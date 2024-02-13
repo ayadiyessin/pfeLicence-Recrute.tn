@@ -1,0 +1,1277 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/notifcation.css">
+        <!--Style CV-->
+        <link rel="stylesheet" href="assets/css/CV.css">
+		
+		<title>Demandeur d’emploi | Profil Offre </title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+        <script>
+            if(!localStorage.getItem("ID_DEM")){
+              location.replace("loginDemandeur.html");
+            }
+          </script>
+       
+        
+       
+    </head>
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="sidemenu-header">
+                <a href="AccueilDemandeur.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/Recrute.fr.png" alt="image">
+                </a>
+
+                <div class="responsive-burger-menu d-block d-lg-none">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </div>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+                    <li class="nav-item ">
+                        <a href="dashboardDemandeur.html" class="nav-link">
+                            <span class="icon"><i class="ri-home-line"></i></span>
+                            <span class="menu-title">Tableau De Bord</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="modifierProfil.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-line"></i></span>
+                            <span class="menu-title">Mon Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="ModifierCV.html" class="nav-link">
+                            <span class="icon"><i class="ri-file-edit-line"></i></span>
+                            <span class="menu-title">Modifier CV</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="GenererCV.html" class="nav-link">
+                            <span class="icon"><i class="ri-newspaper-line"></i></span>
+                            <span class="menu-title">Générer CV</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a href="offresfavoris.html" class="nav-link">
+                            <span class="icon"><i class="ri-heart-3-line"></i></span>
+                            <span class="menu-title">Offres Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="offrespostulees.html" class="nav-link">
+                            <span class="icon"><i class="ri-send-plane-line"></i></span>
+                            <span class="menu-title">Offres Postulées</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item " >
+                        <a href="confirmerEntretiens.html" class="nav-link">
+                            <span class="icon"><i class="ri-checkbox-circle-line"></i></span>
+                            <span class="menu-title">Confirme Entretiens</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="entretienENAttenteDEM.html " class="nav-link">
+                            <span class="icon"><i class="ri-calendar-todo-line"></i></span>
+                            <span class="menu-title">Entretiens En Attente</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienDaujourdhuiDEM.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-check-line"></i></span>
+                            <span class="menu-title">Entretiens D'aujourd'hui</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PVconfirlers.html" class="nav-link">
+                            <span class="icon"><i class="ri-task-line"></i></span>
+                            <span class="menu-title">PV Confirmés</Sspan>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Messageries.html" class="nav-link">
+                            <span class="icon"><i class="ri-chat-download-line"></i></span>
+                            <span class="menu-title">Messageries</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" onClick="quiterStorge();" class="nav-link">
+                            <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                            <span class="menu-title">Deconexion</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  onClick="supprmierCempte()" class="nav-link">
+                            <span class="icon" style="color: red; "><i class="ri-delete-bin-line"></i></span>
+                            <span class="menu-title" style="color: red; ">Supprimer Profil</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="main-responsive-menu">
+                        <div class="responsive-burger-menu d-lg-none d-block">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item ">
+                                    <a href="AccueilDemandeur.html" class="nav-link">
+                                        Accueil 
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="contactDem.html" class="nav-link">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link">   <i class="ri-notification-2-line"> </i>
+                                        <span id="nbtotalhaut" class="badge badge-warning navbar-badge">0</span>   
+                                       &ensp; Notification                  
+                                    
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="Messageries.html" class="nav-link">
+                                            <b id="nbCandidatmes">0 </b> Messages Reçus</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="entretienDaujourdhuiDEM.html" class="nav-link">
+                                            <b id="nbentretienAujordhui">0 </b> Entretiens Aujourd'hui</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="confirmerEntretiens.html" class="nav-link">
+                                            <b id="nbentretienNONCON">0 </b> Entretiens qui n'est pas confirmé</a>
+                                        </li>
+
+                                    </ul>
+                                    
+                                </li>
+
+                            </ul>
+
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <div class="dropdown profile-nav-item">
+                                        <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="menu-profile">
+                                                <img src="" id="imgNav" class="rounded-circle" alt="image">
+                                                <span class="name">Mon Compte</span>
+                                            </div>
+                                        </a>
+            
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                                <div class="figure mb-3">
+                                                    <img src="" id="imgDEM" class="rounded-circle" alt="image">
+                                                </div>
+            
+                                                <div class="info text-center">
+                                                    <span class="name" id="nomDEM"></span>
+                                                    <p class="mb-3 email" id="emailDEM"></p>
+                                                </div>
+                                            </div>
+            
+                                            <div class="dropdown-body">
+                                                <ul class="profile-nav p-0 pt-3">
+                                                    <li class="nav-item ">
+                                                        <a href="dashboardDemandeur.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-home-line"></i></span>
+                                                            <span class="menu-title">Tableau De Bord</span>
+                                                        </a>
+                                                    </li>
+
+                                                    
+                                                    <li class="nav-item">
+                                                        <a href="modifierProfil.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-user-line"></i></span>
+                                                            <span class="menu-title">Mon Profil</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+            
+                                            <div class="dropdown-footer">
+                                                <ul class="profile-nav">
+                                                    <li class="nav-item">
+                                                        <a href="#" onClick="quiterStorge();" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Deconexion</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Salut</h1>
+                <ol class="breadcrumb">
+                    <li class="item" title="Retourner au Accueil"><a href="AccueilDemandeur.html">Accueil</a></li>
+                    <li class="item" title="Retourner aux Entretiens En Attente"><a href="entretienENAttenteDEM.html">Entretiens En Attente</a></li>
+                    <li class="item" >Profil Offre</li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+
+        <!-- Start Job Details Area -->
+        <div class="job-details-area ptb-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <div class="job-details-desc">
+                            <div class="job-details-image">
+                                <img id="PHOTO_OFF" style="width: 1250px; height: 220px;" src="" alt="image">
+                            </div>
+
+                            <h2 id="NOM_OFF"></h2>
+                            <ul class="entry-meta">
+                                <li><i class="ri-calendar-todo-line"></i><span id="iconDatCrea"></span></li>
+                                <li><i class="ri-calendar-line"></i><span id="iconDatExpira"></span></li>
+                                <li><i class="ri-team-line"></i><span id="nbCandOFF"></span> Candidatures</li>
+                                <li><i class="ri-chat-1-line"></i><span id="nbComOFF"></span> Commentaires</li>
+                            </ul>
+                                <div class="job-details-content">
+                                    <h3>Description:</h3>
+
+                                    <ul class="list">
+                                        <li id="DESC_OFF"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="job-details-content">
+                                    <h3>Mission:</h3>
+
+                                    <ul class="list">
+                                        <li id="MISSION_OFF"></li>
+                                    </ul>
+                                </div>
+
+                                <div class="job-details-content">
+                                    <h3>Expériences:</h3>
+
+                                    <ul id="ExpOFF" class="list">
+                                        
+                                    </ul>
+                                </div>
+
+                                <div class="job-details-content">
+                                    <h3>Compétences:</h3>
+
+                                    <ul id="CompOFF" class="list">
+                                        
+                                    </ul>
+                                </div>
+
+                                <div class="job-details-content">
+                                    <h3>Langues:</h3>
+
+                                    <ul id="LangOFF" class="list">
+                                        
+                                    </ul>
+                                </div>
+
+                                <div class="job-details-content">
+                                    <h3>Diplômes:</h3>
+
+                                    <ul id="DipOFF" class="list">
+                                        
+                                    </ul>
+                                </div>
+
+                                <div class="job-details-content">
+                                    <h3>Avantages:</h3>
+
+                                    <ul id="AvgOFF" class="list">
+                                        
+                                    </ul>
+                                </div>
+                                
+                                <div class="row job-article-footer">
+                                    
+                                    <div class="col-lg-12 col-md-12">
+                                        <div  class="article-tags">
+                                            <span>Type D'emploi:</span> <span id="NOM_TE_OFF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row job-article-footer">
+                                    
+                                    <div class="col-lg-12 col-md-12">
+                                        <div  class="article-tags">
+                                            <span>Mots-clés:</span> <span id="NOM_MC_OFF"></span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row job-article-footer">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="article-share">
+                                            <ul class="social">
+                                                <li>
+                                                    <span  >Réseaux Sociaux</span>
+                                                </li>
+                                                <li>
+                                                    <a id="urlWebENT" href="" target="" title="site web de l'entreprise">
+                                                        <i class="flaticon-google-glass-logo"></i>
+                                                    </a>
+                                                </li>
+
+                                                <li>
+                                                    <a id="urlFbENT" href="" target="" title="facebook de l'entreprise">
+                                                        <i class="flaticon-facebook"></i>
+                                                    </a>
+                                                </li>
+                
+                                                <li>
+                                                    <a id="urlLinkENT" href="" target="" title="linkedin de l'entreprise">
+                                                        <i class="flaticon-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="related-jobs-box">
+                                    <div class="blog-details-desc">
+                                        <h4> Commentaires</h4>
+                                        <div id="AjoutComOFF" class="article-comments">
+                                        
+                                        </div>
+                                        <div class="article-comments">
+                                            <div class="comments-list">
+                                                <img style="width: 90px; height: 90px;" id="photoDEM" src="" alt="image">
+                                                <h5 id="nompreDEM"></h5>
+                                                <form onsubmit="return false">
+                                                    <div class="form-group">
+                                                        <div class="row">
+                                                            <div class="col-lg-10 col-md-12">
+                                                                <textarea id="descCom" type="text" class="form-control"></textarea>
+                                                            </div>
+                                                            <div id="modiftype" class="col-lg-2 col-md-12">
+                                                                <button type="button" class="bouttonkbir" onclick="ajoutCom();"><i class="flaticon-send"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div> 
+                                                </form>
+                                                <div id="btnSup" class="reply-btn"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                        </div>
+
+                    
+                    </div>
+
+                    <div class="col-lg-4 col-md-12">
+                        <div class="job-details-information">
+                            <div class="information-box">
+                                <div class="company-logo">
+                                    <img  id="LogoENT" src="" alt="image">
+                                </div>
+                                
+                                <h3 id="NomENT"></h3>
+                                <span id="SectDactENT"></span>
+                            </div>
+
+                            <ul class="information-list-box">
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="flaticon-email"></i> Email</span>
+                                        <a id="EmailENT" href=""></a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="flaticon-worldwide"></i> Pays Original</span>
+                                        <span id="PaysOrgENT"></span>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="flaticon-placeholder"></i> Ville</span>
+                                        <span id="VilleOFF"></span> 
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="ri-road-map-line"></i> Adresse</span>
+                                        <span id="AdressENT"></span> 
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="flaticon-telephone"></i> Téléphone</span>
+                                        <a id="TelENT" href=""></a>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="ri-group-line"></i> Nombre salarier</span>
+                                        <span id="NbSalENT"></span>
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="flaticon-calendar"></i> Créer depuis</span>
+                                        <span id="DatCreaENT"></span> 
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="ri-women-line"></i> Sexe Candidates</span>
+                                        <span id="SexeCandOFF"></span> 
+                                    </div>
+                                </li>
+
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <span><i class="flaticon-money"></i> Salaire</span>
+                                        <span id="SAL_MIN_OFF"></span>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="d-flex justify-content-between align-items-center">
+                                        <div id="map" class="styMap"></div>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="job-details-btn-box">
+                                <a href="" id="reclamation"  class="default-btn">Réclamer <i class="flaticon-send"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Job Details Area -->
+            <!-- End Notification Alert Area -->
+
+            
+            
+            
+            
+
+              <!-- Start Go Top Area -->
+            <div class="go-top">
+                <i class="ri-arrow-up-line"></i>
+            </div>
+            <!-- End Go Top Area -->
+
+
+        </div>
+        <!-- End Main Dashboard Content Wrapper Area -->
+
+        <!-- Start Copyright Area -->
+        <div class="footerCopy">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p><i class="ri-copyright-line"></i> 2021-2022 <a href="#"> Demandeur d’emploi </a>. </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/supprmierProfilDEM.js"></script>
+            <!--alert-->
+        <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+       <!--notifci-->
+       <script src="assets/js/notificationDEM.js"></script>
+      
+        <script>
+            //var idrec= localStorage.getItem("ID_REC");
+            var idDem=localStorage.getItem("ID_DEM");
+            var liste =["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+            var url_string = window.location.href ;
+            var url = new URL(url_string); 
+            var c = url.searchParams.get("id"); 
+            
+            // Create a request variable and assign a new XMLHttpRequest object to it.
+            var requestnbCand = new XMLHttpRequest()
+            // Open a new connection, using the GET request on the URL endpoint
+            requestnbCand.open('GET', 'http://192.168.43.96:3000/candidatures', true)
+            requestnbCand.onload = function()
+            {
+                var j = 0;
+                var datanbCand = JSON.parse(this.response)
+                var ee = document.getElementById("nbCandOFF");
+                console.log(datanbCand);
+                
+                datanbCand.forEach(i => {
+                    if(i.ID_OFFRE == c){
+                        j+=1;
+                    }
+                })
+                ee.innerHTML = j;
+            }
+            // Send request
+            requestnbCand.send()
+
+            var requestnbCom = new XMLHttpRequest();
+            requestnbCom.open('GET', "http://192.168.43.96:3000/commentaires", true);
+            requestnbCom.onload = function()
+            {
+                var datanbCom = JSON.parse(this.response);
+                var j=0;
+                datanbCom.forEach(i => {
+                    if(i.ID_OFFRE==c){
+                        j+=1;
+                    }
+                })
+                document.getElementById('nbComOFF').innerHTML = j;
+            }
+            requestnbCom.send();
+
+            var dateaujPO = new Date();
+            var datemonthPO = dateaujPO.getMonth();
+            var abcPO =  dateauj.getDate()+' '+ liste[datemonthPO] +' '+dateaujPO.getFullYear();
+            
+            if (dateaujPO.getHours()<10){
+                var timeheure = '0'+dateaujPO.getHours();
+            }else{
+                var timeheure = dateaujPO.getHours();
+            }
+            if (dateaujPO.getMinutes()<10){
+                var timeminute = '0'+dateaujPO.getMinutes();
+            }else{
+                var timeminute = dateaujPO.getMinutes();
+            }
+            var timeauj = timeheure+' : '+timeminute;
+
+            chCom= localStorage.getItem("Username_DEM")+`<span id="dateSys">`+abcPO+` à `+timeauj+`</span>`;
+            document.getElementById("nompreDEM").innerHTML = chCom;
+            document.getElementById("photoDEM").src = localStorage.getItem("PHOTO_DEM");
+
+            var url3 = "http://192.168.43.96:3000/offres/" + c ;
+            var xhr3 = new XMLHttpRequest();
+            xhr3.open("GET", url3, true);
+
+            xhr3.onload = function () {
+            var data = JSON.parse(xhr3.responseText);
+            if (xhr3.readyState == 4 && xhr3.status == "200") {
+                document.getElementById("PHOTO_OFF").src = data.PHOTO_OFF;
+                document.getElementById("NOM_OFF").innerHTML = data.NOM_OFF ;
+                document.getElementById("reclamation").href= "reclamationENTATT.html?id="+data._id+"&idrec="+data.ID_RECRUTEUR;
+                 
+                var request1 = new XMLHttpRequest();
+                // Open a new connection, using the GET request on the URL endpoint
+                request1.open('GET', "http://192.168.43.96:3000/recruteurs/"+data.ID_RECRUTEUR, true);
+                request1.onload = function()
+                {
+                    // Begin accessing JSON data here
+                    var data1 = JSON.parse(this.response);
+                    console.log(data1);
+                    document.getElementById("VilleOFF").innerHTML = data1.VILLE_ENT ;
+                    document.getElementById("LogoENT").src = data1.LOGO_ENT;
+                    document.getElementById("NomENT").innerHTML = data1.NOM_ENT;
+                    document.getElementById("SectDactENT").innerHTML = data1.SEC_DACT_ENT;
+                    document.getElementById("EmailENT").innerHTML = data1.EMAIL_ENT;
+                    document.getElementById("EmailENT").href = "mailto:"+data1.EMAIL_ENT;
+                    document.getElementById("PaysOrgENT").innerHTML = data1.PAYS_ORG_ENT;
+                    document.getElementById("AdressENT").innerHTML = data1.ADRESSE_ENT;
+                    document.getElementById("TelENT").innerHTML = data1.NUM_TEL_ENT;
+                    document.getElementById("TelENT").src = "tel:"+data1.NUM_TEL_ENT;
+                    document.getElementById("NbSalENT").innerHTML = data1.NB_SAL_ENT;
+                    var datcrea = data1.DAT_CREA_ENT.split('-');
+                    if(datcrea[1]<10){
+                        datcrea[1]=datcrea[1][1];
+                    }
+                    document.getElementById("DatCreaENT").innerHTML = datcrea[2]+' '+liste[datcrea[1]-1]+' '+datcrea[0];
+                    
+                    if(data1.URL_WEB_ENT !=""){
+                        document.getElementById("urlWebENT").href = data1.URL_WEB_ENT;
+                        document.getElementById("urlWebENT").target = "_blank";
+                    }
+                    if(data1.URL_FB_ENT !=""){
+                        document.getElementById("urlFbENT").href = data1.URL_FB_ENT;
+                        document.getElementById("urlFbENT").target = "_blank";
+                    }
+                    if(data1.URL_LINK_ENT !=""){
+                        document.getElementById("urlLinkENT").href = data1.URL_LINK_ENT;
+                        document.getElementById("urlLinkENT").target = "_blank";
+                    }
+                }
+                // Send request
+                request1.send();
+                
+                document.getElementById("SAL_MIN_OFF").innerHTML = data.SAL_MIN_OFF;
+                var datcre = data.createdAt.split('T');
+                var creadat = datcre[0].split('-');
+                if(creadat[1]<10){
+                        creadat[1]=creadat[1][1];
+                }
+                document.getElementById("iconDatCrea").innerHTML = creadat[2]+' '+liste[creadat[1]-1]+' '+creadat[0];
+                var expiradat = data.DAT_EXPIRA_OFF.split('-');
+                if(expiradat[1]<10){
+                    expiradat[1]=expiradat[1][1];
+                }
+                document.getElementById("iconDatExpira").innerHTML = expiradat[2]+' '+liste[expiradat[1]-1]+' '+expiradat[0];
+                document.getElementById("DESC_OFF").innerHTML = data.DESC_OFF;
+                document.getElementById("MISSION_OFF").innerHTML = data.MISSION_OFF;
+                document.getElementById("SexeCandOFF").innerHTML = data.SEXE_CAND_OFF;
+
+                var eeTE = document.getElementById("NOM_TE_OFF");
+                eeTE.innerHTML="";
+                var tabTE = data.NOM_TE_OFF.split('/');
+                for(var j=1;j<tabTE.length;j++){
+                    chTE =`<a>`+tabTE[j]+`</a>`;
+                    eeTE.insertAdjacentHTML('beforeend',chTE); 
+                }
+
+                
+                var eeMC = document.getElementById("NOM_MC_OFF");
+                eeMC.innerHTML="";
+                var tabMC = data.NOM_MC_OFF.split('/');
+                for(var j=1; j<tabMC.length;j++){
+                    chMC =`<a>`+tabMC[j]+`</a>`;
+                    eeMC.insertAdjacentHTML('beforeend',chMC); 
+                }
+
+                var eeAVG = document.getElementById("AvgOFF");
+                eeAVG.innerHTML="";
+                var nbAVG=0;
+                var tabAVG = data.NOM_AVG_OFF.split('/');
+                for(var j=1;j<tabAVG.length;j++){
+                    if(tabAVG[j]!="")
+                    {
+                        chAVG =`<li>`+tabAVG[j]+`</li>`;
+                        eeAVG.insertAdjacentHTML('beforeend',chAVG); 
+                        nbAVG +=1;
+                    }
+                }  
+                if (nbAVG == 0){
+                    spAVG = "<li>Pas de benefice</li>";
+                    console.log(spAVG);
+                    document.getElementById('AvgOFF').innerHTML = spAVG;
+                }
+
+                
+
+                var request9 = new XMLHttpRequest();
+                    // Open a new connection, using the GET request on the URL endpoint
+                    request9.open('GET', "http://192.168.43.96:3000/commentaires", true);
+                    request9.onload = function()
+                    {
+                        // Begin accessing JSON data here
+                        var data9 = JSON.parse(this.response);
+                        console.log(data9);
+                        var ee = document.getElementById("AjoutComOFF");
+                        ee.innerHTML="";
+                        data9.forEach(j => {
+                        if(j.ID_OFFRE==c){
+                            var datenv = j.createdAt.split('T');
+                            var datenvsp = datenv[0].split('-');
+                            var timenv = datenv[1].split('.');
+                            var timenvsp = timenv[0].split(':');
+                            timenvsp[0] = parseInt(timenvsp[0])+1;
+                            if (timenvsp[0]<10){
+                                timenvsp[0] = '0'+timenvsp[0];
+                            }
+                            if(datenvsp[1]<10){
+                                datenvsp[1]=datenvsp[1][1];
+                            }
+                            
+                            if(j.ID_RECRUTEUR=="" && j.ID_DEMANDEUR==idDem){
+                                var request10 = new XMLHttpRequest();
+                                request10.open('GET', "http://192.168.43.96:3000/demandeurs/"+j.ID_DEMANDEUR, true);
+                                request10.onload = function()
+                                {
+                                    var data10 = JSON.parse(this.response);
+                                    ch=`<div class="comments-list">
+                                                    <img style="width: 90px; height: 90px;" src="`+data10.PHOTO_DEM+`" alt="image">
+                                                    <h5>`+data10.NOM_DEM+` `+data10.PRE_DEM+`<span>`+datenvsp[2]+` `+liste[datenvsp[1]-1]+` `+datenvsp[0]+` à `+timenvsp[0]+` : `+timenvsp[1]+`</span></h5>
+                                                    <p>`+j.DESC_COM+`</p>
+                                            <div class="reply-btn">
+                                            <a onclick="modifierCom('`+j._id+`');" title="Modifier commentaire"><i class="ri-pencil-line"></i></a>
+                                            <a onclick="suppCom('`+j._id+`');" title="Supprimer commentaire"><i class="ri-close-line"></i></a>
+                                            
+                                            </div>
+                                        </div>`;
+                                    ee.insertAdjacentHTML('beforeend',ch);
+
+                                }
+                                request10.send();
+                            }
+                            if(j.ID_DEMANDEUR==""){
+                                var request11 = new XMLHttpRequest();
+                                request11.open('GET', "http://192.168.43.96:3000/recruteurs/"+j.ID_RECRUTEUR, true);
+                                request11.onload = function()
+                                {
+                                    var data11 = JSON.parse(this.response);
+                                    if (data11.ARCHIV_REC=="0"){
+                                        ch=`<div class="comments-list">
+                                            <img style="width: 90px; height: 90px;" src="`+data11.LOGO_ENT+`" alt="image">
+                                            <h5>`+data11.NOM_ENT+`<span>`+datenvsp[2]+` `+liste[datenvsp[1]-1]+` `+datenvsp[0]+` à `+timenvsp[0]+` : `+timenvsp[1]+`</span></h5>
+
+                                            <p>`+j.DESC_COM+`</p>
+                                            
+                                        </div>`;
+                                        ee.insertAdjacentHTML('beforeend',ch);
+                                    }
+                                }
+                                request11.send();
+                            }
+                        }else{
+                            console.log("erreur");
+                        }
+                        })
+                    }
+                    // Send request
+                request9.send();
+                    
+                    // Create a request variable and assign a new XMLHttpRequest object to it.
+                var request16 = new XMLHttpRequest()   
+                    // Open a new connection, using the GET request on the URL endpoint
+                    request16.open('GET', 'http://192.168.43.96:3000/experienceExiges', true)
+                    
+                    request16.onload = function() {
+                        // Begin accessing JSON data here
+                        var data16 = JSON.parse(this.response)
+                        console.log(data16);
+                        var ee = document.getElementById("ExpOFF");
+                        ee.innerHTML="";
+                        data16.forEach(j =>{
+                            if(j.ID_OFFRE==c){
+                                ch =`<li>`+j.NB_EXP_OFF+` : `+j.NOM_EXP_OFF+`</li>`;
+                                ee.insertAdjacentHTML('beforeend',ch);
+                            }
+                        })
+                    }
+                    request16.send();
+                    
+                    
+                    
+                }
+            }
+            xhr3.send();
+
+            var request2 = new XMLHttpRequest();
+            // Open a new connection, using the GET request on the URL endpoint
+            request2.open('GET', "http://192.168.43.96:3000/langueOffres", true);
+            request2.onload = function()
+            {
+                // Begin accessing JSON data here
+                var data2 = JSON.parse(this.response);
+                console.log(data2);
+                var ee = document.getElementById("LangOFF");
+                ee.innerHTML="";
+                data2.forEach(j => {
+                if(j.ID_OFFRE==c){
+                    var request3 = new XMLHttpRequest();
+                    request3.open('GET', "http://192.168.43.96:3000/langues/"+j.ID_LANGUE, true);
+                    request3.onload = function()
+                    {
+                        var data3 = JSON.parse(this.response);
+                        var num=j.NIV_LANG_OFF;
+                        if(num==="1"){  
+                        ch =`<li>`+data3.NOM_LANG+`:  
+                                <span class="ri-star-s-fill" id="star11"></span>
+                                <span class="ri-star-s-line" id="star22"></span>
+                                <span class="ri-star-s-line" id="star33"></span>
+                                <span class="ri-star-s-line" id="star44"></span>
+                                <span class="ri-star-s-line" id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="2"){  
+                        ch =`<li>`+data3.NOM_LANG+`:  
+                                <span class="ri-star-s-fill" id="star11"></span>
+                                <span class="ri-star-s-fill" id="star22"></span>
+                                <span class="ri-star-s-line" id="star33"></span>
+                                <span class="ri-star-s-line" id="star44"></span>
+                                <span class="ri-star-s-line" id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }  
+                        if(num==="3"){  
+                        ch =`<li>`+data3.NOM_LANG+`:  
+                                <span class="ri-star-s-fill" id="star11"></span>
+                                <span class="ri-star-s-fill" id="star22"></span>
+                                <span class="ri-star-s-fill" id="star33"></span>
+                                <span class="ri-star-s-line" id="star44"></span>
+                                <span class="ri-star-s-line" id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="4"){  
+                        ch =`<li>`+data3.NOM_LANG+`:  
+                                <span class="ri-star-s-fill " id="star11"></span>
+                                <span class="ri-star-s-fill  " id="star22"></span>
+                                <span class="ri-star-s-fill  " id="star33"></span>
+                                <span class="ri-star-s-fill " id="star44"></span>
+                                <span class="ri-star-s-line" id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="5"){  
+                        ch =`<li>`+data3.NOM_LANG+`:  
+                                    <span class="ri-star-s-fill " id="star11"></span>
+                                    <span class="ri-star-s-fill " id="star22"></span>
+                                    <span class="ri-star-s-fill " id="star33"></span>
+                                    <span class="ri-star-s-fill " id="star44"></span>
+                                    <span class="ri-star-s-fill " id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        } 
+                    }
+                    request3.send();
+                }
+                })
+            }
+            request2.send();
+
+            var request4 = new XMLHttpRequest();
+            // Open a new connection, using the GET request on the URL endpoint
+            request4.open('GET', "http://192.168.43.96:3000/competenceoffres", true);
+            request4.onload = function()
+            {
+                // Begin accessing JSON data here
+                var data4 = JSON.parse(this.response);
+                console.log(data4);
+                var ee = document.getElementById("CompOFF");
+                ee.innerHTML="";
+                data4.forEach(j => {
+                if(j.ID_OFFRE==c){
+                    var request5 = new XMLHttpRequest();
+                    request5.open('GET', "http://192.168.43.96:3000/competences/"+j.ID_COMPETENCE, true);
+                    request5.onload = function()
+                    {
+                        var data5 = JSON.parse(this.response);
+                        var num=j.NIV_COMP_OFF;
+                        if(num==="1"){
+                        ch =`<li>`+data5.NOM_COMP+`:  
+                                    <span class="ri-star-s-fill" id="star11"></span>
+                                    <span class="ri-star-s-line" id="star22"></span>
+                                    <span class="ri-star-s-line" id="star33"></span>
+                                    <span class="ri-star-s-line" id="star44"></span>
+                                    <span class="ri-star-s-line" id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="2"){
+                        ch =`<li>`+data5.NOM_COMP+`:  
+                                    <span class="ri-star-s-fill" id="star11"></span>
+                                    <span class="ri-star-s-fill" id="star22"></span>
+                                    <span class="ri-star-s-line" id="star33"></span>
+                                    <span class="ri-star-s-line" id="star44"></span>
+                                    <span class="ri-star-s-line" id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="3"){
+                        ch =`<li>`+data5.NOM_COMP+`:  
+                                    <span class="ri-star-s-fill" id="star11"></span>
+                                    <span class="ri-star-s-fill" id="star22"></span>
+                                    <span class="ri-star-s-fill" id="star33"></span>
+                                    <span class="ri-star-s-line" id="star44"></span>
+                                    <span class="ri-star-s-line" id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="4"){
+                        ch =`<li>`+data5.NOM_COMP+`:  
+                                    <span class="ri-star-s-fill " id="star11"></span>
+                                    <span class="ri-star-s-fill  " id="star22"></span>
+                                    <span class="ri-star-s-fill  " id="star33"></span>
+                                    <span class="ri-star-s-fill " id="star44"></span>
+                                    <span class="ri-star-s-line" id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="5"){
+                        ch =`<li>`+data5.NOM_COMP+`:  
+                                    <span class="ri-star-s-fill " id="star11"></span>
+                                    <span class="ri-star-s-fill " id="star22"></span>
+                                    <span class="ri-star-s-fill " id="star33"></span>
+                                    <span class="ri-star-s-fill " id="star44"></span>
+                                    <span class="ri-star-s-fill " id="star55"></span>
+                            </li>`;
+                        ee.insertAdjacentHTML('beforeend',ch); 
+                        }               
+                    }
+                    request5.send();
+                }
+                })
+            }
+            request4.send();
+
+            var request6 = new XMLHttpRequest();
+            // Open a new connection, using the GET request on the URL endpoint
+            request6.open('GET', "http://192.168.43.96:3000/etudeexiges", true);
+            request6.onload = function()
+            {
+                // Begin accessing JSON data here
+                var data6 = JSON.parse(this.response);
+                console.log(data6);
+                var ee = document.getElementById("DipOFF");
+                ee.innerHTML="";
+                data6.forEach(j => {
+                if(j.ID_OFFRE==c){
+                    var request7 = new XMLHttpRequest();
+                    request7.open('GET', "http://192.168.43.96:3000/diplomes/"+j.ID_DIPLOME, true);
+                    request7.onload = function()
+                    {
+                        var data7 = JSON.parse(this.response);
+                        ch =`<li>`+data7.TYPE_DIP+` : `+j.SPECIA_DEM_OFF+`</li>`;
+                        ee.insertAdjacentHTML('beforeend',ch);    
+                    }
+                    request7.send();
+                }
+                })
+            }
+            request6.send();
+            
+        function ajoutCom(){
+            var url = "http://192.168.43.96:3000/commentaires";
+            dataCom={};
+            dataCom.DESC_COM = document.getElementById("descCom").value;
+            dataCom.ID_OFFRE = c;
+            dataCom.ID_DEMANDEUR = idDem;
+            dataCom.ID_RECRUTEUR = "";
+            var json = JSON.stringify(dataCom);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+            xhr.onload = function () {
+                var Commentaires= JSON.parse(xhr.responseText);
+                if (xhr.readyState == 4 && xhr.status == "200") {
+                    var ee = document.getElementById("AjoutComOFF");
+                    var datenv = Commentaires.createdAt.split('T');
+                    var datenvsp = datenv[0].split('-');
+                    var timenv = datenv[1].split('.');
+                    var timenvsp = timenv[0].split(':');
+                    timenvsp[0] = parseInt(timenvsp[0])+1;
+                            if (timenvsp[0]<10){
+                                timenvsp[0] = '0'+timenvsp[0];
+                            }
+                    if(datenvsp[1]<10){
+                        datenvsp[1]=datenvsp[1][1];
+                    }
+                    var request10 = new XMLHttpRequest();
+                    request10.open('GET', "http://192.168.43.96:3000/demandeurs/"+Commentaires.ID_DEMANDEUR, true);
+                    request10.onload = function()
+                    {
+                        var data10 = JSON.parse(this.response);
+                        ch=`<div class="comments-list">
+                                        <img style="width: 90px; height: 90px;" src="`+data10.PHOTO_DEM+`" alt="image">
+                                        <h5>`+data10.NOM_DEM+` `+data10.PRE_DEM+`<span>`+datenvsp[2]+` `+liste[datenvsp[1]-1]+` `+datenvsp[0]+` à `+timenvsp[0]+` : `+timenvsp[1]+`</span></h5>
+                                        <p>`+Commentaires.DESC_COM+`</p>
+                                <div class="reply-btn">
+                                <a onclick="modifierCom('`+Commentaires._id+`');" title="Modifier commentaire"><i class="ri-pencil-line"></i></a>
+                                <a onclick="suppCom('`+Commentaires._id+`');" title="Supprimer commentaire"><i class="ri-close-line"></i></a>
+                                
+                                </div>
+                            </div>`;
+                        ee.insertAdjacentHTML('beforeend',ch);
+
+                    }
+                    request10.send();
+                    document.getElementById("descCom").value ="";
+                }
+            }
+            xhr.send(json);
+        }
+
+        function modifierCom(idCom){
+            ch=`<button type="button" class="bouttonkbir" onclick="remplirCom('`+idCom+`');"><i class="ri-pencil-line"></i></button>`;
+            document.getElementById("modiftype").innerHTML = ch;
+            ch2=`<a onclick="annulerCom('`+idCom+`');" title="Anuuler la modification"><i class="ri-close-line"></i></a>`;
+            document.getElementById("btnSup").innerHTML = ch2;
+            var request = new XMLHttpRequest();
+            request.open('GET', "http://192.168.43.96:3000/commentaires/"+idCom, true);
+            request.onload = function()
+            {
+                var data = JSON.parse(this.response);
+                document.getElementById("descCom").value = data.DESC_COM;
+            }
+            request.send();
+        }
+
+        function remplirCom(x){
+            Swal.fire({
+                title: 'Attetion !',
+                text: "Voulez-vous modifier son commentaire ?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#228B22',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Oui'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    var request = new XMLHttpRequest();
+                    request.open('GET', "http://192.168.43.96:3000/commentaires/"+x, true);
+                    request.onload = function()
+                    {
+                        var data = JSON.parse(this.response);
+                        var url = "http://192.168.43.96:3000/commentaires/"+x;
+                        dataCom={};
+                        dataCom.DESC_COM = document.getElementById("descCom").value;
+                        dataCom.ID_OFFRE = data.ID_OFFRE;
+                        dataCom.ID_DEMANDEUR = data.ID_DEMANDEUR;
+                        dataCom.ID_RECRUTEUR = data.ID_RECRUTEUR;
+                        var json = JSON.stringify(dataCom);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("PUT", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            var commentaires = JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                location.reload();
+                            }
+                        }
+                        xhr.send(json);
+                    }
+                    request.send();
+                }else{
+                    location.reload();
+                }
+            })            
+        }
+
+        function suppCom(x){
+            Swal.fire({
+                title: 'Attetion !',
+                text: "Voulez-vous supprimer cette commentaire ?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#228B22',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Oui, Supprimer!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                var url3 = "http://192.168.43.96:3000/commentaires/" + x ;
+                var xhr3 = new XMLHttpRequest();
+                xhr3.open("DELETE", url3, true);
+                xhr3.onload = function () {
+                if (xhr3.readyState == 4 && xhr3.status == "200") {
+                        Swal.fire({
+                            title:'Supprimer!',
+                            text:'Ce fichier est supprimer avec succés.',
+                            icon:'success',
+                            
+                        }).then((result) => {
+                            if (result.isConfirmed){
+                                location.reload();
+                            }
+
+                        })
+                        
+                        } 
+                    }  
+                    xhr3.send(null);
+                
+                }
+                })            
+        }
+
+        function annulerCom(x){
+            Swal.fire({
+                title: 'Attetion !',
+                text: "Voulez-vous annuler la modification de cette commentaire ?",
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonColor: '#228B22',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Oui, Supprimer!'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            })            
+        }
+            
+        </script>
+              <script>
+                var url_string = window.location.href
+                          var url = new URL(url_string);
+                          var c = url.searchParams.get("id");
+                var request515 = new XMLHttpRequest()
+            
+            // Open a new connection, using the GET request on the URL endpoint
+            request515.open('GET', 'http://192.168.43.96:3000/offres/'+ c, true)
+            
+            request515.onload = function() {
+                // Begin accessing JSON data here
+                var data515 = JSON.parse(this.response)
+                
+                          var request55 = new XMLHttpRequest()
+                        
+                          // Open a new connection, using the GET request on the URL endpoint
+                          request55.open('GET', 'http://192.168.43.96:3000/recruteurs/'+ data515.ID_RECRUTEUR, true)
+                          
+                          request55.onload = function() {
+                              // Begin accessing JSON data here
+                              var data55 = JSON.parse(this.response)
+                             console.log(data55.X) 
+                              
+                var locations = [
+                  [
+                    '<b>Name 1</b><br>Address Line 1<br>Bismarck, ND 58501<br>Phone: 701-555-1234<br><a href="#" >Link<a> of some sort.',
+                    data55.X,
+                    data55.Y,
+                    4,
+                  ],
+                  
+                  
+                  /*
+                   * Next point on map
+                   *   -Notice how the last number within the brackets incrementally increases from the prior marker
+                   *   -Use http://itouchmap.com/latlong.html to get Latitude and Longitude of a specific address
+                   *   -Follow the model below:
+                   *      ['<b>Name 3</b><br>Address Line 1<br>City, ST Zipcode<br>Phone: ###-###-####<br><a href="#" target="_blank">Link<a> of some sort.', ##.####, -##.####, #]
+                   */
+                ];
+                console.log(data55.X);
+                console.log(data55.Y);
+                var map = new google.maps.Map(document.getElementById("map"), {
+                  zoom: 7,
+                  /* Zoom level of your map */
+                  center: new google.maps.LatLng(35.47021625, 10.47173475),
+                  /* coordinates for the center of your map */
+                  mapTypeId: google.maps.MapTypeId.ROADMAP,
+                });
+              
+                var infowindow = new google.maps.InfoWindow();
+              
+                var marker, i;
+              
+                for (i = 0; i < locations.length; i++) {
+                  marker = new google.maps.Marker({
+                    position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+                    map: map,
+                  });
+              
+                  google.maps.event.addListener(
+                    marker,
+                    "click",
+                    (function (marker, i) {
+                      return function () {
+                        infowindow.setContent(locations[i][0]);
+                        infowindow.open(map, marker);
+                      };
+                    })(marker, i)
+                  );
+                }
+             
+                          }
+                          request55.send()
+                
+                        }
+                        request515.send()
+              </script>
+         
+    </body>
+</html>

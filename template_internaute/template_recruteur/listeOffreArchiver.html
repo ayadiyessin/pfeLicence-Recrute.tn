@@ -1,0 +1,780 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/notifcation.css">
+		<title>Recruteur | Liste Des Offres Archivers  </title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(!localStorage.getItem("ID_REC")){
+              location.replace("profile-authentication.html");
+            }
+          </script>
+        
+    </head>
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="sidemenu-header">
+                <a href="dashboardRecruteur.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/Recrute.fr.png" alt="image">
+                </a>
+
+                <div class="responsive-burger-menu d-block d-lg-none">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </div>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+                    <li class="nav-item ">
+                        <a href="dashboardRecruteur.html" class="nav-link">
+                            <span class="icon"><i class="ri-home-line"></i></span>
+                            <span class="menu-title">Tableau De Bord</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="profilEntreprise.html" class="nav-link">
+                            <span class="icon"><i class="ri-building-4-line"></i></span>
+                            <span class="menu-title">Profil De La Société</span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a href="modifierautentification.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-line"></i></span>
+                            <span class="menu-title">Mon Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="ajouterOffre.html" class="nav-link">
+                            <span class="icon"><i class="ri-send-plane-fill"></i></span>
+                            <span class="menu-title">Publier Une Offre</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="listeOffre.html" class="nav-link">
+                            <span class="icon"><i class="ri-file-list-3-line"></i></span>
+                            <span class="menu-title">Liste Des Offres</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listCandidat.html" class="nav-link">
+                            <span class="icon"><i class="ri-contacts-line"></i></span>
+                            <span class="menu-title">Liste Des Candidats</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listeCandidatFavori.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-heart-line"></i></span>
+                            <span class="menu-title">Candidats Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listedemandeur.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-search-line"></i></span>
+                            <span class="menu-title">Demandeurs D'emploi</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listeDemandeurFavoris.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-star-line"></i></span>
+                            <span class="menu-title">Demandeurs Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="dateProposer.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-2-line"></i></span>
+                            <span class="menu-title">Dates Proposer</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienEnattente.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-voice-line"></i></span>
+                            <span class="menu-title">Entretiens En Attente</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienDaujourdhui.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-check-line"></i></span>
+                            <span class="menu-title">Entretiens D'aujourd'hui</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienRealise.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-follow-line"></i></span>
+                            <span class="menu-title">Entretiens Réalisés</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listemesssage.html" class="nav-link">
+                            <span class="icon"><i class="ri-chat-1-line"></i></span>
+                            <span class="menu-title">Messageries</span>
+                        </a>
+                    </li>
+
+                    
+
+                    <li class="nav-item">
+                        <a href="#" onClick="quiterStorge();" class="nav-link">
+                            <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                            <span class="menu-title">Deconexion</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  onClick="supprmierCempte()" class="nav-link">
+                            <span class="icon" style="color: red; "><i class="ri-delete-bin-line"></i></span>
+                            <span class="menu-title" style="color: red; ">Supprimer Profil</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="main-responsive-menu">
+                        <div class="responsive-burger-menu d-lg-none d-block">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a href="dashboardRecruteur.html" class="nav-link">
+                                        Accueil 
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link">   <i class="ri-notification-2-line"> </i>
+                                        <span id="nbtotalhaut" class="badge badge-warning navbar-badge">0</span>   
+                                       &ensp; Notification                  
+                                    
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="listCandidat.html" class="nav-link">
+                                            <b id="nbCandidat">0 </b> Nouveaux Candidats</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="entretienDaujourdhui.html" class="nav-link">
+                                            <b id="nbentretienAujordhui">0 </b> Entretiens Aujourd'hui</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="entretienEnattente.html" class="nav-link">
+                                            <b id="nbentretianENatt">0 </b> Nouveaux Entretiens En Attente</a>
+                                        </li>
+                                        <div id="listedeoffre">
+
+                                        </div>
+
+
+                                            
+
+                                        
+                                    </ul>
+                                    
+                                </li>
+
+                            </ul>
+
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <div class="dropdown profile-nav-item">
+                                        <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="menu-profile">
+                                                <img src="" id="imgNav" class="rounded-circle" alt="image">
+                                                <span class="name">Mon Compte</span>
+                                            </div>
+                                        </a>
+            
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                                <div class="figure mb-3">
+                                                    <img src="" id="imgENT" class="rounded-circle" alt="image">
+                                                </div>
+            
+                                                <div class="info text-center">
+                                                    <span class="name" id="nomENT"></span>
+                                                    <p class="mb-3 email" id="emailENT"></p>
+                                                    <p class="mb-3 email"id="emailREC"></p>
+                                                </div>
+                                            </div>
+            
+                                            <div class="dropdown-body">
+                                                <ul class="profile-nav p-0 pt-3">
+                                                    <li class="nav-item ">
+                                                        <a href="dashboardRecruteur.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-home-line"></i></span>
+                                                            <span class="menu-title">Tableau De Bord</span>
+                                                        </a>
+                                                    </li>
+
+                                                    
+                                                    <li class="nav-item">
+                                                        <a href="modifierautentification.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-user-line"></i></span>
+                                                            <span class="menu-title">Mon Profil</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+            
+                                            <div class="dropdown-footer">
+                                                <ul class="profile-nav">
+                                                    <li class="nav-item">
+                                                        <a href="#" onClick="quiterStorge();" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Deconexion</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Salut</h1>
+                <ol class="breadcrumb">
+                    <li class="item" title="Retourner au Accueil"><a href="dashboardRecruteur.html">Accueil</a></li>
+                    <li class="item" title="Retourner aux Liste Des Offres"><a href="listeOffre.html">Liste Des Offres</a></li>
+                    <li class="item">Liste Des Offres Archiver</li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+
+            <!-- Start Manage Jobs Area -->
+            <div class="dashboard-jobs-box">
+                <div class="invoice-header d-flex justify-content-between">
+                    <div class="invoice-left-text"> 
+                        <h3>Gérer Les Offres Archiver</h3>
+                    </div>
+                    <div class="invoice-right-text">
+                        <!--<h3> <a href="#"> Archives</a></h3>-->
+                        <a href="listeOffre.html"><button class="btnMenu" data-bs-toggle="tooltip" data-bs-placement="top" title="Liste Des Offres " type="button"><i class="ri-file-list-3-line"></i></button></a>
+                    </div>
+                </div>
+                <form >
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <input class="form-control" type="search" id="searchp" placeholder="Cherche Ici...">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div   id="listOFFArchiv">
+                </div>    
+            </div>
+            <!-- End Manage Jobs Area -->
+
+            <!-- Start Go Top Area -->
+            <div class="go-top">
+                <i class="ri-arrow-up-line"></i>
+            </div>
+            <!-- End Go Top Area -->
+        </div>
+        <!-- End Main Dashboard Content Wrapper Area -->
+
+        <!-- Start Copyright Area -->
+        <div class="footerCopy">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p><i class="ri-copyright-line"></i> 2021-2022 <a href="#"> Recrute</a>. </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Area -->
+
+        <!--notifci-->
+        <script src="assets/js/notification.js"></script>
+        <!--alert-->
+        <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/supprmierProfil.js"></script>
+        <script>
+            // Create a request variable and assign a new XMLHttpRequest object to it.
+            var liste =["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+            var idrec= localStorage.getItem("ID_REC");
+            var dateauj = new Date();
+           var datemonth = '';
+           if ((dateauj.getMonth()+1)<10){
+           datemonth = '0'+(dateauj.getMonth()+1);
+           }else {
+           datemonth = (dateauj.getMonth()+1);
+           }
+           if ((dateauj.getDate())<10){
+            datejour = '0'+(dateauj.getDate());
+            }else {
+                datejour = (dateauj.getDate());
+            }
+            
+            
+            var abc = dateauj.getFullYear() +'-'+ (datemonth) +'-'+ (datejour);
+            console.log(abc);
+            var request = new XMLHttpRequest()
+
+       // Open a new connection, using the GET request on the URL endpoint
+       request.open('GET', 'http://192.168.43.96:3000/offres', true)
+       request.onload = function()
+       {
+           // Begin accessing JSON data here
+           var data = JSON.parse(this.response);
+          
+           var ee = document.getElementById("listOFFArchiv");
+           console.log(data);
+           var j = 1;
+           var titlem = 1;
+           data.sort(function (a,b){
+              a = new Date(a.DAT_EXPIRA_OFF);
+              b = new Date(b.DAT_EXPIRA_OFF);
+              return a> b ? -1 : a<b ? 1 :0;
+            })
+           data.forEach(i => {
+            if(idrec==i.ID_RECRUTEUR)
+               {
+                   if(i.ARCHV_OFF=="1"){  
+              // var cell6 = row.insertCell(5);
+               var request1 = new XMLHttpRequest()
+               // Open a new connection, using the GET request on the URL endpoint
+               request1.open('GET', "http://192.168.43.96:3000/candidatures", true)
+               request1.onload = function()
+               {
+                   
+                 // Begin accessing JSON data here
+                 var data1 = JSON.parse(this.response);
+                 console.log(data1);
+                 console.log(Object.entries(data1).length);
+                 var k=0;
+                 data1.forEach(j => {
+                       if(i._id==j.ID_OFFRE && j.ARCHV_CAND=="0"){
+                           k+=1;
+                       }
+                   })
+                   console.log(k);
+                   var datenv = i.createdAt.split('T');
+                   var datenvsp = datenv[0].split('-');
+                   var timenv = datenv[1].split('.');
+                   if(datenvsp[1]<10){
+                       datenvsp[1]=datenvsp[1][1];
+                   }
+                   var datenv1 = i.DAT_EXPIRA_OFF;
+                   var datenvsp1 = datenv1.split('-');
+                   if(datenvsp1[1]<10){
+                       datenvsp1[1]=datenvsp1[1][1];
+                   }
+                 
+                   ch=`<div class="row contact">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="dashboard-job-card">
+                                    <div class="job-content">
+                                        <div class="row">
+                                            <div class="col-md-9"></div>
+                                            <div class="col-md-3" style="text-align: right;">
+                                                <ul class="option-list">
+                                                    <li><a href="profilOffrearchive.html?id=`+i._id+`" ><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Voir Profil Offre" type="button"><i class="ri-eye-line"></i></button></a></li>
+                                                    <li><a href="modifierrOffrearchiver.html?id=`+i._id+`" ><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Modifier L'offre" type="button"><i class="ri-edit-line"></i></button></a></li>
+                                                    <li><a href="creerCopieOffre.html?id=`+i._id+`" ><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Créer un copie" type="button"><i class="ri-file-copy-2-line"></i></button></a></li>
+                                                    <li>  <button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Désarchiver L'offre" type="button" onclick="desarchiveoffre('`+i._id+`')"><i class="ri-inbox-unarchive-line"></i></button></li>
+                                                </ul>
+                                            </div>
+                                        </div> 
+                                        <div class="row">
+                                            <div class="col-md-3"> 
+                                                <div class="image" style="text-align:center;">
+                                                    <a href="profilOffrearchive.html?id=`+i._id+`"><img src="`+i.PHOTO_OFF+`" class="imageCard" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="postCard">
+                                                    <ul class="location-information">
+                                                        <li><i class="ri-briefcase-4-line"></i> <h2><a href="profilOffrearchive.html?id=`+i._id+`">`+i.NOM_OFF+` </a></h2></li>
+                                                    </ul>
+                                                    <ul class="location-information">
+                                                        <li><i class="ri-account-pin-circle-line"></i> <span><a >`+k+`+ Candidats Postuler</a></span></li>
+                                                    </ul>
+                                                    <ul class="location-information">
+                                                        <li><i class="ri-time-line"></i> `+datenvsp[2]+` `+liste[datenvsp[1]-1]+` `+datenvsp[0]+`</li>
+                                                    </ul>
+                                                    <ul class="location-information">
+                                                        <li><i class="ri-timer-flash-line"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+ 
+                   ee.insertAdjacentHTML('beforeend',ch);
+                   //onclick="archiveoffre(`+i._id+`)"
+
+                   
+              }
+               // Send request
+               request1.send()
+               titlem+=1;
+            }
+            else if (i.ARCHV_OFF=="2"){
+                // var cell6 = row.insertCell(5);
+               var request1 = new XMLHttpRequest()
+               // Open a new connection, using the GET request on the URL endpoint
+               request1.open('GET', "http://192.168.43.96:3000/candidatures", true)
+               request1.onload = function()
+               {
+                   
+                 // Begin accessing JSON data here
+                 var data1 = JSON.parse(this.response);
+                 console.log(data1);
+                 console.log(Object.entries(data1).length);
+                 var k=0;
+                 data1.forEach(j => {
+                       if(i._id==j.ID_OFFRE && j.ARCHV_CAND=="0"){
+                           k+=1;
+                       }
+                   })
+                   console.log(k);
+                   var datenv = i.createdAt.split('T');
+                   var datenvsp = datenv[0].split('-');
+                   var timenv = datenv[1].split('.');
+                   if(datenvsp[1]<10){
+                       datenvsp[1]=datenvsp[1][1];
+                   }
+                   var datenv1 = i.DAT_EXPIRA_OFF;
+                   var datenvsp1 = datenv1.split('-');
+                   if(datenvsp1[1]<10){
+                       datenvsp1[1]=datenvsp1[1][1];
+                   }
+                 
+                   ch=`<div class="row contact">
+                            <div class="col-lg-12 col-md-12">
+                                <div class="dashboard-job-card">
+                                    <div class="job-content">
+                                        <div class="row">
+                                            <div class="col-md-10"></div>
+                                            <div class="col-md-2" style="text-align: right;">
+                                                <ul class="option-list">
+                                                    <li><a href="profilOffrearchive.html?id=`+i._id+`" ><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Voir Profil Offre" type="button"><i class="ri-eye-line"></i></button></a></li>
+                                                    <li><a href="creerCopieOffre.html?id=`+i._id+`" ><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Créer un copie" type="button"><i class="ri-file-copy-2-line"></i></button></a></li>
+                                                    <li>  <button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Désarchiver L'offre" type="button" onclick="desarchiveoffre('`+i._id+`')"><i class="ri-inbox-unarchive-line"></i></button></li>
+                                                </ul>
+                                            </div>
+                                        </div> 
+                                        <div class="row">
+                                            <div class="col-md-3"> 
+                                                <div class="image" style="text-align:center;">
+                                                    <a href="profilOffrearchive.html?id=`+i._id+`"><img src="`+i.PHOTO_OFF+`" class="imageCard" alt="image"></a>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-9">
+                                                <div class="postCard">
+                                                    <ul class="location-information">
+                                                        <li><i class="ri-briefcase-4-line"></i> <h2><a href="profilOffrearchive.html?id=`+i._id+`">`+i.NOM_OFF+` </a></h2></li>
+                                                    </ul>
+                                                    <ul class="location-information">
+                                                        <li><i class="ri-account-pin-circle-line"></i> <span><a >`+k+`+ Candidats Postuler</a></span></li>
+                                                    </ul>
+                                                    <ul class="location-information">
+                                                        <li><i class="ri-time-line"></i> `+datenvsp[2]+` `+liste[datenvsp[1]-1]+` `+datenvsp[0]+`</li>
+                                                    </ul>
+                                                    <ul class="location-information">
+                                                        <li><i class="ri-timer-flash-line"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>   
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`;
+ 
+                   ee.insertAdjacentHTML('beforeend',ch);
+                   //onclick="archiveoffre(`+i._id+`)"
+
+                   
+              }
+               // Send request
+               request1.send()
+               titlem+=1;
+            }
+       
+    }
+           })
+           if(titlem == 1){
+                        ch=`
+                            <span class="auccunetitle"  > Aucun Offre Archiver  </span>
+                        `;
+                        ee.insertAdjacentHTML('beforeend',ch);
+            }
+
+       }
+       // Send request
+       request.send()
+
+
+       function desarchiveoffre(c){
+   Swal.fire({
+         title: "Voulez-vous désarchiver cette offre  ?",
+         icon: 'question',
+         showDenyButton: true,
+         confirmButtonColor: '#17a2b8',
+         confirmButtonText: 'Désarchiver',
+         denyButtonText: `Non`,
+       }).then((result) => {
+         if (result.isConfirmed) {
+                     var request = new XMLHttpRequest()
+                     
+                     // Open a new connection, using the GET request on the URL endpoint
+                     request.open('GET', 'http://192.168.43.96:3000/offres/'+ c, true)
+                     var dateauj = new Date();
+                        var datemonth = '';
+                        if ((dateauj.getMonth()+1)<10){
+                        datemonth = '0'+(dateauj.getMonth()+1);
+                        }else {
+                        datemonth = (dateauj.getMonth()+1);
+                        }
+                        if ((dateauj.getDate())<10){
+            datejour = '0'+(dateauj.getDate());
+            }else {
+                datejour = (dateauj.getDate());
+            }
+            
+            
+            var abc = dateauj.getFullYear() +'-'+ (datemonth) +'-'+ (datejour);
+            console.log(abc);
+                     request.onload = function() {
+                         // Begin accessing JSON data here
+                         var data = JSON.parse(this.response)
+                         console.log(data);
+                       var url3 = "http://192.168.43.96:3000/offres/" + c ;
+                       data2={};
+                       var tab = data.DAT_EXPIRA_OFF;
+                
+                        if(tab<abc){   
+                            Swal.fire({
+                            icon: 'error',
+                            title: "Date d'expiration",
+                            text: "Date d'expiration est inférieur à date de systeme",
+                            footer: `<a href="modifierrOffrearchiver.html?id=`+c+`">Voulez-vous Modifier Le Date D'expiration</a>`
+                        })
+                        }else{
+                       data2.NOM_OFF = data.NOM_OFF;
+                       data2.PHOTO_OFF = data.PHOTO_OFF;
+                       data2.SEXE_CAND_OFF = data.SEXE_CAND_OFF;
+                       data2.DESC_OFF = data.DESC_OFF;
+                       data2.MISSION_OFF = data.MISSION_OFF;
+                       data2.SAL_MIN_OFF = data.SAL_MIN_OFF;
+                       data2.NOM_AVG_OFF = data.NOM_AVG_OFF;
+                       data2.NOM_MC_OFF = data.NOM_MC_OFF;
+                       data2.NOM_TE_OFF = data.NOM_TE_OFF;
+                       data2.ARCHV_OFF   = "0";
+                       data2.DAT_EXPIRA_OFF = data.DAT_EXPIRA_OFF;
+                       data2.ID_RECRUTEUR = data.ID_RECRUTEUR;
+                       console.log(data2);
+                       var json = JSON.stringify(data2);
+                       var xhr3 = new XMLHttpRequest();
+                       xhr3.open("PUT", url3, true);
+                       xhr3.setRequestHeader('Content-type','application/json; charset=utf-8');
+                       xhr3.onload = function () {
+                           if (xhr3.readyState == 4 && xhr3.status == "200") {
+                           // location.replace("listadmin.html");
+                              // event.preventDefault();
+                               Swal.fire({
+                                     title:'Cette Offre Est Désarchivé !',
+                                     icon:'success',
+                                   
+                                 }).then((result) => {
+                                     if (result.isConfirmed){
+                                       location.replace("listeOffreArchiver.html");
+                                       event.preventDefault();
+                                     }
+
+                                 })
+                           } else {
+                               console.log("error");
+                               Swal.fire({
+                                 icon:'error',  
+                                 title:'Il y a un erreur !',
+                                 showConfirmButton:true,
+                                 timer:1500
+                                   
+                                 
+                               })
+
+                           }
+                       }
+                       xhr3.send(json);
+                    }
+                     }
+                     request.send();
+                   }
+                   else if (result.isDenied){
+                         Swal.fire("Désarchive Non Enregistrer", '', 'info');
+                   }
+       })
+                 }
+
+     /*            function suppoffre(c){
+
+                    Swal.fire({
+          title: 'Etes vous Sure?',
+          text: "Vous souhaitez le supprimer !",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#228B22',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Oui, Supprimer!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+          // Post a user
+            var url3 = "http://192.168.43.96:3000/offres/" + c ;
+            var xhr3 = new XMLHttpRequest();
+            xhr3.open("DELETE", url3, true);
+            xhr3.onload = function () {
+                if (xhr3.readyState == 4 && xhr3.status == "200") {
+                  Swal.fire({
+                      title:'Supprimer!',
+                      text:'Ce fichier est supprimer avec succés.',
+                      icon:'success',
+                    
+                  }).then((result) => {
+                      if (result.isConfirmed){
+                        location.replace("listeOffreArchiver.html");
+                        event.preventDefault();
+                      }
+
+                  })
+                
+                } 
+              }  
+              xhr3.send(null);
+        
+          }
+        })            
+
+                 }
+*/
+        /*runs each time a new character is entered*/
+       $("#searchp").keyup(function () {
+            /*takes inpt from input box*/
+            var seterm = $("#searchp").val();
+            /*scans through each element*/
+            for (var i = 0; i < $(".contact").length; i++) {
+            /*Makes all elements visible*/
+
+            $(".contact:eq(" + i + ")").css("display", "flex");
+            $(".contact2:eq(" + i + ")").css("display", "flex");
+            /*If it doesn't match the input it is hidden*/
+            if (
+                $(".contact:eq(" + i + ")")
+                .text()
+                .toLowerCase()
+                .indexOf(seterm) < 0
+            ) {
+                $(".contact:eq(" + i + ")").css("display", "none");
+            }
+            }
+        });
+       </script>
+    </body>
+</html>

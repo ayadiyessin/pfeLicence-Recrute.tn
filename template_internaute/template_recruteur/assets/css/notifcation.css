@@ -1,0 +1,105 @@
+.badge {
+  display: inline-block;
+  padding: 0.25em 0.4em;
+  font-size: 75%;
+  font-weight: 700;
+  line-height: 1;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: 0.25rem;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .badge {
+    transition: none;
+  }
+}
+
+a.badge:hover, a.badge:focus {
+  text-decoration: none;
+}
+
+.badge:empty {
+  display: none;
+}
+
+.btn .badge {
+  position: relative;
+  top: -1px;
+}
+
+.navbar-badge {
+  font-size: 0.6rem;
+  font-weight: 300;
+  padding: 2px 4px;
+  position: absolute;
+  margin:20px;
+  left: -15px;
+  top:0px;
+  
+ 
+}
+
+
+
+
+.badge-warning {
+  color: #1f2d3d;
+  background-color: #ffc107;
+}
+
+a.badge-warning:hover, a.badge-warning:focus {
+  color: #1f2d3d;
+  background-color: #d39e00;
+}
+
+a.badge-warning:focus, a.badge-warning.focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(255, 193, 7, 0.5);
+}
+
+
+.dropdown {
+  position: relative;
+}
+
+.nav-link {
+    display: block;
+    padding: 0.5rem 1rem;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    text-decoration: none;
+}
+
+.nav-sidebar .nav-item > .nav-link {
+    margin-bottom: 0.2rem;
+}
+  
+.nav-sidebar .nav-item > .nav-link .right {
+    transition: -webkit-transform ease-in-out 0.3s;
+    transition: transform ease-in-out 0.3s;
+    transition: transform ease-in-out 0.3s, -webkit-transform ease-in-out 0.3s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .nav-sidebar .nav-item > .nav-link .right {
+      transition: none;
+    }
+}
+
+.nav-sidebar .nav-treeview > .nav-item > .nav-link > .nav-icon {
+    width: 1.6rem;
+}
+.auccunetitle{
+  font-size: 36px;
+  font-family: Arial, Helvetica, sans-serif;
+  color:rgb(102, 105, 108);
+  font-weight:lighter;
+  text-align:center;
+  display: block;
+  line-height:150px;
+}

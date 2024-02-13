@@ -1,0 +1,2893 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestionnaire | profile Offre</title>
+  <link rel="icon" type="image/png" href="../dist/img/Recrutelogo.png">
+  <link href="../dist/css/styessin.css" rel="stylesheet">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <script>
+    if(!localStorage.getItem("ID_ADM")){
+      location.replace("login.html");
+    }
+  </script>
+  <script language="JavaScript">
+    function darkmode() {
+  document.body.classList.add("dark-mode");
+    }
+    function nodark() {
+  document.body.classList.remove("dark-mode");
+    }
+ function mode(){
+  if (document.getElementById("demo5").checked) {
+    darkmode(); //if the checkbox is checked, run this funtion
+  } else {
+    nodark(); //else run this funtion
+  }
+ }
+  </script>
+</head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="../dist/img/Recrute.fr.png" alt="AdminLTELogo" >
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../index.html" class="nav-link">Accueil</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+                  <!-- Navbar Search -->
+                  <li class="nav-item">
+                    <a class="nav-link" data-widget="navbar-search" href="#" role="button">
+                      <i class="fas fa-search"></i>
+                    </a>
+                    <div class="navbar-search-block">
+                      <form class="form-inline">
+                        <div class="input-group input-group-sm">
+                          <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
+                          <div class="input-group-append">
+                            <button class="btn btn-navbar" type="submit">
+                              <i class="fas fa-search"></i>
+                            </button>
+                            <button class="btn btn-navbar" type="button" data-widget="navbar-search">
+                              <i class="fas fa-times"></i>
+                            </button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </li>
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span id="nbtotalhaut" class="badge badge-warning navbar-badge"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header"><span id="nbtotalmenu"></span> &ensp; Notifications</span> 
+          <div class="dropdown-divider"></div>
+          <a href="reclamation.html" class="dropdown-item">
+            <i class="fas fa-copy mr-2"></i><span id="nbrecla"></span> &ensp;new réclamations
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="contacts.html" class="dropdown-item">
+            <i class="fas fa-comments mr-2"></i> <span id="nbrecontact"></span>&ensp;new contacts
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="recruteurEnAttente.html" class="dropdown-item">
+            <i class="fas fa-building mr-2"></i> <span id="nbrecrutEA"></span>&ensp;récruteur en attente
+          </a>
+          <div class="dropdown-divider"></div>
+          <!--<div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <!-- mta dark-->
+        <input  type="checkbox" class="demo5 " onclick="mode()" id="demo5">
+        <label for="demo5"></label>
+    </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+ <!-- Main Sidebar Container -->
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="../index.html" class="brand-link">
+    <img src="../dist/img/Recrutelogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">Recrute.tn</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="" id="nvphoto" style="width:32px; height: 32px;" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="profileAdmin.html" class="d-block"id="nvprof"></a>
+      </div>
+    
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item ">
+          <a href="../index.html" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+             Tableau De Bord
+            </p>
+          </a> 
+        </li>
+        <li class="nav-item">
+          <a href="demandeur.html" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Demandeur D'emploi
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-building"></i>
+            <p>
+              Recruteur
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">2</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="recruteurEnAttente.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recruteur en attente</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="recruteurconfirmer.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recruteur confirmer</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="reclamation.html" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              Réclamation
+            </p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="offre.html" class="nav-link active">
+            <i class="nav-icon fas fa-briefcase"></i>
+            <p>
+              Offre
+            </p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="contacts.html" class="nav-link">
+            <i class="nav-icon fas fa-comments"></i>
+            <p>
+              Contacts
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              Gestionnaire
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">2</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="formajoutadmin.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Ajouter</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="listadmin.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lister</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+            <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+            </div>
+          <li class="nav-item">
+            <a href="#" onclick="quitter()" class="nav-link">
+              <i class="nav-icon fas fa-lock"></i>
+              <p>
+                Deconexion 
+              </p>
+            </a>
+          </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Profile Offre</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+              <li class="breadcrumb-item active"><a href="offre.html">Offre</a></li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <div class="row">
+        <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <!-- Widget: user widget style 1 -->
+          <!-- Add the bg color to the header using any of the bg-info nbedel colour profile classes -->
+          <div class="card card-success">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-md-3">
+                    <div class="card mb-2 bg-gradient-dark">
+                        <img id="photoOFF" class="card-img-top" src="" style="width:241,5px; height: 150px;" alt="Dist Photo 1">
+                        <div class="card-img-overlay d-flex flex-column justify-content-end">
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <br><br>
+                    <h2 id="nomOFF" class="text-center"></h2>
+                </div>
+              </div>
+        <div class="post"> </div> 
+            <div class="row">
+              <div class="col-sm-4 border-right">
+                <div class="description-block">
+                  <span class="description-header"><i class="fas fa-venus-mars"></i>&ensp;Sexe</span>
+                  <h5 id="sexeOFF" class="description-text"></h5>
+                </div>
+                <!-- /.description-block -->
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-4 border-right">
+                <div class="description-block">
+                  <span class="description-header"><i class="fas fa-map-marker-alt"></i>&ensp;Ville</span>
+                  <h5 id="villeOFF" class="description-text"></h5>
+                </div>
+                <!-- /.description-block -->
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-4">
+                <div class="description-block">
+                  <span class="description-header"><i class="fas fa-dollar-sign"></i>&ensp;Salaire Minimum</span>
+                  <h5 id="salOFF" class="description-text"></h5>
+                </div>
+                <!-- /.description-block -->
+              </div>
+
+              
+              <!-- /.col -->
+            </div>
+            <br>  
+            <div class="post"> </div>
+                <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-md-3">
+  
+              <!-- Profile Image -->
+              <div class="card card-primary card-outline">
+                <div class="card-body box-profile">
+                  <div class="text-center">
+                    <img id="logoENT" class="profile-user-img img-fluid img-bordered-sm" style="width:100px; height: 100px;" src="" alt="User profile picture">
+                  </div>
+  
+                  <h3 id="nomENT" class="profile-username text-center"></h3>
+  
+                  <ul class="list-group list-group-unbordered mb-3">
+                    <li class="list-group-item text-center">
+                        <i class="fas fa-envelope"></i>&ensp;<b>Email</b> 
+                      <br><a id="mailENT" href="" class="btn-link text-secondary"></a>
+                    </li>
+                    <li class="list-group-item text-center">
+                        <i class="fas fa-id-card"></i>&ensp;<b>Identifiant Unique</b> 
+                        <br><span id="identENT" class="text-secondary"></span>
+                    </li>
+                    <li class="list-group-item text-center">
+                        <i class="fas fa-phone-alt"></i>&ensp;<b>Téléphone</b> 
+                        <br><span id="numtelENT" class="text-secondary"></span>
+
+                  </li>
+                  <li class="list-group-item text-center">
+                    <i class="fas fa-calendar-alt"></i>&ensp;<b>Date Création </b> 
+                    <br><span id="datcreaOFF" class="text-secondary"></span>
+                </li>
+                  </ul>
+                  <div class="text-center">
+                    <i class="fas fa-calendar-alt"></i>&ensp;<b>Date d'expiration</b> 
+                    <br><span id="datexpiraOFF" class="text-secondary"></span>
+                </div>
+                </div>
+                <!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <div class="col-md-9">
+              <div class="card">
+                <div class="card-header p-2">
+                  <ul class="nav nav-pills">
+                    <li class="nav-item"><a class="nav-link active" href="#Informations" data-toggle="tab" id="abcd">Informations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Quiz" data-toggle="tab">Test</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Commentaires" data-toggle="tab" id="abc">Commentaires</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#Candidatures" data-toggle="tab">Candidatures</a></li>
+                  </ul>
+                </div><!-- /.card-header -->
+                <div class="card-body">
+                  <div class="tab-content">
+                    <div class="active tab-pane" id="Informations">
+                      <div class="card-body">
+                        <div class="tab-content">
+                            <div class="active tab-pane">
+                            <i class="fas fa-edit"></i>&ensp;&ensp;<b>Description de l'emploi</b>
+                            <ul class="list-group list-group-unbordered mb-3">
+                                
+                                <li class="list-group-item"> 
+                                    <p id="descOFF">
+                                 
+                                    </p>
+                                </li>
+                                <li class="list-group-item"><i class="fas fa-award"></i>&ensp;&ensp;<b>Mission de l'emploi</b> </li>
+                                <li class="list-group-item"> 
+                                <p id="missionOFF">
+                                </p>
+                                </li>
+                                <li class="list-group-item"><i class="fas fa-user-check"></i>&ensp;&ensp;<b>Profile recherché</b> </li>
+                                <li class="list-group-item"> 
+                                  <i class="fas fa-angle-right">&ensp; Langue</i>
+                                  <div id="lsitlangueOFF"></div>
+                                  <i class="fas fa-angle-right">&ensp; Compétence</i>
+                                  <div id="listcompOFF"></div>
+                                  <i class="fas fa-angle-right">&ensp; Diplôme</i>
+                                  <div id="listdipOFF"></div>
+                                  <i class="fas fa-angle-right">&ensp; Expérience</i>
+                                  <div id="listexpOFF"></div>
+                                  <i class="fas fa-angle-right">&ensp; Type de l'offre</i>
+                                  <div id="listTEOFF" class="row"></div>
+                                </li>
+                                <li class="list-group-item"><i class="fas fa-tasks"></i>&ensp;&ensp;<b>Mots clé</b></li>
+                                <li class="list-group-item"> 
+                                    <div id="listMCOFF" class="row">
+                                        
+                                    </div>
+                                </li>
+                                <li class="list-group-item"><i class="fas fa-star"></i>&ensp;&ensp;<b>Avantage</b></li>
+                                <li class="list-group-item"> 
+                                    <div id="listAVGOFF" class="row">
+                                      
+                                    </div>
+                                </li>
+                            </ul>
+                            </div>
+                            <!-- /.tab-pane -->  
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+                    </div>
+                    <div class="tab-pane" id="Quiz">
+                      <!-- The Quiz -->
+                        <div id="listQUESOFF" class="tab-content">
+
+                        </div>
+                        <!-- /.tab-content -->
+                    </div>
+                    <!-- /.tab-pane --> 
+                    <div class="tab-pane" id="Commentaires">
+                        <div id="groupeCOM" >
+                          
+                          </div>
+                    </div>
+                    <!-- /.tab-pane -->
+                    <div class="tab-pane" id="Candidatures">
+                        <div class="post">
+                            <section class="content">
+                                    <div class="row">
+                                      <div class="col-12 col-sm-6 col-md-12 d-flex align-items-stretch flex-column" id="listcandiOFF" >
+
+                                      </div>
+                                    </div>        
+                            </section>
+                              <!-- /.content -->
+                    </div>
+                    <!-- /.tab-pane -->
+                  </div>
+                  <!-- /.tab-content -->
+
+                              <!-- .modal -->
+                            <div class="modal fade" id="modal-demandeurCOM">
+                              <div class="row">
+                                <div class="col-sm-3"></div>
+                                <div class="col-sm-8">
+                                  <div class="modal-dialog modal-xl">
+                                    <div class="modal-content">
+                                      <div class="modal-header">
+                                        <h4 class="modal-title">Profile Demandeur D'emploi</h4>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="btnclose" >
+                                          <span aria-hidden="true" >&times;</span>
+                                        </button>
+                                      </div>
+                                      <div class="modal-body" >
+                                        <div class="embed-responsive ">
+                                          <section class="content">
+                                            <div class="container-fluid">
+                                                <div class="row">
+                                                    <div class="col-md-12">
+                                                    <div class="card">
+                                                      <div class="row">
+                                                        <div class="col-md-4">
+                                                  <!-- Profile Image -->
+                                                            <div class="card-body "> 
+                                                                <div class="text-center">
+                                                                    <img style="width: 100px; height: 100px;" id="photoDEM" class="profile-user-img img-fluid img-circle" src="" alt="User profile picture">
+                                                                </div>
+                                                
+                                                                <h3 id="nompreDEM" class="profile-username text-center"></h3>
+                                                                <p id="specDEM" class="text-muted text-center"></p>
+                                                
+                                                                <ul class="list-group list-group-unbordered mb-3">
+                                                                    <li class="list-group-item">
+                                                                        <i class="fas fa-address-book"></i>&ensp;&ensp;<b>Contact</b> 
+                                                                        <br>&ensp;&ensp;&ensp;<i class="fas fa-map-marked-alt"></i>&ensp;&ensp;<span id="paysvilleDEM"></span>
+                                    
+                                                                        <br>&ensp;&ensp;&ensp;<i class="fas fa-map-marker-alt"></i>&ensp;&ensp;<span id="adressecopDEM"></span> 
+                                    
+                                                                        <br>&ensp;&ensp;&ensp;<i class="fas fa-phone-alt"></i>&ensp;&ensp;<span id="numtelDEM"></span> 
+                                    
+                                                                        <br>&ensp;&ensp;&ensp;<i class="fas fa-envelope"></i>&ensp;&ensp; <a id="emailDEM" href="" class="btn-link text-secondary"></a>
+                                    
+                                                                        <br>&ensp;&ensp;&ensp;<i class="fab fa-linkedin"></i>&ensp;&ensp; <a id="urllinkDEM" href="" class="btn-link text-secondary"></a>
+                                    
+                                                                        <br>&ensp;&ensp;&ensp;<i class="fab fa-facebook"></i>&ensp;&ensp; <a id="urlfbDEM" href="" class="btn-link text-secondary"></a>
+                                                                    </li>
+                                                                    <li class="list-group-item">
+                                                                      <i class="fas fa-venus-mars"></i>&ensp;&ensp;<b>Sexe</b>
+                                                                      <ul>
+                                                                          <li id="sexeDEM"></li>
+                                                                      </ul> 
+                                                                    </li>
+                                                                    <li class="list-group-item">
+                                                                        <i class="fas fa-calendar-alt"></i>&ensp;&ensp;<b>Date de naissance</b>
+                                                                        <ul>
+                                                                            <li id="datnaisDEM"></li>
+                                                                        </ul> 
+                                                                    </li>
+                                                                    <li class="list-group-item">
+                                                                        <i class="fas fa-car"></i>&ensp;&ensp;<b>Permis de conduire</b>
+                                                                        <ul>
+                                                                            <li id="listpermis"> <span id="permisDEM"> </span> <span id="typepermisDEM"></span> </li>
+                                                                        </ul> 
+                                                                    </li>
+                                                                <li class="list-group-item">
+                                                                    <i class="fas fa-medal"></i>&ensp;&ensp;<b>Qualité</b>
+                                                                    <ul id="qualiteDEM">
+                                                                    </ul> 
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <i class="fas fa-book "></i>&ensp;&ensp; <b>Langues</b>
+                                                                    <ul id="listlangueDEM">
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                    <i class="fas fa-star"></i>&ensp;&ensp; <b>Centres D'intérêts</b>
+                                                                    <ul id="centreintDEM">
+                                                                    </ul>
+                                                                </li>
+                                                                <li class="list-group-item">
+                                                                  <i class="fas fa-calendar-alt"></i>&ensp;&ensp; <b>Date de création</b>
+                                                                  <ul>
+                                                                    <li id="datecreaDEM"></li>
+                                                                </ul> 
+                                                              </li>
+                                                              <li class="list-group-item">
+                                                                <i class="fas fa-calendar-alt"></i>&ensp;&ensp; <b>Date mise à jour</b>
+                                                                <ul>
+                                                                  <li id="datemsjDEM"></li>
+                                                              </ul> 
+                                                            </li>
+                                                                </ul>
+                                                            <!-- /.card -->
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                        </div>
+                                                        <!-- /.col -->
+                                                        <div class="col-md-8">
+                                                          <blockquote>
+                                                            <div class="card-body">
+                                                                <div class="tab-content">
+                                                                    <div class="active tab-pane">
+                                                                    <i class="fas fa-user"></i>&ensp;&ensp;<b>Profile</b>
+                                                                    <ul class="list-group list-group-unbordered mb-3">
+                                                                        
+                                                                        <li id="listprofil" class="list-group-item"> 
+                                                                        </li>
+                                                                        <li class="list-group-item"><i class="fas fa-award"></i>&ensp;&ensp;<b>Expérience Professionnelle</b> </li>
+                                                                        <li id="listEXP" class="list-group-item">
+                                                                        </li>
+                                                                        <li class="list-group-item"><i class="fas fa-user-graduate"></i>&ensp;&ensp;<b>Diplôme</b> </li>
+                                                                        <li id="listDIP" class="list-group-item">
+                                                                        </li>
+                                                                        <li class="list-group-item"><i class="fas fa-graduation-cap"></i>&ensp;&ensp;<b>Formation</b> </li>
+                                                                        <li id="listFOR" class="list-group-item">
+                                                                        </li>
+                                                                        <li class="list-group-item"><i class="fas fa-certificate"></i>&ensp;&ensp;<b>Certifications</b></li>
+                                                                        <li id="listCERT" class="list-group-item"> 
+                                                                        </li>
+                                                                        <li class="list-group-item"><i class="fas fa-trophy"></i>&ensp;&ensp;<b>Projets</b></li>
+                                                                        <li id="listPROJ" class="list-group-item">
+                                                                        </li>
+                                                                        <li class="list-group-item"><i class="fas fa-puzzle-piece"></i>&ensp;&ensp;<b>Vie Associative</b></li>
+                                                                        <li id="listVA" class="list-group-item"> 
+                                                                        </li>
+                                                                        <li class="list-group-item"><i class="fas fa-tasks"></i>&ensp;&ensp;<b>Compétences</b></li>
+                                                                        <li id="pasCOMP" class="list-group-item"> 
+                                                                           
+                                                                        </li>
+                                                                    </ul> 
+                                                                    </div>
+                                                                    <!-- /.tab-pane -->  
+                                                                </div>
+                                                                <!-- /.tab-content -->
+                                                            </div>
+                                                            <!-- /.card-body -->
+                                                          </blockquote>
+                                                        </div>
+                                                        <!-- /.col -->
+                                                    </div>
+                                                    <!-- /.row -->
+                                                    </div>
+                                                    </div>
+                                                    <!-- /.col -->
+                                                </div>
+                                                <!-- /.row -->
+                                            </div>
+                                            <!-- /.container-fluid -->
+                                        </section>
+                                        <!-- /.content -->
+                                        </div>
+                                      </div>
+                                    <!-- /.modal-content -->
+                                  </div>
+                                  <!-- /.modal-dialog -->
+                                </div>
+                                </div>
+                              </div>
+                              
+                            <!-- /.modal -->
+                          </div>
+                           <!-- .modal -->
+                           <div class="modal fade" id="modal-demandeurCAND">
+                            <div class="row">
+                              <div class="col-sm-3"></div>
+                              <div class="col-sm-8">
+                                <div class="modal-dialog modal-xl">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h4 class="modal-title">Profile Demandeur D'emploi</h4>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="closeModal">
+                                        <span aria-hidden="true" >&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body" >
+                                      <div class="embed-responsive ">
+                                        <section class="content">
+                                          <div class="container-fluid">
+                                              <div class="row">
+                                                  <div class="col-md-12">
+                                                  <div class="card">
+                                                    <div class="row">
+                                                      <div class="col-md-4">
+                                                <!-- Profile Image -->
+                                                          <div class="card-body "> 
+                                                              <div class="text-center">
+                                                                  <img style="width: 100px; height: 100px;" id="photoDEM1" class="profile-user-img img-fluid img-circle" src="" alt="User profile picture">
+                                                              </div>
+                                              
+                                                              <h3 id="nompreDEM1" class="profile-username text-center"></h3>
+                                                              <p id="specDEM1" class="text-muted text-center"></p>
+                                              
+                                                              <ul class="list-group list-group-unbordered mb-3">
+                                                                  <li class="list-group-item">
+                                                                      <i class="fas fa-address-book"></i>&ensp;&ensp;<b>Contact</b> 
+                                                                      <br>&ensp;&ensp;&ensp;<i class="fas fa-map-marked-alt"></i>&ensp;&ensp;<span id="paysvilleDEM1"></span>
+                                  
+                                                                      <br>&ensp;&ensp;&ensp;<i class="fas fa-map-marker-alt"></i>&ensp;&ensp;<span id="adressecopDEM1"></span> 
+                                  
+                                                                      <br>&ensp;&ensp;&ensp;<i class="fas fa-phone-alt"></i>&ensp;&ensp;<span id="numtelDEM1"></span> 
+                                  
+                                                                      <br>&ensp;&ensp;&ensp;<i class="fas fa-envelope"></i>&ensp;&ensp; <a id="emailDEM1" href="" class="btn-link text-secondary"></a>
+                                  
+                                                                      <br>&ensp;&ensp;&ensp;<i class="fab fa-linkedin"></i>&ensp;&ensp; <a id="urllinkDEM1" href="" class="btn-link text-secondary"></a>
+                                  
+                                                                      <br>&ensp;&ensp;&ensp;<i class="fab fa-facebook"></i>&ensp;&ensp; <a id="urlfbDEM1" href="" class="btn-link text-secondary"></a>
+                                                                  </li>
+                                                                  <li class="list-group-item">
+                                                                    <i class="fas fa-venus-mars"></i>&ensp;&ensp;<b>Sexe</b>
+                                                                    <ul>
+                                                                        <li id="sexeDEM1"></li>
+                                                                    </ul> 
+                                                                  </li>
+                                                                  <li class="list-group-item">
+                                                                      <i class="fas fa-calendar-alt"></i>&ensp;&ensp;<b>Date de naissance</b>
+                                                                      <ul>
+                                                                          <li id="datnaisDEM1"></li>
+                                                                      </ul> 
+                                                                  </li>
+                                                                  <li class="list-group-item">
+                                                                      <i class="fas fa-car"></i>&ensp;&ensp;<b>Permis de conduire</b>
+                                                                      <ul>
+                                                                          <li id="listpermis1">  </li>
+                                                                      </ul> 
+                                                                  </li>
+                                                              <li class="list-group-item">
+                                                                  <i class="fas fa-medal"></i>&ensp;&ensp;<b>Qualité</b>
+                                                                  <ul id="qualiteDEM1">
+                                                                  </ul> 
+                                                              </li>
+                                                              <li class="list-group-item">
+                                                                  <i class="fas fa-book "></i>&ensp;&ensp; <b>Langues</b>
+                                                                  <ul id="listlangueDEM1">
+                                                                  </ul>
+                                                              </li>
+                                                              <li class="list-group-item">
+                                                                  <i class="fas fa-star"></i>&ensp;&ensp; <b>Centres D'intérêts</b>
+                                                                  <ul id="centreintDEM1">
+                                                                  </ul>
+                                                              </li>
+                                                              <li class="list-group-item">
+                                                                <i class="fas fa-calendar-alt"></i>&ensp;&ensp; <b>Date de création</b>
+                                                                <ul>
+                                                                  <li id="datecreaDEM1"></li>
+                                                              </ul> 
+                                                            </li>
+                                                            <li class="list-group-item">
+                                                              <i class="fas fa-calendar-alt"></i>&ensp;&ensp; <b>Date mise à jour</b>
+                                                              <ul>
+                                                                <li id="datemsjDEM1"></li>
+                                                            </ul> 
+                                                          </li>
+                                                              </ul>
+                                                          <!-- /.card -->
+                                                          </div>
+                                                          <!-- /.card-body -->
+                                                      </div>
+                                                      <!-- /.col -->
+                                                      <div class="col-md-8">
+                                                        <blockquote>
+                                                          <div class="card-body">
+                                                              <div class="tab-content">
+                                                                  <div class="active tab-pane">
+                                                                  <i class="fas fa-user"></i>&ensp;&ensp;<b>Profile</b>
+                                                                  <ul class="list-group list-group-unbordered mb-3">
+                                                                      
+                                                                      <li id="listprofil1" class="list-group-item"> 
+                                                                      </li>
+                                                                      <li class="list-group-item"><i class="fas fa-award"></i>&ensp;&ensp;<b>Expérience Professionnelle</b> </li>
+                                                                      <li id="listEXP1" class="list-group-item">
+                                                                      </li>
+                                                                      <li class="list-group-item"><i class="fas fa-user-graduate"></i>&ensp;&ensp;<b>Diplôme</b> </li>
+                                                                      <li id="listDIP1" class="list-group-item">
+                                                                      </li>
+                                                                      <li class="list-group-item"><i class="fas fa-graduation-cap"></i>&ensp;&ensp;<b>Formation</b> </li>
+                                                                      <li id="listFOR1" class="list-group-item">
+                                                                      </li>
+                                                                      <li class="list-group-item"><i class="fas fa-certificate"></i>&ensp;&ensp;<b>Certifications</b></li>
+                                                                      <li id="listCERT1" class="list-group-item"> 
+                                                                      </li>
+                                                                      <li class="list-group-item"><i class="fas fa-trophy"></i>&ensp;&ensp;<b>Projets</b></li>
+                                                                      <li id="listPROJ1" class="list-group-item">
+                                                                      </li>
+                                                                      <li class="list-group-item"><i class="fas fa-puzzle-piece"></i>&ensp;&ensp;<b>Vie Associative</b></li>
+                                                                      <li id="listVA1" class="list-group-item"> 
+                                                                      </li>
+                                                                      <li class="list-group-item"><i class="fas fa-tasks"></i>&ensp;&ensp;<b>Compétences</b></li>
+                                                                      <li id="pasCOMP1" class="list-group-item"> 
+                                                                          
+                                                                      </li>
+                                                                  </ul> 
+                                                                  </div>
+                                                                  <!-- /.tab-pane -->  
+                                                              </div>
+                                                              <!-- /.tab-content -->
+                                                          </div>
+                                                          <!-- /.card-body -->
+                                                        </blockquote>
+                                                      </div>
+                                                      <!-- /.col -->
+                                                  </div>
+                                                  <!-- /.row -->
+                                                  </div>
+                                                  </div>
+                                                  <!-- /.col -->
+                                              </div>
+                                              <!-- /.row -->
+                                          </div>
+                                          <!-- /.container-fluid -->
+                                      </section>
+                                      <!-- /.content -->
+                                      </div>
+                                    </div>
+                                  <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                              </div>
+                              </div>
+                            </div>
+                            
+                          <!-- /.modal -->
+                        </div>
+                         <!-- .modal -->
+                           <div class="modal fade" id="modal-recruteur">
+                            <div class="row">
+                              <div class="col-sm-3"></div>
+                              <div class="col-sm-8">
+                                <div class="modal-dialog modal-xl">
+                                  <div class="modal-content">
+                                    <div class="modal-header">
+                                      <h4 class="modal-title">Profile Recruteur</h4>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close" >
+                                        <span aria-hidden="true" >&times;</span>
+                                      </button>
+                                    </div>
+                                    <div class="modal-body" >
+                                      <div class="embed-responsive ">
+                                        <div class="row">
+                                        <div class="col-sm-12">
+                                          <!-- Widget: user widget style 1 -->
+                                          <div class="card card-widget widget-user">
+                                            <!-- Add the bg color to the header using any of the bg-info nbedel colour profile classes -->
+                                            <div class="widget-user-header badge-success ">
+                                              <h4 class="widget-user-desc" id="NOM_ENT" ></h4>
+                                              <h3 class="widget-user-username" id="SEC_DACT_ENT"></h3>
+                                             
+                                            </div>
+                                            <div class="widget-user-image">
+                                              <img class="img-circle elevation-2" src="" id="LOGO_ENT" style="width:100px; height: 100px;" alt="User Avatar">
+                                            </div>
+                                            <div class="card-footer">
+                                              <div class="row">
+                                                <div class="col-sm-4 border-right">
+                                                  <div class="description-block">
+                                                    <span class="description-text">Identifiant Unique</span>
+                                                    <h5 class="description-header" id="IDENT_UNQ_ENT"></h5>
+                                                  </div>
+                                                  <!-- /.description-block -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col-sm-4 border-right">
+                                                  <div class="description-block">
+                                                    <span class="description-text">Email</span>
+                                                    <b><a href="" class="btn-link text-secondary" id="EMAIL_ENTh"><h5 class="description-header" id="EMAIL_ENT"></h5></a></b>
+                                                  </div>
+                                                  <!-- /.description-block -->
+                                                </div>
+                                                <!-- /.col -->
+                                                <div class="col-sm-4">
+                                                  <div class="description-block">
+                                                    <span class="description-text">Numéro téléphone</span>
+                                                    <h5 class="description-header" id="NUM_TEL_ENT"></h5>
+                                                  </div>
+                                                  <!-- /.description-block -->
+                                                </div>
+                                  
+                                                
+                                                <!-- /.col -->
+                                              </div>
+                                              <br>
+                                                  
+                                              <div class="post"> </div>
+                                                  <div class="card-body">
+                                                      <div class="row">
+                                                        <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+                                                          <div class="row">
+                                                            <div class="col-12 col-sm-4">
+                                                              <div class="info-box bg-light">
+                                                                <div class="info-box-content">
+                                                                  <span class="info-box-text text-center mb-1 "><h5>Pays d'origine</h5></span>
+                                                                  <span class="info-box-number text-center text-muted mb-0" id="PAYS_ORG_ENT"></span>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                              <div class="info-box bg-light">
+                                                                <div class="info-box-content">
+                                                                  <span class="info-box-text text-center mb-1"><h5>Total des salariés</h5></span>
+                                                                  <span class="info-box-number text-center text-muted mb-0"id="NB_SAL_ENT" ></span>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                            <div class="col-12 col-sm-4">
+                                                              <div class="info-box bg-light">
+                                                                <div class="info-box-content">
+                                                                  <span class="info-box-text text-center mb-1"><h5>Date de création</h5></span>
+                                                                  <span class="info-box-number text-center text-muted mb-0"id="DAT_CREA_ENT"></span>
+                                                                </div>
+                                                              </div>
+                                                            </div>
+                                                          </div>
+                                                          <div class="row">
+                                                            <div class="col-12">
+                                                              <i class="fas fa-user"></i>&ensp;&ensp; <b>Profile</b>
+                                                              <div class="post"></div>  
+                                                              <div class="post">
+                                                                  <!-- /.user-block -->
+                                                                  <p id="DESC_ENT"></p>
+                                                                </div>
+                                            
+                                                                
+                                                                
+                                                            </div>
+                                                          </div>
+                                                        </div>
+                                                        <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+                                                          <div class="info-box bg-light">
+                                                            <div class="info-box-content">
+                                                              <h5 class="mt-1 ">Site Web</h5>
+                                                              <ul class="list-unstyled">
+                                                                <li>
+                                                                  <a href=""id="URL_WEB_ENT" class="btn-link text-secondary"><i class="fas fa-globe"></i>&ensp;&ensp; Site Web</a>
+                                                                </li>
+                                                              </ul>
+                                                              <h5 class="mt-1 ">Linkedin</h5>
+                                                              <ul class="list-unstyled">
+                                                                <li>
+                                                                  <a href=""id="URL_LINK_ENT" class="btn-link text-secondary"><i class="fas fa-globe"></i>&ensp;&ensp; Linkedin</a>
+                                                                </li>
+                                                              </ul>
+                                                              <h5 class="mt-1 ">Facebook</h5>
+                                                              <ul class="list-unstyled">
+                                                                <li>
+                                                                  <a href=""id="URL_FB_ENT" class="btn-link text-secondary"><i class="fas fa-globe"></i>&ensp;&ensp; Facebook</a>
+                                                                </li>
+                                                              </ul>
+                                                             
+                                                              <h5 class="mt-1 ">Responsable sur l'entreprise</h5>
+                                                              <ul class="list-unstyled">
+                                                                <li>
+                                                                  <a href=""  class="btn-link text-secondary" id="EMAIL_RECh"><i class="fas fa-envelope"></i>&ensp;&ensp; <span id="EMAIL_REC"></span> </a>
+                                                                </li>
+                                                              </ul>
+                                                              <h5 class="mt-1 ">Adresse</h5>
+                                                              <ul class="list-unstyled">
+                                                                <li>
+                                                                    <a href="#" class="btn-link text-secondary"><i class="fas fa-map-marker-alt"></i>&ensp;&ensp; <span id="ADRESSE_ENT"></span></a>
+                                                                </li>
+                                                              </ul>
+                                                              <h5 class="mt-1 ">Horaires </h5>
+                                                              <ul class="list-unstyled" id="horaireconfcom">
+                                                              </ul>
+                                                            </div>
+                                                          </div>
+                                                         
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                              <!-- /.row -->
+                                            </div>
+                                          
+                                          <!-- /.widget-user -->
+                                        
+                                    </div>
+                                      </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  <!-- /.modal-content -->
+                                </div>
+                                <!-- /.modal-dialog -->
+                              </div>
+                              </div>
+                            </div>
+                            
+                          <!-- /.modal -->
+                        </div>
+                  
+                </div><!-- /.card-body -->
+              </div>
+              <!-- /.card -->
+            </div>
+            <!-- /.col -->
+            <form>
+              <div class="card-body ">
+                <a class="btn btn-danger  float-right" href="#" onClick="archiveoffre()">
+                  <i class="fas fa-archive"></i>    
+                </a>
+                <a class="btn btn-primary float-right " href="offre.html" style="margin-right: 5px;" >
+                  <i class="fas fa-less-than"></i>
+                </a> 
+              </div>
+            </form>
+          </div>
+          <!-- /.row -->
+        
+        </div>
+        </div><!-- /.container-fluid -->
+      </section>
+      <!-- /.content -->
+            </div>
+    <!-- /.content-wrapper -->
+
+          </div>
+      </div>
+    </div>
+  </div>  
+
+    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+
+
+  <footer class="main-footer">
+
+    <strong>&copy; 2021-2022 <a href="../index.html">Recrute</a>.</strong>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!--alert-->
+<script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../plugins/ekko-lightbox/ekko-lightbox.min.js"></script>
+<script src="../plugins/filterizr/jquery.filterizr.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<script src="../dist/js/notific.js"></script>
+<!--mail-->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+
+<script>
+ var liste =["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+  var url_string = window.location.href ;
+  var url = new URL(url_string); 
+  var c = url.searchParams.get("id"); 
+    console.log(c);
+    // Post a user
+    var url3 = "http://192.168.43.96:3000/offres/" + c ;
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open("GET", url3, true);
+
+    xhr3.onload = function () {
+      var data = JSON.parse(xhr3.responseText);
+      if (xhr3.readyState == 4 && xhr3.status == "200") {
+          document.getElementById("photoOFF").src = data.PHOTO_OFF;
+          document.getElementById("nomOFF").innerHTML = data.NOM_OFF ;
+          var request1 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request1.open('GET', "http://192.168.43.96:3000/recruteurs", true);
+              request1.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data1 = JSON.parse(this.response);
+                console.log(data1);
+                data1.forEach(j => {
+                  if(j._id == data.ID_RECRUTEUR){
+                    document.getElementById("villeOFF").innerHTML = j.VILLE_ENT ;
+                    document.getElementById("logoENT").src = j.LOGO_ENT;
+                    document.getElementById("nomENT").innerHTML = j.NOM_ENT;
+                    document.getElementById("mailENT").innerHTML = j.EMAIL_ENT;
+                    document.getElementById("mailENT").href="mailto:"+j.EMAIL_ENT;
+                    document.getElementById("identENT").innerHTML = j.IDENT_UNQ_ENT;
+                    document.getElementById("numtelENT").innerHTML = j.NUM_TEL_ENT;
+                  }
+                })
+              }
+              // Send request
+          request1.send();
+          document.getElementById("salOFF").innerHTML = data.SAL_MIN_OFF;
+          var datcre = data.createdAt.split('T');
+          var spdatcre = datcre[0].split('-');
+          if(spdatcre[1]<10){
+            spdatcre[1]=spdatcre[1][1];
+          }
+          document.getElementById("datcreaOFF").innerHTML = spdatcre[2]+' '+liste[spdatcre[1]-1]+' '+spdatcre[0];
+          var datexp = data.DAT_EXPIRA_OFF.split('-');
+          if(datexp[1]<10){
+            datexp[1]=datexp[1][1];
+          }
+          document.getElementById("datexpiraOFF").innerHTML = datexp[2]+' '+liste[datexp[1]-1]+' '+datexp[0];
+          document.getElementById("descOFF").innerHTML = data.DESC_OFF;
+          document.getElementById("missionOFF").innerHTML = data.MISSION_OFF;
+          document.getElementById("sexeOFF").innerHTML = data.SEXE_CAND_OFF;
+          var request2 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request2.open('GET', "http://192.168.43.96:3000/langueOffres", true);
+              request2.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data2 = JSON.parse(this.response);
+                console.log(data2);
+                var ee = document.getElementById("lsitlangueOFF");
+                ee.innerHTML="";
+                var nb=0;
+                data2.forEach(j => {
+                  if(j.ID_OFFRE==c){
+                      var request3 = new XMLHttpRequest();
+                      request3.open('GET', "http://192.168.43.96:3000/langues/"+j.ID_LANGUE, true);
+                      request3.onload = function()
+                      {
+                        var data3 = JSON.parse(this.response);
+                        var num=j.NIV_LANG_OFF;
+                        if(num==="1"){  
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data3.NOM_LANG+`</span>  :  
+                                    <span class="fas fa-star checked1" id="star11"></span>
+                                    <span class="far fa-star checked1" id="star22"></span>
+                                    <span class="far fa-star checked1" id="star33"></span>
+                                    <span class="far fa-star checked1" id="star44"></span>
+                                    <span class="far fa-star checked1" id="star55"></span>
+
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="2"){  
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data3.NOM_LANG+`</span>  :  
+                                    <span class="fas fa-star checked1" id="star11"></span>
+                                    <span class="fas fa-star checked1" id="star22"></span>
+                                    <span class="far fa-star checked1" id="star33"></span>
+                                    <span class="far fa-star checked1" id="star44"></span>
+                                    <span class="far fa-star checked1" id="star55"></span>
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }  
+                        if(num==="3"){  
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data3.NOM_LANG+`</span>  :  
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="fas fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="4"){  
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data3.NOM_LANG+`</span>  :  
+                                  <span class="fas fa-star checked1 " id="star11"></span>
+                                  <span class="fas fa-star checked1  " id="star22"></span>
+                                  <span class="fas fa-star checked1  " id="star33"></span>
+                                  <span class="fas fa-star checked1 " id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="5"){  
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data3.NOM_LANG+`</span>  :  
+                                    <span class="fas fa-star checked1 " id="star11"></span>
+                                    <span class="fas fa-star checked1 " id="star22"></span>
+                                    <span class="fas fa-star checked1 " id="star33"></span>
+                                    <span class="fas fa-star checked1 " id="star44"></span>
+                                    <span class="fas fa-star checked1 " id="star55"></span>
+
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        } 
+                      }
+                      request3.send();
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var sp = document.createElement("span");
+                    sp.innerText = "Pas de langue";
+                    document.getElementById('lsitlangueOFF').appendChild(sp);
+                }
+          }
+          request2.send();
+          var request4 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request4.open('GET', "http://192.168.43.96:3000/competenceoffres", true);
+              request4.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data4 = JSON.parse(this.response);
+                console.log(data4);
+                var ee = document.getElementById("listcompOFF");
+                ee.innerHTML="";
+                var nb=0;
+                data4.forEach(j => {
+                  if(j.ID_OFFRE==c){
+                      var request5 = new XMLHttpRequest();
+                      request5.open('GET', "http://192.168.43.96:3000/competences/"+j.ID_COMPETENCE, true);
+                      request5.onload = function()
+                      {
+                        var data5 = JSON.parse(this.response);
+                        var num=j.NIV_COMP_OFF;
+                        if(num==="1"){
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data5.NOM_COMP+` </span> :  
+                                    <span class="fas fa-star checked1" id="star11"></span>
+                                    <span class="far fa-star checked1" id="star22"></span>
+                                    <span class="far fa-star checked1" id="star33"></span>
+                                    <span class="far fa-star checked1" id="star44"></span>
+                                    <span class="far fa-star checked1" id="star55"></span>
+
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="2"){
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data5.NOM_COMP+` </span> :  
+                                    <span class="fas fa-star checked1" id="star11"></span>
+                                    <span class="fas fa-star checked1" id="star22"></span>
+                                    <span class="far fa-star checked1" id="star33"></span>
+                                    <span class="far fa-star checked1" id="star44"></span>
+                                    <span class="far fa-star checked1" id="star55"></span>
+                                 
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="3"){
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data5.NOM_COMP+` </span> :  
+                                    <span class="fas fa-star checked1" id="star11"></span>
+                                    <span class="fas fa-star checked1" id="star22"></span>
+                                    <span class="fas fa-star checked1" id="star33"></span>
+                                    <span class="far fa-star checked1" id="star44"></span>
+                                    <span class="far fa-star checked1" id="star55"></span>
+                                  
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="4"){
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data5.NOM_COMP+` </span> :  
+                                    <span class="fas fa-star checked1 " id="star11"></span>
+                                    <span class="fas fa-star checked1  " id="star22"></span>
+                                    <span class="fas fa-star checked1  " id="star33"></span>
+                                    <span class="fas fa-star checked1 " id="star44"></span>
+                                    <span class="far fa-star checked1" id="star55"></span>
+
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }
+                        if(num==="5"){
+                          ch =`<div class='col-sm-12'>
+                                  <div class='info-box-content '>
+                                    &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data5.NOM_COMP+` </span> :  
+                                    <span class="fas fa-star checked1 " id="star11"></span>
+                                    <span class="fas fa-star checked1 " id="star22"></span>
+                                    <span class="fas fa-star checked1 " id="star33"></span>
+                                    <span class="fas fa-star checked1 " id="star44"></span>
+                                    <span class="fas fa-star checked1 " id="star55"></span>
+
+                                  </div>
+                                </div>`;
+                          ee.insertAdjacentHTML('beforeend',ch); 
+                        }               
+                      }
+                      request5.send();
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var sp = document.createElement("span");
+                    sp.innerText = "Pas de compétence";
+                    document.getElementById('listcompOFF').appendChild(sp);
+                }
+          }
+          request4.send();
+          var request6 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request6.open('GET', "http://192.168.43.96:3000/etudeexiges", true);
+              request6.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data6 = JSON.parse(this.response);
+                console.log(data6);
+                var ee = document.getElementById("listdipOFF");
+                ee.innerHTML="";
+                var nb=0;
+                data6.forEach(j => {
+                  if(j.ID_OFFRE==c){
+                      var request7 = new XMLHttpRequest();
+                      request7.open('GET', "http://192.168.43.96:3000/diplomes/"+j.ID_DIPLOME, true);
+                      request7.onload = function()
+                      {
+                        var data7 = JSON.parse(this.response);
+                        ch =`<div class='col-sm-12'>
+                                <div class='info-box-content '>
+                                  &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+data7.TYPE_DIP+`  :  `+j.SPECIA_DEM_OFF+`</span>
+                                </div>
+                              </div>`;
+                        ee.insertAdjacentHTML('beforeend',ch);    
+                      }
+                      request7.send();
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var sp = document.createElement("span");
+                    sp.innerText = "Pas de diplôme";
+                    document.getElementById('listdipOFF').appendChild(sp);
+                }
+          }
+          request6.send();
+
+          var request17 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request17.open('GET', "http://192.168.43.96:3000/experienceExiges", true);
+              request17.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data17 = JSON.parse(this.response);
+                console.log(data17);
+                var ee = document.getElementById("listexpOFF");
+                ee.innerHTML="";
+                var nb=0;
+                data17.forEach(j => {
+                  if(j.ID_OFFRE==c){
+                      ch =`<div class='col-sm-12'>
+                              <div class='info-box-content '>
+                                  &ensp;&ensp;&ensp;&ensp;<span class='info-box-text'>`+j.NB_EXP_OFF+` en:  `+j.NOM_EXP_OFF+`</span>
+                              </div>
+                          </div>`;
+                      ee.insertAdjacentHTML('beforeend',ch);  
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var sp = document.createElement("span");
+                    sp.innerText = "Pas d'expérience";
+                    document.getElementById('listexpOFF').appendChild(sp);
+                }
+          }
+          request17.send();
+
+          var eeTE = document.getElementById("listTEOFF");
+          eeTE.innerHTML="";
+          var nbTE=0;
+            var tabTE = data.NOM_TE_OFF.split('/');
+          for(var j =1;j<tabTE.length;j++){
+            chTE =`<div class='col-sm-4'>
+                    <div class='info-box-content text-center'>
+                      <span class='info-box-text'>`+tabTE[j]+`</span>
+                    </div>
+                  </div>`;
+            eeTE.insertAdjacentHTML('beforeend',chTE); 
+            nbTE +=1;
+          }
+          if (nbTE == 0){
+            var spTE = document.createElement("span");
+            spTE.innerText = "Pas de Type d'emploi";
+            document.getElementById('listTEOFF').innerHTML = spTE;
+          }
+
+          
+          var eeMC = document.getElementById("listMCOFF");
+          eeMC.innerHTML="";
+          var nbMC=0;
+          var tabMC = data.NOM_MC_OFF.split('/');
+          for(var j =1;j<tabMC.length;j++){
+            chMC =`<div class='col-sm-4'>
+                    <div class='info-box-content text-center'>
+                      <span class='info-box-text'>`+tabMC[j]+`</span>
+                    </div>
+                  </div>`;
+            eeMC.insertAdjacentHTML('beforeend',chMC); 
+            nbMC +=1;
+          }
+          if (nbMC == 0){
+            var spMC = document.createElement("span");
+            spMC.innerText = "Pas de mots clé";
+            document.getElementById('listMCOFF').innerHTML = spMC;
+          }
+
+          var eeAVG = document.getElementById("listAVGOFF");
+          eeAVG.innerHTML="";
+          var nbAVG=0;
+            var tabAVG = data.NOM_AVG_OFF.split('/');
+            for(var j=1;j<tabAVG.length;j++){
+            chAVG =`<div class='col-sm-4'>
+                    <div class='info-box-content text-center'>
+                      <span class='info-box-text'>`+tabAVG[j]+`</span>
+                    </div>
+                  </div>`;
+            eeAVG.insertAdjacentHTML('beforeend',chAVG); 
+            nbAVG +=1;
+          } 
+          if (nbAVG == 0){
+            var spAVG = document.createElement("span");
+            spAVG.innerText = "Pas de benefice";
+            document.getElementById('listAVGOFF').innerHTML = spAVG;
+          }
+
+            var request8 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request8.open('GET', "http://192.168.43.96:3000/tests", true);
+              request8.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data8 = JSON.parse(this.response);
+                console.log(data8);
+                var ee = document.getElementById("listQUESOFF");
+                ee.innerHTML="";
+                var nb=0;
+                data8.forEach(j => {
+                  if(j.ID_OFFRE==c){
+                    var request16 = new XMLHttpRequest();
+                    request16.open('GET', "http://192.168.43.96:3000/questions", true);
+                    request16.onload = function() {
+                      var data16 = JSON.parse(this.response);
+                      console.log(data16);
+                      data16.forEach(i => {
+                        if (j._id==i.ID_TEST){
+                          ch =`<i class="fas fa-question-circle"></i>&ensp;&ensp;<b >`+i.ENONCE_QUE+`</b>
+                                        <ul class="list-group list-group-unbordered mb-3">
+                                          <li class="list-group-item"> 
+                                              <div class="row">
+                                                  <div class="col-sm-1"></div>
+                                                  <div class="col-sm-10">
+                                                      <ul>
+                                                          <li>`+i.REP_T+`&ensp; <i class="fas fa-check text-success"></i></li>
+                                                          <li>`+i.REP_F1+`&ensp; <i class="fas fa-times text-danger"></i></li>
+                                                          <li>`+i.REP_F2+`&ensp; <i class="fas fa-times text-danger"></i></li>
+                                                      </ul>
+                                                  </div>
+                                              </div>
+                                          </li>
+                                        </ul>`;
+                              ee.insertAdjacentHTML('beforeend',ch);
+                        }
+                      })
+                    }
+                    request16.send();
+                    nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de question";
+                    document.getElementById('listQUESOFF').appendChild(pp);
+                }
+              }
+              // Send request
+          request8.send();
+
+          var request9 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request9.open('GET', "http://192.168.43.96:3000/commentaires", true);
+              request9.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data9 = JSON.parse(this.response);
+                console.log(data9);
+                var ee = document.getElementById("groupeCOM");
+                ee.innerHTML="";
+                var nb=0;
+                data9.forEach(j => {
+                  if(j.ID_OFFRE==c){
+                    var datenv = j.createdAt.split('T');
+                    var datenvsp = datenv[0].split('-');
+                    var timenv = datenv[1].split('.');
+                    if(datenvsp[1]<10){
+                        datenvsp[1]=datenvsp[1][1];
+                    }
+                    if(j.ID_DEMANDEUR==""){
+                      var request10 = new XMLHttpRequest();
+                      request10.open('GET', "http://192.168.43.96:3000/recruteurs/"+j.ID_RECRUTEUR, true);
+                      request10.onload = function()
+                      {
+                        var data10 = JSON.parse(this.response);
+                          ch =`<div class="post">
+                                <div class="user-block">
+                                  <img class="img-circle img-bordered-sm" src="`+data10.LOGO_ENT+`" alt="user image">
+                                  <span class="username">
+                                    <a href="#" data-toggle="modal" data-target="#modal-recruteur" onclick="alertrec('`+j.ID_RECRUTEUR+`')">`+data10.NOM_ENT+`</a>
+                                  </span>
+                                  <span id="datenvCOM" class="description">`+datenvsp[2]+` `+liste[datenvsp[1]-1]+` `+datenvsp[0]+` à `+timenv[0]+`</span>
+                                </div>
+                                <!-- /.user-block -->
+                                <p >`+j.DESC_COM+`</p>
+                              </div>`;
+                        ee.insertAdjacentHTML('beforeend',ch);
+
+                      }
+                      request10.send();
+                      nb+=1;
+                    }
+                    if(j.ID_RECRUTEUR==""){
+                      var request11 = new XMLHttpRequest();
+                      request11.open('GET', "http://192.168.43.96:3000/demandeurs/"+j.ID_DEMANDEUR, true);
+                      request11.onload = function()
+                      {
+                        var data11 = JSON.parse(this.response);
+                          ch =`<div class="post">
+                                <div class="user-block">
+                                  <img class="img-circle img-bordered-sm" src="`+data11.PHOTO_DEM+`" alt="user image">
+                                  <span class="username">
+                                    <a href="#" data-toggle="modal" data-target="#modal-demandeurCOM" onclick="alertdem('`+j.ID_DEMANDEUR+`')">`+data11.NOM_DEM+` `+data11.PRE_DEM+`</a>
+                                  </span>
+                                  <span id="datenvCOM" class="description">`+datenvsp[2]+` `+liste[datenvsp[1]-1]+` `+datenvsp[0]+` à `+timenv[0]+`</span>
+                                </div>
+                                <!-- /.user-block -->
+                                <p >`+j.DESC_COM+`</p>
+                              </div>`;
+                        ee.insertAdjacentHTML('beforeend',ch);
+
+                      }
+                      request11.send();
+                      nb+=1;
+                    }
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de commentaire";
+                    document.getElementById('groupeCOM').appendChild(pp);
+                }
+              }
+              // Send request
+          request9.send();
+            // Create a request variable and assign a new XMLHttpRequest object to it.
+          var request12 = new XMLHttpRequest()   
+              // Open a new connection, using the GET request on the URL endpoint
+              request12.open('GET', 'http://192.168.43.96:3000/demandeurs', true)
+              
+              request12.onload = function() {
+                  // Begin accessing JSON data here
+                  var data12 = JSON.parse(this.response)
+                  console.log(data12);
+                  var ee = document.getElementById("listcandiOFF");
+                  ee.innerHTML="";
+                  var nb=0;
+                  var ajout = false;
+                  data12.forEach(i => {
+                    if (i.ARCHIV_DEM =="0"){
+                      var request13 = new XMLHttpRequest();
+                      request13.open('GET', "http://192.168.43.96:3000/candidatures", true);
+                      request13.onload = function() {
+                        var data13 = JSON.parse(this.response);
+                        console.log(data13);
+                        data13.forEach(j => {
+                          if ((j.ID_OFFRE==c)&&(j.ID_DEMANDEUR==i._id)&&(j.ARCHV_CAND=="0")){
+                            var request14 = new XMLHttpRequest();
+                            request14.open('GET', "http://192.168.43.96:3000/tests", true);
+                            request14.onload = function() {
+                              var data14 = JSON.parse(this.response);
+                              console.log(data14);
+                              data14.forEach(k => {
+                                if (k.ID_OFFRE==c){
+                                  var request15 = new XMLHttpRequest();
+                                  request15.open('GET', "http://192.168.43.96:3000/scores", true);
+                                  request15.onload = function() {
+                                    var data15 = JSON.parse(this.response);
+                                    console.log(data15);
+                                    data15.forEach(h => {
+                                      if ((h.ID_TEST==k._id)&&(h.ID_DEMANDEUR==i._id)){
+                                        var datpos = j.createdAt.split('T');
+                                        var spdatcre = datpos[0].split('-');
+                                        if(spdatcre[1]<10){
+                                          spdatcre[1]=spdatcre[1][1];
+                                        }
+                                        ch = `
+                                                <div class="card bg-light d-flex flex-fill">
+                                                    <div class="card-header text-muted border-bottom-0">
+                                                    </div>
+                                                  <div class="card-body pt-0">
+                                                    <div class="row">
+                                                      <div class="col-7">
+                                                        <h1 class="lead text-center"><b>`+i.NOM_DEM+` `+i.PRE_DEM+`</b></h1>
+                                                        <ul class="ml-4 mb-0 fa-ul text-muted">
+                                                          <li class="item"><span ><i class="fas fa-envelope"></i></span>&ensp;<b>Email:</b>&ensp;&ensp;`+i.EMAIL_DEM+`</li>    
+                                                          <li class="item"><span ><i class="fas fa-map-marker-alt"></i></span>&ensp;<b>Adresse:</b>&ensp;&ensp;`+i.PAYS_DEM+`, `+i.VILLE_DEM+`, `+i.ADRESSE_DEM+`, `+i.COD_POST_DEM+`</li>
+                                                          <li class="item"><span ><i class="fas fa-phone-alt"></i></span>&ensp;<b>Téléphone:</b>&ensp;&ensp;`+i.NUM_TEL_DEM+`</li>
+                                                          <li class="item"><span ><i class="fas fa-percentage"></i></span>&ensp;<b>Résultat Quiz:</b>&ensp;&ensp;`+h.SCORE+`</li> 
+                                                          <li class="item"><span ><i class="fas fa-calendar-alt"></i></span>&ensp;<b>Date de Postulation:</b>&ensp;&ensp;`+spdatcre[2]+` `+liste[spdatcre[1]-1]+` `+spdatcre[0]+`</li>
+                                                        </ul>
+                                                      </div>
+                                                      <div class="col-5 text-center">
+                                                        <img style="width: 100px; height: 100px;" src="`+i.PHOTO_DEM+`" alt="user-avatar" class="img-circle img-fluid">
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                                  <div class="card-footer">  
+                                                    <div class="text-right">    
+                                                      <button type="submit" class="btn btn-sm btn-primary float-right" data-toggle="modal" data-target="#modal-demandeurCAND" onclick="alertdemCAND('`+i._id+`')">
+                                                        <i class="fas fa-user"></i> View Profile
+                                                      </button> 
+                                                    </div>  
+                                                  </div>
+                                                </div>`;
+                                        ee.insertAdjacentHTML('beforeend',ch);
+                                      }
+                                    })
+                                  }
+                                  request15.send();
+                                  nb +=1;
+                                }
+                              })
+                            }
+                            request14.send();
+                            nb +=1;
+                          }
+                        })
+                        if ((nb == 0)&&(ajout==false)){
+                          var pp = document.createElement("p");
+                          pp.innerText = "Pas de candidature";
+                          document.getElementById('listcandiOFF').appendChild(pp);
+                          ajout = true;
+                        }
+                      }
+                      request13.send();
+                    }
+                  })
+              }
+              request12.send();
+      } else {
+          console.log("error");
+      }
+    }
+    xhr3.send(null);
+    function alertdem(X) {
+      var url3 = "http://192.168.43.96:3000/demandeurs/" + X ;
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open("GET", url3, true);
+
+    xhr3.onload = function () {
+      var data = JSON.parse(xhr3.responseText);
+      if (xhr3.readyState == 4 && xhr3.status == "200") {
+          document.getElementById("photoDEM").src = data.PHOTO_DEM;
+          document.getElementById("nompreDEM").innerHTML = data.NOM_DEM + ' '+ data.PRE_DEM;
+          document.getElementById("specDEM").innerHTML = data.SPES_DEM;
+          document.getElementById("paysvilleDEM").innerHTML = data.PAYS_DEM + ', '+ data.VILLE_DEM;
+          document.getElementById("adressecopDEM").innerHTML = data.ADRESSE_DEM + ', '+ data.COD_POST_DEM;
+          document.getElementById("numtelDEM").innerHTML = data.NUM_TEL_DEM;
+          document.getElementById("emailDEM").innerHTML = data.EMAIL_DEM;
+          document.getElementById("emailDEM").href = "mailto:"+data.EMAIL_DEM;
+          document.getElementById("urllinkDEM").innerHTML = data.NOM_DEM + '-'+ data.PRE_DEM;
+          document.getElementById("urlfbDEM").innerHTML = data.NOM_DEM + ' '+ data.PRE_DEM;
+          document.getElementById("urllinkDEM").href = data.URL_LINK_DEM;
+          document.getElementById("urlfbDEM").href = data.URL_FB_DEM;
+          var spdatnais = data.DAT_NAI_DEM.split('-');
+          if(spdatnais[1]<10){
+            spdatnais[1]=spdatnais[1][1];
+          }
+          document.getElementById("datnaisDEM").innerHTML = spdatnais[2]+' '+liste[spdatnais[1]-1]+' '+spdatnais[0];
+          document.getElementById("listprofil").innerHTML = data.DESC_DEM;
+          document.getElementById("sexeDEM").innerHTML = data.SEXE_DEM;
+          if (data.PERMIS_COND_DEM == "1"){
+                    ch=`<span id="permisDEM">Permis:</span> <span id="typepermisDEM">`+data.TYPE_PERMIS_DEM+`</span> `;
+                    document.getElementById("listpermis").innerHTML = ch;
+                  }else{
+                    document.getElementById("listpermis").innerHTML = 'Pas de permis';
+                  }
+          var request1 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request1.open('GET', "http://192.168.43.96:3000/qualites", true);
+              request1.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data1 = JSON.parse(this.response);
+                console.log(data1);
+                var ee = document.getElementById("qualiteDEM");
+                ee.innerHTML="";
+                var nb=0;
+                data1.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      ch ="<li><span >"+j.NOM_QUA+"</span></li>";
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var lii = document.createElement("li");
+                    lii.innerText = "Pas de qualité";
+                    document.getElementById('qualiteDEM').appendChild(lii);
+                }
+                
+              }
+              // Send request
+          request1.send();
+          var request2 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request2.open('GET', "http://192.168.43.96:3000/languedemandeurs", true);
+              request2.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data2 = JSON.parse(this.response);
+                console.log(data2);
+                var ee = document.getElementById("listlangueDEM");
+                ee.innerHTML="";
+                var nb=0;
+                data2.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      var request3 = new XMLHttpRequest();
+                      request3.open('GET', "http://192.168.43.96:3000/langues/"+j.ID_LANGUE, true);
+                      request3.onload = function()
+                      {
+                        var data3 = JSON.parse(this.response);
+                        var num=j.NIV_LANG_DEM;
+                        if(num==="1"){ 
+                                  ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                            <span class="fas fa-star checked1" id="star11"></span>
+                                            <span class="far fa-star checked1" id="star22"></span>
+                                            <span class="far fa-star checked1" id="star33"></span>
+                                            <span class="far fa-star checked1" id="star44"></span>
+                                            <span class="far fa-star checked1" id="star55"></span>
+                                        </li>    
+
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch);
+                          }
+                        if(num=="2"){
+                          ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="far fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch);
+                        }
+                        if(num=="3"){
+                          ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="fas fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch);
+                        }
+                        if(num=="4"){
+                          ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                  <span class="fas fa-star checked1 " id="star11"></span>
+                                  <span class="fas fa-star checked1  " id="star22"></span>
+                                  <span class="fas fa-star checked1  " id="star33"></span>
+                                  <span class="fas fa-star checked1 " id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch);
+                        }
+                        if(num=="5"){
+                          ch = `  <li><span >`+data3.NOM_LANG+`</span>  :
+                                    <span class="fas fa-star checked1 " id="star11"></span>
+                                    <span class="fas fa-star checked1 " id="star22"></span>
+                                    <span class="fas fa-star checked1 " id="star33"></span>
+                                    <span class="fas fa-star checked1 " id="star44"></span>
+                                    <span class="fas fa-star checked1 " id="star55"></span>
+                                  </li>
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch); 
+
+                        }    
+                      }
+                      request3.send();
+                      nb +=1;
+                  }
+                })
+                ch="";
+                if (nb == 0){
+                    var lii = document.createElement("li");
+                    lii.innerText = "Pas de langue";
+                    document.getElementById('listlangueDEM').appendChild(lii);
+                }
+          }
+          request2.send();
+          var request4 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request4.open('GET', "http://192.168.43.96:3000/centresinterets", true);
+              request4.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data4 = JSON.parse(this.response);
+                console.log(data4);
+                var nb=0;
+                var ee = document.getElementById("centreintDEM");
+                ee.innerHTML="";
+                data4.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      ch ="<li><span >"+j.NOM_CI+"</span></li>";
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var lii = document.createElement("li");
+                    lii.innerText = "Pas de centre d'interet";
+                    document.getElementById('centreintDEM').appendChild(lii);
+                }
+              }
+              // Send request
+          request4.send();
+          var dateCrea = data.createdAt.split('T');
+          var spdatcre = dateCrea[0].split('-');
+          if(spdatcre[1]<10){
+            spdatcre[1]=spdatcre[1][1];
+          }
+          document.getElementById("datecreaDEM").innerHTML = spdatcre[2]+' '+liste[spdatcre[1]-1]+' '+spdatcre[0];
+          var dateMSJ = data.updatedAt.split('T');
+          var spdatmsj = dateMSJ[0].split('-');
+          if(spdatmsj[1]<10){
+            spdatmsj[1]=spdatmsj[1][1];
+          }
+          document.getElementById("datemsjDEM").innerHTML = spdatmsj[2]+' '+liste[spdatmsj[1]-1]+' '+spdatmsj[0];
+          var request5 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request5.open('GET', "http://192.168.43.96:3000/experiences", true);
+              request5.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data5 = JSON.parse(this.response);
+                console.log(data5);
+                var ee = document.getElementById("listEXP");
+                ee.innerHTML="";
+                var nb=0;
+                data5.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_EXP.split('-');
+                    var tabFIN = j.DAT_FIN_EXP.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      ch = `<p ><b><i>`+j.TYPE_EXP+`</i></b></p>    
+                                    <p >`+j.NOM_ENT_EXP+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+ ` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>
+                                    <p >`+j.POSITION_EXP+`</p>
+                                    <p >`+j.DESC_EXP+`</p>
+                                    <p >`+j.OUTIL_EXP+`</p> `;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas d'experience";
+                    document.getElementById('listEXP').appendChild(pp);
+                }
+              }
+              // Send request
+          request5.send();
+          var request6 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request6.open('GET', "http://192.168.43.96:3000/formations", true);
+              request6.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data6 = JSON.parse(this.response);
+                console.log(data6);
+                var ee = document.getElementById("listFOR");
+                ee.innerHTML="";
+                var nb=0;
+                data6.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_FOR.split('-');
+                    var tabFIN = j.DAT_FIN_FOR.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      ch = `<p ><b><i>`+j.NOM_FOR+`</i></b></p>    
+                                    <p >`+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>
+                                    <p >`+j.DESC_FOR+`</p> `;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de formation";
+                    document.getElementById('listFOR').appendChild(pp);
+                }
+              }
+              // Send request
+          request6.send();
+          var request7 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request7.open('GET', "http://192.168.43.96:3000/certifications", true);
+              request7.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data7 = JSON.parse(this.response);
+                console.log(data7);
+                var ee = document.getElementById("listCERT");
+                ee.innerHTML="";
+                var nb=0;
+                data7.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      ch = `<p ><b><i>`+j.NOM_CERT+`</i></b></p>    
+                                    <p >`+j.REF_CERT+`</p>
+                                    <p >`+j.DESC_CERT+`</p> `;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de certificat";
+                    document.getElementById('listCERT').appendChild(pp);
+                }
+              }
+              // Send request
+          request7.send();
+          var request8 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request8.open('GET', "http://192.168.43.96:3000/projets", true);
+              request8.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data8 = JSON.parse(this.response);
+                console.log(data8);
+                var ee = document.getElementById("listPROJ");
+                ee.innerHTML="";
+                var nb=0;
+                data8.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_PROJ.split('-');
+                    var tabFIN = j.DAT_FIN_PROJ.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      ch = `<p ><b><i>`+j.NOM_PROJ+`</i></b></p> 
+                                    <p >`+j.TYPE_PROJ+`</p>   
+                                    <p >`+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>
+                                    <p >`+j.DESC_PROJ+`</p>
+                                    <p >`+j.OUTIL_PROJ+`</p> `;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de projet";
+                    document.getElementById('listPROJ').appendChild(pp);
+                }
+              }
+              // Send request
+          request8.send();
+          var request9 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request9.open('GET', "http://192.168.43.96:3000/vieassociatives", true);
+              request9.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data9 = JSON.parse(this.response);
+                console.log(data9);
+                var ee = document.getElementById("listVA");
+                ee.innerHTML="";
+                var nb=0;
+                data9.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_VA.split('-');
+                    var tabFIN = j.DAT_FIN_VA.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      ch = `<p ><b><i>`+j.NOM_VA+`</i></b></p>  
+                                <p >`+j.POSITION_VA+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>`;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                    }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de vie associative";
+                    document.getElementById('listVA').appendChild(pp);
+                }
+              }
+              // Send request
+          request9.send();
+          var request10 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request10.open('GET', "http://192.168.43.96:3000/competencedemandeurs", true);
+              request10.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data10 = JSON.parse(this.response);
+                console.log(data10);
+                var ee = document.getElementById("pasCOMP");
+                ee.innerHTML="";
+                var nb=0;
+                var ull = document.createElement("ul");
+                ull.id="listCOMP";
+                ee.appendChild(ull);
+                var eeul = document.getElementById("listCOMP");
+                eeul.innerHTML="";
+                data10.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      var request11 = new XMLHttpRequest();
+                      request11.open('GET', "http://192.168.43.96:3000/competences/"+j.ID_COMPETENCE, true);
+                      request11.onload = function()
+                      {
+                        var data11 = JSON.parse(this.response);
+                        var num=j.NIV_COMP_DEM;
+                        if(num==="1"){ 
+                                  ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                            <span class="fas fa-star checked1" id="star11"></span>
+                                            <span class="far fa-star checked1" id="star22"></span>
+                                            <span class="far fa-star checked1" id="star33"></span>
+                                            <span class="far fa-star checked1" id="star44"></span>
+                                            <span class="far fa-star checked1" id="star55"></span>
+                                        </li>    
+
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch);  
+                          }
+                        if(num=="2"){
+                          ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="far fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch);  
+                        }
+                        if(num=="3"){
+                          ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="fas fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch);  
+                        }
+                        if(num=="4"){
+                          ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                  <span class="fas fa-star checked1 " id="star11"></span>
+                                  <span class="fas fa-star checked1  " id="star22"></span>
+                                  <span class="fas fa-star checked1  " id="star33"></span>
+                                  <span class="fas fa-star checked1 " id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch);  
+                        }
+                        if(num=="5"){
+                          ch = `  <li><span >`+data11.NOM_COMP+`</span>  :
+                                    <span class="fas fa-star checked1 " id="star11"></span>
+                                    <span class="fas fa-star checked1 " id="star22"></span>
+                                    <span class="fas fa-star checked1 " id="star33"></span>
+                                    <span class="fas fa-star checked1 " id="star44"></span>
+                                    <span class="fas fa-star checked1 " id="star55"></span>
+                                  </li>
+                                  `;
+                                  
+                                  eeul.insertAdjacentHTML('beforeend',ch); 
+                        }  
+                      }
+                      request11.send();
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de compétence";
+                    ee.appendChild(pp);
+                }
+          }
+          request10.send();
+          var request12 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request12.open('GET', "http://192.168.43.96:3000/diplomedemandeurs", true);
+              request12.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data12 = JSON.parse(this.response);
+                console.log(data12);
+                var ee = document.getElementById("listDIP");
+                ee.innerHTML="";
+                var nb=0;
+                data12.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_DIP.split('-');
+                    var tabFIN = j.DAT_FIN_DIP.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      var request13 = new XMLHttpRequest();
+                      request13.open('GET', "http://192.168.43.96:3000/diplomes/"+j.ID_DIPLOME, true);
+                      request13.onload = function()
+                      {
+                        var data13 = JSON.parse(this.response);
+                        ch = `<p ><b><i>`+data13.TYPE_DIP+`</i></b></p>    
+                                    <p >`+j.NOM_ECOL_DIP+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>
+                                    <p >`+j.SPECIA_DIP+`</p> `;
+                        ee.insertAdjacentHTML('beforeend',ch);  
+                      }
+                      request13.send();
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    ch=`<p>Pas de diplôme</p>`;
+                    document.getElementById('listDIP').insertAdjacentElement('beforeend',ch);
+                }
+          }
+          request12.send();
+      } else {
+          console.log("error");
+      }
+    }
+    xhr3.send(null);
+    }
+
+    function alertdemCAND(X) {
+      console.log(X);
+      var url3 = "http://192.168.43.96:3000/demandeurs/" + X ;
+    var xhr3 = new XMLHttpRequest();
+    xhr3.open("GET", url3, true);
+
+    xhr3.onload = function () {
+      var data = JSON.parse(xhr3.responseText);
+      if (xhr3.readyState == 4 && xhr3.status == "200") {
+          document.getElementById("photoDEM1").src = data.PHOTO_DEM;
+          document.getElementById("nompreDEM1").innerHTML = data.NOM_DEM + ' '+ data.PRE_DEM;
+          document.getElementById("specDEM1").innerHTML = data.SPES_DEM;
+          document.getElementById("paysvilleDEM1").innerHTML = data.PAYS_DEM + ', '+ data.VILLE_DEM;
+          document.getElementById("adressecopDEM1").innerHTML = data.ADRESSE_DEM + ', '+ data.COD_POST_DEM;
+          document.getElementById("numtelDEM1").innerHTML = data.NUM_TEL_DEM;
+          document.getElementById("emailDEM1").innerHTML = data.EMAIL_DEM;
+          document.getElementById("emailDEM1").href = "mailto:"+data.EMAIL_DEM;
+          document.getElementById("urllinkDEM1").innerHTML = data.NOM_DEM + '-'+ data.PRE_DEM;
+          document.getElementById("urlfbDEM1").innerHTML = data.NOM_DEM + ' '+ data.PRE_DEM;
+          document.getElementById("urllinkDEM1").href = data.URL_LINK_DEM;
+          document.getElementById("urlfbDEM1").href = data.URL_FB_DEM;
+          document.getElementById("sexeDEM1").innerHTML = data.SEXE_DEM;
+          var spdatnais = data.DAT_NAI_DEM.split('-');
+          if(spdatnais[1]<10){
+            spdatnais[1]=spdatnais[1][1];
+          }
+          document.getElementById("datnaisDEM1").innerHTML = spdatnais[2]+' '+liste[spdatnais[1]-1]+' '+spdatnais[0];
+          document.getElementById("listprofil1").innerHTML = data.DESC_DEM;
+          if (data.PERMIS_COND_DEM == "1"){
+            ch=`<span id="permisDEM1"> Permis: </span> <span id="typepermisDEM1">`+data.TYPE_PERMIS_DEM+`</span>`;
+            document.getElementById("listpermis1").innerHTML= ch ;
+          }else{
+            document.getElementById("listpermis1").innerHTML = 'Pas de permis';
+          }
+
+          
+          var request1 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request1.open('GET', "http://192.168.43.96:3000/qualites", true);
+              request1.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data1 = JSON.parse(this.response);
+                console.log(data1);
+                var ee = document.getElementById("qualiteDEM1");
+                ee.innerHTML="";
+                var nb=0;
+                data1.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      ch ="<li><span >"+j.NOM_QUA+"</span></li>";
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var lii = document.createElement("li");
+                    lii.innerText = "Pas de qualité";
+                    document.getElementById('qualiteDEM1').appendChild(lii);
+                }
+              }
+              // Send request
+          request1.send();
+          var request2 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request2.open('GET', "http://192.168.43.96:3000/languedemandeurs", true);
+              request2.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data2 = JSON.parse(this.response);
+                console.log(data2);
+                var ee = document.getElementById("listlangueDEM1");
+                ee.innerHTML="";
+                var nb=0;
+                data2.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      var request3 = new XMLHttpRequest();
+                      request3.open('GET', "http://192.168.43.96:3000/langues/"+j.ID_LANGUE, true);
+                      request3.onload = function()
+                      {
+                        var data3 = JSON.parse(this.response);
+                        var num=j.NIV_LANG_DEM;
+                        if(num==="1"){ 
+                                  ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                            <span class="fas fa-star checked1" id="star11"></span>
+                                            <span class="far fa-star checked1" id="star22"></span>
+                                            <span class="far fa-star checked1" id="star33"></span>
+                                            <span class="far fa-star checked1" id="star44"></span>
+                                            <span class="far fa-star checked1" id="star55"></span>
+                                        </li>    
+
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch);
+                          }
+                        if(num=="2"){
+                          ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="far fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch);
+                        }
+                        if(num=="3"){
+                          ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="fas fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch);
+                        }
+                        if(num=="4"){
+                          ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                  <span class="fas fa-star checked1 " id="star11"></span>
+                                  <span class="fas fa-star checked1  " id="star22"></span>
+                                  <span class="fas fa-star checked1  " id="star33"></span>
+                                  <span class="fas fa-star checked1 " id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch);
+                        }
+                        if(num=="5"){
+                          ch = `  <li><span >`+data3.NOM_LANG+`</span>  :
+                                    <span class="fas fa-star checked1 " id="star11"></span>
+                                    <span class="fas fa-star checked1 " id="star22"></span>
+                                    <span class="fas fa-star checked1 " id="star33"></span>
+                                    <span class="fas fa-star checked1 " id="star44"></span>
+                                    <span class="fas fa-star checked1 " id="star55"></span>
+                                  </li>
+                                  `;
+                                  ee.insertAdjacentHTML('beforeend',ch); 
+
+                        }     
+                      }
+                      request3.send();
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var lii = document.createElement("li");
+                    lii.innerText = "Pas de langue";
+                    document.getElementById('listlangueDEM1').appendChild(lii);
+                }
+          }
+          request2.send();
+          var request4 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request4.open('GET', "http://192.168.43.96:3000/centresinterets", true);
+              request4.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data4 = JSON.parse(this.response);
+                console.log(data4);
+                var nb=0;
+                var ee = document.getElementById("centreintDEM1");
+                ee.innerHTML="";
+                data4.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      ch ="<li><span >"+j.NOM_CI+"</span></li>";
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var lii = document.createElement("li");
+                    lii.innerText = "Pas de centre d'interet";
+                    document.getElementById('centreintDEM1').appendChild(lii);
+                }
+              }
+              // Send request
+          request4.send();
+          var dateCrea = data.createdAt.split('T');
+          var spdatcre = dateCrea[0].split('-');
+          if(spdatcre[1]<10){
+            spdatcre[1]=spdatcre[1][1];
+          }
+          document.getElementById("datecreaDEM1").innerHTML = spdatcre[2]+' '+liste[spdatcre[1]-1]+' '+spdatcre[0];
+          var dateMSJ = data.updatedAt.split('T');
+          var spdatmsj = dateMSJ[0].split('-');
+          if(spdatmsj[1]<10){
+            spdatmsj[1]=spdatmsj[1][1];
+          }
+          document.getElementById("datemsjDEM1").innerHTML = spdatmsj[2]+' '+liste[spdatmsj[1]-1]+' '+spdatmsj[0];
+          var request5 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request5.open('GET', "http://192.168.43.96:3000/experiences", true);
+              request5.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data5 = JSON.parse(this.response);
+                console.log(data5);
+                var ee = document.getElementById("listEXP1");
+                ee.innerHTML="";
+                var nb=0;
+                data5.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_EXP.split('-');
+                    var tabFIN = j.DAT_FIN_EXP.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      ch = `<p ><b><i>`+j.TYPE_EXP+`</i></b></p>    
+                                    <p >`+j.NOM_ENT_EXP+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+ ` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>
+                                    <p >`+j.POSITION_EXP+`</p>
+                                    <p >`+j.DESC_EXP+`</p>
+                                    <p >`+j.OUTIL_EXP+`</p> `;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas d'experience";
+                    document.getElementById('listEXP1').appendChild(pp);
+                }
+              }
+              // Send request
+          request5.send();
+          var request6 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request6.open('GET', "http://192.168.43.96:3000/formations", true);
+              request6.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data6 = JSON.parse(this.response);
+                console.log(data6);
+                var ee = document.getElementById("listFOR1");
+                ee.innerHTML="";
+                var nb=0;
+                data6.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_FOR.split('-');
+                    var tabFIN = j.DAT_FIN_FOR.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      ch = `<p ><b><i>`+j.NOM_FOR+`</i></b></p>    
+                                    <p >`+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>
+                                    <p >`+j.DESC_FOR+`</p> `;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de formation";
+                    document.getElementById('listFOR1').appendChild(pp);
+                }
+              }
+              // Send request
+          request6.send();
+          var request7 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request7.open('GET', "http://192.168.43.96:3000/certifications", true);
+              request7.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data7 = JSON.parse(this.response);
+                console.log(data7);
+                var ee = document.getElementById("listCERT1");
+                ee.innerHTML="";
+                var nb=0;
+                data7.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      ch = `<p ><b><i>`+j.NOM_CERT+`</i></b></p>    
+                                    <p >`+j.REF_CERT+`</p>
+                                    <p >`+j.DESC_CERT+`</p> `;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de certificat";
+                    document.getElementById('listCERT1').appendChild(pp);
+                }
+              }
+              // Send request
+          request7.send();
+          var request8 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request8.open('GET', "http://192.168.43.96:3000/projets", true);
+              request8.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data8 = JSON.parse(this.response);
+                console.log(data8);
+                var ee = document.getElementById("listPROJ1");
+                ee.innerHTML="";
+                var nb=0;
+                data8.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_PROJ.split('-');
+                    var tabFIN = j.DAT_FIN_PROJ.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      ch = `<p ><b><i>`+j.NOM_PROJ+`</i></b></p> 
+                                    <p >`+j.TYPE_PROJ+`</p>   
+                                    <p >`+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>
+                                    <p >`+j.DESC_PROJ+`</p>
+                                    <p >`+j.OUTIL_PROJ+`</p> `;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de projet";
+                    document.getElementById('listPROJ1').appendChild(pp);
+                }
+              }
+              // Send request
+          request8.send();
+          var request9 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request9.open('GET', "http://192.168.43.96:3000/vieassociatives", true);
+              request9.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data9 = JSON.parse(this.response);
+                console.log(data9);
+                var ee = document.getElementById("listVA1");
+                ee.innerHTML="";
+                var nb=0;
+                data9.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_VA.split('-');
+                    var tabFIN = j.DAT_FIN_VA.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      ch = `<p ><b><i>`+j.NOM_VA+`</i></b></p>  
+                                <p >`+j.POSITION_VA+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>`;
+                      ee.insertAdjacentHTML('beforeend',ch);
+                      nb+=1;
+                    }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de vie associative";
+                    document.getElementById('listVA1').appendChild(pp);
+                }
+              }
+              // Send request
+          request9.send();
+          var request10 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request10.open('GET', "http://192.168.43.96:3000/competencedemandeurs", true);
+              request10.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data10 = JSON.parse(this.response);
+                console.log(data10);
+                var ee = document.getElementById("pasCOMP1");
+                ee.innerHTML="";
+                var nb=0;
+                var ull = document.createElement("ul");
+                ull.id="listCOMP1";
+                ee.appendChild(ull);
+                var eeul = document.getElementById("listCOMP1");
+                eeul.innerHTML="";
+                data10.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                      var request11 = new XMLHttpRequest();
+                      request11.open('GET', "http://192.168.43.96:3000/competences/"+j.ID_COMPETENCE, true);
+                      request11.onload = function()
+                      {
+                        var data11 = JSON.parse(this.response);
+                        var num=j.NIV_COMP_DEM;
+                        if(num==="1"){ 
+                                  ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                            <span class="fas fa-star checked1" id="star11"></span>
+                                            <span class="far fa-star checked1" id="star22"></span>
+                                            <span class="far fa-star checked1" id="star33"></span>
+                                            <span class="far fa-star checked1" id="star44"></span>
+                                            <span class="far fa-star checked1" id="star55"></span>
+                                        </li>    
+
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch); 
+                          }
+                        if(num=="2"){
+                          ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="far fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch);  
+                        }
+                        if(num=="3"){
+                          ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                  <span class="fas fa-star checked1" id="star11"></span>
+                                  <span class="fas fa-star checked1" id="star22"></span>
+                                  <span class="fas fa-star checked1" id="star33"></span>
+                                  <span class="far fa-star checked1" id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch);   
+                        }
+                        if(num=="4"){
+                          ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                  <span class="fas fa-star checked1 " id="star11"></span>
+                                  <span class="fas fa-star checked1  " id="star22"></span>
+                                  <span class="fas fa-star checked1  " id="star33"></span>
+                                  <span class="fas fa-star checked1 " id="star44"></span>
+                                  <span class="far fa-star checked1" id="star55"></span>
+                                </li>
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch);  
+                        }
+                        if(num=="5"){
+                          ch = `  <li><span >`+data11.NOM_COMP+`</span>  :
+                                    <span class="fas fa-star checked1 " id="star11"></span>
+                                    <span class="fas fa-star checked1 " id="star22"></span>
+                                    <span class="fas fa-star checked1 " id="star33"></span>
+                                    <span class="fas fa-star checked1 " id="star44"></span>
+                                    <span class="fas fa-star checked1 " id="star55"></span>
+                                  </li>
+                                  `;
+                                  eeul.insertAdjacentHTML('beforeend',ch); 
+
+                        }  
+                      }
+                      request11.send();
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de compétence";
+                    ee.appendChild(pp);
+                }
+          }
+          request10.send();
+          var request12 = new XMLHttpRequest();
+              // Open a new connection, using the GET request on the URL endpoint
+              request12.open('GET', "http://192.168.43.96:3000/diplomedemandeurs", true);
+              request12.onload = function()
+              {
+                // Begin accessing JSON data here
+                var data12 = JSON.parse(this.response);
+                console.log(data12);
+                var ee = document.getElementById("listDIP1");
+                ee.innerHTML="";
+                var nb=0;
+                data12.forEach(j => {
+                  if(j.ID_DEMANDEUR==X){
+                    var tabDEB = j.DAT_DEB_DIP.split('-');
+                    var tabFIN = j.DAT_FIN_DIP.split('-');
+                    if(tabDEB[1]<10){
+                      tabDEB[1]=tabDEB[1][1];
+                    }
+                    if(tabFIN[1]<10){
+                      tabFIN[1]=tabFIN[1][1];
+                    }
+                      var request13 = new XMLHttpRequest();
+                      request13.open('GET', "http://192.168.43.96:3000/diplomes/"+j.ID_DIPLOME, true);
+                      request13.onload = function()
+                      {
+                        var data13 = JSON.parse(this.response);
+                        ch = `<p ><b><i>`+data13.TYPE_DIP+`</i></b></p>    
+                                    <p >`+j.NOM_ECOL_DIP+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</p>
+                                    <p >`+j.SPECIA_DIP+`</p> `;
+                        ee.insertAdjacentHTML('beforeend',ch);  
+                      }
+                      request13.send();
+                      nb +=1;
+                  }
+                })
+                if (nb == 0){
+                    var pp = document.createElement("p");
+                    pp.innerText = "Pas de diplôme";
+                    document.getElementById('listDIP1').appendChild(pp);
+                }
+          }
+          request12.send();
+      } else {
+          console.log("error");
+      }
+    }
+    xhr3.send(null);
+    }
+
+function alertrec(Y) {
+  console.log(Y);
+  
+      // Open a new connection, using the GET request on the URL endpoint
+      var url3 = 'http://192.168.43.96:3000/recruteurs/'+Y ;
+    var request = new XMLHttpRequest();
+    request.open("GET", url3, true);
+  request.onload = function()
+  {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response)
+      console.log(data);
+      document.getElementById("NOM_ENT").innerHTML=data.NOM_ENT;
+      document.getElementById("SEC_DACT_ENT").innerHTML=data.SEC_DACT_ENT;
+      document.getElementById("IDENT_UNQ_ENT").innerHTML=data.IDENT_UNQ_ENT;
+      document.getElementById("EMAIL_ENT").innerHTML=data.EMAIL_ENT;
+      document.getElementById("EMAIL_ENTh").href="mailto:"+data.EMAIL_ENT;
+      document.getElementById("NUM_TEL_ENT").innerHTML=data.NUM_TEL_ENT;
+      document.getElementById("PAYS_ORG_ENT").innerHTML=data.PAYS_ORG_ENT;
+      document.getElementById("NB_SAL_ENT").innerHTML=data.NB_SAL_ENT; 
+      var spdatcre = data.DAT_CREA_ENT.split('-');
+      if(spdatcre[1]<10){
+        spdatcre[1]=spdatcre[1][1];
+      }
+      document.getElementById("DAT_CREA_ENT").innerHTML = spdatcre[2]+' '+liste[spdatcre[1]-1]+' '+spdatcre[0];
+      document.getElementById("DESC_ENT").innerHTML=data.DESC_ENT;
+      document.getElementById("URL_WEB_ENT").href=data.URL_WEB_ENT;
+      document.getElementById("EMAIL_REC").innerHTML=data.EMAIL_REC;
+      document.getElementById("EMAIL_RECh").href="mailto:"+data.EMAIL_REC;
+      document.getElementById("ADRESSE_ENT").innerHTML=data.ADRESSE_ENT+","+data.VILLE_ENT+","+data.COD_POST_ENT;
+      document.getElementById("LOGO_ENT").src=data.LOGO_ENT;
+      document.getElementById("URL_LINK_ENT").href=data.URL_LINK_ENT;
+      document.getElementById("URL_FB_ENT").href=data.URL_FB_ENT;
+ 
+            //date
+  var request1 = new XMLHttpRequest()
+  request1.open('GET','http://192.168.43.96:3000/horaires', true)
+  request1.onload = function()
+  {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response)
+      console.log(data);
+      
+        var ee = document.getElementById("horaireconfcom");
+        ee.innerHTML="";
+      data.forEach(i => {
+        
+        if (i.ID_RECRUTEUR===Y){
+          
+          if (i.TIME_DEB_MATIN ==="" && i.TIME_DEB_MIDI===""){
+            //ch.substr(ch.length);
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"> Fermé </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+              ch=``;
+              ee.insertAdjacentHTML('beforeend',ch);
+              
+           }else if (i.TIME_DEB_MATIN ==="" && i.TIME_FIN_MATIN===""){
+            
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"> ` + i.TIME_DEB_MIDI+ `-` + i.TIME_FIN_MIDI+`  </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+           }else if (i.TIME_DEB_MIDI ==="" && i.TIME_FIN_MIDI===""){
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"> ` + i.TIME_DEB_MATIN+ `-` + i.TIME_FIN_MATIN+`  </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+            }else if (i.TIME_FIN_MATIN ==="" && i.TIME_DEB_MIDI===""){
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"> ` + i.TIME_DEB_MATIN+ `-` + i.TIME_FIN_MIDI+`  </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+            }else{
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-6">
+                    <a  class="btn-link text-secondary">` + i.TIME_DEB_MATIN+ `-` + i.TIME_FIN_MATIN+` & ` + i.TIME_DEB_MIDI+ `-` + i.TIME_FIN_MIDI+` </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              
+              ee.insertAdjacentHTML('beforeend',ch);
+              
+            }
+
+        } 
+
+      })    
+        
+  }   
+  // Send request
+  request1.send()
+
+
+//fin date
+  }   
+  // Send request
+  request.send()
+}
+</script>
+<script>
+  
+      function archiveoffre(){
+        var url_string = window.location.href
+        var url = new URL(url_string);
+        var c = url.searchParams.get("id");
+            console.log(c);
+    Swal.fire({
+          title: "Voulez-vous Déplacer cette offre Vers L'archive ?",
+          icon: 'question',
+          showDenyButton: true,
+          confirmButtonColor: '#17a2b8',
+          confirmButtonText: 'Archiver',
+          denyButtonText: `Non`,
+        }).then((result) => {
+          if (result.isConfirmed) {
+                      var request = new XMLHttpRequest()
+                      
+                      // Open a new connection, using the GET request on the URL endpoint
+                      request.open('GET', 'http://192.168.43.96:3000/offres/'+ c, true)
+                      
+                      request.onload = function() {
+                          // Begin accessing JSON data here
+                          var data = JSON.parse(this.response)
+                          console.log(data);
+                        var url3 = "http://192.168.43.96:3000/offres/" + c ;
+                        data2={};
+                        data2.NOM_OFF = data.NOM_OFF;
+                        data2.PHOTO_OFF = data.PHOTO_OFF;
+                        data2.SEXE_CAND_OFF = data.SEXE_CAND_OFF;
+                        data2.DESC_OFF = data.DESC_OFF;
+                        data2.MISSION_OFF = data.MISSION_OFF;
+                        data2.SAL_MIN_OFF = data.SAL_MIN_OFF;
+                        data2.NOM_AVG_OFF = data.NOM_AVG_OFF;
+                        data2.NOM_MC_OFF = data.NOM_MC_OFF;
+                        data2.NOM_TE_OFF = data.NOM_TE_OFF;
+                        data2.ARCHV_OFF   = "2";
+                        data2.DAT_EXPIRA_OFF = data.DAT_EXPIRA_OFF;
+                        data2.ID_RECRUTEUR = data.ID_RECRUTEUR;
+                        var requestrec = new XMLHttpRequest()
+                              requestrec.open('GET', 'http://192.168.43.96:3000/recruteurs/' + data.ID_RECRUTEUR, true)
+                              requestrec.onload = function()
+                              {
+                                var datarec = JSON.parse(this.response)
+                                Email.send({
+                                  Host: "smtp.gmail.com",
+                                  Username : "tunisierecrute0@gmail.com",
+                                  Password : "Recrute123",
+                                  To : `${datarec.EMAIL_REC}`,
+                                  From : "tunisierecrute0@gmail.com",
+                                  Subject : "Archive Offre",
+                                  Body : "Cette Offre "+data.NOM_OFF+" Est Archivé !. Si tu veux corriger cette offre ou poster un nouveau.",
+                                })  
+                              }
+                              requestrec.send()
+                        console.log(data2);
+                        
+                        var json = JSON.stringify(data2);
+                        var xhr3 = new XMLHttpRequest();
+                        xhr3.open("PUT", url3, true);
+                        xhr3.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr3.onload = function () {
+                            if (xhr3.readyState == 4 && xhr3.status == "200") {
+                              
+                            // location.replace("listadmin.html");
+                               // event.preventDefault();
+                                Swal.fire({
+                                      title:'Cette Offre Est Archivé !',
+                                      icon:'success',
+                                    
+                                  }).then((result) => {
+                                      if (result.isConfirmed){
+                                        location.replace("offre.html");
+                                        event.preventDefault();
+                                      }
+
+                                  })
+                            } else {
+                                console.log("error");
+                                Swal.fire({
+                                  icon:'error',  
+                                  title:'Il y a un erreur !',
+                                  showConfirmButton:true,
+                                  timer:1500
+                                    
+                                  
+                                })
+
+                            }
+                        }
+                        xhr3.send(json);
+                      }
+                      request.send();
+                    }
+                    else if (result.isDenied){
+                          Swal.fire("L'archive Non Enregistrer", '', 'info');
+                    }
+        })
+                  }
+
+
+function refrechOFF() {
+    /*var url_string = window.location.href
+    var url = new URL(url_string);
+    var c = url.searchParams.get("id");
+    location.replace("profileOffre.html?id="+c+"");
+    document.getElementById("modal-demandeurCOM").reload();
+    window.location.reload();
+    document.getElementById("abcd").classList.remove("active")
+    document.getElementById("abc").classList.add("active");*/
+    //window.location.reload();
+    ch='';
+}
+</script>
+</body>
+</html>

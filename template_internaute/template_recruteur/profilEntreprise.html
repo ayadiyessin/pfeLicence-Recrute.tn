@@ -1,0 +1,1306 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--image-->
+        <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+       
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+		<link rel="stylesheet" href="assets/css/notifcation.css">
+		<title>Recruteur | Profil De La Société  </title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(!localStorage.getItem("ID_REC")){
+              location.replace("profile-authentication.html");
+            }
+          </script>
+    </head>
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="sidemenu-header">
+                <a href="dashboardRecruteur.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/Recrute.fr.png" alt="image">
+                </a>
+
+                <div class="responsive-burger-menu d-block d-lg-none">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </div>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+                    <li class="nav-item ">
+                        <a href="dashboardRecruteur.html" class="nav-link">
+                            <span class="icon"><i class="ri-home-line"></i></span>
+                            <span class="menu-title">Tableau De Bord</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="profilEntreprise.html " class="nav-link">
+                            <span class="icon"><i class="ri-building-4-line"></i></span>
+                            <span class="menu-title">Profil De La Société</span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a href="modifierautentification.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-line"></i></span>
+                            <span class="menu-title">Mon Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a href="ajouterOffre.html" class="nav-link">
+                            <span class="icon"><i class="ri-send-plane-fill"></i></span>
+                            <span class="menu-title">Publier Une Offre</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listeOffre.html" class="nav-link">
+                            <span class="icon"><i class="ri-file-list-3-line"></i></span>
+                            <span class="menu-title">Liste Des Offres</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listCandidat.html" class="nav-link">
+                            <span class="icon"><i class="ri-contacts-line"></i></span>
+                            <span class="menu-title">Liste Des Candidats</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listeCandidatFavori.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-heart-line"></i></span>
+                            <span class="menu-title">Candidats Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listedemandeur.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-search-line"></i></span>
+                            <span class="menu-title">Demandeurs D'emploi</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="listeDemandeurFavoris.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-star-line"></i></span>
+                            <span class="menu-title">Demandeurs Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="dateProposer.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-2-line"></i></span>
+                            <span class="menu-title">Dates Proposer</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="entretienEnattente.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-voice-line"></i></span>
+                            <span class="menu-title">Entretiens En Attente</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienDaujourdhui.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-check-line"></i></span>
+                            <span class="menu-title">Entretiens D'aujourd'hui</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienRealise.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-follow-line"></i></span>
+                            <span class="menu-title">Entretiens Réalisés</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listemesssage.html" class="nav-link">
+                            <span class="icon"><i class="ri-chat-1-line"></i></span>
+                            <span class="menu-title">Messageries</span>
+                        </a>
+                    </li>
+
+                    
+
+                    <li class="nav-item">
+                        <a href="#" onClick="quiterStorge();" class="nav-link">
+                            <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                            <span class="menu-title">Deconexion</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  onClick="supprmierCempte()" class="nav-link">
+                            <span class="icon" style="color: red; "><i class="ri-delete-bin-line"></i></span>
+                            <span class="menu-title" style="color: red; ">Supprimer Profil</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="main-responsive-menu">
+                        <div class="responsive-burger-menu d-lg-none d-block">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item ">
+                                    <a href="dashboardRecruteur.html" class="nav-link">
+                                        Accueil 
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link">   <i class="ri-notification-2-line"> </i>
+                                        <span id="nbtotalhaut" class="badge badge-warning navbar-badge">0</span>   
+                                       &ensp; Notification                  
+                                    
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="listCandidat.html" class="nav-link">
+                                            <b id="nbCandidat">0 </b> Nouveaux Candidats</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="entretienDaujourdhui.html" class="nav-link">
+                                            <b id="nbentretienAujordhui">0 </b> Entretiens Aujourd'hui</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="entretienEnattente.html" class="nav-link">
+                                            <b id="nbentretianENatt">0 </b> Nouveaux Entretiens En Attente</a>
+                                        </li>
+                                        <div id="listedeoffre">
+
+                                        </div>
+
+
+                                            
+
+                                        
+                                    </ul>
+                                    
+                                </li>
+
+                            </ul>
+
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <div class="dropdown profile-nav-item">
+                                        <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="menu-profile">
+                                                <img src="" id="imgNav" class="rounded-circle" alt="image">
+                                                <span class="name">Mon Compte</span>
+                                            </div>
+                                        </a>
+            
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                                <div class="figure mb-3">
+                                                    <img src="" id="imgENT" class="rounded-circle" alt="image">
+                                                </div>
+            
+                                                <div class="info text-center">
+                                                    <span class="name" id="nomENT"></span>
+                                                    <p class="mb-3 email" id="emailENT"></p>
+                                                    <p class="mb-3 email"id="emailREC"></p>
+                                                </div>
+                                            </div>
+            
+                                            <div class="dropdown-body">
+                                                <ul class="profile-nav p-0 pt-3">
+                                                    <li class="nav-item active">
+                                                        <a href="dashboardRecruteur.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-home-line"></i></span>
+                                                            <span class="menu-title">Tableau De Bord</span>
+                                                        </a>
+                                                    </li>
+
+                                                    
+                                                    <li class="nav-item">
+                                                        <a href="modifierautentification.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-user-line"></i></span>
+                                                            <span class="menu-title">Mon Profil</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+            
+                                            <div class="dropdown-footer">
+                                                <ul class="profile-nav">
+                                                    <li class="nav-item">
+                                                        <a href="#" onClick="quiterStorge();" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Deconexion</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Salut</h1>
+                <ol class="breadcrumb">
+                    <li class="item" title="Retourner au Accueil"><a href="dashboardRecruteur.html">Accueil</a></li>
+                    <li class="item">Profil De La Société</li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+
+            <!-- Start Post a New Job Area -->
+            <div class="post-a-new-job-box">
+                <div class="container">
+                    <div class="authentication-tabs-list">
+                        <div class="card-body">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="Informations-tab" data-bs-toggle="tab" href="#Informations" role="tab">Informations</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link" id="Autre-tab" data-bs-toggle="tab" href="#Autre" role="tab">Autre</a>
+                            </li>
+    
+                            <li class="nav-item">
+                                <a class="nav-link" id="Horaire-tab" data-bs-toggle="tab" href="#Horaire" role="tab">Horaire</a>
+                            </li>
+                        </ul>
+                        </div>
+                    </div>
+    
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="Informations" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <form onsubmit="return false" id="formInfo">
+                                    <div class="row">
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Nom de l'entreprise</label>
+                                                <input name="NomENT" id="NOM_ENT" type="text" class="form-control" placeholder="Entrer un nom d'entreprise...">
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Secteur d'activité</label>
+                                                <input id="SEC_DACT_ENT" name="SectDactENT" type="text" placeholder="Entrer un secteur d'activité de l'entreprise..." class="form-control">
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Identifiant Unique</label>
+                                                <input id="IDENT_UNQ_ENT" name="IdentUniqENT" type="text" class="form-control" placeholder="Entrer un identifiant unique de l'entreprise...">
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Date Création Entreprise</label>
+                                                <input id="DAT_CREA_ENT" name="DatCreaENT" type="date" class="form-control">
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Nombre Salarier Entreprise</label>
+                                                <input id="NB_SAL_ENT" name="NbSalENT" type="text" placeholder="Entrer le nombre salarier de l'entreprise..." class="form-control">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Description Entreprise</label>
+                                                <textarea name="DescENT" id="DESC_ENT" cols="30" rows="6" placeholder="Entrer une description de l'entreprise..." class="form-control"></textarea>
+                                            </div>
+                                        </div>
+                                        
+                                        <div class="col-xl-12 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Source Logo Entreprise</label>
+                                                <input name="LOGOENT" id="LOGO_ENT" type="text" class="form-control" placeholder="Entrer un logo de l'entreprise..." onclick="send()">
+                                            </div>
+                                        </div>
+    
+                                        
+                                        <table>
+                                            <tr>
+                                                <td>
+                                                    <button type="button" class="default-btn" onclick="refresh();">Annuler<i class="ri-close-line"></i></button>
+                                                </td>
+                                                <td>
+                                                    <div class="row">
+                                                        <div class="col-xl-8 col-lg-12 col-md-12"></div>
+                                                        <div class="col-xl-2 col-lg-12 col-md-12">
+                                                            <button type="submit" class="default-btn">Suivant<i class="ri-arrow-right-fill"></i></button>
+                                                        </div>
+                                                    </div>
+                                                   
+                                                </td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+    
+                        <div class="tab-pane fade" id="Autre" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <form onsubmit="return false" id="formAutre">
+                                    <div class="row">
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>E-mail Entreprise</label>
+                                                <input name="EmailENT" id="EMAIL_ENT" type="text" class="form-control" placeholder="Entrer un e-mail de l'entreprise">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Numéro Téléphone Entreprise</label>
+                                                <input name="NumTelENT" id="NUM_TEL_ENT" type="text" class="form-control" placeholder="Entrer un numéro téléphone de l'entreprise">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Site Web URL Entreprise</label>
+                                                <input id="URL_WEB_ENT" type="text" class="form-control" placeholder="https://www.NomEntreprise.com/">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Facebook URL Entreprise</label>
+                                                <input id="URL_FB_ENT" type="text" class="form-control" placeholder="https://www.facebook.com/">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Linkedin URL</label>
+                                                <input id="URL_LINK_ENT" type="text" class="form-control" placeholder="https://www.linkedin.com/">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Adresse Entreprise</label>
+                                                <input name="AdresseENT" id="ADRESSE_ENT" type="text" class="form-control" placeholder="Entrer une adresse de l'entreprise">
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Code Postal Entreprise</label>
+                                                <input name="CodePosENT" id="COD_POST_ENT" type="text" class="form-control" placeholder="Entrer une code postal de l'entreprise...">
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Ville Entreprise</label>
+                
+                                                <select name="VilleENT" id="VILLE_ENT" class="form-control">
+                                                    <option selected disabled>Choisir une Ville d'entreprise</option>
+                                                    <option value="Ariana">Ariana</option>
+                                                    <option value="Béja">Béja</option>
+                                                    <option value="Ben Arous">Ben Arous</option>
+                                                    <option value="Bizerte">Bizerte</option>
+                                                    <option value="Gabès">Gabès</option>
+                                                    <option value="Gafsa">Gafsa</option>
+                                                    <option value="Jendouba">Jendouba</option>
+                                                    <option value="Kairouan">Kairouan</option>
+                                                    <option value="Kasserine">Kasserine</option>
+                                                    <option value="Kebili">Kebili</option>
+                                                    <option value="La Manouba">La Manouba</option>
+                                                    <option value="Le Kef">Le Kef</option>
+                                                    <option value="Mahdia">Mahdia</option>
+                                                    <option value="Médenine">Médenine</option>
+                                                    <option value="Monastir">Monastir</option>
+                                                    <option value="Nabeul">Nabeul</option>
+                                                    <option value="Sfax">Sfax</option>
+                                                    <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                                    <option value="Siliana">Siliana</option>
+                                                    <option value="Sousse">Sousse</option>
+                                                    <option value="Tataouine">Tataouine</option>
+                                                    <option value="Tozeur">Tozeur</option>
+                                                    <option value="Tunis">Tunis</option>
+                                                    <option value="Zaghouan">Zaghouan</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Pays Original Entreprise</label>
+                                                <input name="PaysOrigENT" id="PAYS_ORG_ENT" type="text" class="form-control" placeholder="Entrer une pays original de l'entreprise...">
+                                            </div>
+                                        </div>
+                                        <table id="tableAutre">
+                                            
+                                        </table>
+                                    </div>
+    
+                                </form>
+                            </div>
+                        </div>
+    
+                        <div class="tab-pane fade" id="Horaire" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <form onsubmit="return false" id="formHoraire">
+                                    <div class="row">
+                                        
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Jour de Travail</label>
+                                                <input id="JOUR_TRAV1" type="text" class="form-control" value="Lundi" disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Heure de Travail</label>
+                                                <select id="SelectPosteJour1" class="form-control" onchange="change_valeur('SelectPosteJour1','rowPosteL','L');">
+                                                    <option selected disabled>Choisir une poste de travail</option>
+                                                    <option value="1">Fermé</option>
+                                                    <option value="2">Seul Poste</option>
+                                                    <option value="3">Deux Poste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="rowPosteL" class="row">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Jour de Travail</label>
+                                                <input id="JOUR_TRAV2" type="text" class="form-control" value="Mardi" disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Heure de Travail</label>
+                                                <select id="SelectPosteJour2" class="form-control" onchange="change_valeur('SelectPosteJour2','rowPosteMA','MA');">
+                                                    <option selected disabled>Choisir une poste de travail</option>
+                                                    <option value="1">Fermé</option>
+                                                    <option value="2">Seul Poste</option>
+                                                    <option value="3">Deux Poste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="rowPosteMA" class="row">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Jour de Travail</label>
+                                                <input id="JOUR_TRAV3" type="text" class="form-control" value="Mercredi" disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Heure de Travail</label>
+                                                <select id="SelectPosteJour3" class="form-control" onchange="change_valeur('SelectPosteJour3','rowPosteME','ME');">
+                                                    <option selected disabled>Choisir une poste de travail</option>
+                                                    <option value="1">Fermé</option>
+                                                    <option value="2">Seul Poste</option>
+                                                    <option value="3">Deux Poste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="rowPosteME" class="row">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Jour de Travail</label>
+                                                <input id="JOUR_TRAV4" type="text" class="form-control" value="Jeudi" disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Heure de Travail</label>
+                                                <select id="SelectPosteJour4" class="form-control" onchange="change_valeur('SelectPosteJour4','rowPosteJ','J');">
+                                                    <option selected disabled>Choisir une poste de travail</option>
+                                                    <option value="1">Fermé</option>
+                                                    <option value="2">Seul Poste</option>
+                                                    <option value="3">Deux Poste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="rowPosteJ" class="row">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Jour de Travail</label>
+                                                <input id="JOUR_TRAV5" type="text" class="form-control" value="Vendredi" disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Heure de Travail</label>
+                                                <select id="SelectPosteJour5" class="form-control" onchange="change_valeur('SelectPosteJour5','rowPosteV','V');">
+                                                    <option selected disabled>Choisir une poste de travail</option>
+                                                    <option value="1">Fermé</option>
+                                                    <option value="2">Seul Poste</option>
+                                                    <option value="3">Deux Poste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="rowPosteV" class="row">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Jour de Travail</label>
+                                                <input id="JOUR_TRAV6" type="text" class="form-control" value="Samedi" disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Heure de Travail</label>
+                                                <select id="SelectPosteJour6" class="form-control" onchange="change_valeur('SelectPosteJour6','rowPosteS','S');">
+                                                    <option selected disabled>Choisir une poste de travail</option>
+                                                    <option value="1">Fermé</option>
+                                                    <option value="2">Seul Poste</option>
+                                                    <option value="3">Deux Poste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="rowPosteS" class="row">
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Jour de Travail</label>
+                                                <input id="JOUR_TRAV7" type="text" class="form-control" value="Dimanche" disabled>
+                                            </div>
+                                        </div>
+                
+                                        <div class="col-xl-6 col-lg-12 col-md-12">
+                                            <div class="form-group">
+                                                <label>Heure de Travail</label>
+                                                <select id="SelectPosteJour7" class="form-control" onchange="change_valeur('SelectPosteJour7','rowPosteD','D');">
+                                                    <option selected disabled>Choisir une poste de travail</option>
+                                                    <option value="1">Fermé</option>
+                                                    <option value="2">Seul Poste</option>
+                                                    <option value="3">Deux Poste</option>
+                                                </select>
+                                            </div>
+                                        </div>
+    
+                                        <div class="col-lg-12 col-md-12">
+                                            <div id="rowPosteD" class="row">
+                                            </div>
+                                        </div>
+                                        <table id="tableHor">
+                                            
+                                        </table>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Post a New Job Area -->
+            
+            <!-- Start Go Top Area -->
+            <div class="go-top">
+                <i class="ri-arrow-up-line"></i>
+            </div>
+            <!-- End Go Top Area -->
+        </div>
+        <!-- End Main Dashboard Content Wrapper Area -->
+         
+        <!-- Start Copyright Area -->
+        <div class="footerCopy">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p><i class="ri-copyright-line"></i> 2021-2022 <a href="#"> Recrute</a>. </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Area -->
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/supprmierProfil.js"></script>
+        <!--notifci-->
+        <script src="assets/js/notification.js"></script>
+        
+        
+        <!--Validation-->
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/additional-methods.min.js"></script>
+        <!--alert-->
+        <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script>
+            function send() {
+              var i = document.getElementById("LOGO_ENT");
+              const apikey = "AnPRsl9JkTZKL3Hp9hwzxz";
+              const client = filestack.init(apikey);
+              const options = {
+                maxFiles: 20,
+                uploadInBackground: false,
+                onOpen: () => console.log("opened!"),
+                onUploadDone: (res) => (i.value = res.filesUploaded[0].url),
+              };
+              client.picker(options).open();
+            }
+          </script>
+    </body>
+    <script>
+        var idrec=localStorage.getItem("ID_REC");
+        
+        
+        var emailREC;
+        var pswREC;
+        var validREC;
+        var mapX;
+        var mapY;
+        var archREC;
+        var idHORL;
+        var idHORMA;
+        var idHORME;
+        var idHORJ;
+        var idHORV;
+        var idHORS;
+        var idHORD;
+        // Create a request variable and assign a new XMLHttpRequest object to it.
+        var request = new XMLHttpRequest()
+            // Open a new connection, using the GET request on the URL endpoint
+            request.open('GET', 'http://192.168.43.96:3000/recruteurs/'+idrec, true)
+            request.onload = function()
+            {
+                // Begin accessing JSON data here
+                var data = JSON.parse(this.response);
+                console.log(data);
+                document.getElementById("SEC_DACT_ENT").value = data.SEC_DACT_ENT;
+                document.getElementById("EMAIL_ENT").value = data.EMAIL_ENT;
+                document.getElementById("IDENT_UNQ_ENT").value = data.IDENT_UNQ_ENT;
+                document.getElementById("NOM_ENT").value = data.NOM_ENT;
+                document.getElementById("LOGO_ENT").value = data.LOGO_ENT;
+                document.getElementById("URL_WEB_ENT").value = data.URL_WEB_ENT;
+                document.getElementById("URL_LINK_ENT").value = data.URL_LINK_ENT;
+                document.getElementById("URL_FB_ENT").value = data.URL_FB_ENT;
+                document.getElementById("DESC_ENT").value = data.DESC_ENT;
+                document.getElementById("PAYS_ORG_ENT").value = data.PAYS_ORG_ENT;
+                document.getElementById("VILLE_ENT").value = data.VILLE_ENT;
+                document.getElementById("ADRESSE_ENT").value = data.ADRESSE_ENT;
+                document.getElementById("COD_POST_ENT").value = data.COD_POST_ENT;
+                document.getElementById("NUM_TEL_ENT").value = data.NUM_TEL_ENT;
+                document.getElementById("NB_SAL_ENT").value = data.NB_SAL_ENT;
+                document.getElementById("DAT_CREA_ENT").value = data.DAT_CREA_ENT;
+                pswREC = data.PSW_REC;
+                emailREC = data.EMAIL_REC;
+                validREC = data.VALID_ENT;
+                mapX = data.X;
+                mapY = data.Y;
+                archREC = data.ARCHIV_REC;
+                // Create a request variable and assign a new XMLHttpRequest object to it.
+                var request1 = new XMLHttpRequest()
+                // Open a new connection, using the GET request on the URL endpoint
+                request1.open('GET', 'http://192.168.43.96:3000/horaires', true)
+                request1.onload = function()
+                {
+                    // Begin accessing JSON data here
+                    var data1 = JSON.parse(this.response);
+                    data1.forEach(i => {
+                        if(i.ID_RECRUTEUR==idrec){
+
+                            if(i.JOUR_TRAV=="Lundi"){
+                                idHORL = i._id;
+                                change_valeurGET("SelectPosteJour1","rowPosteL","L",i);
+                            }else if(i.JOUR_TRAV=="Mardi"){
+                                idHORMA = i._id;
+                                change_valeurGET("SelectPosteJour2","rowPosteMA","MA",i);
+                            }else if(i.JOUR_TRAV=="Mercredi"){
+                                idHORME = i._id;
+                                change_valeurGET("SelectPosteJour3","rowPosteME","ME",i);
+                            }else if(i.JOUR_TRAV=="Jeudi"){
+                                idHORJ = i._id;
+                                change_valeurGET("SelectPosteJour4","rowPosteJ","J",i);
+                            }else if(i.JOUR_TRAV=="Vendredi"){
+                                idHORV = i._id;
+                                change_valeurGET("SelectPosteJour5","rowPosteV","V",i);
+                            }else if(i.JOUR_TRAV=="Samedi"){
+                                idHORS = i._id;
+                                change_valeurGET("SelectPosteJour6","rowPosteS","S",i);
+                            }else{
+                                idHORD = i._id;
+                                change_valeurGET("SelectPosteJour7","rowPosteD","D",i);
+                            }
+                        }
+                    })
+                }
+                request1.send();
+            }
+            request.send();
+
+         function change_valeur(sel,rPos,motJ){
+            var selectPoste = document.getElementById(sel);
+            var choicePoste = selectPoste.selectedIndex;
+            var valeurPoste = selectPoste.options[choicePoste].value;
+            console.log(selectPoste.options[choicePoste]);
+            if (valeurPoste == "1"){
+                ch=``;
+                document.getElementById(rPos).innerHTML=ch;
+            }
+            if (valeurPoste == "2"){
+                ch=`<div class="col-xl-6 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Début de poste 1</label>
+                                <input id="TIME_DEB_MATIN`+motJ+`" type="time" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Fin de poste 1</label>
+                                <input id="TIME_FIN_MATIN`+motJ+`" type="time" class="form-control">
+                            </div>
+                    </div>`;
+                document.getElementById(rPos).innerHTML=ch;
+            }
+            if (valeurPoste == "3"){
+                ch=`<div class="col-xl-3 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Début de poste 1</label>
+                                <input id="TIME_DEB_MATIN`+motJ+`" type="time" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Fin de poste 1</label>
+                                <input id="TIME_FIN_MATIN`+motJ+`" type="time" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Début de poste 2</label>
+                                <input id="TIME_DEB_MIDI`+motJ+`" type="time" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Fin de poste 2</label>
+                                <input id="TIME_FIN_MIDI`+motJ+`" type="time" class="form-control">
+                            </div>
+                    </div>`;
+                document.getElementById(rPos).innerHTML=ch;
+            }
+        }
+
+        function change_valeurGET(sel,rPos,motJ,list){
+            if((list.TIME_DEB_MATIN !="")&&(list.TIME_FIN_MATIN !="")&&(list.TIME_DEB_MIDI!="")&&(list.TIME_FIN_MIDI!="")){
+                document.getElementById(sel).value = "3";
+                ch=`<div class="col-xl-3 col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Début de poste 1</label>
+                            <input id="TIME_DEB_MATIN`+motJ+`" type="time" class="form-control" value="`+list.TIME_DEB_MATIN+`">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Fin de poste 1</label>
+                            <input id="TIME_FIN_MATIN`+motJ+`" type="time" class="form-control" value="`+list.TIME_FIN_MATIN+`">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Début de poste 2</label>
+                            <input id="TIME_DEB_MIDI`+motJ+`" type="time" class="form-control" value="`+list.TIME_DEB_MIDI+`">
+                        </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Fin de poste 2</label>
+                            <input id="TIME_FIN_MIDI`+motJ+`" type="time" class="form-control" value="`+list.TIME_FIN_MIDI+`">
+                        </div>
+                    </div>`;
+                document.getElementById(rPos).innerHTML=ch;
+            }else if((list.TIME_DEB_MATIN !="")&&(list.TIME_FIN_MATIN !="")&&(list.TIME_DEB_MIDI=="")&&(list.TIME_FIN_MIDI=="")){
+                document.getElementById(sel).value = "2";
+                ch=`<div class="col-xl-6 col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Début de poste 1</label>
+                            <input id="TIME_DEB_MATIN`+motJ+`" type="time" class="form-control" value="`+list.TIME_DEB_MATIN+`">
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Fin de poste 1</label>
+                            <input id="TIME_FIN_MATIN`+motJ+`" type="time" class="form-control" value="`+list.TIME_FIN_MATIN+`">
+                        </div>
+                    </div>`;
+                document.getElementById(rPos).innerHTML=ch;
+            }else{
+                document.getElementById(sel).value = "1";
+            }
+        }
+
+        function refresh(){
+            //var form = $("#formInfo"),
+            //validator = form.validate();
+            //validator.resetForm();
+            
+            location.reload();
+            //document.getElementById("formInfo").reset();
+        }
+
+        $(function () {
+            $.validator.setDefaults({
+                submitHandler: function () {
+                    ch=`<tr>
+                            <td>
+                                <button type="button" class="default-btn" onclick="refresh();">Annuler<i class="ri-close-line"></i></button>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-12 col-md-12"></div>
+                                    <div class="col-xl-2 col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn">Suivant<i class="ri-arrow-right-fill"></i></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>`;
+                    document.getElementById("tableAutre").innerHTML=ch;
+                    document.getElementById("Informations").classList.remove("show");
+                    document.getElementById("Autre").classList.add("show");
+
+                    document.getElementById("Informations").classList.remove("active");
+                    document.getElementById("Autre").classList.add("active");
+
+                    document.getElementById("Informations-tab").classList.remove("active");
+                    document.getElementById("Autre-tab").classList.add("active");
+                    document.getElementById("NOM_ENT").disabled = true;
+                    document.getElementById("SEC_DACT_ENT").disabled = true;
+                    document.getElementById("IDENT_UNQ_ENT").disabled = true;
+                    document.getElementById("DAT_CREA_ENT").disabled = true;
+                    document.getElementById("NB_SAL_ENT").disabled = true;
+                    document.getElementById("DESC_ENT").disabled = true;
+                    document.getElementById("LOGO_ENT").disabled = true;
+                }
+            });
+            
+            $('#formInfo').validate({
+                rules: {
+                    NomENT: {
+                        required: true,
+                    },
+                    SectDactENT: {
+                        required: true,
+                    },
+                    IdentUniqENT: {
+                        required: true,
+                        ident: true,
+                    },
+                    DatCreaENT: {
+                        required: true,
+                    },
+                    NbSalENT: {
+                        required: true,
+                        numnbSal: true,
+                        number: true,
+                    },
+                    DescENT: {
+                        required: true,
+                    },
+                    LOGOENT: {
+                        accept: "image/*",
+                    },
+                },
+                messages: {
+                    NomENT: {
+                        required: "Veuillez entrer un nom d'entreprise"
+                    },
+                    SectDactENT: {
+                        required: "Veuillez entrer un secteur d'activité"
+                    },
+                    IdentUniqENT: {
+                        required: "Veuillez saisir le identifient unique de l'entreprise",
+				        ident: "Le identifient unique doit comporter 6 chiffres une - et 2 chiffre à la fin"
+                    },
+                    DatCreaENT: {
+                        required: "Veuillez entrer une date de création de l'entreprise"
+                    },
+                    NbSalENT: {
+                        required: "Veuillez entrer le nombre de salariés dans l'entreprise",
+                        numnbSal: "Le nombre ne débute pas par 0",
+                        number:"Contient que chiffres "
+                    },
+                    DescENT: {
+                        required: "Veuillez entrer une description sur l'entreprise"
+                    },
+                    LOGOENT: {
+				        accept:"extension image"
+                    }
+                },
+                errorElement: 'span',
+                errorPlacement: function (error, element) {
+                error.addClass('text-danger');
+                element.closest('.form-group').append(error);
+                },
+                highlight: function (element) {
+                    var msgClasses = "h4";
+                    $(element).addClass(msgClasses);
+                },
+                unhighlight: function (element) {
+                    var msgClasses = "h4 tab";
+                    $(element).removeClass("h4");
+                    $(element).addClass(msgClasses);
+            
+                }
+            
+            });
+            jQuery.validator.addMethod(
+            "ident",
+            function(value, element) {
+                return /^(([0-9].{5})+\-)+([0-9].{1})+$/.test(value);
+            },)
+            jQuery.validator.addMethod(
+            "numnbSal",
+            function(value, element) {
+                return /^[1-9][0-9]+$/.test(value);
+            },)
+        });
+
+
+        $(function () {
+            $.validator.setDefaults({
+                submitHandler: function () {
+                    ch=`<tr>
+                            <td>
+                                <button type="button" class="default-btn" onclick="refresh();">Annuler<i class="ri-close-line"></i></button>
+                            </td>
+                            <td>
+                                <div class="row">
+                                    <div class="col-xl-8 col-lg-12 col-md-12"></div>
+                                    <div class="col-xl-2 col-lg-12 col-md-12">
+                                        <button type="submit" class="default-btn" onclick="modifier();">Modifié<i class="ri-edit-line"></i></button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>`;
+                    document.getElementById("tableHor").innerHTML=ch;
+                    document.getElementById("Autre").classList.remove("show");
+                    document.getElementById("Horaire").classList.add("show");
+
+                    document.getElementById("Autre").classList.remove("active");
+                    document.getElementById("Horaire").classList.add("active");
+                    
+                    document.getElementById("Autre-tab").classList.remove("active");
+                    document.getElementById("Horaire-tab").classList.add("active");
+                    
+                    document.getElementById("EMAIL_ENT").disabled = true;
+                    document.getElementById("NUM_TEL_ENT").disabled = true;
+                    document.getElementById("URL_WEB_ENT").disabled = true;
+                    document.getElementById("URL_FB_ENT").disabled = true;
+                    document.getElementById("URL_LINK_ENT").disabled = true;
+                    document.getElementById("ADRESSE_ENT").disabled = true;
+                    document.getElementById("COD_POST_ENT").disabled = true;
+                    document.getElementById("VILLE_ENT").disabled = true;
+                    document.getElementById("PAYS_ORG_ENT").disabled = true;
+                }
+            });
+            
+            $('#formAutre').validate({
+                rules: {
+                    EmailENT: {
+                        required: true,
+                        email: true,
+                    },
+                    NumTelENT: {
+                        required: true,
+                        num: true,
+                        number: true,
+                    },
+                    AdresseENT: {
+                        required: true,
+                    },
+                    CodePosENT: {
+                        required: true,
+                        numCP: true,
+                        number: true,
+                    },
+                    VilleENT: {
+                        required: true,
+                    },
+                    PaysOrigENT: {
+                        required: true,
+                    },
+                },
+                messages: {
+                    EmailENT: {
+                        required: "Veuillez entrer une adresse e-mail d'entreprise",
+				        email: "S'il vous plaît, mettez une adresse email valide"
+                    },
+                    NumTelENT: {
+                        required: "Veuillez entrer un numéro de téléphone de l'entreprise",
+                        num: "Le téléphone doit comporter 8 chiffres et ne débute pas par 0 ou 1 ",
+                        number:"Contient que chiffres "
+                    },
+                    AdresseENT: {
+                        required: "Veuillez entrer une adresse d'entreprise"
+                    },
+                    CodePosENT: {
+                        required: "Veuillez entrer un code postal d'entreprise",
+				        numCP: "Le code postal doit comporter 4 chiffres",
+                        number:"Contient que chiffres "
+                    },
+                    VilleENT: {
+                        required: "Veuillez choisir une ville d'entreprise"
+                    },
+                    PaysOrigENT: {
+                        required: "Veuillez entrer un pays original d'entreprise"
+                    },
+                },
+                errorElement: 'span',
+                errorPlacement: function (error, element) {
+                error.addClass('text-danger');
+                element.closest('.form-group').append(error);
+                },
+                highlight: function (element) {
+                    var msgClasses = "h4";
+                    $(element).addClass(msgClasses);
+                },
+                unhighlight: function (element) {
+                    var msgClasses = "h4 tab";
+                    $(element).removeClass("h4");
+                    $(element).addClass(msgClasses);
+            
+                }
+            
+            });
+            jQuery.validator.addMethod(
+            "num",
+            function(value, element) {
+                return /^[2-9][0-9].{6}$/.test(value);
+            },)
+            jQuery.validator.addMethod(
+            "numCP",
+            function(value, element) {
+                return /^([0-9].{3})+$/.test(value);
+            },)
+        });
+
+
+        var dataProf={};
+        function modifier() {
+            Swal.fire({
+                title: 'Voulez-vous enregistrer les modification ?',
+                icon: 'question',
+                showDenyButton: true,
+                confirmButtonColor: '#17a2b8',
+                confirmButtonText: 'Enregistrer',
+                denyButtonText: `Non`,
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    dataProf.EMAIL_REC = emailREC;
+                    dataProf.PSW_REC = pswREC;
+                    dataProf.SEC_DACT_ENT = document.getElementById("SEC_DACT_ENT").value;
+                    dataProf.EMAIL_ENT = document.getElementById("EMAIL_ENT").value;
+                    dataProf.IDENT_UNQ_ENT = document.getElementById("IDENT_UNQ_ENT").value;
+                    dataProf.NOM_ENT = document.getElementById("NOM_ENT").value;
+                    dataProf.LOGO_ENT = document.getElementById("LOGO_ENT").value;
+                    dataProf.URL_WEB_ENT = document.getElementById("URL_WEB_ENT").value;
+                    dataProf.URL_LINK_ENT = document.getElementById("URL_LINK_ENT").value;
+                    dataProf.URL_FB_ENT = document.getElementById("URL_FB_ENT").value;
+                    dataProf.DESC_ENT = document.getElementById("DESC_ENT").value;
+                    dataProf.PAYS_ORG_ENT = document.getElementById("PAYS_ORG_ENT").value;
+                    dataProf.VILLE_ENT = document.getElementById("VILLE_ENT").value;
+                    dataProf.ADRESSE_ENT = document.getElementById("ADRESSE_ENT").value;
+                    dataProf.COD_POST_ENT = document.getElementById("COD_POST_ENT").value;
+                    dataProf.NUM_TEL_ENT = document.getElementById("NUM_TEL_ENT").value;
+                    dataProf.NB_SAL_ENT = document.getElementById("NB_SAL_ENT").value;
+                    dataProf.VALID_ENT = validREC;
+                    dataProf.X = mapX;
+                    dataProf.Y = mapY;
+                    dataProf.ARCHIV_REC = archREC;
+                    dataProf.DAT_CREA_ENT = document.getElementById("DAT_CREA_ENT").value;
+                    var url = "http://192.168.43.96:3000/recruteurs/"+idrec;
+                    var json = JSON.stringify(dataProf);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("PUT", url, true);
+                    xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                    xhr.onload = function () {
+                        var recruteurs = JSON.parse(xhr.responseText);
+                        if (xhr.readyState == 4 && xhr.status == "200") {
+                            splitHoraire("Lundi","rowPosteL",idrec,idHORL);
+                            splitHoraire("Mardi","rowPosteMA",idrec,idHORMA);
+                            splitHoraire("Mercredi","rowPosteME",idrec,idHORME);
+                            splitHoraire("Jeudi","rowPosteJ",idrec,idHORJ);
+                            splitHoraire("Vendredi","rowPosteV",idrec,idHORV);
+                            splitHoraire("Samedi","rowPosteS",idrec,idHORS);
+                            splitHoraire("Dimanche","rowPosteD",idrec,idHORD);
+                            Swal.fire({
+                            title:'Modification Enregistrer',
+                            icon:'success',
+                            showConfirmButton:false,
+                            timer:2200
+                            })
+                        } else {
+                            Swal.fire({
+                                icon:'error',  
+                                title:'Il y a un erreur !',
+                                showConfirmButton:true,
+                                timer:1500
+                            })
+                        }
+                    }
+                    xhr.send(json);
+                }
+            })
+        }
+
+        dataHoraire={};
+        function splitHoraire(jourTrav,rowINPUT,REC,HOR){
+            var list = document.getElementById(rowINPUT).getElementsByTagName("input");
+            if(list.length==0){
+                dataHoraire.JOUR_TRAV = jourTrav;
+                dataHoraire.TIME_DEB_MATIN = "";
+                dataHoraire.TIME_FIN_MATIN = "";
+                dataHoraire.TIME_DEB_MIDI = "";
+                dataHoraire.TIME_FIN_MIDI = "";
+                dataHoraire.ID_RECRUTEUR = REC;
+            }else if(list.length==2){
+                dataHoraire.JOUR_TRAV = jourTrav;
+                dataHoraire.TIME_DEB_MATIN = list[0].value;
+                dataHoraire.TIME_FIN_MATIN = list[1].value;
+                dataHoraire.TIME_DEB_MIDI = "";
+                dataHoraire.TIME_FIN_MIDI = "";
+                dataHoraire.ID_RECRUTEUR = REC;
+            }else{
+                dataHoraire.JOUR_TRAV = jourTrav;
+                dataHoraire.TIME_DEB_MATIN = list[0].value;
+                dataHoraire.TIME_FIN_MATIN = list[1].value;
+                dataHoraire.TIME_DEB_MIDI = list[2].value;
+                dataHoraire.TIME_FIN_MIDI = list[3].value;
+                dataHoraire.ID_RECRUTEUR = REC;
+            }
+            var url = "http://192.168.43.96:3000/horaires/"+HOR;
+            var json = JSON.stringify(dataHoraire);
+            var xhr = new XMLHttpRequest();
+            xhr.open("PUT", url, true);
+            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+            xhr.onload = function () {
+                var horaires = JSON.parse(xhr.responseText);
+                if (xhr.readyState == 4 && xhr.status == "200") {
+                    console.log("OK");
+                }
+            }
+            xhr.send(json);
+        }
+    </script>
+</html>

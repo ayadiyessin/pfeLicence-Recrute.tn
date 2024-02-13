@@ -1,0 +1,1215 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <!--image-->
+         <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+       
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+		<link rel="stylesheet" href="assets/css/styessin.css">
+		<title> Recrute.tn | Recruteur - Espace Entreprise</title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(localStorage.getItem("ID_REC")){
+              location.replace("dashboardRecruteur.html");
+            }
+
+          
+            
+            if(localStorage.getItem("ID_DEM")){
+              location.replace("../template_demandeur/AccueilDemandeur.html");
+            }
+          
+          </script>
+    </head>
+
+    <body >
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Header Area -->
+        <header class="main-header-area">
+            <!-- Start Topbar Area -->
+            <div class="topbar-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-6">
+                            <ul class="topbar-social-list">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank"><i class="flaticon-facebook"></i></a>
+                                </li>
+                              
+                                <li>
+                                    <a href="https://linkedin.com/" target="_blank"><i class="flaticon-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-7 col-md-6">
+                            <ul class="topbar-action">
+                                <li>
+                                    <a href="../template_demandeur/loginDemandeur.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion"><i class="flaticon-user"></i>Espace Candidat</a>
+                                </li>
+
+                                <li>
+                                    <a href="profile-authentication.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion"><i class="ri-community-line"></i> Espace Entreprise</a>
+                                </li>
+
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Topbar Area -->
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="container">
+                        <div class="main-responsive-menu">
+                            <div class="logo">
+                                <a href="../index.html">
+                                    <img src="assets/Recrute.fr-c1.png"style="height: 50px; width: 250px ;  "   alt="logo">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="../index.html">
+                                <img src="assets/Recrute.fr-c1.png" style="height: 100px; width: 250px; "  alt="logo">
+                            </a>
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav m-auto">
+                                    <li class="nav-item">
+                                        <a href="../index.html" class="nav-link ">
+                                            Accueil
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="../template_demandeur/loginDemandeur.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion" class="nav-link ">
+                                            Espace Candidat
+                                        </a>  
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="profile-authentication.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion" class="nav-link active">
+                                            Espace Entreprise
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="../apropos.html" class="nav-link " >
+                                            A propos
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="../faq.html" class="nav-link">
+                                            FAQ
+                                        </a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a href="../contactINT.html" class="nav-link ">Contact</a>
+                                    </li>
+                                </ul>
+
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <a href="../template_recruteur/profile-authentication.html" class="default-btn">Publier une offre <i class="flaticon-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+        </header>
+        <!-- End Header Area -->
+        
+        <!-- Start Page Banner Area -->
+        <div class="page-banner-area item-bg-two">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="page-banner-content">
+                            <h2>Espace Entreprise</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Banner Area -->
+        <br>
+        <p style="text-align: center; ">Si vous êtes à la recherche d'un emploi, rendez-vous à la rubrique <a href="../template_demandeur/loginDemandeur.html"><b> Inscription d'un demandeur d'emploi </b> </a> </p>
+       
+        <!-- Start Profile Authentication Area -->
+        <div class="profile-authentication-area ptb-100">
+            <div class="container">
+                <div class="profile-authentication-tabs">
+                    <div class="authentication-tabs-list">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist" >
+
+                            <li class="nav-item">
+                                <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login">Connexion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab" aria-controls="register">S'inscrire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="oublier-tab" data-bs-toggle="tab" href="#oublier" role="tab" aria-controls="oublier">Mot de passe oublié</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <form onsubmit="return false" id="form">
+                                    <div class="form-group" id="formfoc">
+                                        <label>E-mail</label>
+                                        <input type="text" name="EMAILCNX" class="form-control" id="EMAIL_RECLOGIN" placeholder="Eentrer votre e-mail...">
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label>Mot de passe</label>
+                                        <input type="password" name="PSWCNX" class="form-control" id="PSw_RECLOGIN" placeholder="Entrer votre mot de passe...">
+                                    </div>
+    
+                                    <div class="row align-items-center">
+    
+                                        <div class="col-lg-12 col-md-6 col-sm-6 lost-your-password-wrap">
+                                                <a onclick="ouvrirOBLPSW();" class="lost-your-password">Mot de passe oublié?</a>
+                                        </div>
+                                    </div>
+    
+                                    <button type="submit" class="default-btn">Connexion<i class="flaticon-send"></i></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <!--hetha teb3o-->
+                                <div class="wrapper">
+                                    <div class="header">
+                                        <ul>
+                                            <li class="active form_1_progessbar man8irPoint">
+                                                <div id="Divstep1">
+                                                    <p id="step1" data-bs-toggle="tooltip" data-bs-placement="top" title="Informations de Profil"><i class="ri-lock-line" ></i></p>
+                                                </div>
+                                            </li>
+                                            <li class="form_2_progessbar man8irPoint">
+                                                <div id="Divstep2">
+                                                    <p id="step2" data-bs-toggle="tooltip" data-bs-placement="top" title="Informations de l'Entreprise"><i class="ri-profile-line" ></i></p>
+                                                </div>
+                                            </li>
+                                            <li class="form_3_progessbar man8irPoint">
+                                                <div id="Divstep3">
+                                                    <p id="step3" data-bs-toggle="tooltip" data-bs-placement="top" title="Localisation Entreprise"><i class="ri-map-pin-line"></i></p>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="form_wrap">
+                                        <div class="form_1 data_info" >
+                                            <span class="sub-title"><label class="colorText">Informations de Profil</label></span>
+                                            <form onsubmit="return false" id="form1">  
+                                                <div class="form-group">
+                                                    <label>E-mail<span class="required">*</span></label>
+                                                    <input type="text" name="EMAIL" class="form-control" id="EMAIL_REC" placeholder="Entrer votre E-mail...">
+                                                </div>
+                
+                                                <div class="form-group">
+                                                    <label>Mot de passe<span class="required">*</span></label>
+                                                    <input type="password" name="PSW" class="form-control" id="PSW_REC" placeholder="Entrer votre Mot de Passe...">
+                                                </div>
+            
+                                                <div class="form-group">
+                                                    <label>Confirmer Mot de passe<span class="required">*</span></label>
+                                                    <input type="password" name="CPSW" class="form-control" id="CPSW_REC" placeholder="Confirmer votre Mot de Passe...">
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_1_btns" >
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form_2 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Informations de l'Entreprise</label></span>
+                                            <form onsubmit="return false" id="form2">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom Entreprise<span class="required">*</span></label>
+                                                            <input name="NOM" id="NOM_ENT" type="text" class="form-control" placeholder="Entrer le nom de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Identifiant Unique<span class="required">*</span></label>
+                                                            <input name="IDENTUNIQ" id="IDENT_UNQ_ENT" type="text" class="form-control" placeholder="Entrer l'identifiant unique de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Secteur d'Activité<span class="required">*</span></label>
+                                                            <input name="SECDACT" id="SEC_DACT_ENT" type="text" class="form-control" placeholder="Entrer le secteur d'activité de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Logo Entreprise<span class="required">*</span></label>
+                                                            <input name="LOGOENT" id="LOGO_ENT" type="text" class="form-control"  onclick="send()" placeholder="Entrer logo de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_2_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form_3 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Localisation Entreprise</label></span>
+                                            <form onsubmit="return false" id="form3">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Adresse Entreprise<span class="required">*</span></label>
+                                                            <input name="ADRESSEENT" id="ADRESSE_ENT" type="text" class="form-control" placeholder="Entrer l'adresse de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Code Postal Entreprise<span class="required">*</span></label>
+                                                            <input name="CODPOSENT" id="COD_POST_ENT" type="text" class="form-control" placeholder="Entrer le code postal de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Pays Original Entreprise<span class="required">*</span></label>
+                                                            <input name="PAYSORGENT" id="PAYS_ORG_ENT" type="text" class="form-control" placeholder="Entrer le pays original de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ville Entreprise<span class="required">*</span></label>
+                            
+                                                            <select name="VILLEENT" id="VILLE_ENT" class="form-control">
+                                                                <option selected disabled>Choisir une Ville d'entreprise</option>
+                                                                <option value="Ariana">Ariana</option>
+                                                                <option value="Béja">Béja</option>
+                                                                <option value="Ben Arous">Ben Arous</option>
+                                                                <option value="Bizerte">Bizerte</option>
+                                                                <option value="Gabès">Gabès</option>
+                                                                <option value="Gafsa">Gafsa</option>
+                                                                <option value="Jendouba">Jendouba</option>
+                                                                <option value="Kairouan">Kairouan</option>
+                                                                <option value="Kasserine">Kasserine</option>
+                                                                <option value="Kebili">Kebili</option>
+                                                                <option value="La Manouba">La Manouba</option>
+                                                                <option value="Le Kef">Le Kef</option>
+                                                                <option value="Mahdia">Mahdia</option>
+                                                                <option value="Médenine">Médenine</option>
+                                                                <option value="Monastir">Monastir</option>
+                                                                <option value="Nabeul">Nabeul</option>
+                                                                <option value="Sfax">Sfax</option>
+                                                                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                                                <option value="Siliana">Siliana</option>
+                                                                <option value="Sousse">Sousse</option>
+                                                                <option value="Tataouine">Tataouine</option>
+                                                                <option value="Tozeur">Tozeur</option>
+                                                                <option value="Tunis">Tunis</option>
+                                                                <option value="Zaghouan">Zaghouan</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_3_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form_4 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Contact de l'Entreprise</label></span>
+                                            <form onsubmit="return false" id="form4">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>E-mail Entreprise<span class="required">*</span></label>
+                                                            <input name="EMAILENT" id="EMAIL_ENT" type="text" class="form-control" placeholder="Entrer le e-mail de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Numéro Téléphone Entreprise<span class="required">*</span></label>
+                                                            <input name="NUMTELENT" id="NUM_TEL_ENT" type="text" class="form-control" placeholder="Entrer le numéro téléphone de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Site Web URL Entreprise</label>
+                                                            <input id="URL_WEB_ENT" type="text" class="form-control" placeholder="https://www.NomEntreprise.com/">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Facebook URL Entreprise</label>
+                                                            <input id="URL_FB_ENT" type="text" class="form-control" placeholder="https://www.facebook.com/">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Linkedin URL</label>
+                                                            <input id="URL_LINK_ENT" type="text" class="form-control" placeholder="https://www.linkedin.com/">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_4_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form_5 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Autres Informations de l'Entreprise</label></span>
+                                            <form onsubmit="return false" id="form5">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nombre Salarier Entreprise<span class="required">*</span></label>
+                                                            <input name="NBSALENT" id="NB_SAL_ENT" type="text" class="form-control" placeholder="Entrer le nombre salarier de l'entreprise...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Création Entreprise<span class="required">*</span></label>
+                                                            <input name="DATCREAENT" id="DAT_CREA_ENT" type="date" class="form-control">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Description Entreprise<span class="required">*</span></label>
+                                                            <textarea name="DESCENT" id="DESC_ENT" cols="30" rows="6" placeholder="Entrer une description de l'entreprise..." class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_5_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                        <div class="form_6 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Jours de Travail de l'Entreprise</label></span>
+                                            <form onsubmit="return false" id="form6">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div  class="form-group">
+                                                            <label>Jour de Travail</label>
+                                                            <select id="SelectJourTravail" class="form-control">
+                                                                <option value="Lundi" selected>Lundi</option>
+                                                                <option value="Mardi" disabled>Mardi</option>
+                                                                <option value="Mercredi" disabled>Mercredi</option>
+                                                                <option value="Jeudi" disabled>Jeudi</option>
+                                                                <option value="Vendredi" disabled>Vendredi</option>
+                                                                <option value="Samedi" disabled>Samedi</option>
+                                                                <option value="Dimanche" disabled>Dimanche</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div  class="form-group">
+                                                            <label>Heure de Travail</label>
+                                                            <select id="SelectPosteTravail" class="form-control" onchange="change_valeur();">
+                                                                <option value="0" selected disabled>Choisir une poste de travail</option>
+                                                                <option value="1">Fermé</option>
+                                                                <option value="2">Seul Poste</option>
+                                                                <option value="3">Deux Poste</option>
+                                                            </select>
+                                                        </div>
+                                                        <div id="rowPoste" class="row"></div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_6_btns" style="display: none;">
+                                                        <button type="submit" class="default-btn" onclick="Ajout_horaire_Recruteur();">Register<i class="flaticon-plus"></i></button> 
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="oublier" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <form onsubmit="return false" id="formOublier">
+                                    <div class="form-group">
+                                        <input type="text" name="EMAILOub" class="form-control" id="EMAIL_Oub" placeholder="Entrer son e-mail...">
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-lg-12 col-md-6 col-sm-6 lost-your-password-wrap">
+                                             <a onclick="ouvrirCNX();" class="lost-your-password">Connexion</a>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="default-btn">Suivant<i class="flaticon-send"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Profile Authentication Area -->
+
+         <!-- Start Footer Area -->
+         <footer class="footer-area pt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <div class="widget-logo">
+                                <a href="../index.html"><img src="assets/Recrute.tn-blache.png" alt="image"></a>
+                            </div>
+                           
+                            <ul class="widget-social-links">
+                                <li><span>Suivre:</span></li>
+
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="flaticon-facebook"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.linkedin.com/" target="_blank">
+                                        <i class="flaticon-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-footer-widget ps-5">
+                            <h3>Société</h3>
+
+                            <ul class="quick-links">
+                               
+                                <li><a href="../apropos.html">A propos</a></li>
+                                <li><a href="../faq.html">FAQ</a></li>
+                                <li><a href="../contactINT.html">Contact</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h3>Ressources</h3>
+
+                            <ul class="quick-links">
+                                <li><a href="../template_demandeur/loginDemandeur.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion">Espace Candidat</a></li>
+                                <li><a href="profile-authentication.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion">Espace Entreprise</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h3>Contact Rapide</h3>
+                            
+                            <ul class="widget-info">
+                               
+                                <li>
+                                    <i class="flaticon-e"></i>
+                                    <a href="mailto:tunisierecrute0@gmail.com">tunisierecrute0@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright-area">
+                <div class="container">
+                    <p><i class="ri-copyright-line"></i> 2021 - 2022 Recrute.tn - Tous droits réservés </p>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+        <!-- End Go Top Area -->
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        
+        <script src="assets/js/scripts.js"></script>
+        <!--validation-->
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/additional-methods.min.js"></script>
+       
+        <!--alert-->
+        <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!--Email-->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function send() {
+              var i = document.getElementById("LOGO_ENT");
+              const apikey = "AnPRsl9JkTZKL3Hp9hwzxz";
+              const client = filestack.init(apikey);
+              const options = {
+                maxFiles: 20,
+                uploadInBackground: false,
+                onOpen: () => console.log("opened!"),
+                onUploadDone: (res) => (i.value = res.filesUploaded[0].url),
+              };
+              client.picker(options).open();
+            }
+          </script>
+        <script>
+        function change_valeur(){
+            var selectPoste = document.getElementById("SelectPosteTravail");
+            var choicePoste = selectPoste.selectedIndex;
+            var valeurPoste = selectPoste.options[choicePoste].value;
+            console.log(selectPoste.options[choicePoste]);
+            if (valeurPoste == "1"){
+                ch=``;
+                document.getElementById("rowPoste").innerHTML=ch;
+            }
+            if (valeurPoste == "2"){
+                ch=`<div class="col-xl-6 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Début de poste 1</label>
+                                <input id="TIME_DEB_MATIN" type="time" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Fin de poste 1</label>
+                                <input id="TIME_FIN_MATIN" type="time" class="form-control">
+                            </div>
+                    </div>`;
+                document.getElementById("rowPoste").innerHTML=ch;
+            }
+            if (valeurPoste == "3"){
+                ch=`<div class="col-xl-3 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Début de poste 1</label>
+                                <input id="TIME_DEB_MATIN" type="time" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Fin de poste 1</label>
+                                <input id="TIME_FIN_MATIN" type="time" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Début de poste 2</label>
+                                <input id="TIME_DEB_MIDI" type="time" class="form-control">
+                            </div>
+                    </div>
+                    <div class="col-xl-3 col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Fin de poste 2</label>
+                                <input id="TIME_FIN_MIDI" type="time" class="form-control">
+                            </div>
+                    </div>`;
+                document.getElementById("rowPoste").innerHTML=ch;
+            }
+        }
+
+        /*function Ajout_Recruteur() {
+            var data = {};
+            data.EMAIL_REC = document.getElementById("EMAIL_REC").value;
+            data.PSW_REC = document.getElementById("PSW_REC").value;
+            data.SEC_DACT_ENT = document.getElementById("SEC_DACT_ENT").value;
+            data.EMAIL_ENT = document.getElementById("EMAIL_ENT").value;
+            data.IDENT_UNQ_ENT = document.getElementById("IDENT_UNQ_ENT").value; 
+            data.NOM_ENT = document.getElementById("NOM_ENT").value;
+            data.LOGO_ENT = document.getElementById("LOGO_ENT").value;
+            data.URL_WEB_ENT = document.getElementById("URL_WEB_ENT").value;
+            data.URL_LINK_ENT = document.getElementById("URL_LINK_ENT").value;
+            data.URL_FB_ENT = document.getElementById("URL_FB_ENT").value;
+            data.DESC_ENT = document.getElementById("DESC_ENT").value;
+            data.PAYS_ORG_ENT = document.getElementById("PAYS_ORG_ENT").value; 
+            data.VILLE_ENT = document.getElementById("VILLE_ENT").value;
+            data.ADRESSE_ENT = document.getElementById("ADRESSE_ENT").value;
+            data.COD_POST_ENT = document.getElementById("COD_POST_ENT").value;
+            data.NUM_TEL_ENT = document.getElementById("NUM_TEL_ENT").value; 
+            data.NB_SAL_ENT = document.getElementById("NB_SAL_ENT").value;
+            data.VALID_ENT = "0";
+            data.X = "0";
+            data.Y = "0";
+            data.DAT_CREA_ENT = document.getElementById("DAT_CREA_ENT").value;
+            console.table(data);
+
+            var url = "http://192.168.43.96:3000/recruteurs";
+            var json = JSON.stringify(data);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+            xhr.onload = function () {
+                var recruteurs= JSON.parse(xhr.responseText);
+                if (xhr.readyState == 4 && xhr.status == "200") {
+                    //alert("Inscription registré");
+                    Swal.fire({
+                      title:'Information enregistré',
+                      icon:'success',
+                      showConfirmButton:false,
+                      timer:1800
+                    
+                  })
+                } else {
+                    Swal.fire('Inscription annuler')
+                    //alert(recruteurs.message);
+                }
+            }
+            xhr.send(json);
+        }*/
+        function Ajout_horaire_Recruteur(){
+            // Create a request variable and assign a new XMLHttpRequest object to it.
+            var request = new XMLHttpRequest()
+            // Open a new connection, using the GET request on the URL endpoint
+            request.open('GET', 'http://192.168.43.96:3000/recruteurs', true)
+            request.onload = function()
+            {
+                // Begin accessing JSON data here
+                var data = JSON.parse(this.response);
+                console.log(data);
+                data.forEach(i => {
+                    if(i.EMAIL_REC==document.getElementById("EMAIL_REC").value){
+                        var url = "http://192.168.43.96:3000/horaires";
+                        var testduré = true;
+                        if (document.getElementById("SelectPosteTravail").value == "0"){
+                            testduré = false;
+                        }else{
+                            if (document.getElementById("SelectPosteTravail").value == "1"){
+                            var datahor = {};
+                            datahor.JOUR_TRAV = document.getElementById("SelectJourTravail").value;
+                            datahor.TIME_DEB_MATIN = "";
+                            datahor.TIME_FIN_MATIN = "";
+                            datahor.TIME_DEB_MIDI = "";
+                            datahor.TIME_FIN_MIDI = "";
+                            datahor.ID_RECRUTEUR = i._id;
+                            }
+                            if (document.getElementById("SelectPosteTravail").value == "2"){
+                                if((document.getElementById("TIME_DEB_MATIN").value < document.getElementById("TIME_FIN_MATIN").value)&&(document.getElementById("TIME_DEB_MATIN").value != "")&&(document.getElementById("TIME_FIN_MATIN").value != "")){
+                                    var datahor = {};
+                                    datahor.JOUR_TRAV = document.getElementById("SelectJourTravail").value;
+                                    datahor.TIME_DEB_MATIN = document.getElementById("TIME_DEB_MATIN").value;
+                                    datahor.TIME_FIN_MATIN = document.getElementById("TIME_FIN_MATIN").value;
+                                    datahor.TIME_DEB_MIDI = "";
+                                    datahor.TIME_FIN_MIDI = "";
+                                    datahor.ID_RECRUTEUR = i._id;
+                                }else{
+                                    testduré = false;
+                                }
+                            }
+                            if (document.getElementById("SelectPosteTravail").value == "3"){
+                                if ((document.getElementById("TIME_DEB_MATIN").value<document.getElementById("TIME_FIN_MATIN").value)&&(document.getElementById("TIME_FIN_MATIN").value<document.getElementById("TIME_DEB_MIDI").value)&&(document.getElementById("TIME_DEB_MIDI").value<document.getElementById("TIME_FIN_MIDI").value)
+                                &&(document.getElementById("TIME_DEB_MATIN").value != "")&&(document.getElementById("TIME_FIN_MATIN").value != "")&&(document.getElementById("TIME_DEB_MIDI").value != "")&&(document.getElementById("TIME_FIN_MIDI").value != "")){
+                                    var datahor = {};
+                                    datahor.JOUR_TRAV = document.getElementById("SelectJourTravail").value;
+                                    datahor.TIME_DEB_MATIN = document.getElementById("TIME_DEB_MATIN").value;
+                                    datahor.TIME_FIN_MATIN = document.getElementById("TIME_FIN_MATIN").value;
+                                    datahor.TIME_DEB_MIDI = document.getElementById("TIME_DEB_MIDI").value;
+                                    datahor.TIME_FIN_MIDI = document.getElementById("TIME_FIN_MIDI").value;
+                                    datahor.ID_RECRUTEUR = i._id;
+                                }else{
+                                    testduré = false;
+                                }
+                            }
+                        }
+                        if (testduré){
+                            var jsonL = JSON.stringify(datahor);
+                            var xhrL = new XMLHttpRequest();
+                            xhrL.open("POST", url, true);
+                            xhrL.setRequestHeader('Content-type','application/json; charset=utf-8');
+                            xhrL.onload = function () {
+                                var horairesL= JSON.parse(xhrL.responseText);
+                                if (xhrL.readyState == 4 && xhrL.status == "200") {
+                                    console.table(horairesL);
+                                    if (document.getElementById("SelectJourTravail").value == "Dimanche") {
+                                        //alert("Horaire ajouter");
+                                        Swal.fire({
+                                            title:'Inscription enregistré',
+                                            text: "Ce compte est activé après 24 heures.",
+                                            icon:'success',
+                                            showConfirmButton:false,
+                                            timer:2200
+                                        })
+                                        ouvrirCNXRegis();
+                                    }else {
+                                    //alert("Jour ajouter");
+                                    Swal.fire({
+                                    title:'Jour enregistré',
+                                    icon:'success',
+                                    showConfirmButton:false,
+                                    timer:1800
+                                    })
+                                    var selectJour = document.getElementById("SelectJourTravail");
+                                    var choiceJour = selectJour.selectedIndex;
+                                    selectJour.options[choiceJour].disabled = true;
+                                    selectJour.selectedIndex = selectJour.selectedIndex +1 ;
+                                    var selectJourplus = selectJour.selectedIndex;
+                                    selectJour.options[selectJourplus].disabled = false;
+                                    document.getElementById("SelectPosteTravail").selectedIndex =document.getElementById("SelectPosteTravail").options[0].value;
+                                    document.getElementById("rowPoste").innerHTML="";
+                                    }
+                                } else {
+                                    Swal.fire({
+                                    title:'Le jour de travail est incorrecte',
+                                    icon:'warning',
+                                    showConfirmButton:false,
+                                    timer:1800
+                                    })
+                                }
+                            }
+                            xhrL.send(jsonL);
+                        }else {
+                            Swal.fire({
+							title:'Attention date début de poste est suppérieur à la date fin de poste !',
+							icon:'warning',
+							showConfirmButton:false,
+							timer:1800
+						})
+                        }
+                    }
+                })
+            }
+            request.send();
+        }
+       
+        $(function () {
+  
+  $.validator.setDefaults({
+    submitHandler: function () {
+        var url = "http://192.168.43.96:3000/recruteurs";
+                var email = document.getElementById("EMAIL_RECLOGIN").value;
+                var password = document.getElementById("PSw_RECLOGIN").value;
+                var xhr = new XMLHttpRequest(); 
+                xhr.open("GET", url, true); 
+                xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+                xhr.onload = function () {
+                  // load les données à partir de la serveur -> début connection
+                  var recruteurs = JSON.parse(xhr.responseText); 
+                  var nb=0;
+                  if (xhr.readyState == 4 && xhr.status == "200") {
+                    for (var i = 0; i < recruteurs.length; i++) {
+                        if((email == recruteurs[i].EMAIL_REC)&&(password == recruteurs[i].PSW_REC)){
+                            if(recruteurs[i].VALID_ENT == "1"){
+                                nb +=1;
+                                if(recruteurs[i].ARCHIV_REC =="1"){
+                                    
+                                    Swal.fire({
+                                        title: 'Ce compte est archivé',
+                                        text: "Contactez l'administrateur si vous souhaitez restaurer votre compte !",
+                                        icon:'question',
+                                        showCancelButton: true,
+                                        confirmButtonText: 'Contacter',
+                                    }).then((result) => {
+                                        if (result.isConfirmed) {
+                                            location.replace("../contactINT.html");
+                                        } 
+                                    })
+                                }else{
+                                    localStorage.setItem('ID_REC', recruteurs[i]._id);
+                                    localStorage.setItem('LOGO_ENT', recruteurs[i].LOGO_ENT);
+                                    localStorage.setItem('NOM_ENT', recruteurs[i].NOM_ENT);
+                                    localStorage.setItem('EMAIL_REC', recruteurs[i].EMAIL_REC);
+                                    localStorage.setItem('EMAIL_ENT', recruteurs[i].EMAIL_ENT);
+                                    
+                                    location.replace("dashboardRecruteur.html");
+                                }
+                            }else {
+                                nb +=1;
+                                    Swal.fire({
+                                    title:"Votre compte n'est pas valider",
+                                    icon:'warning',
+                                    showConfirmButton:false,
+                                    timer:1800
+						        })
+                            }
+                        }
+                    }
+                    if(nb==0){
+                        Swal.fire({
+							title:'E-mail ou mot de passe est introuvable !',
+							icon:'warning',
+							showConfirmButton:false,
+							timer:1800
+						})
+                    }
+                  }else {
+                    Swal.fire({
+							title:'Erreur De Connexion',
+							icon:'error',
+							showConfirmButton:false,
+							timer:1800
+						})
+                  }
+                }
+              xhr.send()
+    }
+  });
+  
+  $('#form').validate({
+  
+    rules: {
+      EMAILCNX: {
+        required: true,
+        email: true,
+      },
+      PSWCNX: {
+        required: true,
+      },
+    },
+    messages: {
+      EMAILCNX: {
+        required: "Veuillez saisir une adresse e-mail",
+        email: "S'il vous plaît, mettez une adresse email valide"
+      },
+      PSWCNX: {
+        required: "Veuillez saisir un mot de passe"
+      }
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('text-danger');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element) {
+        var msgClasses = "h4";
+        $(element).addClass(msgClasses);
+    },
+    unhighlight: function (element) {
+        var msgClasses = "h4 tab";
+        $(element).removeClass("h4");
+        $(element).addClass(msgClasses);
+  
+    }
+  
+  });
+  jQuery.validator.addMethod(
+  "email",
+  function(value, element) {
+    return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+  },)
+});
+        function ouvrirOBLPSW(){
+            document.getElementById("login").classList.remove("show");
+            document.getElementById("oublier").classList.add("show");
+
+            document.getElementById("login").classList.remove("active");
+            document.getElementById("oublier").classList.add("active");
+            
+            document.getElementById("login-tab").classList.remove("active");
+            document.getElementById("oublier-tab").classList.add("active");
+        }
+
+        $(function () {
+  
+  $.validator.setDefaults({
+    submitHandler: function () {
+        // Open a new connection, using the GET request on the URL endpoint
+        var nb=0;
+        var emailOUB = document.getElementById("EMAIL_Oub").value;
+        var requestgetREC = new XMLHttpRequest()
+        requestgetREC.open('GET', 'http://192.168.43.96:3000/recruteurs', true)
+        requestgetREC.onload = function()
+        {
+            // Begin accessing JSON data here
+            var data = JSON.parse(this.response);
+            console.log(data);
+            data.forEach(j => {
+            if(emailOUB == j.EMAIL_REC && j.ARCHIV_REC == "0"){
+                nb+=1;
+                var url = "http://192.168.43.96:3000/recruteurs/"+j._id;                                  
+                var dataOub = {};
+                dataOub.NOM_ENT=j.NOM_ENT;
+                dataOub.SEC_DACT_ENT=j.SEC_DACT_ENT;
+                dataOub.IDENT_UNQ_ENT=j.IDENT_UNQ_ENT;
+                dataOub.EMAIL_ENT=j.EMAIL_ENT;
+                dataOub.NUM_TEL_ENT=j.NUM_TEL_ENT;
+                dataOub.PAYS_ORG_ENT=j.PAYS_ORG_ENT;
+                dataOub.NB_SAL_ENT=j.NB_SAL_ENT; 
+                dataOub.DAT_CREA_ENT=j.DAT_CREA_ENT;
+                dataOub.DESC_ENT=j.DESC_ENT;
+                dataOub.URL_WEB_ENT=j.URL_WEB_ENT;
+                dataOub.EMAIL_REC=j.EMAIL_REC;
+                dataOub.PSW_REC=Math.random().toString(36).replace(/[^a-zA-Z0-9]+/g, '').substr(0, 8);
+                dataOub.ADRESSE_ENT=j.ADRESSE_ENT;
+                dataOub.VILLE_ENT=j.VILLE_ENT;
+                dataOub.COD_POST_ENT=j.COD_POST_ENT;
+                dataOub.VALID_ENT=j.VALID_ENT;
+                dataOub.X=j.X;
+                dataOub.Y=j.Y;
+                dataOub.LOGO_ENT=j.LOGO_ENT;
+                dataOub.URL_LINK_ENT=j.URL_LINK_ENT;
+                dataOub.URL_FB_ENT=j.URL_FB_ENT;
+                dataOub.ARCHIV_REC=j.ARCHIV_REC;
+                var json = JSON.stringify(dataOub);
+                var xhr = new XMLHttpRequest();
+                xhr.open("PUT", url, true);
+                xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhr.onload = function () {
+                    var Rec = JSON.parse(xhr.responseText);
+                    if (xhr.readyState == 4 && xhr.status == "200") {
+                        Email.send({
+                            Host: "smtp.gmail.com",
+                            Username : "tunisierecrute0@gmail.com",
+                            Password : "Recrute123",
+                            To : `${Rec.EMAIL_REC}`,
+                            From : "tunisierecrute0@gmail.com",
+                            Subject : "Ceci votre code",
+                            Body : `code : ${Rec.PSW_REC}`,
+                        })  
+                    }
+                }
+                xhr.send(json);
+            }
+            })
+            if(nb==0){
+                Swal.fire({
+                    title:`E-mail est introuvable !`,
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }else{
+                Swal.fire({
+                    title:'Vous avez reçus une e-mail',
+                    icon:'success',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+                var ee = document.getElementById("formOublier");
+                ch=`<div class="form-group">
+                        <input type="text" name="Code_EMAIL" class="form-control" id="Code_EMAIL" placeholder="Entrer le code reçus...">
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 retour-password">
+                            <a onclick="retourOub();">Retour</a>
+                        </div>
+
+                        <div class="col-xl-6 col-md-12 lost-your-password-wrap">
+                                <a onclick="ouvrirCNX();">Connexion</a>
+                        </div>
+                    </div>
+                    <button type="button" class="default-btn" onclick="validerCNX();">Valider<i class="flaticon-send"></i></button>`;
+                ee.innerHTML = ch;
+            }
+        }
+        requestgetREC.send();
+    }
+  });
+  
+  $('#formOublier').validate({
+  
+    rules: {
+      EMAILOub: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      EMAILOub: {
+        required: "Veuillez saisir votre adresse e-mail",
+        email: "S'il vous plaît, mettez une adresse email valide"
+      }
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('text-danger');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element) {
+        var msgClasses = "h4";
+        $(element).addClass(msgClasses);
+    },
+    unhighlight: function (element) {
+        var msgClasses = "h4 tab";
+        $(element).removeClass("h4");
+        $(element).addClass(msgClasses);
+  
+    }
+  
+  });
+  jQuery.validator.addMethod(
+  "email",
+  function(value, element) {
+    return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+  },)
+});
+    function retourOub(){
+        var ee = document.getElementById("formOublier");
+        ch=`<div class="form-group">
+                <input type="text" name="EMAILOub" class="form-control" id="EMAIL_Oub" placeholder="Entrer son e-mail...">
+            </div>
+            <div class="row">
+
+                <div class="col-lg-12 col-md-6 col-sm-6 lost-your-password-wrap">
+                        <a onclick="ouvrirCNX();" class="lost-your-password">Connexion</a>
+                </div>
+            </div>
+            <button type="submit" class="default-btn">Suivant<i class="flaticon-send"></i></button>`;
+        ee.innerHTML = ch;
+    }
+
+    function ouvrirCNX(){
+        document.getElementById("oublier").classList.remove("show");
+        document.getElementById("login").classList.add("show");
+
+        document.getElementById("oublier").classList.remove("active");
+        document.getElementById("login").classList.add("active");
+        
+        document.getElementById("oublier-tab").classList.remove("active");
+        document.getElementById("login-tab").classList.add("active");
+    }
+
+    function ouvrirCNXRegis(){
+        document.getElementById("register").classList.remove("show");
+        document.getElementById("login").classList.add("show");
+
+        document.getElementById("register").classList.remove("active");
+        document.getElementById("login").classList.add("active");
+        
+        document.getElementById("register-tab").classList.remove("active");
+        document.getElementById("login-tab").classList.add("active");
+    }
+
+    function validerCNX(){
+        // Open a new connection, using the GET request on the URL endpoint
+        var request = new XMLHttpRequest()
+        var codeEmail = document.getElementById("Code_EMAIL").value;
+        request.open('GET', 'http://192.168.43.96:3000/recruteurs', true)
+        request.onload = function()
+        {
+            // Begin accessing JSON data here
+            var data = JSON.parse(this.response);
+            var test = false;
+            data.forEach(j => {
+                if(codeEmail == j.PSW_REC){
+                    test = true;
+                    localStorage.setItem('ID_REC', j._id);
+                    localStorage.setItem('LOGO_ENT', j.LOGO_ENT);
+                    localStorage.setItem('NOM_ENT', j.NOM_ENT);
+                    localStorage.setItem('EMAIL_REC', j.EMAIL_REC);
+                    localStorage.setItem('EMAIL_ENT', j.EMAIL_ENT);
+                    Swal.fire({
+                        title:`Modifier mot de passe`,
+                        text: 'Changer le mot de passe pour plus de sécurité pour votre compte.',
+                        icon:'warning',
+                        confirmButtonText: "D'accord",
+					}).then((result) => {
+                        if (result.isConfirmed) {
+                            location.replace("modifierautentification.html");
+                        }
+                    })
+                }
+            })
+            if (test == false){
+                Swal.fire({
+                    title:`Le code n'est pas correct`,
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:2200
+                })
+            }
+        }
+        request.send();
+            
+    }
+        </script>
+    </body>
+</html>

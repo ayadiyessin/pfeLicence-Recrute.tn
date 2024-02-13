@@ -1,0 +1,622 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/notifcation.css">
+		
+		<title>Demandeur d’emploi | Mon Profil  </title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(!localStorage.getItem("ID_DEM")){
+              location.replace("loginDemandeur.html");
+            }
+          </script>
+        
+       
+    </head>
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="sidemenu-header">
+                <a href="AccueilDemandeur.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/Recrute.fr.png" alt="image">
+                </a>
+
+                <div class="responsive-burger-menu d-block d-lg-none">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </div>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+                    <li class="nav-item  ">
+                        <a href="dashboardDemandeur.html" class="nav-link">
+                            <span class="icon"><i class="ri-home-line"></i></span>
+                            <span class="menu-title">Tableau De Bord</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item active" >
+                        <a href="modifierProfil.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-line"></i></span>
+                            <span class="menu-title">Mon Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="ModifierCV.html" class="nav-link">
+                            <span class="icon"><i class="ri-file-edit-line"></i></span>
+                            <span class="menu-title">Modifier CV</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="GenererCV.html" class="nav-link">
+                            <span class="icon"><i class="ri-newspaper-line"></i></span>
+                            <span class="menu-title">Générer CV</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="offresfavoris.html" class="nav-link">
+                            <span class="icon"><i class="ri-heart-3-line"></i></span>
+                            <span class="menu-title">Offres Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="offrespostulees.html" class="nav-link">
+                            <span class="icon"><i class="ri-send-plane-line"></i></span>
+                            <span class="menu-title">Offres Postulées</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="confirmerEntretiens.html" class="nav-link">
+                            <span class="icon"><i class="ri-checkbox-circle-line"></i></span>
+                            <span class="menu-title">Confirme Entretiens</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienENAttenteDEM.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-todo-line"></i></span>
+                            <span class="menu-title">Entretiens En Attente</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienDaujourdhuiDEM.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-check-line"></i></span>
+                            <span class="menu-title">Entretiens D'aujourd'hui</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PVconfirlers.html" class="nav-link">
+                            <span class="icon"><i class="ri-task-line"></i></span>
+                            <span class="menu-title">PV Confirmés</Sspan>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Messageries.html" class="nav-link">
+                            <span class="icon"><i class="ri-chat-download-line"></i></span>
+                            <span class="menu-title">Messageries</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" onClick="quiterStorge();" class="nav-link">
+                            <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                            <span class="menu-title">Deconexion</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  onClick="supprmierCempte()" class="nav-link">
+                            <span class="icon" style="color: red; "><i class="ri-delete-bin-line"></i></span>
+                            <span class="menu-title" style="color: red; ">Supprimer Profil</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="main-responsive-menu">
+                        <div class="responsive-burger-menu d-lg-none d-block">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item ">
+                                    <a href="AccueilDemandeur.html" class="nav-link">
+                                        Accueil 
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="contactDem.html" class="nav-link">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link">   <i class="ri-notification-2-line"> </i>
+                                        <span id="nbtotalhaut" class="badge badge-warning navbar-badge">0</span>   
+                                       &ensp; Notification                  
+                                    
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="Messageries.html" class="nav-link">
+                                            <b id="nbCandidatmes">0 </b> Messages Reçus</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="entretienDaujourdhuiDEM.html" class="nav-link">
+                                            <b id="nbentretienAujordhui">0 </b> Entretiens Aujourd'hui</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="confirmerEntretiens.html" class="nav-link">
+                                            <b id="nbentretienNONCON">0 </b> Entretiens qui n'est pas confirmé</a>
+                                        </li>
+
+                                    </ul>
+                                    
+                                </li>
+
+                            </ul>
+
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <div class="dropdown profile-nav-item">
+                                        <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="menu-profile">
+                                                <img src="" id="imgNav" class="rounded-circle" alt="image">
+                                                <span class="name">Mon Compte</span>
+                                            </div>
+                                        </a>
+            
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                                <div class="figure mb-3">
+                                                    <img src="" id="imgDEM" class="rounded-circle" alt="image">
+                                                </div>
+            
+                                                <div class="info text-center">
+                                                    <span class="name" id="nomDEM"></span>
+                                                    <p class="mb-3 email" id="emailDEM"></p>
+                                                </div>
+                                            </div>
+            
+                                            <div class="dropdown-body">
+                                                <ul class="profile-nav p-0 pt-3">
+                                                    <li class="nav-item ">
+                                                        <a href="dashboardDemandeur.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-home-line"></i></span>
+                                                            <span class="menu-title">Tableau De Bord</span>
+                                                        </a>
+                                                    </li>
+
+                                                    
+                                                    <li class="nav-item">
+                                                        <a href="modifierProfil.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-user-line"></i></span>
+                                                            <span class="menu-title">Mon Profil</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+            
+                                            <div class="dropdown-footer">
+                                                <ul class="profile-nav">
+                                                    <li class="nav-item">
+                                                        <a href="#" onClick="quiterStorge();" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Deconexion</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Salut</h1>
+                <ol class="breadcrumb">
+                    <li class="item" title="Retourner au Accueil"><a href="AccueilDemandeur.html">Accueil</a></li>
+                    <li class="item" >Mon Profil</li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+
+           
+            <!-- End Notification Alert Area -->
+
+            <!-- Start Change Password Area -->
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                        <div class="change-password-box">
+                            <h3>Mon Compte</h3>
+
+                            <form onsubmit="return false" id="formmodif">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>E-mail</label>
+                                            <input type="text" class="form-control" id="EMAIL_DEM" name="EMAIL" placeholder=" Entrer nouveau email " >
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Mot De passe Actuel</label>
+                                        <div class="row">
+                                            
+                                                <div class="col-lg-10 col-md-12">
+                                                
+                                                    
+                                                    <input type="password" class="form-control" id="PSW_DEM" disabled>
+                                                </div> 
+                                            
+                                                <div class="col-lg-2 col-md-12">
+                                                    <button type="button" class="bouttonkbir" title="Voir mot de passe" onclick="viewpsw()" > <i id="iconvew" class="ri-eye-off-line"></i>
+                                                    </button>
+                                                </div> 
+                                            </div>
+                                        </div>
+                                        
+                                    </div>
+                                    
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Nouveau Mot De Passe</label>
+                                            <input type="password" class="form-control" id="PSW_NOV_DEM" name="NPSW" placeholder=" Entrer nouveau mot de pass ">
+                                            
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Confirmer Le Nouveau Mot De Passe</label>
+                                            <input type="password" class="form-control" id="CON_PSW_DEM" name="CPSW" placeholder=" Entrer confirmer nouveau mot de pass ">
+                                        </div>
+                                    </div>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <button type="button" class="default-btn" onclick="annuler();" >Annuler <i class="ri-refresh-line"></i></button>
+                                            </td>
+                                            <td>
+                                                <div class="row">
+                                                    <div class="col-xl-6 col-lg-12 col-md-12"></div>
+                                                    <div class="col-xl-2 col-lg-12 col-md-12">
+                                                        <button type="submit" class="default-btn" >Enregistrer <i class="flaticon-send"></i></button>
+                                                    </div>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </table>
+                                        <!--
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="row">
+                                            <div class="col-md-8">
+                                                <button type="button" class="default-btn" onclick="annuler();" >Annuler <i class="ri-refresh-line"></i></button>
+                                                <br>
+                                            </div>
+                                            <div class="col-md-4">
+                                                <button type="submit" class="default-btn" >Enregistrer <i class="flaticon-send"></i></button>
+                                            </div>
+                                        </div>
+                                    </div>-->
+                                </div>
+                            </form>
+                        </div>
+                </div>
+            </div>
+            <!-- Start Change Password Area -->
+
+
+              <!-- Start Go Top Area -->
+            <div class="go-top">
+                <i class="ri-arrow-up-line"></i>
+            </div>
+            <!-- End Go Top Area -->
+
+
+        </div>
+        <!-- End Main Dashboard Content Wrapper Area -->
+
+        <!-- Start Copyright Area -->
+        <div class="footerCopy">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p><i class="ri-copyright-line"></i> 2021-2022 <a href="#"> Demandeur d’emploi </a>. </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/supprmierProfilDEM.js"></script>
+        <!--notifci-->
+        <script src="assets/js/notificationDEM.js"></script>
+        <!--validation-->
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/additional-methods.min.js"></script>
+         <!--alert-->
+         <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+         <script>
+             // Create a request variable and assign a new XMLHttpRequest object to it.
+            var idDEM=localStorage.getItem("ID_DEM");
+            var request = new XMLHttpRequest()
+
+       // Open a new connection, using the GET request on the URL endpoint
+       request.open('GET', 'http://192.168.43.96:3000/demandeurs/'+idDEM, true)
+       request.onload = function()
+       {
+           // Begin accessing JSON data here
+           var data = JSON.parse(this.response);
+           
+          
+           document.getElementById("EMAIL_DEM").value=data.EMAIL_DEM;
+           document.getElementById("PSW_DEM").value=data.PSW_DEM;
+       }
+       // Send request
+       request.send()
+       function viewpsw(){
+           elm=document.getElementById("iconvew");
+            if(elm.className == 'ri-eye-off-line'){
+                elm.className = 'ri-eye-line';
+                document.getElementById("PSW_DEM").type="text";
+                
+            } else {
+                
+                elm.className = 'ri-eye-off-line';
+                document.getElementById("PSW_DEM").type="password";
+            }
+       }
+
+       function annuler(){
+            location.reload();
+       }
+
+       $(function () {
+  
+            $.validator.setDefaults({
+                submitHandler: function () {
+                    Swal.fire({
+                    title: 'Voulez-vous confirmée la modification ?',
+                    icon: 'question',
+                    showDenyButton: true,
+                    confirmButtonColor: '#17a2b8',
+                    confirmButtonText: 'Confirmer',
+                    denyButtonText: `Non`,
+                    }).then((result) => {
+                    if (result.isConfirmed) {
+                        var request = new XMLHttpRequest()
+
+                    // Open a new connection, using the GET request on the URL endpoint
+                    request.open('GET', 'http://192.168.43.96:3000/demandeurs/'+idDEM, true)
+            
+                  request.onload = function() {
+                // Begin accessing JSON data here
+                var data = JSON.parse(this.response)
+                console.log(data);
+                var url3 = "http://192.168.43.96:3000/demandeurs/" +idDEM ;
+                data2={};
+                data2.PHOTO_DEM = data.PHOTO_DEM;
+                data2.EMAIL_DEM = document.getElementById("EMAIL_DEM").value;
+                data2.PSW_DEM = document.getElementById("PSW_NOV_DEM").value;
+                data2.NOM_DEM = data.NOM_DEM;
+                data2.PRE_DEM = data.PRE_DEM;
+                data2.SEXE_DEM = data.SEXE_DEM;
+                data2.DAT_NAI_DEM = data.DAT_NAI_DEM;
+                data2.VILLE_DEM = data.VILLE_DEM;
+                data2.PAYS_DEM = data.PAYS_DEM;
+                data2.ADRESSE_DEM = data.ADRESSE_DEM;
+                data2.NUM_TEL_DEM = data.NUM_TEL_DEM;
+                data2.COD_POST_DEM = data.COD_POST_DEM;
+                data2.PERMIS_COND_DEM = data.PERMIS_COND_DEM;
+                data2.TYPE_PERMIS_DEM = data.TYPE_PERMIS_DEM;
+                data2.SAL_MIN_DEM = data.SAL_MIN_DEM;
+                data2.URL_LINK_DEM = data.URL_LINK_DEM;
+                data2.DESC_DEM = data.DESC_DEM;
+                data2.SPES_DEM = data.SPES_DEM;
+                data2.ARCHIV_DEM = "0";
+                data2.URL_FB_DEM = data.URL_FB_DEM;
+                console.log(data2);
+                var json = JSON.stringify(data2);
+                var xhr3 = new XMLHttpRequest();
+                xhr3.open("PUT", url3, true);
+                xhr3.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhr3.onload = function () {
+                        if (xhr3.readyState == 4 && xhr3.status == "200") {
+                        
+                        Swal.fire({
+                                title:'Modification enregistré !',
+                                icon:'success',
+                                
+                            }).then((result) => {
+                                if (result.isConfirmed){
+                                    location.reload();
+                                    event.preventDefault();
+                                }
+
+                            })
+                        } else {
+                        console.error(admins);
+                        // location.replace("admins.html");
+                        Swal.fire({
+                                icon:'error',  
+                                title:'Il y a un erreur !',
+                                showConfirmButton:true,
+                                timer:1500
+                                    
+                                
+                                })
+                        }
+                    }
+                    xhr3.send(json);
+                    }
+                // Send request
+                request.send()
+            }else if (result.isDenied){
+                    Swal.fire('Modification Non Enregistrer', '', 'info');
+            }
+            })
+                }
+            });
+            
+            $('#formmodif').validate({
+            
+                rules: {
+                EMAIL: {
+                    required: true,
+                    email: true,
+                },
+                NPSW: {
+                    
+                    required: true,
+                    minlength: 5,
+                },
+                CPSW: {
+                    required: true,
+                    equalTo: "#formmodif input[name='NPSW']",
+                },
+                },
+                messages: {
+                EMAIL: {
+                    required: "Veuillez saisir une adresse e-mail",
+                    email: "S'il vous plaît, mettez une adresse email valide"
+                },
+                NPSW: {
+                    required: "Veuillez saisir un nouveau mot de passe",
+                    minlength: "Votre mot de passe doit comporter au moins 5 caractères",
+                    password: "Au moins une lettre minuscule + Au moins une lettre majuscule + Au moins un chiffre"
+                },
+                CPSW: {
+                    
+                    required: "Veuillez fournir un mot de passe de confirmation",
+                    equalTo:"Entrez à nouveau la même valeur s'il vous plait.",
+                    password:"Entrez à nouveau la même valeur s'il vous plait.",
+                },
+
+                },
+                errorElement: 'span',
+                errorPlacement: function (error, element) {
+                error.addClass('text-danger');
+                element.closest('.form-group').append(error);
+                },
+                highlight: function (element) {
+                    var msgClasses = "h4";
+                    $(element).addClass(msgClasses);
+                },
+                unhighlight: function (element) {
+                    var msgClasses = "h4 tab";
+                    $(element).removeClass("h4");
+                    $(element).addClass(msgClasses);
+            
+                }
+            
+            });
+            jQuery.validator.addMethod(
+            "password",
+            function(value, element) {
+                return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{1,}$/.test(value);
+            },),
+            jQuery.validator.addMethod(
+            "email",
+            function(value, element) {
+                return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+            },)
+            });
+
+
+
+
+         </script>
+         
+    </body>
+</html>

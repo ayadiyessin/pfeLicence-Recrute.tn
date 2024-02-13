@@ -1,0 +1,2704 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+         <!--image-->
+         <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+       
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+		<link rel="stylesheet" href="assets/css/styessin.css">
+		<title> Recrute.tn | Demandeur d’emploi - Espace Candidat</title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(localStorage.getItem("ID_DEM")){
+              location.replace("AccueilDemandeur.html");
+            }
+            
+            if(localStorage.getItem("ID_REC")){
+              location.replace("../template_recruteur/dashboardRecruteur.html");
+            }
+            
+          </script>
+    </head>
+
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        
+        <!-- Start Header Area -->
+        <header class="main-header-area">
+            <!-- Start Topbar Area -->
+            <div class="topbar-area">
+                <div class="container-fluid">
+                    <div class="row align-items-center">
+                        <div class="col-lg-5 col-md-6">
+                            <ul class="topbar-social-list">
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank"><i class="flaticon-facebook"></i></a>
+                                </li>
+                              
+                                <li>
+                                    <a href="https://linkedin.com/" target="_blank"><i class="flaticon-linkedin"></i></a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-lg-7 col-md-6">
+                            <ul class="topbar-action">
+                                <li>
+                                    <a href="loginDemandeur.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion"><i class="flaticon-user"></i>Espace Candidat</a>
+                                </li>
+
+                                <li>
+                                    <a href="../template_recruteur/profile-authentication.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion"><i class="ri-community-line"></i> Espace Entreprise</a>
+                                </li>
+
+                               
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Topbar Area -->
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="container">
+                        <div class="main-responsive-menu">
+                            <div class="logo">
+                                <a href="../index.html">
+                                    <img src="assets/Recrute.fr-c1.png"style="height: 50px; width: 250px ;  "   alt="logo">
+                                    
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <div class="container-fluid">
+                        <nav class="navbar navbar-expand-md navbar-light">
+                            <a class="navbar-brand" href="../index.html">
+                                <img src="assets/Recrute.fr-c1.png" style="height: 100px; width: 250px; "  alt="logo">
+                            </a>
+
+                            <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                                <ul class="navbar-nav m-auto">
+                                    <li class="nav-item">
+                                        <a href="../index.html" class="nav-link ">
+                                            Accueil
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="loginDemandeur.html"data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion" class="nav-link active">
+                                            Espace Candidat
+                                        </a>  
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="../template_recruteur/profile-authentication.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion" class="nav-link">
+                                            Espace Entreprise
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="../apropos.html" class="nav-link " >
+                                            A propos
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="../faq.html" class="nav-link">
+                                            FAQ
+                                        </a>
+                                    </li>
+        
+                                    <li class="nav-item">
+                                        <a href="../contactINT.html" class="nav-link ">Contact</a>
+                                    </li>
+                                </ul>
+
+                                <div class="others-options d-flex align-items-center">
+                                    <div class="option-item">
+                                        <a href="../template_recruteur/profile-authentication.html" class="default-btn">Publier une offre <i class="flaticon-plus"></i></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+        </header>
+        <!-- End Header Area -->
+        
+        <!-- Start Page Banner Area -->
+        <div class="page-banner-area item-bg-two">
+            <div class="d-table">
+                <div class="d-table-cell">
+                    <div class="container">
+                        <div class="page-banner-content">
+                            <h2>Espace Candidat</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Page Banner Area -->
+        <br>
+        <p style="text-align: center; ">Si vous représentez une entreprise / organisation et souhaitez embaucher , <a href="../template_recruteur/profile-authentication.html"><b> créez un compte employeur </b> </a> </p>
+        <!-- Start Profile Authentication Area -->
+        <div class="profile-authentication-area ptb-100">
+            <div class="container">
+                <div class="profile-authentication-tabs">
+                    <div class="authentication-tabs-list">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist" >
+
+                            <li class="nav-item">
+                                <a class="nav-link active" id="login-tab" data-bs-toggle="tab" href="#login" role="tab" aria-controls="login">Connexion</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="register-tab" data-bs-toggle="tab" href="#register" role="tab" aria-controls="register">S'inscrire</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="oublier-tab" data-bs-toggle="tab" href="#oublier" role="tab" aria-controls="oublier">Mot de passe oublié</a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-content" id="myTabContent">
+                        <div class="tab-pane fade show active" id="login" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <form onsubmit="return false" id="form">
+                                    <div class="form-group" id="formfoc">
+                                        <label>E-mail</label>
+                                        <input type="text" name="EMAILCNX" class="form-control" id="EMAIL_RECLOGIN" placeholder="Eentrer votre e-mail...">
+                                    </div>
+    
+                                    <div class="form-group">
+                                        <label>Mot de passe</label>
+                                        <input type="password" name="PSWCNXD" class="form-control" id="PSw_RECLOGIN" placeholder="Entrer votre mot de passe...">
+                                    </div>
+    
+                                    <div class="row align-items-center">
+    
+                                        <div class="col-lg-12 col-md-6 col-sm-6 lost-your-password-wrap">
+                                                <a onclick="ouvrirOBLPSW();" class="lost-your-password">Mot de passe oublié?</a>
+                                        </div>
+                                    </div>
+    
+                                    <button type="submit" class="default-btn">Connexion<i class="flaticon-send"></i></button>
+
+                                </form>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="register" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <!--hetha teb3o-->
+                                <div class="wrapper">
+                                    <div class="header">
+                                        <ul>
+                                            <li class="active form_1_progessbar man8irPoint">
+                                                <div id="Divstep1">
+                                                    <p id="step1" data-bs-toggle="tooltip" data-bs-placement="top" title="Connexion"><i class="ri-lock-line" ></i></p>
+                                                </div>
+                                            </li>
+                                            <li class="form_2_progessbar man8irPoint">
+                                                <div id="Divstep2">
+                                                    <p id="step2" data-bs-toggle="tooltip" data-bs-placement="top" title="Information Personnelle"><i class="ri-draft-line" ></i></p>
+                                                </div>
+                                            </li>
+                                            <li class="form_3_progessbar man8irPoint">
+                                                <div id="Divstep3">
+                                                    <p id="step3" data-bs-toggle="tooltip" data-bs-placement="top" title="Profil"><i class="flaticon-user-1"></i></p>
+                                                </div>
+                                            </li>
+                                            
+                                        </ul>
+                                    </div>
+                                    <div class="form_wrap">
+
+                                        <div class="form_1 data_info" >
+                                            <span class="sub-title"><label class="colorText">Connexion Profil</label></span>
+                                            <form onsubmit="return false" id="form1">  
+                                                <div class="form-group">
+                                                    <label>E-mail<span class="required">*</span></label>
+                                                    <input type="text" name="EMAIL" class="form-control" id="EMAIL_DEM" placeholder="Entrer votre E-mail...">
+                                                </div>
+                
+                                                <div class="form-group">
+                                                    <label>Mot de passe<span class="required">*</span></label>
+                                                    <input type="password" name="PSW" class="form-control" id="PSW_DEM" placeholder="Entrer votre Mot de Passe...">
+                                                </div>
+            
+                                                <div class="form-group">
+                                                    <label>Confirmer Mot de passe<span class="required">*</span></label>
+                                                    <input type="password" name="CPSW" class="form-control" id="CPSW_DEM" placeholder="Confirmer votre Mot de Passe...">
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_1_btns" >
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_2 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Informations Personnelle</label></span>
+                                            <form onsubmit="return false" id="form2">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom <span class="required">*</span></label>
+                                                            <input name="NOM" id="NOM_DEM" type="text" class="form-control" placeholder="Entrer votre nom...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Prénom<span class="required">*</span></label>
+                                                            <input name="PRE" id="PRE_DEM" type="text" class="form-control" placeholder="Entrer votre prénom...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Sexe<span class="required">*</span></label>
+                                                            <select id="SEXE_DEM" name="SexeDem" class="form-control">
+                                                                <option selected disabled>Choisir un sexe...</option>
+                                                                <option value="Homme">Homme</option>
+                                                                <option value="Femme">Femme</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date de naissance<span class="required">*</span></label>
+                                                            <input name="DatNais" id="DAT_NAI_DEM" type="date" class="form-control" placeholder="Entrer votre date de naissance...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Numéro de téléphone<span class="required">*</span></label>
+                                                            <input name="NumTel" id="NUM_TEL_DEM" type="text" class="form-control" placeholder="Entrer votre numéro de téléphone...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Photo<span class="required">*</span></label>
+                                                            <input name="PhotoDem" id="PHOTO_DEM" type="text" class="form-control" placeholder="Entrer votre photo..." onclick="send()">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_2_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_3 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Profil</label></span>
+                                            <form onsubmit="return false" id="form3">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Spécialité<span class="required">*</span></label>
+                                                            <input name="SpeciaDem" id="SPES_DEM" type="text" class="form-control" placeholder="Entrer votre spécialité...">
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div id="Selectpermis" class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Permis<span class="required">*</span></label>
+                                                            <select id="PERMIS_COND_DEM" name="permisDem" class="form-control" onchange="typPermis();">
+                                                                <option selected disabled>Choisir un état de permis...</option>
+                                                                <option value="1">Oui</option>
+                                                                <option value="0">Non</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+
+                                                    <div id="TypePermis">
+
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Salaire minimum<span class="required">*</span></label>
+                                                            <input name="SalMinDem" id="SAL_MIN_DEM" type="text" class="form-control" placeholder="Entrer le salaire minimum...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Description<span class="required">*</span></label>
+                                                            <textarea name="DescDem" id="DESC_DEM" cols="30" rows="6" placeholder="Entrer une description sur son profil..." class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Linkedin URL</label>
+                                                            <input id="URL_LINK_DEM" type="text" class="form-control" placeholder="https://www.linkedin.com/">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Facebook URL</label>
+                                                            <input id="URL_FB_DEM" type="text" class="form-control" placeholder="https://www.facebook.com/">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_3_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_4 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Adresse</label></span>
+                                            <form onsubmit="return false" id="form4">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Adresse<span class="required">*</span></label>
+                                                            <input name="AdressDem" id="ADRESSE_DEM" type="text" class="form-control" placeholder="Entrer votre adresse...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Code Postal<span class="required">*</span></label>
+                                                            <input name="CPDem" id="COD_POST_DEM" type="text" class="form-control" placeholder="Entrer le code postal...">
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Ville<span class="required">*</span></label>
+                                                            <select name="VilleDem" id="VILLE_DEM" class="form-control">
+                                                                <option selected disabled>Choisir une Ville d'entreprise</option>
+                                                                <option value="Ariana">Ariana</option>
+                                                                <option value="Béja">Béja</option>
+                                                                <option value="Ben Arous">Ben Arous</option>
+                                                                <option value="Bizerte">Bizerte</option>
+                                                                <option value="Gabès">Gabès</option>
+                                                                <option value="Gafsa">Gafsa</option>
+                                                                <option value="Jendouba">Jendouba</option>
+                                                                <option value="Kairouan">Kairouan</option>
+                                                                <option value="Kasserine">Kasserine</option>
+                                                                <option value="Kebili">Kebili</option>
+                                                                <option value="La Manouba">La Manouba</option>
+                                                                <option value="Le Kef">Le Kef</option>
+                                                                <option value="Mahdia">Mahdia</option>
+                                                                <option value="Médenine">Médenine</option>
+                                                                <option value="Monastir">Monastir</option>
+                                                                <option value="Nabeul">Nabeul</option>
+                                                                <option value="Sfax">Sfax</option>
+                                                                <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                                                <option value="Siliana">Siliana</option>
+                                                                <option value="Sousse">Sousse</option>
+                                                                <option value="Tataouine">Tataouine</option>
+                                                                <option value="Tozeur">Tozeur</option>
+                                                                <option value="Tunis">Tunis</option>
+                                                                <option value="Zaghouan">Zaghouan</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Pays<span class="required">*</span></label>
+                                                            <input id="PAYS_DEM" name="paysDem" type="text" class="form-control" placeholder="Entrer votre pays...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_4_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_5 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Expérience Professionnelle</label></span>
+                                            <form onsubmit="return false" id="form5">  
+                                                <div id="expDefault" class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom Entreprise de l'Expérience</label>
+                                                            <input name="NomEntExp" id="NOM_ENT_EXP" type="text" class="form-control" placeholder="Entrer le nom de l'entreprise...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom de l'Expérience</label>
+                                                            <input name="typExp" id="TYPE_EXP" type="text" class="form-control" placeholder="Entrer le nom de l'expérience...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Position de l'Expérience</label>
+                                                            <input name="posExp" id="POSITION_EXP" type="text" class="form-control" placeholder="Entrer la position de l'expérience...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Description</label>
+                                                            <textarea name="descExp" id="DESC_EXP" cols="30" rows="6" placeholder="Entrer une description sur l'expérience..." class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Outils Utilisés</label>
+                                                            <input name="outExp" id="OUTIL_EXP" type="text" class="form-control" placeholder="Entrer les outils utilisés...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Début de l'Expérience</label>
+                                                            <input name="DatDebExp" id="DAT_DEB_EXP" type="date" class="form-control" placeholder="Entrer la date début de l'expérience...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Fin de l'Expérience</label>
+                                                            <input name="DatFinExp" id="DAT_FIN_EXP" type="date" class="form-control" placeholder="Entrer la date fin de l'expérience...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="autreExp" class="row">
+
+                                                </div>
+                                                <div class="btns_wrap" style="text-align: right;">
+                                                    <button type="button" class="default-btn" onclick="AjoutAutreExp();">Autre<i class="flaticon-plus"></i></button>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_5_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_6 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Diplôme</label></span>
+                                            <form onsubmit="return false" id="form6">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Type de Diplôme<span class="required">*</span></label>
+                                                            <select name="TypDip" id="TYPE_DIP" class="form-control" onchange="typeDiplome('TYPE_DIP','changetypeDip');">
+                                                                <option selected disabled>Choisir un type de diplôme...</option>
+                                                                <option value="1">Autre</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    <div id="changetypeDip">
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom École de Diplôme<span class="required">*</span></label>
+                                                            <input name="NomEcolDip" id="NOM_ECOL_DIP" type="text" placeholder="Entrer le nom de l'école..." class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Spécialité de Diplôme<span class="required">*</span></label>
+                                                            <input name="SpecDip" id="SPECIA_DIP" type="text" class="form-control" placeholder="Entrer la spécialité de diplôme...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Début de Diplôme<span class="required">*</span></label>
+                                                            <input name="DatDebDip" id="DAT_DEB_DIP" type="date" class="form-control" placeholder="Entrer la date début de diplôme...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Fin de Diplôme<span class="required">*</span></label>
+                                                            <input name="DatFinDip" id="DAT_FIN_DIP" type="date" class="form-control" placeholder="Entrer la date fin de diplôme...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="autreDip" class="row">
+
+                                                </div>
+                                                <div class="btns_wrap" style="text-align: right;">
+                                                    <button type="button" class="default-btn" onclick="AjoutAutreDip();">Autre<i class="flaticon-plus"></i></button>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_6_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_7 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Formation</label></span>
+                                            <form onsubmit="return false" id="form7">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom de Formation</label>
+                                                            <input name="Nomform" id="NOM_FOR" type="text" placeholder="Entrer le nom de formation..." class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Description sur la Formation</label>
+                                                            <textarea name="DescForm" id="DESC_FOR" cols="30" rows="6" placeholder="Entrer une description sur la formation..." class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Début de Formation</label>
+                                                            <input name="DatDebForm" id="DAT_DEB_FOR" type="date" class="form-control" placeholder="Entrer la date début de formation...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Fin de Formation</label>
+                                                            <input name="DatFinForm" id="DAT_FIN_FOR" type="date" class="form-control" placeholder="Entrer la date fin de formation...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="autreForm" class="row">
+
+                                                </div>
+                                                <div class="btns_wrap" style="text-align: right;">
+                                                    <button type="button" class="default-btn" onclick="AjoutAutreForm();">Autre<i class="flaticon-plus"></i></button>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_7_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_8 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Certifications</label></span>
+                                            <form onsubmit="return false" id="form8">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom de Certificat</label>
+                                                            <input name="NomCert" id="NOM_CERT" type="text" placeholder="Entrer le nom de Certificat..." class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Référence de Certificat</label>
+                                                            <input name="RefCert" id="REF_CERT" type="text" class="form-control" placeholder="Entrer la référence de Certificat...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Description sur la Certificat</label>
+                                                            <textarea name="DescCert" id="DESC_CERT" cols="30" rows="6" placeholder="Entrer une description sur la Certificat..." class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div id="autreCert" class="row">
+
+                                                </div>
+                                                <div class="btns_wrap" style="text-align: right;">
+                                                    <button type="button" class="default-btn" onclick="AjoutAutreCert();">Autre<i class="flaticon-plus"></i></button>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_8_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_9 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Projets</label></span>
+                                            <form onsubmit="return false" id="form9">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom de Projet</label>
+                                                            <input name="NomProj" id="NOM_PROJ" type="text" placeholder="Entrer le nom de Projet..." class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Type de Projet</label>
+                                                            <input name="TypProj" id="TYPE_PROJ" type="text" class="form-control" placeholder="Entrer le type de Projet...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Description sur le Projet</label>
+                                                            <textarea name="DescProj" id="DESC_PROJ" cols="30" rows="6" placeholder="Entrer une description sur le Projet..." class="form-control"></textarea>
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Outils utilisés</label>
+                                                            <input name="OutProj" id="OUTIL_PROJ" type="text" class="form-control" placeholder="Entrer les outils utilisés sur le Projet...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Début de Projet</label>
+                                                            <input name="DatDebProj" id="DAT_DEB_PROJ" type="date" class="form-control" placeholder="Entrer la date début de Projet...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Fin de Projet</label>
+                                                            <input name="DatFinProj" id="DAT_FIN_PROJ" type="date" class="form-control" placeholder="Entrer la date fin de Projet...">
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <div id="autreProj" class="row">
+
+                                                </div>
+                                                <div class="btns_wrap" style="text-align: right;">
+                                                    <button type="button" class="default-btn" onclick="AjoutAutreProj();">Autre<i class="flaticon-plus"></i></button>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_9_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_10 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Vie Associative</label></span>
+                                            <form onsubmit="return false" id="form10">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Nom de Vie Associative</label>
+                                                            <input name="NomVA" id="NOM_VA" type="text" placeholder="Entrer le nom de Vie Associative..." class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Position de Vie Associative</label>
+                                                            <input name="PosVA" id="POSITION_VA" type="text" placeholder="Entrer le position Vie Associative..." class="form-control">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Début de Vie Associative</label>
+                                                            <input name="DatDebVA" id="DAT_DEB_VA" type="date" class="form-control" placeholder="Entrer la date début de Vie Associative...">
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Date Fin de Vie Associative</label>
+                                                            <input name="DatFinVA" id="DAT_FIN_VA" type="date" class="form-control" placeholder="Entrer la date fin de Vie Associative...">
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div id="autreVA" class="row">
+
+                                                </div>
+                                                <div class="btns_wrap" style="text-align: right;">
+                                                    <button type="button" class="default-btn" onclick="AjoutAutreVA();">Autre<i class="flaticon-plus"></i></button>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_10_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_11 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Langues & Compétences</label></span>
+                                            <form onsubmit="return false" id="form11">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Langues<span class="required">*</span></label>
+                                                            <select id="NOM_LANG" name="langSelect" class="form-control" onchange="change_valeurLang();">
+                                                                <option selected disabled>Choisir une langue...</option>
+                                                                <option value="1">Autre</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                    
+                                                    <div class="row" id="autreLang"></div>
+                            
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div id="ListLang" class="job-details-desc">
+            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Compétences<span class="required">*</span></label>
+                                                            <select id="NOM_COMP" name="compSelect" class="form-control" onchange="change_valeurComp();">
+                                                                <option selected disabled>Choisir une compétence...</option>
+                                                                <option value="1">Autre</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+            
+                                                    <div class="row" id="autreComp"></div>
+            
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div id="ListComp" class="job-details-desc">
+            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_11_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn">Suivant<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+
+                                        <div class="form_12 data_info" style="display: none;">
+                                            <span class="sub-title"><label class="colorText">Qualités & Centres D'interêts</label></span>
+                                            <form onsubmit="return false" id="form12">  
+                                                <div class="row">
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Qualités</label>
+                                                            <div class="row">
+                                                                <div class="col-lg-10 col-md-12">
+                                                                    <input id="NOM_QUA" name="NomQua" class="form-control" type="text" placeholder="Entrer un nom de qualité...">
+                                                                </div>
+                                                                <div class="col-lg-2 col-md-12">
+                                                                    <button id="NOM_QUA1" type="button" class="bouttonkbir" onclick="ajoutQA();"><i class="ri-add-line"></i></button>
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+            
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div id="ListQUA" class="job-details-desc">
+            
+                                                        </div>
+                                                    </div>
+
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div class="form-group">
+                                                            <label>Centres D'interêts</label>
+                                                            <div class="row">
+                                                                <div class="col-lg-10 col-md-12">
+                                                                    <input id="NOM_CI" name="NomCi" class="form-control" type="text" placeholder="Entrer un nom de centre d'interêt...">
+                                                                </div>
+                                                                <div class="col-lg-2 col-md-12">
+                                                                    <button id="NOM_CI1" type="button" class="bouttonkbir" onclick="ajoutCI();"><i class="ri-add-line"></i></button>
+                                                                </div>
+                                                            </div> 
+                                                        </div>
+                                                    </div>
+            
+                                                    <div class="col-lg-12 col-md-12">
+                                                        <div id="ListCI" class="job-details-desc">
+            
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="btns_wrap">
+                                                    <div class="common_btns form_12_btns" style="display: none;">
+                                                        <button type="button" class="btnBACK">Retour<i class="flaticon-flech-left-gras"></i></button>
+                                                        <button type="submit" class="default-btn" onclick="enregistreDEM();">Enregistré<i class="flaticon-flech-right-gras"></i></button>
+                                                    </div>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <div class="tab-pane fade" id="oublier" role="tabpanel">
+                            <div class="eeza-authentication-form">
+                                <form onsubmit="return false" id="formOublier">
+                                    <div class="form-group">
+                                        <input type="text" name="EMAILOub" class="form-control" id="EMAIL_Oub" placeholder="Entrer son e-mail...">
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-lg-12 col-md-6 col-sm-6 lost-your-password-wrap">
+                                             <a onclick="ouvrirCNX();" class="lost-your-password">Connexion</a>
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="default-btn">Suivant<i class="flaticon-send"></i></button>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Start Profile Authentication Area -->
+
+           <!-- Start Footer Area -->
+           <footer class="footer-area pt-100">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <div class="widget-logo">
+                                <a href="../index.html"><img src="assets/Recrute.tn-blache.png" alt="image"></a>
+                            </div>
+                           
+                            <ul class="widget-social-links">
+                                <li><span>Suivre:</span></li>
+
+                                <li>
+                                    <a href="https://www.facebook.com/" target="_blank">
+                                        <i class="flaticon-facebook"></i>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="https://www.linkedin.com/" target="_blank">
+                                        <i class="flaticon-linkedin"></i>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-footer-widget ps-5">
+                            <h3>Société</h3>
+
+                            <ul class="quick-links">
+                               
+                                <li><a href="../apropos.html">A propos</a></li>
+                                <li><a href="../faq.html">FAQ</a></li>
+                                <li><a href="../contactINT.html">Contact</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h3>Ressources</h3>
+
+                            <ul class="quick-links">
+                                <li><a href="loginDemandeur.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion">Espace Candidat</a></li>
+                                <li><a href="../template_recruteur/profile-authentication.html" data-bs-toggle="tooltip" data-bs-placement="top"  title="Inscription / Connexion">Espace Entreprise</a></li>
+                                
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-sm-6">
+                        <div class="single-footer-widget">
+                            <h3>Contact Rapide</h3>
+                            
+                            <ul class="widget-info">
+                               
+                                <li>
+                                    <i class="flaticon-e"></i>
+                                    <a href="mailto:tunisierecrute0@gmail.com">tunisierecrute0@gmail.com</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="copyright-area">
+                <div class="container">
+                    <p><i class="ri-copyright-line"></i> 2021 - 2022 Recrute.tn - Tous droits réservés </p>
+                </div>
+            </div>
+        </footer>
+        <!-- End Footer Area -->
+
+        <!-- Start Go Top Area -->
+        <div class="go-top">
+            <i class="ri-arrow-up-line"></i>
+        </div>
+        <!-- End Go Top Area -->
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        
+        <script src="assets/js/scriptsDem.js"></script>
+        <!--validation-->
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/additional-methods.min.js"></script>
+        <!--notifci-->
+        <script src="assets/js/notification.js"></script>
+        
+        <!--alert-->
+        <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <!--Email-->
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        <script>
+            function send() {
+              var i = document.getElementById("PHOTO_DEM");
+              const apikey = "AnPRsl9JkTZKL3Hp9hwzxz";
+              const client = filestack.init(apikey);
+              const options = {
+                maxFiles: 20,
+                uploadInBackground: false,
+                onOpen: () => console.log("opened!"),
+                onUploadDone: (res) => (i.value = res.filesUploaded[0].url),
+              };
+              client.picker(options).open();
+            }
+          </script>
+        <script>
+            // Open a new connection, using the GET request on the URL endpoint
+            var requestL = new XMLHttpRequest();
+            requestL.open('GET', "http://192.168.43.96:3000/langues", true);
+            requestL.onload = function()
+            {
+                // Begin accessing JSON data here
+                var dataL = JSON.parse(this.response);
+                var selectLang = document.getElementById("NOM_LANG");
+                var nbselectLang=2;
+                dataL.forEach(j => {
+                    ch=`<option value="`+nbselectLang+`">`+j.NOM_LANG+`</option>`;
+                    selectLang.insertAdjacentHTML('beforeend',ch);
+                    nbselectLang +=1;
+                })
+            }
+            requestL.send();
+    
+            // Open a new connection, using the GET request on the URL endpoint
+            var requestC = new XMLHttpRequest();
+            requestC.open('GET', "http://192.168.43.96:3000/competences", true);
+            requestC.onload = function()
+            {
+                // Begin accessing JSON data here
+                var dataC = JSON.parse(this.response);
+                var selectComp = document.getElementById("NOM_COMP");
+                var nbselectComp=2;
+                dataC.forEach(j => {
+                    ch=`<option value="`+nbselectComp+`">`+j.NOM_COMP+`</option>`;
+                    selectComp.insertAdjacentHTML('beforeend',ch);
+                    nbselectComp +=1;
+                })
+            }
+            requestC.send();
+
+            var dateAuj = new Date();
+            var datemonthAuj = '';
+            var datejourAuj ='';
+            if ((dateAuj.getMonth()+1)<10){
+                datemonthAuj = '0'+(dateAuj.getMonth()+1);
+            }else {
+                datemonthAuj = (dateAuj.getMonth()+1);
+            }
+            if ((dateAuj.getDate())<10){
+                datejourAuj = '0'+(dateAuj.getDate());
+            }else {
+                datejourAuj = (dateAuj.getDate());
+            }
+    
+            var abcAuj = (dateAuj.getFullYear()-18) +'-'+ (datemonthAuj) +'-'+ (datejourAuj);
+            document.getElementById("DAT_NAI_DEM").max = abcAuj;
+
+            // Open a new connection, using the GET request on the URL endpoint
+            var requestD = new XMLHttpRequest();
+            requestD.open('GET', "http://192.168.43.96:3000/diplomes", true);
+            requestD.onload = function()
+            {
+                // Begin accessing JSON data here
+                var dataD = JSON.parse(this.response);
+                dataD.forEach(j => {
+                    ch=`<option value="`+j._id+`">`+j.TYPE_DIP+`</option>`;
+                    document.getElementById("TYPE_DIP").insertAdjacentHTML('beforeend',ch);
+                })
+            }
+            requestD.send();
+            
+            function typPermis(){
+                if(document.getElementById("PERMIS_COND_DEM").value=="1"){
+                    //document.getElementById("Selectpermis").className="col-xl-6 col-lg-12 col-md-12";
+                    ch=`<div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Type de permis<span class="required">*</span></label>
+                                <select id="TYPE_PERMIS_DEM" name="typPermisDem" class="form-control">
+                                    <option selected disabled>Choisir un type de permis</option>
+                                    <option value="A1">A1</option>
+                                    <option value="A">A</option>
+                                    <option value="B">B</option>
+                                    <option value="B+E">B+E</option>
+                                    <option value="C">C</option>
+                                    <option value="C+E">C+E</option>
+                                    <option value="D">D</option>
+                                    <option value="D1">D1</option>
+                                    <option value="D+E">D+E</option>
+                                    <option value="H">H</option>
+                                </select>
+                            </div>
+                        </div>`;
+                    document.getElementById("TypePermis").innerHTML=ch;
+                }
+                if(document.getElementById("PERMIS_COND_DEM").value=="0")
+                {
+                    document.getElementById("TypePermis").innerHTML="";
+                }
+            }
+            var nbAjoutExp=0;
+            function AjoutAutreExp(){
+                var chaine1 = "NOM_ENT_EXP";
+                var chaine2 = "TYPE_EXP";
+                var chaine3 = "POSITION_EXP";
+                var chaine4 = "DESC_EXP";
+                var chaine5 = "OUTIL_EXP";
+                var chaine6 = "DAT_DEB_EXP";
+                var chaine7 = "DAT_FIN_EXP";
+                var cont1 = chaine1 + nbAjoutExp;
+                var cont2 = chaine2 + nbAjoutExp;
+                var cont3 = chaine3 + nbAjoutExp;
+                var cont4 = chaine4 + nbAjoutExp;
+                var cont5 = chaine5 + nbAjoutExp;
+                var cont6 = chaine6 + nbAjoutExp;
+                var cont7 = chaine7 + nbAjoutExp;
+                ch=`<div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Nom Entreprise de l'Expérience</label>
+                            <input name="NomEntExp" id="`+cont1+`" type="text" class="form-control" placeholder="Entrer le nom de l'entreprise...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Nom de l'Expérience</label>
+                            <input name="typExp" id="`+cont2+`" type="text" class="form-control" placeholder="Entrer le nom de l'expérience...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Position de l'Expérience</label>
+                            <input name="posExp" id="`+cont3+`" type="text" class="form-control" placeholder="Entrer la position de l'expérience...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Description</label>
+                            <textarea name="descExp" id="`+cont4+`" cols="30" rows="6" placeholder="Entrer une description sur l'expérience..." class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Outils Utilisés</label>
+                            <input name="outExp" id="`+cont5+`" type="text" class="form-control" placeholder="Entrer les outils utilisés...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Début de l'Expérience</label>
+                            <input name="DatDebExp" id="`+cont6+`" type="date" class="form-control" placeholder="Entrer la date début de l'expérience...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Fin de l'Expérience</label>
+                            <input name="DatFinExp" id="`+cont7+`" type="date" class="form-control" placeholder="Entrer la date fin de l'expérience...">
+                        </div>
+                    </div>`;
+                document.getElementById("autreExp").insertAdjacentHTML('beforeend',ch);
+                nbAjoutExp +=1;
+            }
+
+            function typeDiplome(x,y){
+                if(document.getElementById(x).value=="1"){
+                    ch=`<div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Autre type d'emploi<span class="required">*</span></label>
+                                <input id="AutreTypDip" name="autDIP" class="form-control" type="text" placeholder="Entrer un autre type...">
+                            </div>
+                        </div>`;
+                    document.getElementById(y).innerHTML=ch;
+                }else{
+                    document.getElementById(y).innerHTML="";
+                }
+            }
+
+            var nbAjoutDip=0;
+            function AjoutAutreDip(){
+                var chaine1 = "TYPE_DIP";
+                var chaine2 = "NOM_ECOL_DIP";
+                var chaine3 = "SPECIA_DIP";
+                var chaine4 = "DAT_DEB_DIP";
+                var chaine5 = "DAT_FIN_DIP";
+                var chaine6 = "changetypeDip";
+                var cont1 = chaine1 + nbAjoutDip;
+                var cont2 = chaine2 + nbAjoutDip;
+                var cont3 = chaine3 + nbAjoutDip;
+                var cont4 = chaine4 + nbAjoutDip;
+                var cont5 = chaine5 + nbAjoutDip;
+                var cont6 = chaine6 + nbAjoutDip;
+                ch=`<div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Type de Diplôme<span class="required">*</span></label>
+                            <select name="TypDip" id="`+cont1+`" class="form-control" onchange="typeDiplome('`+cont1+`','`+cont6+`');">
+                                <option selected disabled>Choisir un type de diplôme...</option>
+                                <option value="1">Autre</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div id="`+cont6+`">
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Nom École de Diplôme<span class="required">*</span></label>
+                            <input name="NomEcolDip" id="`+cont2+`" type="text" placeholder="Entrer le nom de l'école..." class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Spécialité de Diplôme<span class="required">*</span></label>
+                            <input name="SpecDip" id="`+cont3+`" type="text" class="form-control" placeholder="Entrer la spécialité de diplôme...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Début de Diplôme<span class="required">*</span></label>
+                            <input name="DatDebDip" id="`+cont4+`" type="date" class="form-control" placeholder="Entrer la date début de diplôme...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Fin de Diplôme<span class="required">*</span></label>
+                            <input name="DatFinDip" id="`+cont5+`" type="date" class="form-control" placeholder="Entrer la date fin de diplôme...">
+                        </div>
+                    </div>`;
+                document.getElementById("autreDip").insertAdjacentHTML('beforeend',ch);
+                nbAjoutDip +=1;
+                // Open a new connection, using the GET request on the URL endpoint
+                var requestD = new XMLHttpRequest();
+                requestD.open('GET', "http://192.168.43.96:3000/diplomes", true);
+                requestD.onload = function()
+                {
+                    // Begin accessing JSON data here
+                    var dataD = JSON.parse(this.response);
+                    dataD.forEach(j => {
+                        ch=`<option value="`+j._id+`">`+j.TYPE_DIP+`</option>`;
+                        document.getElementById(cont1).insertAdjacentHTML('beforeend',ch);
+                    })
+                }
+                requestD.send();
+            }
+
+            var nbAjoutForm=0;
+            function AjoutAutreForm(){
+                var chaine1 = "NOM_FOR";
+                var chaine2 = "DESC_FOR";
+                var chaine3 = "DAT_DEB_FOR";
+                var chaine4 = "DAT_FIN_FOR";
+                var cont1 = chaine1 + nbAjoutForm;
+                var cont2 = chaine2 + nbAjoutForm;
+                var cont3 = chaine3 + nbAjoutForm;
+                var cont4 = chaine4 + nbAjoutForm;
+                ch=`<div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Nom de Formation</label>
+                            <input name="Nomform" id="`+cont1+`" type="text" placeholder="Entrer le nom de formation..." class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Description sur la Formation</label>
+                            <textarea name="DescForm" id="`+cont2+`" cols="30" rows="6" placeholder="Entrer une description sur la formation..." class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Début de Formation</label>
+                            <input name="DatDebForm" id="`+cont3+`" type="date" class="form-control" placeholder="Entrer la date début de formation...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Fin de Diplôme</label>
+                            <input name="DatFinForm" id="`+cont4+`" type="date" class="form-control" placeholder="Entrer la date fin de formation...">
+                        </div>
+                    </div>`;
+                document.getElementById("autreForm").insertAdjacentHTML('beforeend',ch);
+                nbAjoutForm +=1;
+            }
+
+            var nbAjoutCert=0;
+            function AjoutAutreCert(){
+                var chaine1 = "NOM_CERT";
+                var chaine2 = "REF_CERT";
+                var chaine3 = "DESC_CERT";
+                var cont1 = chaine1 + nbAjoutCert;
+                var cont2 = chaine2 + nbAjoutCert;
+                var cont3 = chaine3 + nbAjoutCert;
+                ch=`<div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Nom de Certificat</label>
+                            <input name="NomCert" id="`+cont1+`" type="text" placeholder="Entrer le nom de Certificat..." class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Référence de Certificat</label>
+                            <input name="RefCert" id="`+cont2+`" type="text" class="form-control" placeholder="Entrer la référence de Certificat...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Description sur la Certificat</label>
+                            <textarea name="DescCert" id="`+cont3+`" cols="30" rows="6" placeholder="Entrer une description sur la Certificat..." class="form-control"></textarea>
+                        </div>
+                    </div>`;
+                document.getElementById("autreCert").insertAdjacentHTML('beforeend',ch);
+                nbAjoutCert +=1;
+            }
+
+            var nbAjoutProj=0;
+            function AjoutAutreProj(){
+                var chaine1 = "NOM_PROJ";
+                var chaine2 = "TYPE_PROJ";
+                var chaine3 = "DESC_PROJ";
+                var chaine4 = "OUTIL_PROJ";
+                var chaine5 = "DAT_DEB_PROJ";
+                var chaine6 = "DAT_FIN_PROJ";
+                var cont1 = chaine1 + nbAjoutProj;
+                var cont2 = chaine2 + nbAjoutProj;
+                var cont3 = chaine3 + nbAjoutProj;
+                var cont4 = chaine4 + nbAjoutProj;
+                var cont5 = chaine5 + nbAjoutProj;
+                var cont6 = chaine6 + nbAjoutProj;
+                ch=`<div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Nom de Projet</label>
+                            <input name="NomProj" id="`+cont1+`" type="text" placeholder="Entrer le nom de Projet..." class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Type de Projet</label>
+                            <input name="TypProj" id="`+cont2+`" type="text" class="form-control" placeholder="Entrer le type de Projet...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Description sur le Projet</label>
+                            <textarea name="DescProj" id="`+cont3+`" cols="30" rows="6" placeholder="Entrer une description sur le Projet..." class="form-control"></textarea>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Outils utilisés</label>
+                            <input name="OutProj" id="`+cont4+`" type="text" class="form-control" placeholder="Entrer les outils utilisés sur le Projet...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Début de Projet</label>
+                            <input name="DatDebProj" id="`+cont5+`" type="date" class="form-control" placeholder="Entrer la date début de Projet...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Fin de Projet</label>
+                            <input name="DatFinProj" id="`+cont6+`" type="date" class="form-control" placeholder="Entrer la date fin de Projet...">
+                        </div>
+                    </div>`;
+                document.getElementById("autreProj").insertAdjacentHTML('beforeend',ch);
+                nbAjoutProj +=1;
+            }
+        
+            var nbAjoutVA=0;
+            function AjoutAutreVA(){
+                var chaine1 = "NOM_VA";
+                var chaine2 = "POSITION_VA";
+                var chaine3 = "DAT_DEB_VA";
+                var chaine4 = "DAT_FIN_VA";
+                var cont1 = chaine1 + nbAjoutVA;
+                var cont2 = chaine2 + nbAjoutVA;
+                var cont3 = chaine3 + nbAjoutVA;
+                var cont4 = chaine4 + nbAjoutVA;
+                ch=`<div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Nom de Vie Associative</label>
+                            <input name="NomVA" id="`+cont1+`" type="text" placeholder="Entrer le nom de Vie Associative..." class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Position de Vie Associative</label>
+                            <input name="PosVA" id="`+cont2+`" type="text" placeholder="Entrer le position Vie Associative..." class="form-control">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Début de Vie Associative</label>
+                            <input name="DatDebVA" id="`+cont3+`" type="date" class="form-control" placeholder="Entrer la date début de Vie Associative...">
+                        </div>
+                    </div>
+
+                    <div class="col-lg-12 col-md-12">
+                        <div class="form-group">
+                            <label>Date Fin de Vie Associative</label>
+                            <input name="DatFinVA" id="`+cont4+`" type="date" class="form-control" placeholder="Entrer la date fin de Vie Associative...">
+                        </div>
+                    </div>`;
+                document.getElementById("autreVA").insertAdjacentHTML('beforeend',ch);
+                nbAjoutVA +=1;
+            }
+
+            function change_valeurLang(){
+                var selectPoste = document.getElementById("NOM_LANG");
+                var choicePoste = selectPoste.selectedIndex;
+                var valeurPoste = selectPoste.options[choicePoste].value;
+                console.log(selectPoste.options[choicePoste]);
+                if (valeurPoste == "1"){
+                    ch=`<div class="col-lg-5 col-md-12">
+                            <div class="form-group">
+                                <label>Autre langue<span class="required">*</span></label>
+                                <input id="AUTRE_NOM_LANG" name="autreNomLang" type="text" class="form-control" placeholder="Entrer une langue...">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="form-group">
+                                <label>Niveau de langue<span class="required">*</span></label>
+                                <div class="row">
+                                    <div class="col-lg-9 col-md-12">
+                                        <select id="NIV_LANG_OFF" name="NivLangOFF" class="form-control">
+                                            <option selected disabled>Choisir un niveau de langues...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-12">
+                                        <button id="NIV_LANG_OFF1" type="button" class="bouttonkbir" onclick="ajoutLang();"><i class="ri-add-line"></i></button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>`;
+                    document.getElementById("autreLang").innerHTML=ch;
+                }else{
+                    ch=`<div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Niveau de langue<span class="required">*</span></label>
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-12">
+                                        <select id="NIV_LANG_OFF" name="NivLangOFF" class="form-control">
+                                            <option selected disabled>Choisir un niveau de langues...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 col-md-12">
+                                        <button id="NIV_LANG_OFF1" type="button" class="bouttonkbir" onclick="ajoutLang();"><i class="ri-add-line"></i></button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>`;
+                    document.getElementById("autreLang").innerHTML=ch;
+                }
+            }
+
+            var nbLANG =0;
+            function ajoutLang(){
+                var selectLang = document.getElementById("NOM_LANG");
+                var choiceLang = selectLang.selectedIndex;
+                console.log(choiceLang);
+                var valeurLang = selectLang.options[choiceLang].value;
+                var textLang = selectLang.options[choiceLang].innerHTML;
+                var chaine ="LANG";
+                var contLANG = chaine + nbLANG;
+                // Open a new connection, using the GET request on the URL endpoint
+                var requestlang = new XMLHttpRequest();
+                requestlang.open('GET', "http://192.168.43.96:3000/langues", true);
+                requestlang.onload = function()
+                {
+                    // Begin accessing JSON data here
+                    var datalang = JSON.parse(this.response);
+                    var testNomLang = true;
+                    if(valeurLang =="1"){
+                        if(document.getElementById("AUTRE_NOM_LANG").value !="" && document.getElementById("NIV_LANG_OFF").value !=""){
+                            datalang.forEach(lg =>{
+                                if(document.getElementById("AUTRE_NOM_LANG").value == lg.NOM_LANG){
+                                    testNomLang=false;
+                                }
+                            })
+                            if(testNomLang){
+                                var listLang = document.getElementById("ListLang").getElementsByTagName("div");
+                                if (listLang.length == 0){
+                                    ch=`<div class="job-article-footer">
+                                            <div id="plusieurA_listLang" class="article-tags">
+                                                <span>Liste des langues:</span>
+                                                <a id="`+contLANG+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+contLANG+`');" title="Supprimer">`+document.getElementById("AUTRE_NOM_LANG").value+`:`+document.getElementById("NIV_LANG_OFF").value+`</a>
+                                            </div>
+                                        </div>`;
+                                    document.getElementById("ListLang").innerHTML= ch;
+                                    document.getElementById("autreLang").innerHTML="";
+                                }else{
+                                    var nomLang=document.getElementById("AUTRE_NOM_LANG").value;
+                                    var nivLang=document.getElementById("NIV_LANG_OFF").value;
+                                    ch=`<a id="`+contLANG+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+contLANG+`');" title="Supprimer">`+nomLang+`:`+nivLang+`</a>`;
+                                    document.getElementById("plusieurA_listLang").insertAdjacentHTML('beforeend',ch);
+                                    document.getElementById("autreLang").innerHTML="";
+                                }
+                                nbLANG +=1;
+                            }else{
+                                Swal.fire({
+                                    title:"Cette langue existe déja!!",
+                                    icon:'warning',
+                                    showConfirmButton:false,
+                                    timer:1800
+                                })
+                            }
+                        }else{
+                            Swal.fire({
+                                title:"Entrer une langue est leur niveau tout d'abbord",
+                                icon:'warning',
+                                showConfirmButton:false,
+                                timer:1800
+                            })
+                        }
+                    }else{
+                        if(document.getElementById("NIV_LANG_OFF").value ==""){
+                            Swal.fire({
+                                title:"Entrer un niveau de langue tout d'abbord",
+                                icon:'warning',
+                                showConfirmButton:false,
+                                timer:1800
+                            })
+                        }else{
+                            var listLang = document.getElementById("ListLang").getElementsByTagName("div");
+                            if (listLang.length == 0){
+                                ch=`<div class="job-article-footer">
+                                        <div id="plusieurA_listLang" class="article-tags">
+                                            <span>Liste des langues:</span>
+                                            <a id="`+contLANG+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+contLANG+`');" title="Supprimer">`+textLang+`:`+document.getElementById("NIV_LANG_OFF").value+`</a>
+                                        </div>
+                                    </div>`;
+                                document.getElementById("ListLang").innerHTML= ch;
+                                document.getElementById("autreLang").innerHTML="";
+                            }else{
+                                var nivLang=document.getElementById("NIV_LANG_OFF").value;
+                                ch=`<a id="`+contLANG+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+contLANG+`');" title="Supprimer">`+textLang+`:`+nivLang+`</a>`;
+                                document.getElementById("plusieurA_listLang").insertAdjacentHTML('beforeend',ch);
+                                document.getElementById("autreLang").innerHTML="";
+                            }
+                            nbLANG +=1;
+                        }
+                    }
+                }
+                requestlang.send();
+            }
+
+            function change_valeurComp(){
+                var selectPoste = document.getElementById("NOM_COMP");
+                var choicePoste = selectPoste.selectedIndex;
+                var valeurPoste = selectPoste.options[choicePoste].value;
+                console.log(selectPoste.options[choicePoste]);
+                if (valeurPoste == "1"){
+                    ch=`<div class="col-lg-5 col-md-12">
+                            <div class="form-group">
+                                <label>Autre compétence<span class="required">*</span></label>
+                                <input id="AUTRE_NOM_COMP" name="autreNomComp" type="text" class="form-control" placeholder="Entrer une compétence...">
+                            </div>
+                        </div>
+                        <div class="col-lg-7 col-md-12">
+                            <div class="form-group">
+                                <label>Niveau de compétence<span class="required">*</span></label>
+                                <div class="row">
+                                    <div class="col-lg-9 col-md-12">
+                                        <select id="NIV_COMP_OFF" name="NivCompOFF" class="form-control">
+                                            <option selected disabled>Choisir un niveau de compétence...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-3 col-md-12">
+                                        <button id="NIV_COMP_OFF1" type="button" class="bouttonkbir" onclick="ajoutComp();"><i class="ri-add-line"></i></button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>`;
+                    document.getElementById("autreComp").innerHTML=ch;
+                }else{
+                    ch=`<div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <label>Niveau de compétence<span class="required">*</span></label>
+                                <div class="row">
+                                    <div class="col-lg-10 col-md-12">
+                                        <select id="NIV_COMP_OFF" name="NivCompOFF" class="form-control">
+                                            <option selected disabled>Choisir un niveau de compétence...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-lg-2 col-md-12">
+                                        <button id="NIV_COMP_OFF1" type="button" class="bouttonkbir" onclick="ajoutComp();"><i class="ri-add-line"></i></button>
+                                    </div>
+                                </div> 
+                            </div>
+                        </div>`;
+                    document.getElementById("autreComp").innerHTML=ch;
+                }
+            }
+
+            var nbCOMP =0;
+            function ajoutComp(){
+                var selectComp = document.getElementById("NOM_COMP");
+                var choiceComp = selectComp.selectedIndex;
+                var valeurComp = selectComp.options[choiceComp].value;
+                var textComp = selectComp.options[choiceComp].innerHTML;
+                var chaine ="COMP";
+                var contCOMP = chaine + nbCOMP;
+                // Open a new connection, using the GET request on the URL endpoint
+                var requestcomp = new XMLHttpRequest();
+                requestcomp.open('GET', "http://192.168.43.96:3000/competences", true);
+                requestcomp.onload = function()
+                {
+                    // Begin accessing JSON data here
+                    var datacomp = JSON.parse(this.response);
+                    var testNomComp = true;
+                    if(valeurComp =="1"){
+                        if(document.getElementById("AUTRE_NOM_COMP").value !="" && document.getElementById("NIV_COMP_OFF").value !=""){
+                            datacomp.forEach(cp =>{
+                                if(document.getElementById("AUTRE_NOM_COMP").value == cp.NOM_COMP){
+                                    testNomComp = false;
+                                }
+                            })
+                            if(testNomComp){
+                                var listComp = document.getElementById("ListComp").getElementsByTagName("div");
+                                if (listComp.length == 0){
+                                    ch=`<div class="job-article-footer">
+                                            <div id="plusieurA_listComp" class="article-tags">
+                                                <span>Liste des compétences:</span>
+                                                <a id="`+contCOMP+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+contCOMP+`');" title="Supprimer">`+document.getElementById("AUTRE_NOM_COMP").value+`:`+document.getElementById("NIV_COMP_OFF").value+`</a>
+                                            </div>
+                                        </div>`;
+                                    document.getElementById("ListComp").innerHTML= ch;
+                                    document.getElementById("autreComp").innerHTML="";
+                                }else{
+                                    var nomComp=document.getElementById("AUTRE_NOM_COMP").value;
+                                    var nivComp=document.getElementById("NIV_COMP_OFF").value;
+                                    ch=`<a id="`+contCOMP+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+contCOMP+`');" title="Supprimer">`+nomComp+`:`+nivComp+`</a>`;
+                                    document.getElementById("plusieurA_listComp").insertAdjacentHTML('beforeend',ch);
+                                    document.getElementById("autreComp").innerHTML="";
+                                    
+                                }
+                                nbCOMP +=1
+                            }else{
+                                Swal.fire({
+                                    title:"Cette compétence existe déja!!",
+                                    icon:'warning',
+                                    showConfirmButton:false,
+                                    timer:1800
+                                })
+                            }
+                        }else{
+                            Swal.fire({
+                                title:"Entrer une compétence est leur niveau tout d'abbord",
+                                icon:'warning',
+                                showConfirmButton:false,
+                                timer:1800
+                            })
+                        }
+                    }else{
+                        if(document.getElementById("NIV_COMP_OFF").value ==""){
+                            Swal.fire({
+                                title:"Entrer un niveau de compétence tout d'abbord",
+                                icon:'warning',
+                                showConfirmButton:false,
+                                timer:1800
+                            })
+                        }else{
+                            var listComp = document.getElementById("ListComp").getElementsByTagName("div");
+                            if (listComp.length == 0){
+                                ch=`<div class="job-article-footer">
+                                        <div id="plusieurA_listComp" class="article-tags">
+                                            <span>Liste des compétences:</span>
+                                            <a id="`+contCOMP+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+contCOMP+`');" title="Supprimer">`+textComp+`:`+document.getElementById("NIV_COMP_OFF").value+`</a>
+                                        </div>
+                                    </div>`;
+                                document.getElementById("ListComp").innerHTML= ch;
+                                document.getElementById("autreComp").innerHTML="";
+                            }else{
+                                var nivComp=document.getElementById("NIV_COMP_OFF").value;
+                                ch=`<a id="`+contCOMP+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+contCOMP+`');" title="Supprimer">`+textComp+`:`+nivComp+`</a>`;
+                                document.getElementById("plusieurA_listComp").insertAdjacentHTML('beforeend',ch);
+                                document.getElementById("autreComp").innerHTML="";
+                            }
+                            nbCOMP +=1;
+                        }
+                    }
+                }
+                requestcomp.send();
+            }
+
+            function SelectDelete_a(ListDiv,ListA,textContenet,c){
+                Swal.fire({
+                    title: 'Voulez-vous supprimer cet élément?',
+                    icon:'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Supprimer',
+                }).then((result) => {
+                if (result.isConfirmed) {
+                        var Del_a = document.getElementById(c);
+                        Del_a.parentNode.removeChild(Del_a);
+                        var listA = document.getElementById(ListA).getElementsByTagName("a");
+                        if (listA.length == 0){
+                            document.getElementById(ListDiv).innerHTML = "";
+                            document.getElementById(textContenet).selectedIndex = document.getElementById(textContenet).selectedIndex[0];
+                        }
+                        Swal.fire({
+                            title:'cet élément est supprimé',
+                            icon:'success',
+                            showConfirmButton:false,
+                            timer:1800
+                        })
+                    }
+                })
+            }
+
+            var nbQUA=0;
+            function ajoutQA(){
+                if(document.getElementById("NOM_QUA").value ==""){
+                    Swal.fire({
+                        title:"Entrer un nom de qualité tout d'abbord",
+                        icon:'warning',
+                        showConfirmButton:false,
+                        timer:1800
+                    })
+                }else{
+                    var listQUA = document.getElementById("ListQUA").getElementsByTagName("div");
+                    var chaine = "QUA";
+                    var contQUA = chaine + nbQUA;
+                    if (listQUA.length == 0){
+                        ch=`<div class="job-article-footer">
+                                <div id="plusieurA_listQUA" class="article-tags">
+                                    <span>Liste des qualités:</span>
+                                    <a id="`+contQUA+`" onclick="delete_a('ListQUA','plusieurA_listQUA','NOM_QUA','`+contQUA+`');" title="Supprimer">`+document.getElementById("NOM_QUA").value+`</a>
+                                </div>
+                            </div>`;
+                        document.getElementById("ListQUA").innerHTML= ch;
+                        document.getElementById("NOM_QUA").value ="";
+                        nbQUA+=1;
+                    }else{
+                        var nivQUA=document.getElementById("NOM_QUA").value;
+                        ch=`<a id="`+contQUA+`" onclick="delete_a('ListQUA','plusieurA_listQUA','NOM_QUA','`+contQUA+`');" title="Supprimer">`+nivQUA+`</a>`;
+                        document.getElementById("plusieurA_listQUA").insertAdjacentHTML('beforeend',ch);
+                        document.getElementById("NOM_QUA").value ="";
+                        nbQUA+=1;
+                    }
+                }
+            }
+
+            var nbCI=0;
+            function ajoutCI(){
+                if(document.getElementById("NOM_CI").value ==""){
+                    Swal.fire({
+                        title:"Entrer un nom de centre d'interêt tout d'abbord",
+                        icon:'warning',
+                        showConfirmButton:false,
+                        timer:1800
+                    })
+                }else{
+                    var listCI = document.getElementById("ListCI").getElementsByTagName("div");
+                    var chaine = "CI";
+                    var contCI = chaine + nbCI;
+                    if (listCI.length == 0){
+                        ch=`<div class="job-article-footer">
+                                <div id="plusieurA_listCI" class="article-tags">
+                                    <span>Liste des centres d'interêts:</span>
+                                    <a id="`+contCI+`" onclick="delete_a('ListCI','plusieurA_listCI','NOM_CI','`+contCI+`');" title="Supprimer">`+document.getElementById("NOM_CI").value+`</a>
+                                </div>
+                            </div>`;
+                        document.getElementById("ListCI").innerHTML= ch;
+                        document.getElementById("NOM_CI").value ="";
+                        nbCI+=1;
+                    }else{
+                        var nivCI=document.getElementById("NOM_CI").value;
+                        ch=`<a id="`+contCI+`" onclick="delete_a('ListCI','plusieurA_listCI','NOM_CI','`+contCI+`');" title="Supprimer">`+nivCI+`</a>`;
+                        document.getElementById("plusieurA_listCI").insertAdjacentHTML('beforeend',ch);
+                        document.getElementById("NOM_CI").value ="";
+                        nbCI+=1;
+                    }
+                }
+            }
+
+            function delete_a(ListDiv,ListA,textContenet,c){
+                Swal.fire({
+                    title: 'Voulez-vous supprimer cet élément?',
+                    icon:'question',
+                    showCancelButton: true,
+                    confirmButtonText: 'Supprimer',
+                }).then((result) => {
+                if (result.isConfirmed) {
+                        var Del_a = document.getElementById(c);
+                        Del_a.parentNode.removeChild(Del_a);
+                        var listA = document.getElementById(ListA).getElementsByTagName("a");
+                        if (listA.length == 0){
+                            document.getElementById(ListDiv).innerHTML = "";
+                            document.getElementById(textContenet).value = "";
+                        }
+                        Swal.fire({
+                            title:'cet élément est supprimé',
+                            icon:'success',
+                            showConfirmButton:false,
+                            timer:1800
+                        })
+                    }
+                })
+            }
+
+            function enregistreDEM(){
+                var dataDEM = {};
+                var url3 = "http://192.168.43.96:3000/demandeurs" ;
+                dataDEM.PHOTO_DEM = document.getElementById("PHOTO_DEM").value;
+                dataDEM.EMAIL_DEM = document.getElementById("EMAIL_DEM").value;
+                dataDEM.PSW_DEM = document.getElementById("PSW_DEM").value;
+                dataDEM.NOM_DEM = document.getElementById("NOM_DEM").value;
+                dataDEM.PRE_DEM = document.getElementById("PRE_DEM").value;
+                dataDEM.SEXE_DEM = document.getElementById("SEXE_DEM").value;
+                dataDEM.DAT_NAI_DEM = document.getElementById("DAT_NAI_DEM").value;
+                dataDEM.VILLE_DEM = document.getElementById("VILLE_DEM").value;
+                dataDEM.PAYS_DEM = document.getElementById("PAYS_DEM").value;
+                dataDEM.ADRESSE_DEM = document.getElementById("ADRESSE_DEM").value;
+                dataDEM.NUM_TEL_DEM = document.getElementById("NUM_TEL_DEM").value;
+                dataDEM.COD_POST_DEM = document.getElementById("COD_POST_DEM").value;
+                if(document.getElementById("PERMIS_COND_DEM").value=="1"){
+                    dataDEM.PERMIS_COND_DEM = document.getElementById("PERMIS_COND_DEM").value;
+                    dataDEM.TYPE_PERMIS_DEM = document.getElementById("TYPE_PERMIS_DEM").value;
+                }else{
+                    dataDEM.PERMIS_COND_DEM = document.getElementById("PERMIS_COND_DEM").value;
+                dataDEM.TYPE_PERMIS_DEM = "0";
+                }
+                dataDEM.SAL_MIN_DEM = document.getElementById("SAL_MIN_DEM").value;
+                dataDEM.URL_LINK_DEM = document.getElementById("URL_LINK_DEM").value;
+                dataDEM.DESC_DEM = document.getElementById("DESC_DEM").value;
+                dataDEM.SPES_DEM = document.getElementById("SPES_DEM").value;
+                dataDEM.ARCHIV_DEM = "0";
+                dataDEM.URL_FB_DEM = document.getElementById("URL_FB_DEM").value;
+                var json = JSON.stringify(dataDEM);
+                var xhrDem3 = new XMLHttpRequest();
+                xhrDem3.open("POST", url3, true);
+                xhrDem3.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrDem3.onload = function () {
+                    var demandeurs= JSON.parse(xhrDem3.responseText);
+                    if (xhrDem3.readyState == 4 && xhrDem3.status == "200") {
+                        console.log("aaaaaaaaaaa");
+                        Email.send({
+                            Host: "smtp.gmail.com",
+                            Username : "tunisierecrute0@gmail.com",
+                            Password : "Recrute123",
+                            To : document.getElementById("EMAIL_DEM").value,
+                            From : "tunisierecrute0@gmail.com",
+                            Subject : "Message de bienvenue",
+                            Body : "Bienvenue sur Recrute.tn",
+                        })
+                            var listInputExp = document.getElementById("form5").getElementsByTagName("input");
+                            var listTextareaExp = document.getElementById("form5").getElementsByTagName("textarea");
+                            var dataExp = {};
+                            var exTex = 0;
+                            var AjoutExp = 0;
+                            for(var ex=0;ex<listInputExp.length-5;ex++){
+                                if((listInputExp[ex].value != "")&&(listInputExp[ex+1].value != "")&&(listInputExp[ex+2].value != "")&&(listTextareaExp[exTex].value !="")&&(listInputExp[ex+3].value !="")&&(listInputExp[ex+4].value !="")&&(listInputExp[ex+5].value !="")){
+                                    dataExp.NOM_ENT_EXP = listInputExp[ex].value;
+                                    dataExp.TYPE_EXP = listInputExp[ex+1].value;
+                                    dataExp.POSITION_EXP = listInputExp[ex+2].value;
+                                    dataExp.DESC_EXP = listTextareaExp[exTex].value;
+                                    dataExp.OUTIL_EXP = listInputExp[ex+3].value;
+                                    dataExp.DAT_DEB_EXP = listInputExp[ex+4].value;
+                                    dataExp.DAT_FIN_EXP = listInputExp[ex+5].value;
+                                    dataExp.ID_DEMANDEUR = demandeurs._id;
+                                    console.log("hechbej");
+                                    if (ex == AjoutExp){
+                                        console.log("aaaaaaaaaaa");
+                                        AjouterExpDEM(dataExp);
+                                        AjoutExp+=6;
+                                        exTex+=1;
+                                    }
+                                }
+                            }
+
+                        var listInputDip = document.getElementById("form6").getElementsByTagName("input");
+                        var listSelectDip = document.getElementById("form6").getElementsByTagName("select");
+                        var dataDip ={};
+                        var dataDipDEM = {};
+                        var AjoutDip = 0;
+                        var selDIP = 0;
+                        for(var di=0;di<listSelectDip.length;di++){
+                            if(listSelectDip[di].value=="1"){
+                                dataDip.TYPE_DIP = listInputDip[selDIP].value;
+                                var jsonDip = JSON.stringify(dataDip);
+                                var urlDip = "http://192.168.43.96:3000/diplomes";
+                                var xhrDip = new XMLHttpRequest();
+                                xhrDip.open("POST", urlDip, true);
+                                xhrDip.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                xhrDip.onload = function () {
+                                    var diplomes = JSON.parse(xhrDip.responseText);
+                                    if (xhrDip.readyState == 4 && xhrDip.status == "200") {
+                                        dataDipDEM.NOM_ECOL_DIP = listInputDip[selDIP+1].value;
+                                        dataDipDEM.SPECIA_DIP = listInputDip[selDIP+2].value;
+                                        dataDipDEM.DAT_DEB_DIP = listInputDip[selDIP+3].value;
+                                        dataDipDEM.DAT_FIN_DIP = listInputDip[selDIP+4].value;
+                                        dataDipDEM.ID_DIPLOME = diplomes._id;
+                                        dataDipDEM.ID_DEMANDEUR = demandeurs._id;
+                                        AjouterDipDEM(dataDipDEM);
+                                        selDIP+=5;
+                                    }
+                                }
+                                xhrDip.send(jsonDip);
+                            }else{
+                                dataDipDEM.NOM_ECOL_DIP = listInputDip[selDIP].value;
+                                dataDipDEM.SPECIA_DIP = listInputDip[selDIP+1].value;
+                                dataDipDEM.DAT_DEB_DIP = listInputDip[selDIP+2].value;
+                                dataDipDEM.DAT_FIN_DIP = listInputDip[selDIP+3].value;
+                                dataDipDEM.ID_DIPLOME = listSelectDip[di].value;
+                                dataDipDEM.ID_DEMANDEUR = demandeurs._id;
+                                AjouterDipDEM(dataDipDEM);
+                                selDIP+=4;
+                            }
+                        }
+
+                        
+                            var listInputFor = document.getElementById("form7").getElementsByTagName("input");
+                            var listTextareaFor = document.getElementById("form7").getElementsByTagName("textarea");
+                            var dataFor = {};
+                            var foTex = 0;
+                            var AjoutFor = 0;
+                            for(var fo=0;fo<listInputFor.length-2;fo++){
+                                if((listInputFor[fo].value !="")&&(listTextareaFor[foTex].value != "")&&(listInputFor[fo+1].value != "")&&(listInputFor[fo+2].value != "")){    
+                                    dataFor.NOM_FOR = listInputFor[fo].value;
+                                    dataFor.DESC_FOR = listTextareaFor[foTex].value;
+                                    dataFor.DAT_DEB_FOR = listInputFor[fo+1].value;
+                                    dataFor.DAT_FIN_FOR = listInputFor[fo+2].value;
+                                    dataFor.ID_DEMANDEUR = demandeurs._id;
+                                    if (fo == AjoutFor){
+                                        console.log("hechbej");
+                                        AjouterForDEM(dataFor);
+                                        AjoutFor+=3;
+                                        foTex+=1;
+                                    }
+                                }
+                            }
+
+                        var listInputCert = document.getElementById("form8").getElementsByTagName("input");
+                        var listTextareaCert = document.getElementById("form8").getElementsByTagName("textarea");
+                        var dataCert = {};
+                        var CertTex = 0;
+                        var AjoutCert = 0;
+                        for(var ce=0;ce<listInputCert.length-1;ce++){
+                            if((listInputCert[ce].value != "")&&(listInputCert[ce+1].value != "")&&(listTextareaCert[CertTex].value != "")){
+                                dataCert.NOM_CERT = listInputCert[ce].value;
+                                dataCert.REF_CERT = listInputCert[ce+1].value;
+                                dataCert.DESC_CERT = listTextareaCert[CertTex].value;
+                                dataCert.ID_DEMANDEUR = demandeurs._id;
+                                if(ce == AjoutCert){
+                                    AjouterCertDEM(dataCert);
+                                    AjoutCert+=2;
+                                    CertTex+=1;
+                                }
+                            }
+                        }
+
+                        var listInputProj = document.getElementById("form9").getElementsByTagName("input");
+                        var listTextareaProj = document.getElementById("form9").getElementsByTagName("textarea");
+                        var dataProj = {};
+                        var ProjTex = 0;
+                        var AjoutProj = 0;
+                        for(var po=0;po<listInputProj.length-4;po++){
+                            if((listInputProj[po].value != "")&&(listInputProj[po+1].value != "")&&(listTextareaProj[ProjTex].value != "")&&(listInputProj[po+2].value !="")&&(listInputProj[po+3].value != "")&&(listInputProj[po+4].value != "")){
+                                dataProj.NOM_PROJ = listInputProj[po].value;
+                                dataProj.TYPE_PROJ = listInputProj[po+1].value;
+                                dataProj.DESC_PROJ = listTextareaProj[ProjTex].value;
+                                dataProj.OUTIL_PROJ = listInputProj[po+2].value;
+                                dataProj.DAT_DEB_PROJ = listInputProj[po+3].value;
+                                dataProj.DAT_FIN_PROJ = listInputProj[po+4].value;
+                                dataProj.ID_DEMANDEUR = demandeurs._id;
+                                if(po == AjoutProj){
+                                    AjouterProjDEM(dataProj);
+                                    AjoutProj+=5;
+                                    ProjTex+=1;
+                                }
+                            }
+                        }
+
+                        var listInputVA = document.getElementById("form10").getElementsByTagName("input");
+                        var dataVA = {};
+                        var AjoutVA = 0;
+                        for(var va=0;va<listInputVA.length-3;va++){
+                            if((listInputVA[va].value != "")&&(listInputVA[va+1].value != "")&&(listInputVA[va+2].value !="")&&(listInputVA[va+3].value != "")){
+                                dataVA.NOM_VA = listInputVA[va].value;
+                                dataVA.POSITION_VA = listInputVA[va+1].value;
+                                dataVA.DAT_DEB_VA = listInputVA[va+2].value;
+                                dataVA.DAT_FIN_VA = listInputVA[va+3].value;
+                                dataVA.ID_DEMANDEUR = demandeurs._id;
+                                if(va == AjoutVA){
+                                    AjouterVADEM(dataVA);
+                                    AjoutVA+=4;
+                                }
+                            }
+                        }
+
+                        // Open a new connection, using the GET request on the URL endpoint
+                        var requestlang = new XMLHttpRequest();
+                        requestlang.open('GET', "http://192.168.43.96:3000/langues", true);
+                        requestlang.onload = function()
+                        {
+                            // Begin accessing JSON data here
+                            var datalang = JSON.parse(this.response);
+                            console.log(datalang);
+                            var dataLANG ={};
+                            var dataNivLang ={};
+                            
+                            var listLang = document.getElementById("ListLang").getElementsByTagName("a");
+                            if (listLang.length > 0){
+                                for(var i=0;i<listLang.length;i++){
+                                    var testlang = true;
+                                    var idlang ="";
+                                    var splitLANG = listLang[i].innerHTML.split(":");
+                                    datalang.forEach(j => {
+                                        console.log(splitLANG[0]);
+                                        if(j.NOM_LANG == splitLANG[0]){
+                                            testlang=false;
+                                            idlang = j._id;
+                                        }
+                                    })
+                                    if(testlang){
+                                        dataLANG.NOM_LANG = splitLANG[0];
+                                        var jsonLang = JSON.stringify(dataLANG);
+                                        var urlLang = "http://192.168.43.96:3000/langues";
+                                        var xhrLang = new XMLHttpRequest();
+                                        xhrLang.open("POST", urlLang, true);
+                                        xhrLang.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                        xhrLang.onload = function () {
+                                            var langues= JSON.parse(xhrLang.responseText);
+                                            console.log(langues);
+                                            if (xhrLang.readyState == 4 && xhrLang.status == "200") {
+                                                dataNivLang.NIV_LANG_DEM = splitLANG[1];
+                                                dataNivLang.ID_LANGUE = langues._id;
+                                                dataNivLang.ID_DEMANDEUR = demandeurs._id;
+                                                ajoutNivLang(dataNivLang);
+                                            }else{
+                                                console.log("erreur");
+                                            }
+                                        }
+                                        xhrLang.send(jsonLang);
+                                    }else{
+                                        dataNivLang.NIV_LANG_DEM = splitLANG[1];
+                                        dataNivLang.ID_LANGUE = idlang;
+                                        dataNivLang.ID_DEMANDEUR = demandeurs._id;
+                                        ajoutNivLang(dataNivLang);
+                                    }
+                                }
+                            } 
+                        }
+                        requestlang.send();
+
+                        // Open a new connection, using the GET request on the URL endpoint
+                        var requestcomp = new XMLHttpRequest();
+                        requestcomp.open('GET', "http://192.168.43.96:3000/competences", true);
+                        requestcomp.onload = function()
+                        {
+                            // Begin accessing JSON data here
+                            var datacomp = JSON.parse(this.response);
+                            console.log(datacomp);
+                            var dataComp ={};
+                            var dataNivComp={};
+                            
+                            var listComp = document.getElementById("ListComp").getElementsByTagName("a");
+                            if (listComp.length != 0){
+                                for(var i=0;i<listComp.length;i++){
+                                    var testcomp = true;
+                                    var idcomp ="";
+                                    var splitCOMP = listComp[i].innerHTML.split(":");
+                                    datacomp.forEach(j => {
+                                        if(j.NOM_COMP == splitCOMP[0]){
+                                            testcomp=false;
+                                            idcomp = j._id;
+                                        }
+                                    })
+                                    if(testcomp){
+                                            dataComp.NOM_COMP = splitCOMP[0];
+                                            var jsonComp = JSON.stringify(dataComp);
+                                            var urlComp = "http://192.168.43.96:3000/competences";
+                                            var xhrComp = new XMLHttpRequest();
+                                            xhrComp.open("POST", urlComp, true);
+                                            xhrComp.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                            xhrComp.onload = function () {
+                                                var competences = JSON.parse(xhrComp.responseText);
+                                                if (xhrComp.readyState == 4 && xhrComp.status == "200") {
+                                                    dataNivComp.NIV_COMP_DEM = splitCOMP[1];
+                                                    dataNivComp.ID_COMPETENCE = competences._id;
+                                                    dataNivComp.ID_DEMANDEUR = demandeurs._id;
+                                                    ajoutNivComp(dataNivComp);
+                                                }
+                                            }
+                                            xhrComp.send(jsonComp);
+                                    }else{
+                                            dataNivComp.NIV_COMP_DEM = splitCOMP[1];
+                                            dataNivComp.ID_COMPETENCE = idcomp;
+                                            dataNivComp.ID_DEMANDEUR = demandeurs._id;
+                                            ajoutNivComp(dataNivComp);
+                                    }
+                                }
+                            } 
+                        }
+                        requestcomp.send();
+
+                        var dataQUA = {};
+                        var listQua = document.getElementById("ListQUA").getElementsByTagName("a");   
+                            if (listQua.length != 0){
+                                for(var i=0;i<listQua.length;i++){
+                                    dataQUA.NOM_QUA = listQua[i].innerHTML;
+                                    dataQUA.ID_DEMANDEUR = demandeurs._id;
+                                    var jsonQua = JSON.stringify(dataQUA);
+                                    var urlQua = "http://192.168.43.96:3000/qualites";
+                                    var xhrQua = new XMLHttpRequest();
+                                    xhrQua.open("POST", urlQua, true);
+                                    xhrQua.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                    xhrQua.onload = function () {
+                                        if (xhrQua.readyState == 4 && xhrQua.status == "200") {
+                                            console.log("OK");
+                                        }
+                                    }
+                                    xhrQua.send(jsonQua);
+                                }
+                                
+                            }
+
+                        var dataCI = {};
+                        var listCI = document.getElementById("ListCI").getElementsByTagName("a");   
+                            if (listCI.length != 0){
+                                for(var i=0;i<listCI.length;i++){
+                                    dataCI.NOM_CI = listCI[i].innerHTML;
+                                    dataCI.ID_DEMANDEUR = demandeurs._id;
+                                    var jsonCI = JSON.stringify(dataCI);
+                                    var urlCI = "http://192.168.43.96:3000/centresinterets";
+                                    var xhrCI = new XMLHttpRequest();
+                                    xhrCI.open("POST", urlCI, true);
+                                    xhrCI.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                    xhrCI.onload = function () {
+                                        if (xhrCI.readyState == 4 && xhrCI.status == "200") {
+                                            console.log("OK");
+                                        }
+                                    }
+                                    xhrCI.send(jsonCI);
+                                }
+                                
+                            }
+                            Swal.fire({
+                                title:'Inscription enregistré.',
+                                icon:'success',
+                                
+                            }).then((result) => {
+                                if (result.isConfirmed){
+                                    location.reload();
+                                }
+
+                            })
+                        
+                    }else{
+                        Swal.fire({
+                            icon:'error',  
+                            title:'Il y a un erreur !',
+                            showConfirmButton:true,
+                            timer:1500
+                        })
+                    }
+                }
+                xhrDem3.send(json);
+            }
+            
+            function AjouterExpDEM(data){
+                var jsonExp = JSON.stringify(data);
+                var urlExp = "http://192.168.43.96:3000/experiences";
+                var xhrExp = new XMLHttpRequest();
+                xhrExp.open("POST", urlExp, true);
+                xhrExp.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrExp.onload = function () {
+                    var Experiences= JSON.parse(xhrExp.responseText);
+                    if (xhrExp.readyState == 4 && xhrExp.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrExp.send(jsonExp);
+            }
+
+            function AjouterDipDEM(data){
+                var jsonDipDEM = JSON.stringify(data);
+                var urlDipDEM = "http://192.168.43.96:3000/diplomedemandeurs";
+                var xhrDipDEM = new XMLHttpRequest();
+                xhrDipDEM.open("POST", urlDipDEM, true);
+                xhrDipDEM.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrDipDEM.onload = function () {
+                    var DipDemandeurs= JSON.parse(xhrDipDEM.responseText);
+                    if (xhrDipDEM.readyState == 4 && xhrDipDEM.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrDipDEM.send(jsonDipDEM);
+            }
+
+            function AjouterForDEM(data){
+                var jsonForDEM = JSON.stringify(data);
+                var urlForDEM = "http://192.168.43.96:3000/formations";
+                var xhrForDEM = new XMLHttpRequest();
+                xhrForDEM.open("POST", urlForDEM, true);
+                xhrForDEM.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrForDEM.onload = function () {
+                    var ForDemandeurs= JSON.parse(xhrForDEM.responseText);
+                    if (xhrForDEM.readyState == 4 && xhrForDEM.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrForDEM.send(jsonForDEM);
+            }
+
+            function AjouterCertDEM(data){
+                var jsonCertDEM = JSON.stringify(data);
+                var urlCertDEM = "http://192.168.43.96:3000/certifications";
+                var xhrCertDEM = new XMLHttpRequest();
+                xhrCertDEM.open("POST", urlCertDEM, true);
+                xhrCertDEM.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrCertDEM.onload = function () {
+                    var CertDemandeurs= JSON.parse(xhrCertDEM.responseText);
+                    if (xhrCertDEM.readyState == 4 && xhrCertDEM.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrCertDEM.send(jsonCertDEM);
+            }
+
+            function AjouterProjDEM(data){
+                var jsonProjDEM = JSON.stringify(data);
+                var urlProjDEM = "http://192.168.43.96:3000/projets";
+                var xhrProjDEM = new XMLHttpRequest();
+                xhrProjDEM.open("POST", urlProjDEM, true);
+                xhrProjDEM.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrProjDEM.onload = function () {
+                    var ProjDemandeurs= JSON.parse(xhrProjDEM.responseText);
+                    if (xhrProjDEM.readyState == 4 && xhrProjDEM.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrProjDEM.send(jsonProjDEM);
+            }
+
+            function AjouterVADEM(data){
+                var jsonVADEM = JSON.stringify(data);
+                var urlVADEM = "http://192.168.43.96:3000/vieassociatives";
+                var xhrVADEM = new XMLHttpRequest();
+                xhrVADEM.open("POST", urlVADEM, true);
+                xhrVADEM.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrVADEM.onload = function () {
+                    var VADemandeurs= JSON.parse(xhrVADEM.responseText);
+                    if (xhrVADEM.readyState == 4 && xhrVADEM.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrVADEM.send(jsonVADEM);
+            }
+
+            function ajoutNivLang(data){
+                var jsonNivLang = JSON.stringify(data);
+                var urlNivLang = "http://192.168.43.96:3000/languedemandeurs";
+                var xhrNivLang = new XMLHttpRequest();
+                xhrNivLang.open("POST", urlNivLang, true);
+                xhrNivLang.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrNivLang.onload = function () {
+                    var Nivlangues= JSON.parse(xhrNivLang.responseText);
+                    if (xhrNivLang.readyState == 4 && xhrNivLang.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrNivLang.send(jsonNivLang);
+            }
+
+            function ajoutNivComp(data){
+                var jsonNivComp = JSON.stringify(data);
+                var urlNivComp = "http://192.168.43.96:3000/competencedemandeurs";
+                var xhrNivComp = new XMLHttpRequest();
+                xhrNivComp.open("POST", urlNivComp, true);
+                xhrNivComp.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrNivComp.onload = function () {
+                    var Nivcompetences= JSON.parse(xhrNivComp.responseText);
+                    if (xhrNivComp.readyState == 4 && xhrNivComp.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrNivComp.send(jsonNivComp);
+            }
+
+            $(function () {
+  
+  $.validator.setDefaults({
+    submitHandler: function () {
+        var url = "http://192.168.43.96:3000/demandeurs";
+                var email = document.getElementById("EMAIL_RECLOGIN").value;
+                var password = document.getElementById("PSw_RECLOGIN").value;
+                var xhr = new XMLHttpRequest(); 
+                xhr.open("GET", url, true); 
+                xhr.setRequestHeader("Content-type", "application/json; charset=utf-8");
+                xhr.onload = function () {
+                  // load les données à partir de la serveur -> début connection
+                  var demandeurs = JSON.parse(xhr.responseText); 
+                  var nb=0;
+                  if (xhr.readyState == 4 && xhr.status == "200") {
+                    for (var i = 0; i < demandeurs.length; i++) {
+                        if((email == demandeurs[i].EMAIL_DEM)&&(password == demandeurs[i].PSW_DEM)){
+                            if(demandeurs[i].ARCHIV_DEM =="1"){
+                                nb +=1;
+                                Swal.fire({
+                                    title: 'Ce compte est archivé',
+                                    text: "Contactez l'administrateur si vous souhaitez restaurer votre compte !",
+                                    icon:'question',
+                                    showCancelButton: true,
+                                    confirmButtonText: 'Contacter',
+                                }).then((result) => {
+                                    if (result.isConfirmed) {
+                                        location.replace("../contactINT.html");
+                                    } 
+                                })
+                            }else{
+                                nb +=1;
+                                localStorage.setItem('ID_DEM', demandeurs[i]._id);
+                                localStorage.setItem('PHOTO_DEM', demandeurs[i].PHOTO_DEM);
+                                localStorage.setItem('Username_DEM', demandeurs[i].NOM_DEM + " " + demandeurs[i].PRE_DEM);
+                                localStorage.setItem('EMAIL_DEM', demandeurs[i].EMAIL_DEM);
+                                location.replace("AccueilDemandeur.html");
+                            }
+                            
+                        }
+                    }
+                    if(nb==0){
+                        Swal.fire({
+							title:'E-mail ou mot de passe est introuvable !',
+							icon:'warning',
+							showConfirmButton:false,
+							timer:1800
+						})
+                    }
+                  }else {
+                    Swal.fire({
+							title:'Erreur De Connexion',
+							icon:'error',
+							showConfirmButton:false,
+							timer:1800
+						})
+                  }
+                }
+              xhr.send()
+    }
+  });
+  
+  $('#form').validate({
+  
+    rules: {
+      EMAILCNX: {
+        required: true,
+        email: true,
+      },
+      PSWCNXD: {
+        required: true,
+        password:false,
+      },
+    },
+    messages: {
+      EMAILCNX: {
+        required: "Veuillez saisir une adresse e-mail",
+        email: "S'il vous plaît, mettez une adresse email valide"
+      },
+      PSWCNXD: {
+        required: "Veuillez saisir un mot de passe"
+		
+      }
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('text-danger');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element) {
+        var msgClasses = "h4";
+        $(element).addClass(msgClasses);
+    },
+    unhighlight: function (element) {
+        var msgClasses = "h4 tab";
+        $(element).removeClass("h4");
+        $(element).addClass(msgClasses);
+  
+    }
+  
+  });
+  jQuery.validator.addMethod(
+  "email",
+  function(value, element) {
+    return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+  },)
+});
+        function ouvrirOBLPSW(){
+            document.getElementById("login").classList.remove("show");
+            document.getElementById("oublier").classList.add("show");
+
+            document.getElementById("login").classList.remove("active");
+            document.getElementById("oublier").classList.add("active");
+            
+            document.getElementById("login-tab").classList.remove("active");
+            document.getElementById("oublier-tab").classList.add("active");
+        }
+
+        $(function () {
+  
+  $.validator.setDefaults({
+    submitHandler: function () {
+        // Open a new connection, using the GET request on the URL endpoint
+        var nb=0;
+        var emailOUB = document.getElementById("EMAIL_Oub").value;
+        var requestgetDEM = new XMLHttpRequest()
+        requestgetDEM.open('GET', 'http://192.168.43.96:3000/demandeurs', true)
+        requestgetDEM.onload = function()
+        {
+            // Begin accessing JSON data here
+            var data = JSON.parse(this.response);
+            console.log(data);
+            data.forEach(j => {
+            if(emailOUB == j.EMAIL_DEM && j.ARCHIV_DEM == "0"){
+                nb+=1;
+                var url = "http://192.168.43.96:3000/demandeurs/"+j._id;                                  
+                var dataOub = {};
+                dataOub.PHOTO_DEM = j.PHOTO_DEM;
+                dataOub.EMAIL_DEM = j.EMAIL_DEM
+                dataOub.PSW_DEM = Math.random().toString(36).replace(/[^a-zA-Z0-9]+/g, '').substr(0, 8);
+                dataOub.NOM_DEM = j.NOM_DEM;
+                dataOub.PRE_DEM = j.PRE_DEM;
+                dataOub.SEXE_DEM = j.SEXE_DEM;
+                dataOub.DAT_NAI_DEM = j.DAT_NAI_DEM;
+                dataOub.VILLE_DEM = j.VILLE_DEM;
+                dataOub.PAYS_DEM = j.PAYS_DEM;
+                dataOub.ADRESSE_DEM = j.ADRESSE_DEM;
+                dataOub.NUM_TEL_DEM = j.NUM_TEL_DEM;
+                dataOub.COD_POST_DEM = j.COD_POST_DEM;
+                dataOub.PERMIS_COND_DEM = j.PERMIS_COND_DEM;
+                dataOub.TYPE_PERMIS_DEM = j.TYPE_PERMIS_DEM;
+                dataOub.SAL_MIN_DEM = j.SAL_MIN_DEM;
+                dataOub.URL_LINK_DEM = j.URL_LINK_DEM;
+                dataOub.DESC_DEM = j.DESC_DEM;
+                dataOub.SPES_DEM = j.SPES_DEM;
+                dataOub.ARCHIV_DEM = j.ARCHIV_DEM;
+                dataOub.URL_FB_DEM = j.URL_FB_DEM;
+                var json = JSON.stringify(dataOub);
+                var xhr = new XMLHttpRequest();
+                xhr.open("PUT", url, true);
+                xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhr.onload = function () {
+                    var Dem = JSON.parse(xhr.responseText);
+                    if (xhr.readyState == 4 && xhr.status == "200") {
+                        Email.send({
+                            Host: "smtp.gmail.com",
+                            Username : "tunisierecrute0@gmail.com",
+                            Password : "Recrute123",
+                            To : `${Dem.EMAIL_DEM}`,
+                            From : "tunisierecrute0@gmail.com",
+                            Subject : "Ceci votre code",
+                            Body : `code : ${Dem.PSW_DEM}`,
+                        })  
+                    }
+                }
+                xhr.send(json);
+            }
+            })
+            if(nb==0){
+                Swal.fire({
+                    title:`E-mail est introuvable !`,
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }else{
+                Swal.fire({
+                    title:'Vous avez reçus une e-mail',
+                    icon:'success',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+                var ee = document.getElementById("formOublier");
+                ch=`<div class="form-group">
+                        <input type="text" name="Code_EMAIL" class="form-control" id="Code_EMAIL" placeholder="Entrer le code reçus...">
+                    </div>
+                    <div class="row">
+                        <div class="col-xl-6 col-md-12 retour-password">
+                            <a onclick="retourOub();">Retour</a>
+                        </div>
+
+                        <div class="col-xl-6 col-md-12 lost-your-password-wrap">
+                                <a onclick="ouvrirCNX();">Connexion</a>
+                        </div>
+                    </div>
+                    <button type="button" class="default-btn" onclick="validerCNX();">Valider<i class="flaticon-send"></i></button>`;
+                ee.innerHTML = ch;
+            }
+        }
+        requestgetDEM.send();
+    }
+  });
+  
+  $('#formOublier').validate({
+  
+    rules: {
+      EMAILOub: {
+        required: true,
+        email: true,
+      },
+    },
+    messages: {
+      EMAILOub: {
+        required: "Veuillez saisir votre adresse e-mail",
+        email: "S'il vous plaît, mettez une adresse email valide"
+      }
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('text-danger');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element) {
+        var msgClasses = "h4";
+        $(element).addClass(msgClasses);
+    },
+    unhighlight: function (element) {
+        var msgClasses = "h4 tab";
+        $(element).removeClass("h4");
+        $(element).addClass(msgClasses);
+  
+    }
+  
+  });
+  jQuery.validator.addMethod(
+  "email",
+  function(value, element) {
+    return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+  },)
+});
+
+    function retourOub(){
+        var ee = document.getElementById("formOublier");
+        ch=`<div class="form-group">
+                <input type="text" name="EMAILOub" class="form-control" id="EMAIL_Oub" placeholder="Entrer son e-mail...">
+            </div>
+            <div class="row">
+
+                <div class="col-lg-12 col-md-6 col-sm-6 lost-your-password-wrap">
+                        <a onclick="ouvrirCNX();" class="lost-your-password">Connexion</a>
+                </div>
+            </div>
+            <button type="submit" class="default-btn">Suivant<i class="flaticon-send"></i></button>`;
+        ee.innerHTML = ch;
+    }
+
+    function ouvrirCNX(){
+        document.getElementById("oublier").classList.remove("show");
+        document.getElementById("login").classList.add("show");
+
+        document.getElementById("oublier").classList.remove("active");
+        document.getElementById("login").classList.add("active");
+        
+        document.getElementById("oublier-tab").classList.remove("active");
+        document.getElementById("login-tab").classList.add("active");
+    }
+
+    function ouvrirCNXRegis(){
+        document.getElementById("register").classList.remove("show");
+        document.getElementById("login").classList.add("show");
+
+        document.getElementById("register").classList.remove("active");
+        document.getElementById("login").classList.add("active");
+        
+        document.getElementById("register-tab").classList.remove("active");
+        document.getElementById("login-tab").classList.add("active");
+    }
+
+    function validerCNX(){
+        // Open a new connection, using the GET request on the URL endpoint
+        var request = new XMLHttpRequest()
+        var codeEmail = document.getElementById("Code_EMAIL").value;
+        request.open('GET', 'http://192.168.43.96:3000/demandeurs', true)
+        request.onload = function()
+        {
+            // Begin accessing JSON data here
+            var data = JSON.parse(this.response);
+            var test = false;
+            data.forEach(j => {
+                if(codeEmail == j.PSW_DEM){
+                    test = true;
+                    localStorage.setItem('ID_DEM', j._id);
+                    localStorage.setItem('PHOTO_DEM', j.PHOTO_DEM);
+                    localStorage.setItem('Username_DEM', j.NOM_DEM +" "+ j.PRE_DEM );
+                    localStorage.setItem('EMAIL_DEM', j.EMAIL_DEM);
+                  
+                    Swal.fire({
+                        title:`Modifier mot de passe`,
+                        text: 'Changer le mot de passe pour plus de sécurité pour votre compte.',
+                        icon:'warning',
+                        confirmButtonText: "D'accord",
+					}).then((result) => {
+                        if (result.isConfirmed) {
+                            location.replace("modifierProfil.html");
+                        }
+                    })
+                }
+            })
+            if (test == false){
+                Swal.fire({
+                    title:`Le code n'est pas correct`,
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:2200
+                })
+            }
+        }
+        request.send();
+            
+    }
+        </script>
+    </body>
+</html>

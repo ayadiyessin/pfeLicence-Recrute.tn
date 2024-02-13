@@ -1,0 +1,1686 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/notifcation.css">
+        <!--Style CV-->
+        <link rel="stylesheet" href="assets/css/CV.css">
+		<title>Recruteur | Profil Candidat Favori  </title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(!localStorage.getItem("ID_REC")){
+              location.replace("profile-authentication.html");
+            }
+          </script>
+
+    </head>
+
+    <body onload="getLocation()">
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="sidemenu-header">
+                <a href="dashboardRecruteur.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/Recrute.fr.png" alt="image">
+                </a>
+
+                <div class="responsive-burger-menu d-block d-lg-none">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </div>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+                    <li class="nav-item ">
+                        <a href="dashboardRecruteur.html" class="nav-link">
+                            <span class="icon"><i class="ri-home-line"></i></span>
+                            <span class="menu-title">Tableau De Bord</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="profilEntreprise.html" class="nav-link">
+                            <span class="icon"><i class="ri-building-4-line"></i></span>
+                            <span class="menu-title">Profil De La Société</span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a href="modifierautentification.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-line"></i></span>
+                            <span class="menu-title">Mon Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="ajouterOffre.html" class="nav-link">
+                            <span class="icon"><i class="ri-send-plane-fill"></i></span>
+                            <span class="menu-title">Publier Une Offre</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item ">
+                        <a href="listeOffre.html" class="nav-link">
+                            <span class="icon"><i class="ri-file-list-3-line"></i></span>
+                            <span class="menu-title">Liste Des Offres</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item " >
+                        <a href="listCandidat.html" class="nav-link">
+                            <span class="icon"><i class="ri-contacts-line"></i></span>
+                            <span class="menu-title">Liste Des Candidats</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="listeCandidatFavori.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-heart-line"></i></span>
+                            <span class="menu-title">Candidats Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listedemandeur.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-search-line"></i></span>
+                            <span class="menu-title">Demandeurs D'emploi</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listeDemandeurFavoris.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-star-line"></i></span>
+                            <span class="menu-title">Demandeurs Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="dateProposer.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-2-line"></i></span>
+                            <span class="menu-title">Dates Proposer</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="entretienEnattente.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-voice-line"></i></span>
+                            <span class="menu-title">Entretiens En Attente</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienDaujourdhui.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-check-line"></i></span>
+                            <span class="menu-title">Entretiens D'aujourd'hui</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienRealise.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-follow-line"></i></span>
+                            <span class="menu-title">Entretiens Réalisés</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listemesssage.html" class="nav-link">
+                            <span class="icon"><i class="ri-chat-1-line"></i></span>
+                            <span class="menu-title">Messageries</span>
+                        </a>
+                    </li>
+
+                    
+
+                    <li class="nav-item">
+                        <a href="#" onClick="quiterStorge();" class="nav-link">
+                            <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                            <span class="menu-title">Deconexion</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  onClick="supprmierCempte()" class="nav-link">
+                            <span class="icon" style="color: red; "><i class="ri-delete-bin-line"></i></span>
+                            <span class="menu-title" style="color: red; ">Supprimer Profil</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="main-responsive-menu">
+                        <div class="responsive-burger-menu d-lg-none d-block">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a href="dashboardRecruteur.html" class="nav-link">
+                                        Accueil
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link">   <i class="ri-notification-2-line"> </i>
+                                        <span id="nbtotalhaut" class="badge badge-warning navbar-badge">0</span>   
+                                       &ensp; Notification                  
+                                    
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="listCandidat.html" class="nav-link">
+                                            <b id="nbCandidat">0 </b> Nouveaux Candidats</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="entretienDaujourdhui.html" class="nav-link">
+                                            <b id="nbentretienAujordhui">0 </b> Entretiens Aujourd'hui</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="entretienEnattente.html" class="nav-link">
+                                            <b id="nbentretianENatt">0 </b> Nouveaux Entretiens En Attente</a>
+                                        </li>
+                                        <div id="listedeoffre">
+
+                                        </div>
+
+
+                                            
+
+                                        
+                                    </ul>
+                                    
+                                </li>
+
+                            </ul>
+
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <div class="dropdown profile-nav-item">
+                                        <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="menu-profile">
+                                                <img src="" id="imgNav" class="rounded-circle" alt="image">
+                                                <span class="name">Mon Compte</span>
+                                            </div>
+                                        </a>
+            
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                                <div class="figure mb-3">
+                                                    <img src="" id="imgENT" class="rounded-circle" alt="image">
+                                                </div>
+            
+                                                <div class="info text-center">
+                                                    <span class="name" id="nomENT"></span>
+                                                    <p class="mb-3 email" id="emailENT"></p>
+                                                    <p class="mb-3 email"id="emailREC"></p>
+                                                </div>
+                                            </div>
+            
+                                            <div class="dropdown-body">
+                                                <ul class="profile-nav p-0 pt-3">
+                                                    <li class="nav-item ">
+                                                        <a href="dashboardRecruteur.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-home-line"></i></span>
+                                                            <span class="menu-title">Tableau De Bord</span>
+                                                        </a>
+                                                    </li>
+
+                                                    
+                                                    <li class="nav-item">
+                                                        <a href="modifierautentification.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-user-line"></i></span>
+                                                            <span class="menu-title">Mon Profil</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+            
+                                            <div class="dropdown-footer">
+                                                <ul class="profile-nav">
+                                                    <li class="nav-item">
+                                                        <a href="#" onClick="quiterStorge();" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Deconexion</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Salut</h1>
+                <ol class="breadcrumb">
+                    <li class="item" title="Retourner au Accueil"><a href="dashboardRecruteur.html">Accueil</a></li>
+                    <li class="item" title="Retourner aux Liste Des Candidats Favoris"><a href="listeCandidatFavori.html">Liste Des Candidats Favoris</a></li>
+                    <li class="item">Profil Candidat Favoris</li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+            
+            <!-- Start Candidates Details Area -->
+            <div class="manage-jobs-box">
+                <div class="candidates-details-area ptb-100">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-lg-4 col-md-12">
+                                <div class="candidates-details-sticky">
+                                    <div class="candidates-details-information">
+                                        <div class="information-box">
+                                            <img id="photoDEM" src="" alt="image">
+                                            <h3 id="nompreDEM"></h3>
+                                            <span id="speciaDEM"></span>
+
+                                            <ul class="social-links">
+                                                <li>
+                                                    <a id="urlfbDEM" href="" target="_blank">
+                                                        <i class="flaticon-facebook"></i>
+                                                    </a>
+                                                </li>
+                
+                                                <li>
+                                                    <a id="urllinkDEM" href="" target="_blank">
+                                                        <i class="flaticon-linkedin"></i>
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+            
+                                        <ul class="information-list-box">
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-mail-line"></i> Email</span>
+                                                    <a id="emailDEM" href=""></a>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-women-line"></i> Sexe</span>
+                                                    <div id="sexeDEM"></div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-calendar-2-line"></i> Naissance</span>
+                                                    <div id="datnaisDEM"></div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-phone-line"></i> Téléphone</span>
+                                                    <a id="numtelDEM" href=""></a>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-map-pin-line"></i> Adresse</span>
+                                                    <div id="adresseDEM"></div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-map-pin-range-line"></i> Code Postal</span>
+                                                    <div id="CPDEM"></div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-road-map-line"></i> Ville</span>
+                                                    <div id="villeDEM"></div>
+                                                </div>
+                                            </li>
+
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-earth-line"></i> Pays</span>
+                                                    <div id="paysDEM"></div>
+                                                </div>
+                                            </li>
+            
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="ri-steering-2-line"></i> Permis</span>
+                                                    <div id="typePermisDEM"></div> 
+                                                </div>
+                                            </li>
+            
+                                            <li>
+                                                <div class="d-flex justify-content-between align-items-center">
+                                                    <span><i class="flaticon-money"></i> Salaire min</span>
+                                                    <span id="salminDEM"></span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                        <div class="candidates-details-btn-box">
+                                            <a href="#" onClick="envMessage()" class="default-btn">Messages <i class="ri-chat-forward-line"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-8 col-md-12">
+                                <div class="candidates-details-desc">
+                                    <div class="candidates-desc-content mb-30">
+                                        <h3>Profile <i class="flaticon-user-1"></i></h3>
+                                        <p id="descDEM">
+
+                                        </p>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Expérience Professionnelle<i class="flaticon-layers"></i></h3>
+                                        
+                                        <div id="listEXP" class="candidates-desc-list">
+                                            
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Diplôme <i class="ri-nurse-line"></i></h3>
+                                        
+                                        <div id="listDIP" class="candidates-desc-list">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Formation <i class="flaticon-mortarboard"></i></h3>
+                                        
+                                        <div id="listFOR" class="candidates-desc-list">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Certifications <i class="ri-file-mark-line"></i></h3>
+                                        
+                                        <div id="listCERT" class="candidates-desc-list">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Projets <i class="flaticon-trophy"></i></h3>
+                                        
+                                        <div id="listPROJ" class="candidates-desc-list">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Vie Associative <i class="ri-service-line"></i></h3>
+                                        
+                                        <div id="listVA" class="candidates-desc-list">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Compétences <i class="ri-medal-line"></i></h3>
+                                        
+                                        <div class="candidates-desc-list">
+                                            <ul id="listCOMP">
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Qualités <i class="ri-award-line"></i></h3>
+                                        
+                                        <div class="candidates-desc-list">
+                                            <ul id="qualiteDEM">
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Langues <i class="ri-file-list-3-line"></i></h3>
+                                        
+                                        <div class="candidates-desc-list">
+                                            <ul id="listlangueDEM">
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="candidates-desc-content">
+                                        <h3>Centres D'intérêts <i class="ri-bookmark-3-line"></i></h3>
+                                        
+                                        <div class="candidates-desc-list">
+                                            <ul id="centreintDEM">
+                                            </ul>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-xl-8 col-lg-12 col-md-12"></div>
+                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                            <div class="candidates-details-btn-box">
+                                                <a  onClick="propRDV()" class="default-btn">Proposer rendez-vous <i class="ri-chat-forward-line"></i></a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row" id="horairesRDV">
+                                
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Start Candidates Details Area -->
+
+
+            <!-- Start Go Top Area -->
+            <div class="go-top">
+                <i class="ri-arrow-up-line"></i>
+            </div>
+            <!-- End Go Top Area -->
+        </div>
+        <!-- End Main Dashboard Content Wrapper Area -->
+        
+        <!-- Start Copyright Area -->
+        <div class="footerCopy">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p><i class="ri-copyright-line"></i> 2021-2022 <a href="#"> Recrute</a>. </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Area -->
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/supprmierProfil.js"></script>
+        <script src="assets/js/BTprofilDem.js"></script>
+
+        
+          <!--Modal-->
+          <script src="assets/js/modal.js"></script>
+          <script src="assets/js/modelCV.js"></script>
+          <script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>  
+          <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.3.5/jspdf.min.js"></script>
+            <!--notifci <script src="assets/js/proposRDV.js"></script>-->
+            <script src="assets/js/notification.js"></script>
+                                 
+            <!--alert-->
+            <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+            <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+                       <script>
+                        var liste =["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+                        var url_string = window.location.href ;
+                        var url = new URL(url_string); 
+                        var c = url.searchParams.get("id"); 
+                        //var c="6269e3882836aa1a58d22a2a";
+                            //console.log(c);
+                            // Post a user
+                            var url3 = "http://192.168.43.96:3000/demandeurs/" +c;
+                            var xhr3 = new XMLHttpRequest();
+                            xhr3.open("GET", url3, true);
+            
+                            xhr3.onload = function () {
+                            var data = JSON.parse(xhr3.responseText);
+                            if (xhr3.readyState == 4 && xhr3.status == "200") {
+                                document.getElementById("photoDEM").src = data.PHOTO_DEM;
+                                document.getElementById("nompreDEM").innerHTML = data.NOM_DEM + ' '+ data.PRE_DEM;
+                                document.getElementById("speciaDEM").innerHTML = data.SPES_DEM;
+                                document.getElementById("emailDEM").innerHTML = data.EMAIL_DEM;
+                                document.getElementById("emailDEM").href = "mailto:"+data.EMAIL_DEM;
+                                document.getElementById("sexeDEM").innerHTML = data.SEXE_DEM;
+                                document.getElementById("datnaisDEM").innerHTML = data.DAT_NAI_DEM;
+                                document.getElementById("numtelDEM").innerHTML = data.NUM_TEL_DEM;
+                                document.getElementById("numtelDEM").href = "tel:"+data.NUM_TEL_DEM;
+                                document.getElementById("adresseDEM").innerHTML = data.ADRESSE_DEM;
+                                document.getElementById("CPDEM").innerHTML = data.COD_POST_DEM;
+                                document.getElementById("villeDEM").innerHTML = data.VILLE_DEM;
+                                document.getElementById("paysDEM").innerHTML = data.PAYS_DEM;
+                                document.getElementById("salminDEM").innerHTML = data.SAL_MIN_DEM;
+                                document.getElementById("descDEM").innerHTML = data.DESC_DEM;
+                                if(data.URL_FB_DEM !=""){
+                                    document.getElementById("urlfbDEM").href = data.URL_FB_DEM;
+                                }
+                                if(data.URL_FB_DEM !=""){
+                                    document.getElementById("urllinkDEM").href = data.URL_LINK_DEM;
+                                }
+                                if (data.PERMIS_COND_DEM == "1"){
+                                    document.getElementById("typePermisDEM").innerHTML = data.TYPE_PERMIS_DEM;
+                                }else{
+                                    document.getElementById("typePermisDEM").innerHTML = 'Pas de permis';
+                                }
+                                var request1 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request1.open('GET', "http://192.168.43.96:3000/qualites", true);
+                                    request1.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data1 = JSON.parse(this.response);
+                                        console.log(data1);
+                                        var ee = document.getElementById("qualiteDEM");
+                                        var nb=0;
+                                        data1.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            ch ="<li>"+j.NOM_QUA+"</li>";
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                            nb +=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            ch ="<li>Pas de qualité </li>";
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                        }
+                                    }
+                                    // Send request
+                                request1.send();
+                                var request2 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request2.open('GET', "http://192.168.43.96:3000/languedemandeurs", true);
+                                    request2.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data2 = JSON.parse(this.response);
+                                        console.log(data2);
+                                        var ee = document.getElementById("listlangueDEM");
+                                        var nb=0;
+                                        data2.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            var request3 = new XMLHttpRequest();
+                                            request3.open('GET', "http://192.168.43.96:3000/langues/"+j.ID_LANGUE, true);
+                                            request3.onload = function()
+                                            {
+                                                var data3 = JSON.parse(this.response);
+                                                var num=j.NIV_LANG_DEM;
+                                                if(num==="1"){ 
+                                                        ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                                                    <span class="ri-star-s-fill" id="star11"></span>
+                                                                    <span class="ri-star-s-line" id="star22"></span>
+                                                                    <span class="ri-star-s-line" id="star33"></span>
+                                                                    <span class="ri-star-s-line" id="star44"></span>
+                                                                    <span class="ri-star-s-line" id="star55"></span>
+                                                                </li>    
+            
+                                                        `;
+                                                        ee.insertAdjacentHTML('beforeend',ch);
+                                                }
+                                                if(num=="2"){
+                                                ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                                        <span class="ri-star-s-fill" id="star11"></span>
+                                                        <span class="ri-star-s-fill" id="star22"></span>
+                                                        <span class="ri-star-s-line" id="star33"></span>
+                                                        <span class="ri-star-s-line" id="star44"></span>
+                                                        <span class="ri-star-s-line" id="star55"></span>
+                                                        </li>
+                                                        `;
+                                                        ee.insertAdjacentHTML('beforeend',ch);
+                                                }
+                                                if(num=="3"){
+                                                ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                                        <span class="ri-star-s-fill" id="star11"></span>
+                                                        <span class="ri-star-s-fill" id="star22"></span>
+                                                        <span class="ri-star-s-fill" id="star33"></span>
+                                                        <span class="ri-star-s-line" id="star44"></span>
+                                                        <span class="ri-star-s-line" id="star55"></span>
+                                                        </li>
+                                                        `;
+                                                        ee.insertAdjacentHTML('beforeend',ch);
+                                                }
+                                                if(num=="4"){
+                                                ch = `<li><span >`+data3.NOM_LANG+`</span>  :
+                                                        <span class="ri-star-s-fill " id="star11"></span>
+                                                        <span class="ri-star-s-fill  " id="star22"></span>
+                                                        <span class="ri-star-s-fill  " id="star33"></span>
+                                                        <span class="ri-star-s-fill " id="star44"></span>
+                                                        <span class="ri-star-s-line" id="star55"></span>
+                                                        </li>
+                                                        `;
+                                                        ee.insertAdjacentHTML('beforeend',ch);
+                                                }
+                                                if(num=="5"){
+                                                ch = `  <li><span >`+data3.NOM_LANG+`</span>  :
+                                                            <span class="ri-star-s-fill " id="star11"></span>
+                                                            <span class="ri-star-s-fill " id="star22"></span>
+                                                            <span class="ri-star-s-fill " id="star33"></span>
+                                                            <span class="ri-star-s-fill " id="star44"></span>
+                                                            <span class="ri-star-s-fill " id="star55"></span>
+                                                        </li>
+                                                        `;
+                                                        ee.insertAdjacentHTML('beforeend',ch); 
+            
+                                                }
+            
+                                            // ch ="<li><span >"+data3.NOM_LANG+"</span>  :  <span >"+j.NIV_LANG_DEM+"</span></li>";
+                                            // ee.insertAdjacentHTML('beforeend',ch);    
+                                            }
+                                            request3.send();
+                                            nb +=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            ch ="<li>Pas de langue </li>";
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                        }
+                                }
+                                request2.send();
+                                var request4 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request4.open('GET', "http://192.168.43.96:3000/centresinterets", true);
+                                    request4.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data4 = JSON.parse(this.response);
+                                        console.log(data4);
+                                        var nb=0;
+                                        var ee = document.getElementById("centreintDEM");
+                                        data4.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            ch ="<li>"+j.NOM_CI+"</li>";
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                            nb +=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            ch ="<li>Pas de centre d'interet </li>";
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                        }
+                                    }
+                                    // Send request
+                                request4.send();
+                                var request5 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request5.open('GET', "http://192.168.43.96:3000/experiences", true);
+                                    request5.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data5 = JSON.parse(this.response);
+                                        console.log(data5);
+                                        var ee = document.getElementById("listEXP");
+                                        var nb=0;
+                                        data5.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            var tabDEB = j.DAT_DEB_EXP.split('-');
+                                            var tabFIN = j.DAT_FIN_EXP.split('-');
+                                            if(tabDEB[1]<10){
+                                            tabDEB[1]=tabDEB[1][1];
+                                            }
+                                            if(tabFIN[1]<10){
+                                            tabFIN[1]=tabFIN[1][1];
+                                            }
+                                            ch = `<div class="list-box">
+                                                        <h4>`+j.TYPE_EXP+`</h4>
+                                                        <span>`+j.NOM_ENT_EXP+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+ ` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</span>
+                                                        <p>`+j.POSITION_EXP+`</p>
+                                                        <p>`+j.DESC_EXP+`</p>
+                                                        <p>`+j.OUTIL_EXP+`</p>
+                                                    </div>`;
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                            nb+=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            var pp = document.createElement("ul");
+                                            pp.innerText =" Pas d'experience ";
+                                            document.getElementById('listEXP').appendChild(pp);
+                                        }
+                                    }
+                                    // Send request
+                                request5.send();
+                                var request6 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request6.open('GET', "http://192.168.43.96:3000/formations", true);
+                                    request6.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data6 = JSON.parse(this.response);
+                                        console.log(data6);
+                                        var ee = document.getElementById("listFOR");
+                                        var nb=0;
+                                        data6.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            var tabDEB = j.DAT_DEB_FOR.split('-');
+                                            var tabFIN = j.DAT_FIN_FOR.split('-');
+                                            if(tabDEB[1]<10){
+                                            tabDEB[1]=tabDEB[1][1];
+                                            }
+                                            if(tabFIN[1]<10){
+                                            tabFIN[1]=tabFIN[1][1];
+                                            }
+                                            ch = `<div class="list-box">
+                                                        <h4>`+j.NOM_FOR+`</h4>
+                                                        <span>`+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</span>
+                                                        <p>`+j.DESC_FOR+`</p>
+                                                    </div>`;
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                            nb+=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            var pp = document.createElement("ul");
+                                            pp.innerText = "Pas de formation";
+                                            document.getElementById('listFOR').appendChild(pp);
+                                        }
+                                    }
+                                    // Send request
+                                request6.send();
+                                var request7 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request7.open('GET', "http://192.168.43.96:3000/certifications", true);
+                                    request7.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data7 = JSON.parse(this.response);
+                                        console.log(data7);
+                                        var ee = document.getElementById("listCERT");
+                                        var nb=0;
+                                        data7.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            ch = `<div class="list-box">
+                                                        <h4>`+j.NOM_CERT+`</h4>
+                                                        <span>`+j.REF_CERT+`</span>
+                                                        <p>`+j.DESC_CERT+`</p>
+                                                    </div>`;
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                            nb+=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            var pp = document.createElement("ul");
+                                            pp.innerText = "Pas de certificat";
+                                            document.getElementById('listCERT').appendChild(pp);
+                                        }
+                                    }
+                                    // Send request
+                                request7.send();
+                                var request8 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request8.open('GET', "http://192.168.43.96:3000/projets", true);
+                                    request8.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data8 = JSON.parse(this.response);
+                                        console.log(data8);
+                                        var ee = document.getElementById("listPROJ");
+                                        var nb=0;
+                                        data8.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            var tabDEB = j.DAT_DEB_PROJ.split('-');
+                                            var tabFIN = j.DAT_FIN_PROJ.split('-');
+                                            if(tabDEB[1]<10){
+                                            tabDEB[1]=tabDEB[1][1];
+                                            }
+                                            if(tabFIN[1]<10){
+                                            tabFIN[1]=tabFIN[1][1];
+                                            }
+                                            ch = `<div class="list-box">
+                                                        <h4>`+j.NOM_PROJ+`</h4>
+                                                        <span>`+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</span>
+                                                        <p>`+j.TYPE_PROJ+`</p>
+                                                        <p>`+j.DESC_PROJ+`</p>
+                                                        <p>`+j.OUTIL_PROJ+`</p>
+                                                    </div>`;
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                            nb+=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            var pp = document.createElement("ul");
+                                            pp.innerText = "Pas de projet";
+                                            document.getElementById('listPROJ').appendChild(pp);
+                                        }
+                                    }
+                                    // Send request
+                                request8.send();
+                                var request9 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request9.open('GET', "http://192.168.43.96:3000/vieassociatives", true);
+                                    request9.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data9 = JSON.parse(this.response);
+                                        console.log(data9);
+                                        var ee = document.getElementById("listVA");
+                                        var nb=0;
+                                        data9.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            var tabDEB = j.DAT_DEB_VA.split('-');
+                                            var tabFIN = j.DAT_FIN_VA.split('-');
+                                            if(tabDEB[1]<10){
+                                            tabDEB[1]=tabDEB[1][1];
+                                            }
+                                            if(tabFIN[1]<10){
+                                            tabFIN[1]=tabFIN[1][1];
+                                            }
+                                            ch = `<div class="list-box">
+                                                        <h4>`+j.NOM_VA+`</h4>
+                                                        <span>`+j.POSITION_VA+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</span>
+                                                    </div>`;
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                            nb+=1;
+                                            }
+                                        })
+                                        if (nb == 0){
+                                            var pp = document.createElement("ul");
+                                            pp.innerText = "Pas de vie associative";
+                                            document.getElementById('listVA').appendChild(pp);
+                                        }
+                                    }
+                                    // Send request
+                                request9.send();
+                                var request10 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request10.open('GET', "http://192.168.43.96:3000/competencedemandeurs", true);
+                                    request10.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data10 = JSON.parse(this.response);
+                                        console.log(data10);
+                                        var ee = document.getElementById("listCOMP");
+                                        var nb=0;
+                                        data10.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            var request11 = new XMLHttpRequest();
+                                            request11.open('GET', "http://192.168.43.96:3000/competences/"+j.ID_COMPETENCE, true);
+                                            request11.onload = function()
+                                            {
+                                                var data11 = JSON.parse(this.response);
+                                            // ch ="<li><span >"+data11.NOM_COMP+"</span>  :  <span >"+j.NIV_COMP_DEM+"</span></li>";
+                                            var num=j.NIV_COMP_DEM;
+                                                if(num==="1"){ 
+                                                        ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                                                    <span class="ri-star-s-fill" id="star11"></span>
+                                                                    <span class="ri-star-s-line" id="star22"></span>
+                                                                    <span class="ri-star-s-line" id="star33"></span>
+                                                                    <span class="ri-star-s-line" id="star44"></span>
+                                                                    <span class="ri-star-s-line" id="star55"></span>
+                                                                </li>`;
+                                                }
+                                                if(num=="2"){
+                                                ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                                        <span class="ri-star-s-fill" id="star11"></span>
+                                                        <span class="ri-star-s-fill" id="star22"></span>
+                                                        <span class="ri-star-s-line" id="star33"></span>
+                                                        <span class="ri-star-s-line" id="star44"></span>
+                                                        <span class="ri-star-s-line" id="star55"></span>
+                                                        </li>`;    
+                                                }
+                                                if(num=="3"){
+                                                ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                                        <span class="ri-star-s-fill" id="star11"></span>
+                                                        <span class="ri-star-s-fill" id="star22"></span>
+                                                        <span class="ri-star-s-fill" id="star33"></span>
+                                                        <span class="ri-star-s-line" id="star44"></span>
+                                                        <span class="ri-star-s-line" id="star55"></span>
+                                                        </li>`;
+                                                }
+                                                if(num=="4"){
+                                                ch = `<li><span >`+data11.NOM_COMP+`</span>  :
+                                                        <span class="ri-star-s-fill " id="star11"></span>
+                                                        <span class="ri-star-s-fill  " id="star22"></span>
+                                                        <span class="ri-star-s-fill  " id="star33"></span>
+                                                        <span class="ri-star-s-fill " id="star44"></span>
+                                                        <span class="ri-star-s-line" id="star55"></span>
+                                                        </li>`;   
+                                                }
+                                                if(num=="5"){
+                                                ch = `  <li><span >`+data11.NOM_COMP+`</span>  :
+                                                            <span class="ri-star-s-fill " id="star11"></span>
+                                                            <span class="ri-star-s-fill " id="star22"></span>
+                                                            <span class="ri-star-s-fill " id="star33"></span>
+                                                            <span class="ri-star-s-fill " id="star44"></span>
+                                                            <span class="ri-star-s-fill " id="star55"></span>
+                                                        </li>`;
+                                                }
+                                                ee.insertAdjacentHTML('beforeend',ch); 
+                                            }
+                                            request11.send();
+                                            nb +=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            ch ="<li>Pas de compétence </li>";
+                                            ee.insertAdjacentHTML('beforeend',ch);
+                                        }
+                                }
+                                request10.send();
+                                var request12 = new XMLHttpRequest();
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request12.open('GET', "http://192.168.43.96:3000/diplomedemandeurs", true);
+                                    request12.onload = function()
+                                    {
+                                        // Begin accessing JSON data here
+                                        var data12 = JSON.parse(this.response);
+                                        console.log(data12);
+                                        var ee = document.getElementById("listDIP");
+                                        var nb=0;
+                                        data12.forEach(j => {
+                                        if(j.ID_DEMANDEUR==c){
+                                            var tabDEB = j.DAT_DEB_DIP.split('-');
+                                            var tabFIN = j.DAT_FIN_DIP.split('-');
+                                            if(tabDEB[1]<10){
+                                            tabDEB[1]=tabDEB[1][1];
+                                            }
+                                            if(tabFIN[1]<10){
+                                            tabFIN[1]=tabFIN[1][1];
+                                            }
+                                            var request13 = new XMLHttpRequest();
+                                            request13.open('GET', "http://192.168.43.96:3000/diplomes/"+j.ID_DIPLOME, true);
+                                            request13.onload = function()
+                                            {
+                                                var data13 = JSON.parse(this.response);
+                                                ch = `<div class="list-box">
+                                                        <h4>`+data13.TYPE_DIP+`</h4>
+                                                        <span>`+j.NOM_ECOL_DIP+`  |  `+liste[tabDEB[1]-1]+` `+tabDEB[0]+` - `+liste[tabFIN[1]-1]+` `+tabFIN[0]+`</span>
+                                                        <p>`+j.SPECIA_DIP+`</p>
+                                                    </div>`;
+                                                ee.insertAdjacentHTML('beforeend',ch);  
+                                            }
+                                            request13.send();
+                                            nb +=1;
+                                        }
+                                        })
+                                        if (nb == 0){
+                                            var pp = document.createElement("ul");
+                                            pp.innerText = "Pas de diplôme";
+                                            document.getElementById('listDIP').appendChild(pp);
+                                        }
+                                }
+                                request12.send();
+                            } else {
+                                console.log("error");
+                            }
+                            }
+                            xhr3.send(null);
+                    </script>
+                    <script>
+                        var idrec=localStorage.getItem("ID_REC");
+                    var url_string = window.location.href ;
+                    var url = new URL(url_string); 
+                    var idcond = url.searchParams.get("idcond");
+                        function propRDV(){
+                            var dateauj = new Date();
+                            var datemonth = '';
+                            var datejour='';
+                            if ((dateauj.getMonth()+1)<10){
+                            datemonth = '0'+(dateauj.getMonth()+1);
+                            }else {
+                            datemonth = (dateauj.getMonth()+1);
+                            }
+                            if ((dateauj.getDate()+7)<10){
+                                datejour = '0'+(dateauj.getDate()+7);
+                            }else {
+                                datejour = (dateauj.getDate()+7);
+                            }
+                           var abc = dateauj.getFullYear() +'-'+ (datemonth) +'-'+ (datejour);
+                           //var abc="2022-06-06";
+                           console.log(abc);
+                           var request13 = new XMLHttpRequest();
+                            request13.open('GET', "http://192.168.43.96:3000/proposerrdvs", true);
+                            request13.onload = function()
+                            {
+                                var test = false;
+                                var data13 = JSON.parse(this.response);
+                                data13.forEach(i => {
+                                    console.log((i.ID_RECRUTEUR == idrec) && (i.ID_CANDIDATURE == idcond));
+                                    if((i.ID_RECRUTEUR == idrec) && (i.ID_CANDIDATURE == idcond)){
+                                        
+                                        test=true;
+            
+                                    }
+                                })
+                                    /*if((i.ID_RECRUTEUR==idrec && i.ID_CANDIDATURE!=idcond)||(i.ID_RECRUTEUR!=idrec && i.ID_CANDIDATURE!=idcond)){*/
+                                        if(test){
+                                            Swal.fire("c'est déjà fait !");
+                                        }else{
+                                        ch=`<div class="col-xl-2 col-lg-12 col-md-12"></div>
+                                                <div class="col-xl-8 col-lg-12 col-md-12">
+                                                    <div class="change-password-box">
+                                                        <h3>Proposer rendez-vous</h3>
+                            
+                                                        <form onsubmit="return false" id="formcontact2">
+                                                            <div class="row">
+                                                                <div class="col-lg-12 col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label>Première Date </label>
+                                                                        <input name="DATCREAENT" id="DAT_1" type="date" min="`+abc+`" value="`+abc+`" class="form-control">
+                                                                    </div>
+                                                                </div>
+                            
+                                                                <div class="col-lg-12 col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label>Première proposition</label>
+                                                                                <input name="HEUR1" id="DAT1P1" type="time" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label>Deuxième proposition</label>
+                                                                                    <input name="HEUR2" id="DAT1P2" type="time" class="form-control">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label>La troisième proposition</label>
+                                                                                    <input name="HEUR3" id="DAT1P3" onchange="date2();" type="time" class="form-control">
+                                                                                </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                            
+                                                                
+                                                            </div>
+                                                            <div class="row" id="date2">
+                                                             </div> 
+                                                             <div class="row" id="date3">
+                                                             </div>
+                                                        </form>
+                                                    </div>
+                                                </div>`;
+                                document.getElementById("horairesRDV").innerHTML=ch;
+                                    }
+            
+                            }
+                            request13.send();
+                          
+            
+                        }
+                        function date2(){
+                            var d1=document.getElementById("DAT_1").value;
+                            tab=d1.split('-');
+                            abc = tab[0]+'-'+tab[1]+'-'+tab[2][0]+""+(parseInt(tab[2][1])+1) ;
+                            console.log(abc);
+                            
+            
+                            ch=`                                <div class="col-lg-12 col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label>Deuxième Date</label>
+                                                                        <input name="DATCREAENT" id="DAT_2" min="`+abc+`" value="`+abc+`" type="date" class="form-control">
+                                                                    </div>
+                                                                </div>
+                            
+                                                                <div class="col-lg-12 col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label>Première proposition</label>
+                                                                                <input name="HEUR4" id="DAT2P1" type="time" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label>Deuxième proposition</label>
+                                                                                    <input name="HEUR5" id="DAT2P2" type="time" class="form-control">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label>La troisième proposition</label>
+                                                                                    <input name="HEUR6" id="DAT2P3" onchange="date3();" type="time" class="form-control">
+                                                                                </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
+            
+                                `;
+                                document.getElementById("date2").innerHTML=ch;
+            
+                        }
+                        function date3(){
+                            var d1=document.getElementById("DAT_2").value;
+                            tab=d1.split('-');
+                            
+                            abc = tab[0]+'-'+tab[1]+'-'+tab[2][0]+""+(parseInt(tab[2][1])+1) ;
+                            dd=abc.split('-');
+                            console.log(dd[2].length);
+                            if( dd[2].length==3){
+                                abc=dd[0]+'-'+dd[1]+'-'+dd[2][1]+""+dd[2][2];
+                                console.log(abc);
+                            }
+                            
+                            console.log(abc);
+                            ch=`                                                    <div class="col-lg-12 col-md-6">
+                                                                    <div class="form-group">
+                                                                        <label>Troisième Date</label>
+                                                                        <input  name="DATCREAENT" min="`+abc+`" value="`+abc+`" id="DAT_3" type="date" class="form-control">
+                                                                    </div>
+                                                                </div>
+                            
+                                                                <div class="col-lg-12 col-md-6">
+                                                                    <div class="row">
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                            <div class="form-group">
+                                                                                <label>Première proposition</label>
+                                                                                <input name="HEUR7" id="DAT3P1" type="time" class="form-control">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label>Deuxième proposition</label>
+                                                                                    <input name="HEUR8" id="DAT3P2" type="time" class="form-control">
+                                                                                </div>
+                                                                        </div>
+                                                                        <div class="col-xl-4 col-lg-12 col-md-12">
+                                                                                <div class="form-group">
+                                                                                    <label>La troisième proposition</label>
+                                                                                    <input name="HEUR9" id="DAT3P3" type="time" class="form-control">
+                                                                                </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                            
+                                                                
+                                                                <div class="col-lg-12 col-md-12">
+                                                                    <div class="row">
+                                                                        <div class="col-md-8">
+                                                                        <button type="button" class="default-btn" onclick="annuler();" >Annuler <i class="flaticon-send"></i></button>
+                                                                        <br>
+                                                                        </div>
+                                                                        <div class="col-md-4">
+                                                                            <button type="submit" onclick="valider2();" class="default-btn"  >Envoyer <i class="flaticon-send"></i></button>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>`;
+                                                                document.getElementById("date3").innerHTML=ch;                                                    
+                        }           
+                        function annuler(){
+                            location.reload();
+                                   }
+                    </script>
+                    <script>
+            function valider2() {
+              $.validator.setDefaults({
+                submitHandler: function () {
+                    var url = "http://192.168.43.96:3000/proposerrdvs";
+                     var DAT1P1=document.getElementById("DAT1P1").value;
+                     var DAT1P2=document.getElementById("DAT1P2").value;
+                     var DAT1P3=document.getElementById("DAT1P3").value;
+                     var DAT2P1=document.getElementById("DAT2P1").value;
+                     var DAT2P2=document.getElementById("DAT2P2").value;
+                     var DAT2P3=document.getElementById("DAT2P3").value;
+                     var DAT3P1=document.getElementById("DAT3P1").value;
+                     var DAT3P2=document.getElementById("DAT3P2").value;
+                     var DAT3P3=document.getElementById("DAT3P3").value;
+                     var d1p11=DAT1P1.split(':');
+                     var d1p12=DAT1P2.split(':');
+                     var d1p13=DAT1P3.split(':');
+                     var d2p11=DAT2P1.split(':');
+                     var d2p12=DAT2P2.split(':');
+                     var d2p13=DAT2P3.split(':');
+                     var d3p11=DAT3P1.split(':');
+                     var d3p12=DAT3P2.split(':');
+                     var d3p13=DAT3P3.split(':');
+                    console.log(d1p11[0]);
+            
+            
+                    if(((d1p11[0] != d1p12[0]) && (d1p11[0] != d1p13[0]) && (d1p12[0] != d1p13[0]) ) && ((d2p11[0] != d2p12[0]) && (d2p11[0] != d2p13[0]) && (d2p12[0] != d2p13[0]) ) && ((d3p11[0] != d3p12[0]) &&(d3p12[0] != d3p13[0]) && (d3p11[0] != d3p13[0])  )){
+                        console.log("aaa");
+                        Swal.fire({
+                            title: 'Vous souhaitez enregistrer ces dates ?',
+                            icon: 'info',
+                            showCancelButton: true,
+                            confirmButtonColor: '#17a2b8',
+                            cancelButtonColor: '#d33',
+                            confirmButtonText: 'Enregistrer'
+                        }).then((result) => {
+                            if (result.isConfirmed) {
+                        var data = {};
+                        data.DATE=document.getElementById("DAT_1").value;
+                        data.HEURE=document.getElementById("DAT1P1").value;
+                        data.CONF_DATE="0";
+                        data.ID_RECRUTEUR=idrec;
+                        data.ID_CANDIDATURE=idcond;
+                       console.log(data);
+            
+                        var json = JSON.stringify(data);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins1= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                            
+                              
+                            } else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins1);
+                            }
+                        }
+                        xhr.send(json);
+            
+                        var data1 = {};
+                        data1.DATE=document.getElementById("DAT_1").value;
+                        data1.HEURE=document.getElementById("DAT1P2").value;
+                        data1.CONF_DATE="0";
+                        data1.ID_RECRUTEUR=idrec;
+                        data1.ID_CANDIDATURE=idcond;
+                       console.log(data1);
+            
+                        var json = JSON.stringify(data1);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins2= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                            
+                              
+                            }else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins2);
+                            } 
+                        }
+                        xhr.send(json);
+                        var data2 = {};
+                        data2.DATE=document.getElementById("DAT_1").value;
+                        data2.HEURE=document.getElementById("DAT1P3").value;
+                        data2.CONF_DATE="0";
+                        data2.ID_RECRUTEUR=idrec;
+                        data2.ID_CANDIDATURE=idcond;
+                       console.log(data2);
+            
+                        var json = JSON.stringify(data2);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins3= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                
+                              
+                            }else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins3);
+                            } 
+                        }
+                        xhr.send(json);
+                        var data3 = {};
+                        data3.DATE=document.getElementById("DAT_2").value;
+                        data3.HEURE=document.getElementById("DAT2P1").value;
+                        data3.CONF_DATE="0";
+                        data3.ID_RECRUTEUR=idrec;
+                        data3.ID_CANDIDATURE=idcond;
+                       console.log(data3);
+            
+                        var json = JSON.stringify(data3);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins4= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                
+                              
+                            }else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins4);
+                            } 
+                        }
+                        xhr.send(json);
+            
+                        var data4 = {};
+                        data4.DATE=document.getElementById("DAT_2").value;
+                        data4.HEURE=document.getElementById("DAT2P2").value;
+                        data4.CONF_DATE="0";
+                        data4.ID_RECRUTEUR=idrec;
+                        data4.ID_CANDIDATURE=idcond;
+                       console.log(data4);
+            
+                        var json = JSON.stringify(data4);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins5= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                
+                              
+                            }else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins5);
+                            }
+                        }
+                        xhr.send(json);
+            
+                        var data5 = {};
+                        data5.DATE=document.getElementById("DAT_2").value;
+                        data5.HEURE=document.getElementById("DAT2P3").value;
+                        data5.CONF_DATE="0";
+                        data5.ID_RECRUTEUR=idrec;
+                        data5.ID_CANDIDATURE=idcond;
+                       console.log(data5);
+            
+                        var json = JSON.stringify(data5);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins6= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                
+                              
+                            }else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins6);
+                            }
+                        }
+                        xhr.send(json);
+                        var data6 = {};
+                        data6.DATE=document.getElementById("DAT_3").value;
+                        data6.HEURE=document.getElementById("DAT3P1").value;
+                        data6.CONF_DATE="0";
+                        data6.ID_RECRUTEUR=idrec;
+                        data6.ID_CANDIDATURE=idcond;
+                       console.log(data6);
+            
+                        var json = JSON.stringify(data6);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins6= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                
+                              
+                            }else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins6);
+                            }
+                        }
+                        xhr.send(json);
+                        var data7 = {};
+                        data7.DATE=document.getElementById("DAT_3").value;
+                        data7.HEURE=document.getElementById("DAT3P2").value;
+                        data7.CONF_DATE="0";
+                        data7.ID_RECRUTEUR=idrec;
+                        data7.ID_CANDIDATURE=idcond;
+                       console.log(data7);
+            
+                        var json = JSON.stringify(data7);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins7= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                
+                              
+                            }else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins7);
+                            }
+                        }
+                        xhr.send(json);
+                        var data8 = {};
+                        data8.DATE=document.getElementById("DAT_3").value;
+                        data8.HEURE=document.getElementById("DAT3P3").value;
+                        data8.CONF_DATE="0";
+                        data8.ID_RECRUTEUR=idrec;
+                        data8.ID_CANDIDATURE=idcond;
+                       console.log(data8);
+            
+                        var json = JSON.stringify(data8);
+                        var xhr = new XMLHttpRequest();
+                        xhr.open("POST", url, true);
+                        xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                        xhr.onload = function () {
+                            
+                            var admins8= JSON.parse(xhr.responseText);
+                            if (xhr.readyState == 4 && xhr.status == "200") {
+                                Swal.fire({
+                                  title:'Envoyé!',
+                                  text:'Ce fichier est enregistrer avec succés.',
+                                  icon:'success',
+                                
+                              }).then((result) => {
+                                    if (result.isConfirmed){
+                                        location.reload();
+                                    }
+
+                                })
+                              
+                            }else {
+                                Swal.fire('Date Non Envoyer')
+                                console.table(admins8);
+                            } 
+                        }
+                        xhr.send(json);
+                        modifCand(idcond);
+                    }else {
+                                Swal.fire('Dates Non Enregisrers')
+                                
+                            }
+              })
+                }else {
+                        Swal.fire("Il est impossible d'ajouter deux ou trois heures égales dans la même date!");
+                    }
+                }
+              });
+              
+              $('#formcontact2').validate({
+              
+                rules: {
+                    DATCREAENT: {
+                    required: true,
+                  },
+                  HEUR1: {
+                    required: true,
+                  },
+                  HEUR2: {
+                    required: true,
+                  },
+                  HEUR3: {
+                    required: true,
+                  },
+                  HEUR4: {
+                    required: true,
+                  },
+                  HEUR5: {
+                    required: true,
+                  },
+                  HEUR6: {
+                    required: true,
+                  },
+                  HEUR7: {
+                    required: true,
+                  },
+                  HEUR8: {
+                    required: true,
+                  },
+                  HEUR9: {
+                    required: true,
+                  },
+                },
+                messages: {
+                    DATCREAENT: {
+                    required: "Veuillez sélectionner le date"
+                  },
+                  HEUR1: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+                     HEUR2: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+                     HEUR3: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+                     HEUR4: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+                     HEUR5: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+                     HEUR6: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+                     HEUR7: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+                     HEUR8: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+                     HEUR9: {
+                    required: "Veuillez sélectionner l'heur"
+                     },
+            
+                },
+                errorElement: 'span',
+                errorPlacement: function (error, element) {
+                  error.addClass('text-danger');
+                  element.closest('.form-group').append(error);
+                },
+                highlight: function (element) {
+                    var msgClasses = "h4";
+                    $(element).addClass(msgClasses);
+                },
+                unhighlight: function (element) {
+                    var msgClasses = "h4 tab";
+                    $(element).removeClass("h4");
+                    $(element).addClass(msgClasses);
+              
+                }
+              
+              });
+              
+              
+            }
+
+            function modifCand(x){
+                            var testPV = false;
+                            var idCand ="";
+                            var dataCand={};
+                            var requestPV = new XMLHttpRequest()
+                            requestPV.open('GET', "http://192.168.43.96:3000/candidatures", true)
+                            requestPV.onload = function()
+                            {
+                                var dataPV = JSON.parse(this.response)
+                                dataPV.forEach(i => {
+                                    if(i.ID_DEMANDEUR==x){
+                                        testPV=true;
+                                        idCand=i._id;
+                                        dataPV.FAVORI_CAND = i.FAVORI_CAND;
+                                        dataPV.ARCHV_CAND   = "2";
+                                        dataPV.ID_OFFRE = i.ID_OFFRE;
+                                        dataPV.ID_DEMANDEUR = i.ID_DEMANDEUR;
+                                    }
+                                })
+                                if(testPV){
+                                    var url3 = "http://192.168.43.96:3000/candidatures/" + idCand ;
+                                    console.log(dataPV);
+                                    var json = JSON.stringify(data2);
+                                    var xhr3 = new XMLHttpRequest();
+                                    xhr3.open("PUT", url3, true);
+                                    xhr3.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                    xhr3.onload = function () {
+                                        if (xhr3.readyState == 4 && xhr3.status == "200") {
+                                            console.log("OK");
+                                        }
+                                    }
+                                    xhr3.send(json);
+                                }
+                            }
+                            requestPV.send();
+                        }
+                    </script>
+                       <!--validation-->
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/additional-methods.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,2734 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <!--image-->
+        <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+		<link rel="stylesheet" href="assets/css/notifcation.css">
+        <link rel="stylesheet" href="assets/css/CV.css">
+		<title>Recruteur | Modifer Offre Archiver  </title>
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(!localStorage.getItem("ID_REC")){
+              location.replace("profile-authentication.html");
+            }
+          </script>
+    </head>
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="sidemenu-header">
+                <a href="dashboardRecruteur.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/Recrute.fr.png" alt="image">
+                </a>
+
+                <div class="responsive-burger-menu d-block d-lg-none">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </div>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+                    <li class="nav-item ">
+                        <a href="dashboardRecruteur.html" class="nav-link">
+                            <span class="icon"><i class="ri-home-line"></i></span>
+                            <span class="menu-title">Tableau De Bord</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="profilEntreprise.html" class="nav-link">
+                            <span class="icon"><i class="ri-building-4-line"></i></span>
+                            <span class="menu-title">Profil De La Société</span>
+                        </a>
+                    </li>
+
+                    
+                    <li class="nav-item">
+                        <a href="modifierautentification.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-line"></i></span>
+                            <span class="menu-title">Mon Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="ajouterOffre.html" class="nav-link">
+                            <span class="icon"><i class="ri-send-plane-fill"></i></span>
+                            <span class="menu-title">Publier Une Offre</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item active">
+                        <a href="listeOffre.html" class="nav-link">
+                            <span class="icon"><i class="ri-file-list-3-line"></i></span>
+                            <span class="menu-title">Liste Des Offres</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listCandidat.html" class="nav-link">
+                            <span class="icon"><i class="ri-contacts-line"></i></span>
+                            <span class="menu-title">Liste Des Candidats</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listeCandidatFavori.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-heart-line"></i></span>
+                            <span class="menu-title">Candidats Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listedemandeur.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-search-line"></i></span>
+                            <span class="menu-title">Demandeurs D'emploi</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listeDemandeurFavoris.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-star-line"></i></span>
+                            <span class="menu-title">Demandeurs Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="dateProposer.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-2-line"></i></span>
+                            <span class="menu-title">Dates Proposer</span>
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="entretienEnattente.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-voice-line"></i></span>
+                            <span class="menu-title">Entretiens En Attente</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienDaujourdhui.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-check-line"></i></span>
+                            <span class="menu-title">Entretiens D'aujourd'hui</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="dashboard-submit-resume.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-follow-line"></i></span>
+                            <span class="menu-title">Entretiens Réalisés</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="listemesssage.html" class="nav-link">
+                            <span class="icon"><i class="ri-chat-1-line"></i></span>
+                            <span class="menu-title">Messageries</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" onClick="quiterStorge();" class="nav-link">
+                            <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                            <span class="menu-title">Deconexion</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a  onClick="supprmierCempte()" class="nav-link">
+                            <span class="icon" style="color: red; "><i class="ri-delete-bin-line"></i></span>
+                            <span class="menu-title" style="color: red; ">Supprimer Profil</span>
+                        </a>
+                    </li>
+                    
+                </div>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="main-responsive-menu">
+                        <div class="responsive-burger-menu d-lg-none d-block">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item">
+                                    <a href="dashboardRecruteur.html" class="nav-link">
+                                        Accueil
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="contact.html" class="nav-link">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link">   <i class="ri-notification-2-line"> </i>
+                                        <span id="nbtotalhaut" class="badge badge-warning navbar-badge">0</span>   
+                                       &ensp; Notification                  
+                                    
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="listCandidat.html" class="nav-link">
+                                            <b id="nbCandidat">0 </b> Nouveaux Candidats</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="entretienDaujourdhui.html" class="nav-link">
+                                            <b id="nbentretienAujordhui">0 </b> Entretiens Aujourd'hui</a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="entretienEnattente.html" class="nav-link">
+                                            <b id="nbentretianENatt">0 </b> Nouveaux Entretiens En Attente</a>
+                                        </li>
+                                        <div id="listedeoffre">
+
+                                        </div>
+
+
+                                            
+
+                                        
+                                    </ul>
+                                    
+                                </li>
+
+                            </ul>
+
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <div class="dropdown profile-nav-item">
+                                        <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="menu-profile">
+                                                <img src="" id="imgNav" class="rounded-circle" alt="image">
+                                                <span class="name">Mon Compte</span>
+                                            </div>
+                                        </a>
+            
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                                <div class="figure mb-3">
+                                                    <img src="" id="imgENT" class="rounded-circle" alt="image">
+                                                </div>
+            
+                                                <div class="info text-center">
+                                                    <span class="name" id="nomENT"></span>
+                                                    <p class="mb-3 email" id="emailENT"></p>
+                                                    <p class="mb-3 email"id="emailREC"></p>
+                                                </div>
+                                            </div>
+            
+                                            <div class="dropdown-body">
+                                                <ul class="profile-nav p-0 pt-3">
+                                                    <li class="nav-item ">
+                                                        <a href="dashboardRecruteur.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-home-line"></i></span>
+                                                            <span class="menu-title">Tableau De Bord</span>
+                                                        </a>
+                                                    </li>
+
+                                                    
+                                                    <li class="nav-item">
+                                                        <a href="modifierautentification.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-user-line"></i></span>
+                                                            <span class="menu-title">Mon Profil</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+            
+                                            <div class="dropdown-footer">
+                                                <ul class="profile-nav">
+                                                    <li class="nav-item">
+                                                        <a href="#" onClick="quiterStorge();" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Deconexion</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Salut</h1>
+                <ol class="breadcrumb">
+                    <li class="item" title="Retourner au Accueil"><a href="dashboardRecruteur.html">Accueil</a></li>
+                    <li class="item" title="Retourner aux Liste Des Offres"><a href="listeOffre.html">Liste Des Offres</a></li>
+                    <li class="item" title="Retourner aux Liste Des Offres Archivers"><a href="listeOffreArchiver.html">Liste Des Offres Archivers</a></li>
+                    <li class="item">Créer un copie sur l'offre </li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+
+           <!-- Start Post a New Job Area -->
+           <div class="post-a-new-job-box">
+            <div class="container">
+                <div class="authentication-tabs-list">
+                    <div class="card-body">
+                    <ul class="nav nav-tabs" id="myTab" role="tablist">
+                        <li class="nav-item">
+                            <a class="nav-link active" id="Informations-tab" data-bs-toggle="tab" href="#Informations" role="tab">Informations</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="Autre-tab" data-bs-toggle="tab" href="#Autre" role="tab">Autre</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" id="Test-tab" data-bs-toggle="tab" href="#Test" role="tab">Test</a>
+                        </li>
+                    </ul>
+                </div>
+                </div>
+
+                <div class="tab-content" id="myTabContent">
+                    <div class="tab-pane fade show active" id="Informations" role="tabpanel">
+                        <div class="eeza-authentication-form">
+                            <form onsubmit="return false" id="formInfo">
+                                <div class="row">
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Titre de l'offre</label>
+                                            <input name="TitreOFF" id="NOM_OFF" type="text" class="form-control" placeholder="Entrer un titre...">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Description de l'offre</label>
+                                            <textarea id="DESC_OFF" name="DescOFF" cols="30" rows="2" placeholder="Entrer une description..." class="form-control"></textarea>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-xl-6 col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Salaire minimum de l'offre</label>
+                                            <input id="SAL_MIN_OFF" name="SalMinOFF" type="text" class="form-control" placeholder="Entrer un salaire...">
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-xl-6 col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Date d'expiration de l'offre</label>
+                                            <input id="DAT_EXPIRA_OFF" name="DatExpiraOFF" type="date" class="form-control" placeholder="Entrer une date...">
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Mission de l'offre</label>
+                                            <textarea id="MISSION_OFF" name="MissOFF" cols="30" rows="2" placeholder="Entrer une mission..." class="form-control"></textarea>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-xl-6 col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Sexe candidature de l'offre</label>
+                                            <select id="SEXE_CAND_OFF" name="SexeCandOFF" class="form-control">
+                                                <option selected disabled>Choisir un sexe de candidature recherché...</option>
+                                                <option value="Homme">Homme</option>
+                                                <option value="Femme">Femme</option>
+                                                <option value="Autre">Autre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+            
+                                    <div class="col-xl-6 col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Avantage de l'offre</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-12">
+                                                    <input id="NOM_AVG_OFF" class="form-control" type="text" placeholder="Entrer un avantage...">
+                                                </div>
+                                                <div id="btnAVG" class="col-lg-2 col-md-12">
+                                                    <button id="NOM_AVG_OFF1" type="button" class="bouttonkbir" onclick="ajoutAVG();"><i class="ri-add-line"></i></button>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+                                    <div class="col-lg-12 col-md-12">
+                                        <div id="ListAVG" class="job-details-desc">
+
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-12 col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label> Photo de l'offre</label>
+                                            <input id="PHOTO_OFF" name="PhotoOFF" type="text" class="form-control" onclick="send()" placeholder="importer photo">
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-9 col-md-12"></div>
+                                    <div class="col-lg-3 col-md-12">
+                                        <button type="submit" class="default-btn">Suivant<i class="ri-arrow-right-fill"></i></button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="Autre" role="tabpanel">
+                        <div class="eeza-authentication-form">
+                            <form onsubmit="return false" id="formAutre">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Langues recherchées de l'offre</label>
+                                            <select id="NOM_LANG" name="langSelect" class="form-control" onchange="change_valeurLang();">
+                                                <option selected disabled>Choisir une langue...</option>
+                                                <option value="1">Autre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    
+                                    <div class="row" id="autreLang"></div>
+            
+                                    <div class="col-lg-12 col-md-12">
+                                        <div id="ListLang" class="job-details-desc">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Compétences recherchées de l'offre</label>
+                                            <select id="NOM_COMP" name="compSelect" class="form-control" onchange="change_valeurComp();">
+                                                <option selected disabled>Choisir une compétence...</option>
+                                                <option value="1">Autre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" id="autreComp"></div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div id="ListComp" class="job-details-desc">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Diplômes recherchés de l'offre</label>
+                                            <select id="TYPE_DIP" name="dipSelect" class="form-control" onchange="change_valeurDip();">
+                                                <option selected disabled>Choisir un diplôme...</option>
+                                                <option value="1">Autre</option>
+                                            </select>
+                                        </div>
+                                    </div>
+
+                                    <div class="row" id="autreDip"></div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div id="ListDip" class="job-details-desc">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12" id="expOFFAj">
+                                        <div class="row" >
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <label>Nombre d'expériences recherchées<span class="required">*</span></label>
+                                                    <select id="NB_EXP_OFF" name="expSelect" class="form-control" onchange="change_valeurExp();">
+                                                        <option selected disabled>Choisir un nombre d'expérience recherché...</option>
+                                                        <option value="0"> Débutant</option>
+                                                        <option value="1"> 0  à  1 ans</option>
+                                                        <option value="2"> 1  à  3 ans</option>
+                                                        <option value="3"> 3  à  5 ans</option>
+                                                        <option value="4"> Plus de 5 ans</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-lg-6 col-md-12">
+                                                <div class="form-group">
+                                                    <label>Expérience en<span class="required">*</span></label>
+                                                    <div class="row">
+                                                        <div class="col-lg-10 col-md-12">
+                                                            <input id="NOM_EXP_OFF" name="NomExpOFF" class="form-control" type="text" placeholder="Entrer une expérience...">
+                                                        </div>
+                                                        <div id="btnEXP" class="col-lg-2 col-md-12">
+                                                            <button id="NOM_EXP_OFF1" type="button" class="bouttonkbir" onclick="ajoutExp();"><i class="ri-add-line"></i></button>
+                                                        </div>
+                                                    </div> 
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div id="ListExp" class="job-details-desc">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Types d'emploi de l'offre</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-12">
+                                                    <input id="NOM_TE_OFF" name="NomTeOFF" class="form-control" type="text" placeholder="Entrer un type d'emploi...">
+                                                </div>
+                                                <div id="btnTE" class="col-lg-2 col-md-12">
+                                                    <button id="NOM_TE_OFF1" type="button" class="bouttonkbir" onclick="ajoutTE();"><i class="ri-add-line"></i></button>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div id="ListTE" class="job-details-desc">
+
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div class="form-group">
+                                            <label>Mots-clés de l'offre</label>
+                                            <div class="row">
+                                                <div class="col-lg-10 col-md-12">
+                                                    <input id="NOM_MC_OFF" name="NomMcOFF" class="form-control" type="text" placeholder="Entrer un mot-clé...">
+                                                </div>
+                                                <div id="btnMC" class="col-lg-2 col-md-12">
+                                                    <button id="NOM_MC_OFF1" type="button" class="bouttonkbir" onclick="ajoutMC();"><i class="ri-add-line"></i></button>
+                                                </div>
+                                            </div> 
+                                        </div>
+                                    </div>
+
+                                    <div class="col-lg-12 col-md-12">
+                                        <div id="ListMC" class="job-details-desc">
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-lg-9 col-md-12"></div>
+                                    <div id="buttonNextAutre" class="col-lg-3 col-md-12">
+                                        
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="tab-pane fade" id="Test" role="tabpanel">
+                        <div class="eeza-authentication-form">
+                            <form onsubmit="return false" id="formTest">
+                                <div class="row">
+                                   
+                                </div>
+                                <div id="autreTest" class="row"></div>
+                                <div class="row" id="bouttonNextTest">
+                                    
+                                </div>
+                                    
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- End Post a New Job Area -->
+          
+            <!-- End Manage Jobs Area -->
+
+            <div class="go-top">
+                <i class="ri-arrow-up-line"></i>
+            </div>
+
+        </div>
+        <!-- End Main Dashboard Content Wrapper Area -->
+        
+        <!-- Start Copyright Area -->
+        <div class="footerCopy">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p><i class="ri-copyright-line"></i> 2021-2022 <a href="#"> Recrute</a>. </p>
+                </div>
+            </div>
+        </div>
+        <!-- End Copyright Area -->
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/supprmierProfil.js"></script>
+        <!--Validation-->
+        <script src="assets/js/jquery.validate.min.js"></script>
+        <script src="assets/js/additional-methods.min.js"></script>
+        <!--notifci-->
+        <script src="assets/js/notification.js"></script>
+        <!--alert-->
+<script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+    function send() {
+      var i = document.getElementById("PHOTO_OFF");
+      const apikey = "AnPRsl9JkTZKL3Hp9hwzxz";
+      const client = filestack.init(apikey);
+      const options = {
+        maxFiles: 20,
+        uploadInBackground: false,
+        onOpen: () => console.log("opened!"),
+        onUploadDone: (res) => (i.value = res.filesUploaded[0].url),
+      };
+      client.picker(options).open();
+    }
+  </script>
+<script>
+    var url_string = window.location.href ;
+    var url = new URL(url_string); 
+    var c = url.searchParams.get("id");
+    
+    var idREC=localStorage.getItem("ID_REC");
+    var idtest="";
+    // Open a new connection, using the GET request on the URL endpoint
+    var request = new XMLHttpRequest();
+    request.open('GET', "http://192.168.43.96:3000/offres/"+c, true);
+    request.onload = function()
+    {
+        // Begin accessing JSON data here
+        var data = JSON.parse(this.response);
+        document.getElementById("NOM_OFF").value = data.NOM_OFF;
+        document.getElementById("DESC_OFF").value = data.DESC_OFF;
+        document.getElementById("SAL_MIN_OFF").value = data.SAL_MIN_OFF;
+        document.getElementById("DAT_EXPIRA_OFF").value = data.DAT_EXPIRA_OFF;
+        document.getElementById("MISSION_OFF").value = data.MISSION_OFF;
+        document.getElementById("SEXE_CAND_OFF").value = data.SEXE_CAND_OFF;
+        var AVG = data.NOM_AVG_OFF.split('/');
+        var listAVG = document.getElementById("ListAVG").getElementsByTagName("div");
+        var chaine ="AVGG";
+        var nbAVG =0;
+        for (var i=1;i<AVG.length;i++){
+            var contAVG = chaine + nbAVG;
+            if (listAVG.length == 0){
+                ch=`<div class="job-article-footer">
+                        <div id="plusieurA_listAVG" class="article-tags">
+                            <span>Liste des avantages:</span>
+                            <a id="`+contAVG+`" onclick="delete_a('ListAVG','plusieurA_listAVG','NOM_AVG_OFF','`+contAVG+`','btnAVG','ajoutAVG();');" title="Modifier ou Supprimer">`+AVG[i]+`</a>
+                        </div>
+                    </div>`;
+                document.getElementById("ListAVG").innerHTML= ch;
+                nbAVG +=1;
+            }else{
+                ch=`<a id="`+contAVG+`" onclick="delete_a('ListAVG','plusieurA_listAVG','NOM_AVG_OFF','`+contAVG+`','btnAVG','ajoutAVG();');" title="Modifier ou Supprimer">`+AVG[i]+`</a>`;
+                document.getElementById("plusieurA_listAVG").insertAdjacentHTML('beforeend',ch);
+                nbAVG +=1;
+            } 
+        }
+        document.getElementById("PHOTO_OFF").value = data.PHOTO_OFF;
+        var TE = data.NOM_TE_OFF.split('/');
+        var listTE = document.getElementById("ListTE").getElementsByTagName("div");
+        var chaine = "TE";
+        var nbTE=0;
+        for(var i=1;i<TE.length;i++){
+            var contTE = chaine + nbTE;
+            if (listTE.length == 0){
+                ch=`<div class="job-article-footer">
+                        <div id="plusieurA_listTE" class="article-tags">
+                            <span>Liste des types d'emploi:</span>
+                            <a id="`+contTE+`" onclick="delete_a('ListTE','plusieurA_listTE','NOM_TE_OFF','`+contTE+`','btnTE','ajoutTE();');" title="Modifier ou Supprimer">`+TE[i]+`</a>
+                        </div>
+                    </div>`;
+                document.getElementById("ListTE").innerHTML= ch;
+                nbTE+=1;
+            }else{
+                ch=`<a id="`+contTE+`" onclick="delete_a('ListTE','plusieurA_listTE','NOM_TE_OFF','`+contTE+`','btnTE','ajoutTE();');" title="Modifier ou Supprimer">`+TE[i]+`</a>`;
+                document.getElementById("plusieurA_listTE").insertAdjacentHTML('beforeend',ch);
+                nbTE+=1;
+            }
+        }
+        var MC = data.NOM_MC_OFF.split('/');
+        var listMC = document.getElementById("ListMC").getElementsByTagName("div");
+        var chaine ="MC";
+        var nbMC=0;
+        for(var i=1;i<MC.length;i++){
+            var contMC = chaine + nbMC;
+            if (listMC.length == 0){
+                ch=`<div class="job-article-footer">
+                        <div id="plusieurA_listMC" class="article-tags">
+                            <span>Liste des mots-clé:</span>
+                            <a id="`+contMC+`" onclick="delete_a('ListMC','plusieurA_listMC','NOM_MC_OFF','`+contMC+`','btnMC','ajoutMC();');" title="Modifier ou Supprimer">`+MC[i]+`</a>
+                        </div>
+                    </div>`;
+                document.getElementById("ListMC").innerHTML= ch;
+                nbMC+=1
+            }else{
+                ch=`<a id="`+contMC+`" onclick="delete_a('ListMC','plusieurA_listMC','NOM_MC_OFF','`+contMC+`','btnMc','ajoutMC();');" title="Modifier ou Supprimer">`+MC[i]+`</a>`;
+                document.getElementById("plusieurA_listMC").insertAdjacentHTML('beforeend',ch);
+                nbMC+=1;
+            }
+        }
+    }
+    request.send();
+
+    // Open a new connection, using the GET request on the URL endpoint
+    var requestLO = new XMLHttpRequest();
+    requestLO.open('GET', "http://192.168.43.96:3000/langueOffres", true);
+    requestLO.onload = function()
+    {
+        dataLO = JSON.parse(this.response);
+        
+        var nbLANG =0;
+        dataLO.forEach(h => {
+            if(h.ID_OFFRE == c){
+                var chaine ="LANGG";
+                var requestL = new XMLHttpRequest();
+                requestL.open('GET', "http://192.168.43.96:3000/langues/"+h.ID_LANGUE, true);
+                requestL.onload = function()
+                {
+                    var contLANG = chaine + nbLANG;
+                    // Begin accessing JSON data here
+                    var dataL = JSON.parse(this.response);
+                    var listLang = document.getElementById("ListLang").getElementsByTagName("div");
+                    if (listLang.length == 0){
+                        ch=`<div class="job-article-footer">
+                                <div id="plusieurA_listLang" class="article-tags">
+                                    <span>Liste des langues:</span>
+                                    <a id="`+h._id+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+h._id+`','autreLang','`+h._id+`','langueOffres');" title="Modifier ou Supprimer">`+dataL.NOM_LANG+`:`+h.NIV_LANG_OFF+`</a>
+                                </div>
+                            </div>`;
+                        document.getElementById("ListLang").innerHTML= ch;
+                        nbLANG +=1;
+                    }else{
+                        ch=`<a id="`+h._id+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+h._id+`','autreLang','`+h._id+`','langueOffres');" title="Modifier ou Supprimer">`+dataL.NOM_LANG+`:`+h.NIV_LANG_OFF+`</a>`;
+                        document.getElementById("plusieurA_listLang").insertAdjacentHTML('beforeend',ch);
+                        nbLANG +=1;
+                    }
+                }
+                requestL.send();
+            }
+        })
+    }
+    requestLO.send();
+
+    // Open a new connection, using the GET request on the URL endpoint
+    var requestCO = new XMLHttpRequest();
+    requestCO.open('GET', "http://192.168.43.96:3000/competenceoffres", true);
+    requestCO.onload = function()
+    {
+        dataCO = JSON.parse(this.response);
+        
+        var nbCOMP =0;
+        dataCO.forEach(hc => {
+            if(hc.ID_OFFRE == c){
+                var chaine ="COMPP";
+                var requestC = new XMLHttpRequest();
+                requestC.open('GET', "http://192.168.43.96:3000/competences/"+hc.ID_COMPETENCE, true);
+                requestC.onload = function()
+                {
+                    var contCOMP = chaine + nbCOMP;
+                    // Begin accessing JSON data here
+                    var dataC = JSON.parse(this.response);
+                    var listComp = document.getElementById("ListComp").getElementsByTagName("div");
+                    if (listComp.length == 0){
+                        ch=`<div class="job-article-footer">
+                                <div id="plusieurA_listComp" class="article-tags">
+                                    <span>Liste des compétences:</span>
+                                    <a id="`+hc._id+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+hc._id+`','autreComp','`+hc._id+`','competenceoffres');" title="Modifier ou Supprimer">`+dataC.NOM_COMP+`:`+hc.NIV_COMP_OFF+`</a>
+                                </div>
+                            </div>`;
+                        document.getElementById("ListComp").innerHTML= ch;
+                        nbCOMP +=1;
+                    }else{
+                        ch=`<a id="`+hc._id+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+hc._id+`','autreComp','`+hc._id+`','competenceoffres');" title="Modifier ou Supprimer">`+dataC.NOM_COMP+`:`+hc.NIV_COMP_OFF+`</a>`;
+                        document.getElementById("plusieurA_listComp").insertAdjacentHTML('beforeend',ch);
+                        nbCOMP +=1
+                    }
+                }
+                requestC.send();
+            }
+        })
+    }
+    requestCO.send();
+
+    // Open a new connection, using the GET request on the URL endpoint
+    var requestDO = new XMLHttpRequest();
+    requestDO.open('GET', "http://192.168.43.96:3000/etudeexiges", true);
+    requestDO.onload = function()
+    {
+        dataDO = JSON.parse(this.response);
+        
+        var nbDIP =0;
+        dataDO.forEach(h => {
+            if(h.ID_OFFRE == c){
+                var chaine ="DIPP";
+                var requestD = new XMLHttpRequest();
+                requestD.open('GET', "http://192.168.43.96:3000/diplomes/"+h.ID_DIPLOME, true);
+                requestD.onload = function()
+                {
+                    var contDIP = chaine + nbDIP;
+                    // Begin accessing JSON data here
+                    var dataD = JSON.parse(this.response);
+                    var listDip = document.getElementById("ListDip").getElementsByTagName("div");
+                    if (listDip.length == 0){
+                        ch=`<div class="job-article-footer">
+                                <div id="plusieurA_listDip" class="article-tags">
+                                    <span>Liste des diplômes:</span>
+                                    <a id="`+h._id+`" onclick="SelectDelete_a('ListDip','plusieurA_listDip','TYPE_DIP','`+h._id+`','autreDip','`+h._id+`','etudeexiges');" title="Modifier ou Supprimer">`+dataD.TYPE_DIP+`:`+h.SPECIA_DEM_OFF+`</a>
+                                </div>
+                            </div>`;
+                        document.getElementById("ListDip").innerHTML= ch;
+                        nbDIP +=1;
+                    }else{
+                        ch=`<a id="`+h._id+`" onclick="SelectDelete_a('ListDip','plusieurA_listDip','TYPE_DIP','`+h._id+`','autreDip','`+h._id+`','etudeexiges');" title="Modifier ou Supprimer">`+dataD.TYPE_DIP+`:`+h.SPECIA_DEM_OFF+`</a>`;
+                        document.getElementById("plusieurA_listDip").insertAdjacentHTML('beforeend',ch);
+                        nbDIP +=1;
+                    }
+                }
+                requestD.send();
+            }
+        })
+    }
+    requestDO.send();
+
+    // Open a new connection, using the GET request on the URL endpoint
+    var requestExpO = new XMLHttpRequest();
+    requestExpO.open('GET', "http://192.168.43.96:3000/experienceExiges", true);
+    requestExpO.onload = function()
+    {
+        dataExpO = JSON.parse(this.response);
+        var chaine ="EXPP";
+        var nbEXP =0;
+        dataExpO.forEach(h => {
+            if(h.ID_OFFRE == c){
+                var contEXP = chaine + nbEXP;
+                var listExp = document.getElementById("ListExp").getElementsByTagName("div");
+                if (listExp.length == 0){
+                    ch=`<div class="job-article-footer">
+                            <div id="plusieurA_listExp" class="article-tags">
+                                <span>Liste des expériences:</span>
+                                <a id="`+h._id+`" onclick="SelectTextDelete_a('ListExp','plusieurA_listExp','NB_EXP_OFF','NOM_EXP_OFF','`+h._id+`','btnEXP','`+h._id+`');" title="Modifier ou Supprimer">`+h.NB_EXP_OFF+`:`+h.NOM_EXP_OFF+`</a>
+                            </div>
+                        </div>`;
+                    document.getElementById("ListExp").innerHTML= ch;
+                    nbEXP +=1;
+                }else{
+                    var nivExp=document.getElementById("NOM_EXP_OFF").value;
+                    ch=`<a id="`+h._id+`" onclick="SelectTextDelete_a('ListExp','plusieurA_listExp','NB_EXP_OFF','NOM_EXP_OFF','`+h._id+`','btnEXP','`+h._id+`');" title="Modifier ou Supprimer">`+h.NB_EXP_OFF+`:`+h.NOM_EXP_OFF+`</a>`;
+                    document.getElementById("plusieurA_listExp").insertAdjacentHTML('beforeend',ch);
+                    nbEXP +=1;
+                }
+            }
+        })
+    }
+    requestExpO.send();
+
+
+    var requestQO = new XMLHttpRequest();
+    requestQO.open('GET', "http://192.168.43.96:3000/questions", true);
+    requestQO.onload = function()
+    {
+        var dataQO = JSON.parse(this.response);
+        var nbAutreTest =0;
+        var chaineEN = "ENONCE_QUEE";
+        var chaineRT = "REP_TT";
+        var chaineRF1 = "REP_F11";
+        var chaineRF2 = "REP_F22";
+        dataQO.forEach(i =>{
+            var requestTO = new XMLHttpRequest();
+            requestTO.open('GET', "http://192.168.43.96:3000/tests/"+i.ID_TEST, true);
+            requestTO.onload = function()
+            {
+                var dataTO = JSON.parse(this.response);
+                var contEN = chaineEN + nbAutreTest;
+                var contRT = chaineRT + nbAutreTest;
+                var contRF1 = chaineRF1 + nbAutreTest;
+                var contRF2 = chaineRF2 + nbAutreTest;
+                if(dataTO.ID_OFFRE == c){
+                    
+                 idtest = dataTO._id;
+                    ch=`<div id="`+i._id+`"><div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label>Énoncé de la question</label>
+                        <textarea id="`+contEN+`" name="EnonceQUE" cols="30" rows="3" class="form-control" placeholder="Entrer l'énoncé...">`+i.ENONCE_QUE+`</textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label>Réponse vraie de la question</label>
+                        <textarea id="`+contRT+`" name="RepTQUE" cols="30" rows="2" placeholder="Entrer une réponse vraie..." class="form-control">`+i.REP_T+`</textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label>Première réponse fausse de la question</label>
+                        <textarea id="`+contRF1+`" name="RepF1QUE" cols="30" rows="2" placeholder="Entrer une réponse fausse..." class="form-control">`+i.REP_F1+`</textarea>
+                    </div>
+                </div>
+
+                <div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label>Deuxième réponse fausse de la question</label>
+                        <textarea id="`+contRF2+`" name="RepF2QUE" cols="30" rows="2" placeholder="Entrer une réponse fausse..." class="form-control">`+i.REP_F2+`</textarea>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-lg-10 col-md-12"></div>
+                    <div class="col-lg-2 col-md-12">
+                        <button type="button" class="default-btn" onclick="modifQues('`+i._id+`');">Enregistré<i class="ri-send-plane-fill"></i></button>
+                    </div>
+                </div>
+                </div>`;
+                document.getElementById("autreTest").insertAdjacentHTML('beforeend',ch);
+                nbAutreTest +=1;
+                }
+            }
+            requestTO.send();
+        })
+    }
+    requestQO.send();
+    // Open a new connection, using the GET request on the URL endpoint
+    var requestL = new XMLHttpRequest();
+    requestL.open('GET', "http://192.168.43.96:3000/langues", true);
+    requestL.onload = function()
+    {
+        // Begin accessing JSON data here
+        var dataL = JSON.parse(this.response);
+        var selectLang = document.getElementById("NOM_LANG");
+        var nbselectLang=2;
+        dataL.forEach(j => {
+            ch=`<option value="`+nbselectLang+`">`+j.NOM_LANG+`</option>`;
+            selectLang.insertAdjacentHTML('beforeend',ch);
+            nbselectLang +=1;
+        })
+    }
+    requestL.send();
+
+    // Open a new connection, using the GET request on the URL endpoint
+    var requestC = new XMLHttpRequest();
+    requestC.open('GET', "http://192.168.43.96:3000/competences", true);
+    requestC.onload = function()
+    {
+        // Begin accessing JSON data here
+        var dataC = JSON.parse(this.response);
+        var selectComp = document.getElementById("NOM_COMP");
+        var nbselectComp=2;
+        dataC.forEach(j => {
+            ch=`<option value="`+nbselectComp+`">`+j.NOM_COMP+`</option>`;
+            selectComp.insertAdjacentHTML('beforeend',ch);
+            nbselectComp +=1;
+        })
+    }
+    requestC.send();
+
+    // Open a new connection, using the GET request on the URL endpoint
+    var requestD = new XMLHttpRequest();
+    requestD.open('GET', "http://192.168.43.96:3000/diplomes", true);
+    requestD.onload = function()
+    {
+        // Begin accessing JSON data here
+        var dataD = JSON.parse(this.response);
+        var selectDip = document.getElementById("TYPE_DIP");
+        var nbselectDip=2;
+        dataD.forEach(j => {
+            ch=`<option value="`+nbselectDip+`">`+j.TYPE_DIP+`</option>`;
+            selectDip.insertAdjacentHTML('beforeend',ch);
+            nbselectDip +=1;
+        })
+    }
+    requestD.send();
+
+    function change_valeurComp(){
+        var selectPoste = document.getElementById("NOM_COMP");
+        var choicePoste = selectPoste.selectedIndex;
+        var valeurPoste = selectPoste.options[choicePoste].value;
+        //var textLang = selectLang.options[choiceLang].innerHTML;
+        console.log(selectPoste.options[choicePoste]);
+        if (valeurPoste == "1"){
+            ch=`<div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                        <label>Autre compétence recherché</label>
+                        <input id="AUTRE_NOM_COMP" name="autreNomComp" type="text" class="form-control" placeholder="Entrer une compétence...">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                        <label>Niveau de compétence</label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12">
+                                
+                                <select id="NIV_COMP_OFF" name="NivCompOFF" class="form-control">
+                                            <option value ="" selected disabled>Choisir un niveau de compétence...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <button id="NIV_COMP_OFF1" type="button" class="bouttonkbir" onclick="ajoutComp();"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>`;
+            document.getElementById("autreComp").innerHTML=ch;
+        }else{
+            ch=`<div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label>Niveau de compétence</label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12">
+                              
+                                <select id="NIV_COMP_OFF" name="NivCompOFF" class="form-control">
+                                            <option value ="" selected disabled>Choisir un niveau de compétence...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <button id="NIV_COMP_OFF1" type="button" class="bouttonkbir" onclick="ajoutComp();"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>`;
+            document.getElementById("autreComp").innerHTML=ch;
+        }
+    }
+    function change_valeurLang(){
+        var selectPoste = document.getElementById("NOM_LANG");
+        var choicePoste = selectPoste.selectedIndex;
+        var valeurPoste = selectPoste.options[choicePoste].value;
+        console.log(selectPoste.options[choicePoste]);
+        if (valeurPoste == "1"){
+            ch=`<div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                        <label>Autre langue recherché</label>
+                        <input id="AUTRE_NOM_LANG" name="autreNomLang" type="text" class="form-control" placeholder="Entrer une langue...">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                        <label>Niveau de langue</label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12">
+                                <select id="NIV_LANG_OFF" name="NivLangOFF" class="form-control">
+                                            <option value ="" selected disabled>Choisir un niveau de langues...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <button id="NIV_LANG_OFF1" type="button" class="bouttonkbir" onclick="ajoutLang();"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>`;
+            document.getElementById("autreLang").innerHTML=ch;
+        }else{
+            ch=`<div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label>Niveau de langue</label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12">
+                                <select id="NIV_LANG_OFF" name="NivLangOFF" class="form-control">
+                                            <option value ="" selected disabled>Choisir un niveau de langues...</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                            <option value="4">4</option>
+                                            <option value="5">5</option>
+                                        </select>
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <button id="NIV_LANG_OFF1" type="button" class="bouttonkbir" onclick="ajoutLang();"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>`;
+            document.getElementById("autreLang").innerHTML=ch;
+        }
+    }
+
+    function change_valeurDip(){
+        var selectPoste = document.getElementById("TYPE_DIP");
+        var choicePoste = selectPoste.selectedIndex;
+        var valeurPoste = selectPoste.options[choicePoste].value;
+        console.log(selectPoste.options[choicePoste]);
+        if (valeurPoste == "1"){
+            ch=`<div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                        <label>Autre diplôme recherché</label>
+                        <input id="AUTRE_TYPE_DIP" name="autreTypeDip" type="text" class="form-control" placeholder="Entrer un diplôme...">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                        <label>Spécialité de diplôme</label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12">
+                                <input id="SPECIA_DEM_OFF" name="SpeciaDemOFF" class="form-control" type="text" placeholder="Spécialité de diplôme...">
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <button id="SPECIA_DEM_OFF1" type="button" class="bouttonkbir" onclick="ajoutDip();"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>`;
+            document.getElementById("autreDip").innerHTML=ch;
+        }else{
+            ch=`<div class="col-lg-12 col-md-12">
+                    <div class="form-group">
+                        <label>Spécialité de diplôme</label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12">
+                                <input id="SPECIA_DEM_OFF" name="SpeciaDemOFF" class="form-control" type="text" placeholder="Spécialité de diplôme...">
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <button id="SPECIA_DEM_OFF1" type="button" class="bouttonkbir" onclick="ajoutDip();"><i class="ri-add-line"></i></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>`;
+            document.getElementById("autreDip").innerHTML=ch;
+        }
+    }
+
+    function change_valeurExp(){
+        var selectPoste = document.getElementById("NB_EXP_OFF");
+        var choicePoste = selectPoste.selectedIndex;
+        var valeurPoste = selectPoste.options[choicePoste].value;
+        console.log(selectPoste.options[choicePoste]);
+        if (valeurPoste == "0"){
+            ch=`<div class="form-group">
+                    <label>Nombre d'expériences recherchées<span class="required">*</span></label>
+                    <div class="row">
+                        <div class="col-lg-11 col-md-12">
+                            <select id="NB_EXP_OFF" name="expSelect" class="form-control" onchange="change_valeurExp();">
+                                <option disabled>Choisir un nombre d'expérience recherché...</option>
+                                <option value="0" selected > Débutant</option>
+                                <option value="1"> 0  à  1 ans</option>
+                                <option value="2"> 1  à  3 ans</option>
+                                <option value="3"> 3  à  5 ans</option>
+                                <option value="4"> Plus de 5 ans</option>
+                            </select>
+                        </div>
+
+                        <div class="col-lg-1 col-md-12">
+                            <button id="NOM_EXP_OFF1" type="button" class="bouttonkbir" onclick="ajoutExp();"><i class="ri-add-line"></i></button>
+                        </div>
+                    </div>
+                </div>`;
+            document.getElementById("expOFFAj").innerHTML=ch;
+        }else if (valeurPoste == "1"){
+            ch=`<div class="row" >
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Nombre d'expériences recherchées<span class="required">*</span></label>
+                            <select id="NB_EXP_OFF" name="expSelect" class="form-control" onchange="change_valeurExp();">
+                                <option disabled>Choisir un nombre d'expérience recherché...</option>
+                                <option value="0"> Débutant</option>
+                                <option value="1" selected> 0  à  1 ans</option>
+                                <option value="2"> 1  à  3 ans</option>
+                                <option value="3"> 3  à  5 ans</option>
+                                <option value="4"> Plus de 5 ans</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Expérience en<span class="required">*</span></label>
+                            <div class="row">
+                                <div class="col-lg-10 col-md-12">
+                                    <input id="NOM_EXP_OFF" name="NomExpOFF" class="form-control" type="text" placeholder="Entrer une expérience...">
+                                </div>
+                                <div class="col-lg-2 col-md-12">
+                                    <button id="NOM_EXP_OFF1" type="button" class="bouttonkbir" onclick="ajoutExp();"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>`;
+            document.getElementById("expOFFAj").innerHTML=ch;
+        }else if (valeurPoste == "2"){
+            ch=`<div class="row" >
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Nombre d'expériences recherchées<span class="required">*</span></label>
+                            <select id="NB_EXP_OFF" name="expSelect" class="form-control" onchange="change_valeurExp();">
+                                <option disabled>Choisir un nombre d'expérience recherché...</option>
+                                <option value="0"> Débutant</option>
+                                <option value="1" > 0  à  1 ans</option>
+                                <option value="2" selected> 1  à  3 ans</option>
+                                <option value="3"> 3  à  5 ans</option>
+                                <option value="4"> Plus de 5 ans</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Expérience en<span class="required">*</span></label>
+                            <div class="row">
+                                <div class="col-lg-10 col-md-12">
+                                    <input id="NOM_EXP_OFF" name="NomExpOFF" class="form-control" type="text" placeholder="Entrer une expérience...">
+                                </div>
+                                <div class="col-lg-2 col-md-12">
+                                    <button id="NOM_EXP_OFF1" type="button" class="bouttonkbir" onclick="ajoutExp();"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>`;
+            document.getElementById("expOFFAj").innerHTML=ch;
+        }else if (valeurPoste == "3"){
+            ch=`<div class="row" >
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Nombre d'expériences recherchées<span class="required">*</span></label>
+                            <select id="NB_EXP_OFF" name="expSelect" class="form-control" onchange="change_valeurExp();">
+                                <option disabled>Choisir un nombre d'expérience recherché...</option>
+                                <option value="0"> Débutant</option>
+                                <option value="1" > 0  à  1 ans</option>
+                                <option value="2" > 1  à  3 ans</option>
+                                <option value="3" selected> 3  à  5 ans</option>
+                                <option value="4"> Plus de 5 ans</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Expérience en<span class="required">*</span></label>
+                            <div class="row">
+                                <div class="col-lg-10 col-md-12">
+                                    <input id="NOM_EXP_OFF" name="NomExpOFF" class="form-control" type="text" placeholder="Entrer une expérience...">
+                                </div>
+                                <div class="col-lg-2 col-md-12">
+                                    <button id="NOM_EXP_OFF1" type="button" class="bouttonkbir" onclick="ajoutExp();"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>`;
+            document.getElementById("expOFFAj").innerHTML=ch;
+        }else if (valeurPoste == "4"){
+            ch=`<div class="row" >
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Nombre d'expériences recherchées<span class="required">*</span></label>
+                            <select id="NB_EXP_OFF" name="expSelect" class="form-control" onchange="change_valeurExp();">
+                                <option disabled>Choisir un nombre d'expérience recherché...</option>
+                                <option value="0"> Débutant</option>
+                                <option value="1" > 0  à  1 ans</option>
+                                <option value="2" > 1  à  3 ans</option>
+                                <option value="3" > 3  à  5 ans</option>
+                                <option value="4" selected> Plus de 5 ans</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Expérience en<span class="required">*</span></label>
+                            <div class="row">
+                                <div class="col-lg-10 col-md-12">
+                                    <input id="NOM_EXP_OFF" name="NomExpOFF" class="form-control" type="text" placeholder="Entrer une expérience...">
+                                </div>
+                                <div class="col-lg-2 col-md-12">
+                                    <button id="NOM_EXP_OFF1" type="button" class="bouttonkbir" onclick="ajoutExp();"><i class="ri-add-line"></i></button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>
+                </div>`;
+            document.getElementById("expOFFAj").innerHTML=ch;
+        }
+    }
+
+
+    var nbAutreTest =0;
+    function Autre_Test(){
+        var chaineQues = "Question";
+        var chaineEN = "ENONCE_QUE";
+        var chaineRT = "REP_T";
+        var chaineRF1 = "REP_F1";
+        var chaineRF2 = "REP_F2";
+        var contQues = chaineQues + nbAutreTest;
+        var contEN = chaineEN + nbAutreTest;
+        var contRT = chaineRT + nbAutreTest;
+        var contRF1 = chaineRF1 + nbAutreTest;
+        var contRF2 = chaineRF2 + nbAutreTest;
+        ch=`<div id="`+contQues+`"><div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label>Énoncé de la question</label>
+                    <textarea id="`+contEN+`" name="EnonceQUE" cols="30" rows="3" class="form-control" placeholder="Entrer l'énoncé..."></textarea>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label>Réponse vraie de la question</label>
+                    <textarea id="`+contRT+`" name="RepTQUE" cols="30" rows="2" placeholder="Entrer une réponse vraie..." class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label>Première réponse fausse de la question</label>
+                    <textarea id="`+contRF1+`" name="RepF1QUE" cols="30" rows="2" placeholder="Entrer une réponse fausse..." class="form-control"></textarea>
+                </div>
+            </div>
+
+            <div class="col-lg-12 col-md-12">
+                <div class="form-group">
+                    <label>Deuxième réponse fausse de la question</label>
+                    <textarea id="`+contRF2+`" name="RepF2QUE" cols="30" rows="2" placeholder="Entrer une réponse fausse..." class="form-control"></textarea>
+                </div>
+            </div>
+            <div class="row">
+                    <div class="col-lg-10 col-md-12"></div>
+                    <div class="col-lg-2 col-md-12">
+                        <button type="button" class="default-btn" onclick="ajoutTest('`+contQues+`');">Enregistré<i class="ri-send-plane-fill"></i></button>
+                    </div>
+            </div></div>`;
+        document.getElementById("autreTest").insertAdjacentHTML('beforeend',ch);
+        nbAutreTest +=1;
+
+    }
+
+        
+    $(function () {
+        $.validator.setDefaults({
+            submitHandler: function () {
+                var dateauj07 = new Date();
+                var datemonth07 = '';
+                var datejour07 ='';
+                if ((dateauj07.getMonth()+1)<10){
+                    datemonth07 = '0'+(dateauj07.getMonth()+1);
+                }else {
+                    datemonth07 = (dateauj07.getMonth()+1);
+                }
+                if ((dateauj07.getDate())<10){
+                    datejour07 = '0'+(dateauj07.getDate());
+                }else {
+                    datejour07 = (dateauj07.getDate());
+                }
+            
+            
+            var abc07 = dateauj07.getFullYear() +'-'+ (datemonth07) +'-'+ (datejour07);
+            console.log(abc07);
+            if(document.getElementById("DAT_EXPIRA_OFF").value>abc07){
+                    ch=`<button type="submit" class="default-btn">Créer une copie<i class="ri-arrow-right-fill"></i></button>`;
+                    document.getElementById("buttonNextAutre").innerHTML=ch;
+                    document.getElementById("Informations").classList.remove("show");
+                    document.getElementById("Autre").classList.add("show");
+
+                    document.getElementById("Informations").classList.remove("active");
+                    document.getElementById("Autre").classList.add("active");
+
+                    document.getElementById("Informations-tab").classList.remove("active");
+                    document.getElementById("Autre-tab").classList.add("active");
+
+                    document.getElementById("NOM_OFF").disabled = true;
+                    document.getElementById("DESC_OFF").disabled = true;
+                    document.getElementById("SAL_MIN_OFF").disabled = true;
+                    document.getElementById("DAT_EXPIRA_OFF").disabled = true;
+                    document.getElementById("MISSION_OFF").disabled = true;
+                    document.getElementById("SEXE_CAND_OFF").disabled = true;
+                    document.getElementById("NOM_AVG_OFF").disabled = true;
+                    document.getElementById("NOM_AVG_OFF1").disabled = true;
+                    document.getElementById("PHOTO_OFF").disabled = true;
+                    desactiv_a("ListAVG");
+            
+                }else{
+                    Swal.fire({
+                        title:"Le date d'expiration est incorrecte",
+                        icon:'error',
+                        showConfirmButton:false,
+                        timer:1800
+                    })
+                }
+            }
+        });
+        
+        $('#formInfo').validate({
+            rules: {
+                TitreOFF: {
+                    required: true,
+                    minlength: 5,
+                },
+                DescOFF: {
+                    required: true,
+                },
+                SalMinOFF: {
+                    required: true,
+                    num: true,
+                },
+                DatExpiraOFF: {
+                    required: true,
+                },
+                MissOFF: {
+                    required: true,
+                },
+                SexeCandOFF: {
+                    required: true,
+                },
+                PhotoOFF: {
+                    accept: "image/*",
+                },
+            },
+            messages: {
+                TitreOFF: {
+                    required: "Veuillez entrer un titre de l'offre",
+                    minlength: "Le titre doit comporter au moins 5 caractères"
+                },
+                DescOFF: {
+                    required: "Veuillez entrer une description de l'offre"
+                },
+                SalMinOFF: {
+                    required: "Veuillez entrer un salaire de l'offre",
+                    num: "Le salaire doit comporter des chiffres"
+                },
+                DatExpiraOFF: {
+                    required: "Veuillez entrer une date d'expiration de l'offre",
+                },
+                MissOFF: {
+                    required: "Veuillez entrer une mission de l'offre",
+                },
+                SexeCandOFF: {
+                    required: "Veuillez choisir un sexe de candidature recherché"
+                },
+                PhotoOFF: {
+                    accept:"extension image"
+                }
+            },
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+            error.addClass('text-danger');
+            element.closest('.form-group').append(error);
+            },
+            highlight: function (element) {
+                var msgClasses = "h4";
+                $(element).addClass(msgClasses);
+            },
+            unhighlight: function (element) {
+                var msgClasses = "h4 tab";
+                $(element).removeClass("h4");
+                $(element).addClass(msgClasses);
+        
+            }
+        
+        });
+        jQuery.validator.addMethod(
+        "num",
+        function(value, element) {
+            return /^[0-9.]+$/.test(value);
+        },)
+    });
+
+    
+
+    var idOFF;
+        $(function () {
+        $.validator.setDefaults({
+            submitHandler: function () {
+                ch=`<div class="col-lg-2 col-md-12">
+                        <button type="button" class="default-btn" onclick="Autre_Test();">Autre<i class="ri-add-line"></i></button>
+                    </div>`;
+                document.getElementById("bouttonNextTest").innerHTML=ch;
+                document.getElementById("Autre").classList.remove("show");
+                document.getElementById("Test").classList.add("show");
+
+                document.getElementById("Autre").classList.remove("active");
+                document.getElementById("Test").classList.add("active");
+                
+                document.getElementById("Autre-tab").classList.remove("active");
+                document.getElementById("Test-tab").classList.add("active");
+                
+                document.getElementById("NOM_LANG").disabled = true;
+                document.getElementById("NOM_COMP").disabled = true;
+                document.getElementById("TYPE_DIP").disabled = true;
+                document.getElementById("NB_EXP_OFF").disabled = true;
+                document.getElementById("NOM_EXP_OFF").disabled = true;
+                document.getElementById("NOM_EXP_OFF1").disabled = true;
+                document.getElementById("NOM_TE_OFF").disabled = true;
+                document.getElementById("NOM_TE_OFF1").disabled = true;
+                document.getElementById("NOM_MC_OFF").disabled = true;
+                document.getElementById("NOM_MC_OFF1").disabled = true;
+                desactiv_a("ListTE");
+                desactiv_a("ListMC");
+                desactiv_a("ListLang");
+                desactiv_a("ListComp");
+                desactiv_a("ListDip");
+                desactiv_a("ListExp");
+                var dataOFF={};
+                dataOFF.NOM_OFF = document.getElementById("NOM_OFF").value;
+                dataOFF.PHOTO_OFF = document.getElementById("PHOTO_OFF").value;
+                dataOFF.SEXE_CAND_OFF = document.getElementById("SEXE_CAND_OFF").value;
+                dataOFF.DESC_OFF = document.getElementById("DESC_OFF").value;
+                dataOFF.MISSION_OFF = document.getElementById("MISSION_OFF").value;
+                dataOFF.SAL_MIN_OFF = document.getElementById("SAL_MIN_OFF").value;
+                var listAvg = document.getElementById("ListAVG").getElementsByTagName("a");
+                var chAVG ="/";    
+                    if (listAvg.length != 0){
+                        for(var i=0;i<listAvg.length;i++){
+                            var splitAVG = listAvg[i].innerHTML.split(":");
+                            chAVG = chAVG  + splitAVG[0]+ '/';
+                        }
+                    }
+                dataOFF.NOM_AVG_OFF = chAVG;
+                var listMc = document.getElementById("ListMC").getElementsByTagName("a");
+                var chMC ="";    
+                    if (listMc.length != 0){
+                        for(var i=0;i<listMc.length;i++){
+                            var splitMC = listMc[i].innerHTML.split(":");
+                            chMC = chMC + '/' + splitMC[0];
+                        }
+                    }
+                dataOFF.NOM_MC_OFF = chMC;
+                var listTe = document.getElementById("ListTE").getElementsByTagName("a");
+                var chTE ="";    
+                    if (listTe.length != 0){
+                        for(var i=0;i<listTe.length;i++){
+                            var splitTE = listTe[i].innerHTML.split(":");
+                            chTE = chTE + '/' + splitTE[0];
+                        }
+                    }
+                dataOFF.NOM_TE_OFF = chTE;
+                dataOFF.ARCHV_OFF = "0";
+                dataOFF.DAT_EXPIRA_OFF = document.getElementById("DAT_EXPIRA_OFF").value;
+                dataOFF.ID_RECRUTEUR = idREC;
+                var json = JSON.stringify(dataOFF);
+                var urlOFF = "http://192.168.43.96:3000/offres";
+                var xhr = new XMLHttpRequest();
+                xhr.open("POST", urlOFF, true);
+                xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhr.onload = function () {
+                    var offres= JSON.parse(xhr.responseText);
+                    if (xhr.readyState == 4 && xhr.status == "200") {
+                        idOFF = offres._id;
+                        // Open a new connection, using the GET request on the URL endpoint
+                        var request = new XMLHttpRequest();
+                        request.open('GET', "http://192.168.43.96:3000/langues", true);
+                        request.onload = function()
+                        {
+                            // Begin accessing JSON data here
+                            var data = JSON.parse(this.response);
+                            console.log(data);
+                            var dataLANG ={};
+                            var listLang = document.getElementById("ListLang").getElementsByTagName("a");
+                            if (listLang.length > 0){
+                                for(var i=0;i<listLang.length;i++){
+                                    var testnomLang = true;
+                                    var idlo="";
+                                    var splitLANG = listLang[i].innerHTML.split(":");
+                                    console.log(splitLANG);//********************
+                                    data.forEach(j => {
+                                        console.log(splitLANG[0]);
+                                        if(j.NOM_LANG == splitLANG[0]){
+                                            testnomLang = false;
+                                            idlo=j._id;
+                                        }
+                                    })
+                                    if(testnomLang){
+                                        dataLANG.NOM_LANG = splitLANG[0];
+                                        console.log(dataLANG);
+                                        var jsonLang = JSON.stringify(dataLANG);
+                                        console.log(jsonLang);
+                                        var urlLang = "http://192.168.43.96:3000/langues";
+                                        var xhrLang = new XMLHttpRequest();
+                                        xhrLang.open("POST", urlLang, true);
+                                        xhrLang.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                        xhrLang.onload = function () {
+                                            var langues= JSON.parse(xhrLang.responseText);
+                                            console.log(langues);
+                                            if (xhrLang.readyState == 4 && xhrLang.status == "200") {
+                                                ajoutNivLang(splitLANG[1],idOFF,langues._id);
+                                            }else{
+                                                console.log("erreur");
+                                            }
+                                        }
+                                        xhrLang.send(jsonLang);
+                                    }else{
+                                        ajoutNivLang(splitLANG[1],idOFF,idlo);
+                                    }
+                                }
+                            } 
+                        }
+                        request.send();
+
+                        // Open a new connection, using the GET request on the URL endpoint
+                        var request1 = new XMLHttpRequest();
+                        request1.open('GET', "http://192.168.43.96:3000/competences", true);
+                        request1.onload = function()
+                        {
+                            // Begin accessing JSON data here
+                            var data1 = JSON.parse(this.response);
+                            console.log(data1);
+                            var dataComp ={};
+                            var listComp = document.getElementById("ListComp").getElementsByTagName("a");
+                            if (listComp.length != 0){
+                                for(var ic=0;ic<listComp.length;ic++){
+                                    var testnomComp = true;
+                                    var idco="";
+                                    var splitCOMP = listComp[ic].innerHTML.split(":");
+                                    data1.forEach(jc => {
+                                        if(jc.NOM_COMP == splitCOMP[0]){
+                                            testnomComp = false;
+                                            idco = jc._id;
+                                        }
+                                    })
+                                    if(testnomComp){
+                                        dataComp.NOM_COMP = splitCOMP[0];
+                                        var jsonComp = JSON.stringify(dataComp);
+                                        var urlComp = "http://192.168.43.96:3000/competences";
+                                        var xhrComp = new XMLHttpRequest();
+                                        xhrComp.open("POST", urlComp, true);
+                                        xhrComp.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                        xhrComp.onload = function () {
+                                            var competences = JSON.parse(xhrComp.responseText);
+                                            if (xhrComp.readyState == 4 && xhrComp.status == "200") {
+                                                ajoutNivComp(splitCOMP[1],idOFF,competences._id);
+                                            }
+                                        }
+                                        xhrComp.send(jsonComp);
+                                    }else{
+                                        ajoutNivComp(splitCOMP[1],idOFF,idco);
+                                    }
+                                }
+                            } 
+                        }
+                        request1.send();
+
+                        // Open a new connection, using the GET request on the URL endpoint
+                        var request2 = new XMLHttpRequest();
+                        request2.open('GET', "http://192.168.43.96:3000/diplomes", true);
+                        request2.onload = function()
+                        {
+                            // Begin accessing JSON data here
+                            var data2 = JSON.parse(this.response);
+                            console.log(data2);
+                            var dataDip ={};
+                            var listDip = document.getElementById("ListDip").getElementsByTagName("a");
+                            if (listDip.length != 0){
+                                for(var i=0;i<listDip.length;i++){
+                                    var testnomDip = true;
+                                    var iddo="";
+                                    var splitDIP = listDip[i].innerHTML.split(":");
+                                    data2.forEach(j => {
+                                        if(j.TYPE_DIP == splitDIP[0]){
+                                            testnomDip = false;
+                                            iddo=j._id;
+                                        }
+                                    })
+                                    if(testnomDip){
+                                        dataDip.TYPE_DIP = splitDIP[0];
+                                        var jsonDip = JSON.stringify(dataDip);
+                                        var urlDip = "http://192.168.43.96:3000/diplomes";
+                                        var xhrDip = new XMLHttpRequest();
+                                        xhrDip.open("POST", urlDip, true);
+                                        xhrDip.setRequestHeader('Content-type','application/json; charset=utf-8');
+                                        xhrDip.onload = function () {
+                                            var diplomes = JSON.parse(xhrDip.responseText);
+                                            if (xhrDip.readyState == 4 && xhrDip.status == "200") {
+                                                ajoutSpeciaDip(splitDIP[1],idOFF,diplomes._id);
+                                            }
+                                        }
+                                        xhrDip.send(jsonDip);
+                                    }else{
+                                        ajoutSpeciaDip(splitDIP[1],idOFF,iddo);
+                                    }
+                                }
+                            } 
+                        }
+                        request2.send();
+
+                        var listExp = document.getElementById("ListExp").getElementsByTagName("a");
+                            if (listExp.length != 0){
+                                for(var i=0;i<listExp.length;i++){
+                                    var splitExp = listExp[i].innerHTML.split(":");
+                                    ajoutTabExp(splitExp[1],splitExp[0],idOFF,listExp[i].id)
+                                }
+                            }
+                        Swal.fire({
+                                title:'Offre Ajouté avec succés.',
+                                icon:'success',
+                                showConfirmButton:false,
+                                timer:1800
+                        })
+                    }
+                }
+                xhr.send(json);
+                
+            }
+        });
+        
+        $('#formAutre').validate({
+            rules: {
+                autreNomLang: {
+                    required: true,
+                },
+                NivLangOFF: {
+                    required: true,
+                },
+                autreNomComp: {
+                    required: true,
+                },
+                NivCompOFF: {
+                    required: true,
+                },
+                autreTypeDip: {
+                    required: true,
+                },
+                SpeciaDemOFF: {
+                    required: true,
+                },
+            },
+            messages: {
+                autreNomLang: {
+                    required: "Veuillez entrer une autre langue"
+                },
+                NivLangOFF: {
+                    required: "Veuillez entrer un niveau de langue recherchée"
+                },
+                autreNomComp: {
+                    required: "Veuillez entrer une autre compétence"
+                },
+                NivCompOFF: {
+                    required: "Veuillez entrer un niveau de compétence recherchée"
+                },
+                autreTypeDip: {
+                    required: "Veuillez entrer un autre type de diplôme"
+                },
+                SpeciaDemOFF: {
+                    required: "Veuillez entrer une spécialité de diplôme recherché"
+                }
+            },
+            errorElement: 'span',
+            errorPlacement: function (error, element) {
+            error.addClass('text-danger');
+            element.closest('.form-group').append(error);
+            },
+            highlight: function (element) {
+                var msgClasses = "h4";
+                $(element).addClass(msgClasses);
+            },
+            unhighlight: function (element) {
+                var msgClasses = "h4 tab";
+                $(element).removeClass("h4");
+                $(element).addClass(msgClasses);
+        
+            }
+        
+        });
+    });
+
+    function desactiv_a(list){
+        var splist = document.getElementById(list).getElementsByTagName("a");
+        if (splist.length != 0){
+            for(var i=0;i<splist.length;i++){
+                splist[i].onclick="";
+                splist[i].title="";
+            }
+        }
+    }
+    
+    function ajoutNivLang(NivAjoutLang,xAjoutLang,yAjoutLang){
+        var dataNivLang ={};
+        // Open a new connection, using the GET request on the URL endpoint
+        var requestAjoutLang = new XMLHttpRequest();
+        requestAjoutLang.open('GET', "http://192.168.43.96:3000/langueOffres", true);
+        requestAjoutLang.onload = function()
+        {
+            // Begin accessing JSON data here
+            var datalo = JSON.parse(this.response);
+            var testAjoutlang = false;
+            var idno="";
+            datalo.forEach( i=>{
+                if (i.ID_OFFRE==xAjoutLang && i.ID_LANGUE==yAjoutLang){
+                    testAjoutlang = true;
+                    idno = i._id;
+                    dataNivLang.NIV_LANG_OFF = NivAjoutLang;
+                    dataNivLang.ID_OFFRE = i.ID_OFFRE;
+                    dataNivLang.ID_LANGUE = i.ID_LANGUE;
+                }
+            })
+            if(testAjoutlang==false){
+                dataNivLang.NIV_LANG_OFF = NivAjoutLang;
+                dataNivLang.ID_OFFRE = xAjoutLang;
+                dataNivLang.ID_LANGUE = yAjoutLang;
+                var jsonNivLang = JSON.stringify(dataNivLang);
+                var urlNivLang = "http://192.168.43.96:3000/langueOffres";
+                var xhrNivLang = new XMLHttpRequest();
+                xhrNivLang.open("POST", urlNivLang, true);
+                xhrNivLang.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrNivLang.onload = function () {
+                    var Nivlangues= JSON.parse(xhrNivLang.responseText);
+                    if (xhrNivLang.readyState == 4 && xhrNivLang.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrNivLang.send(jsonNivLang);
+            }else{
+                var jsonNivLang = JSON.stringify(dataNivLang);
+                var urlNivLang = "http://192.168.43.96:3000/langueOffres/"+idno;
+                var xhrNivLang = new XMLHttpRequest();
+                xhrNivLang.open("PuT", urlNivLang, true);
+                xhrNivLang.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrNivLang.onload = function () {
+                    var Nivlangues= JSON.parse(xhrNivLang.responseText);
+                    if (xhrNivLang.readyState == 4 && xhrNivLang.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrNivLang.send(jsonNivLang);
+            }
+        }
+        requestAjoutLang.send();
+        
+    }
+
+    function ajoutNivComp(NivAjoutComp,xAjoutComp,yAjoutComp){
+        var dataNivComp = {};
+        // Open a new connection, using the GET request on the URL endpoint
+        var requestAjoutComp = new XMLHttpRequest();
+        requestAjoutComp.open('GET', "http://192.168.43.96:3000/competenceoffres", true);
+        requestAjoutComp.onload = function()
+        {
+            // Begin accessing JSON data here
+            var dataco = JSON.parse(this.response);
+            var testAjoutComp = false;
+            var idnc ="";
+            dataco.forEach( i=>{
+                if (i.ID_OFFRE==xAjoutComp && i.ID_COMPETENCE==yAjoutComp){
+                    testAjoutComp = true;
+                    idnc = i._id;
+                    dataNivComp.NIV_COMP_OFF = NivAjoutComp;
+                    dataNivComp.ID_COMPETENCE = i.ID_COMPETENCE;
+                    dataNivComp.ID_OFFRE = i.ID_OFFRE;
+                }
+            })
+            if(testAjoutComp==false){
+                dataNivComp.NIV_COMP_OFF = NivAjoutComp;
+                dataNivComp.ID_COMPETENCE = yAjoutComp;
+                dataNivComp.ID_OFFRE = xAjoutComp;
+                var jsonNivComp = JSON.stringify(dataNivComp);
+                var urlNivComp = "http://192.168.43.96:3000/competenceoffres";
+                var xhrNivComp = new XMLHttpRequest();
+                xhrNivComp.open("POST", urlNivComp, true);
+                xhrNivComp.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrNivComp.onload = function () {
+                    var Nivcompetences= JSON.parse(xhrNivComp.responseText);
+                    if (xhrNivComp.readyState == 4 && xhrNivComp.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrNivComp.send(jsonNivComp);
+            }else{
+                var jsonNivComp = JSON.stringify(dataNivComp);
+                var urlNivComp = "http://192.168.43.96:3000/competenceoffres/"+idnc;
+                var xhrNivComp = new XMLHttpRequest();
+                xhrNivComp.open("PuT", urlNivComp, true);
+                xhrNivComp.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrNivComp.onload = function () {
+                    var Nivlangues= JSON.parse(xhrNivComp.responseText);
+                    if (xhrNivComp.readyState == 4 && xhrNivComp.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrNivComp.send(jsonNivComp);
+            }
+        }
+        requestAjoutComp.send();
+       
+    }
+
+    function ajoutSpeciaDip(NivAjoutDip,xAjoutDip,yAjoutDip){
+        var dataSpeciaDip={};
+        // Open a new connection, using the GET request on the URL endpoint
+        var requestAjoutDip = new XMLHttpRequest();
+        requestAjoutDip.open('GET', "http://192.168.43.96:3000/etudeexiges", true);
+        requestAjoutDip.onload = function()
+        {
+            // Begin accessing JSON data here
+            var datado = JSON.parse(this.response);
+            var testAjoutDip = false;
+            var iddipo="";
+            datado.forEach( i=>{
+                if (i.ID_OFFRE==xAjoutDip && i.ID_DIPLOME==yAjoutDip){
+                    testAjoutDip = true;
+                    iddipo = i._id;
+                    dataSpeciaDip.SPECIA_DEM_OFF = NivAjoutDip;
+                    dataSpeciaDip.ID_DIPLOME = i.ID_DIPLOME;
+                    dataSpeciaDip.ID_OFFRE = i.ID_OFFRE;
+                }
+            })
+            if(testAjoutDip==false){
+                dataSpeciaDip.SPECIA_DEM_OFF = NivAjoutDip;
+                dataSpeciaDip.ID_DIPLOME = yAjoutDip;
+                dataSpeciaDip.ID_OFFRE = xAjoutDip;
+                var jsonSpeciaDip = JSON.stringify(dataSpeciaDip);
+                var urlSpeciaDip = "http://192.168.43.96:3000/etudeexiges";
+                var xhrSpeciaDip = new XMLHttpRequest();
+                xhrSpeciaDip.open("POST", urlSpeciaDip, true);
+                xhrSpeciaDip.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrSpeciaDip.onload = function () {
+                    var SpeciaDip= JSON.parse(xhrSpeciaDip.responseText);
+                    if (xhrSpeciaDip.readyState == 4 && xhrSpeciaDip.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrSpeciaDip.send(jsonSpeciaDip);
+            }else{
+                var jsonSpeciaDip = JSON.stringify(dataSpeciaDip);
+                var urlSpeciaDip = "http://192.168.43.96:3000/etudeexiges/"+iddipo;
+                var xhrSpeciaDip = new XMLHttpRequest();
+                xhrSpeciaDip.open("PuT", urlSpeciaDip, true);
+                xhrSpeciaDip.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrSpeciaDip.onload = function () {
+                    var SpeciaDip= JSON.parse(xhrSpeciaDip.responseText);
+                    if (xhrSpeciaDip.readyState == 4 && xhrSpeciaDip.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrSpeciaDip.send(jsonSpeciaDip);
+            }
+        }
+        requestAjoutDip.send();
+    }
+
+    function ajoutTabExp(NomAjoutExp,NbAjoutExp,xAjoutExp,yAjoutExp){
+        var dataExpOFF={};
+        // Open a new connection, using the GET request on the URL endpoint
+        var requestAjoutExp = new XMLHttpRequest();
+        requestAjoutExp.open('GET', "http://192.168.43.96:3000/experienceExiges", true);
+        requestAjoutExp.onload = function()
+        {
+            // Begin accessing JSON data here
+            var dataeo = JSON.parse(this.response);
+            var testAjoutExp =false;
+            var ideo="";
+            dataeo.forEach( i=>{
+                if (i.ID_OFFRE==xAjoutExp && i._id==yAjoutExp){
+                    testAjoutExp = true;
+                    ideo=i._id;
+                    dataExpOFF.NOM_EXP_OFF = NomAjoutExp;
+                    dataExpOFF.NB_EXP_OFF = NbAjoutExp;
+                    dataExpOFF.ID_OFFRE = i.ID_OFFRE;
+                }
+            })
+            if(testAjoutExp){
+                var jsonExpOFF = JSON.stringify(dataExpOFF);
+                var urlExpOFF = "http://192.168.43.96:3000/experienceExiges/"+ideo;
+                var xhrExpOFF = new XMLHttpRequest();
+                xhrExpOFF.open("PUT", urlExpOFF, true);
+                xhrExpOFF.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrExpOFF.onload = function () {
+                    var ExpOFF= JSON.parse(xhrExpOFF.responseText);
+                    if (xhrExpOFF.readyState == 4 && xhrExpOFF.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrExpOFF.send(jsonExpOFF);
+            }else{
+                dataExpOFF.NOM_EXP_OFF = NomAjoutExp;
+                dataExpOFF.NB_EXP_OFF = NbAjoutExp;
+                dataExpOFF.ID_OFFRE = xAjoutExp;
+                var jsonExpOFF = JSON.stringify(dataExpOFF);
+                var urlExpOFF = "http://192.168.43.96:3000/experienceExiges";
+                var xhrExpOFF = new XMLHttpRequest();
+                xhrExpOFF.open("POST", urlExpOFF, true);
+                xhrExpOFF.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhrExpOFF.onload = function () {
+                    var ExpOFF= JSON.parse(xhrExpOFF.responseText);
+                    if (xhrExpOFF.readyState == 4 && xhrExpOFF.status == "200") {
+                        console.log("OK");
+                    }
+                }
+                xhrExpOFF.send(jsonExpOFF);
+            }
+        }
+        requestAjoutExp.send();
+    }
+
+    var nbAVG =0;
+    function ajoutAVG(){
+        if(document.getElementById("NOM_AVG_OFF").value ==""){
+            Swal.fire({
+                title:"Entrer un avantage tout d'abbord",
+                icon:'warning',
+                showConfirmButton:false,
+                timer:1800
+            })
+        }else{
+            var listAVG = document.getElementById("ListAVG").getElementsByTagName("div");
+            var chaine ="AVG";
+            var contAVG = chaine + nbAVG;
+            if (listAVG.length == 0){
+                ch=`<div class="job-article-footer">
+                        <div id="plusieurA_listAVG" class="article-tags">
+                            <span>Liste des avantages:</span>
+                            <a id="`+contAVG+`" onclick="delete_a('ListAVG','plusieurA_listAVG','NOM_AVG_OFF','`+contAVG+`','btnAVG','ajoutAVG();');" title="Modifier ou Supprimer">`+document.getElementById("NOM_AVG_OFF").value+`</a>
+                        </div>
+                    </div>`;
+                document.getElementById("ListAVG").innerHTML= ch;
+                document.getElementById("NOM_AVG_OFF").value = "";
+                nbAVG +=1;
+            }else{
+                var avg=document.getElementById("NOM_AVG_OFF").value;
+                ch=`<a id="`+contAVG+`" onclick="delete_a('ListAVG','plusieurA_listAVG','NOM_AVG_OFF','`+contAVG+`','btnAVG','ajoutAVG();');" title="Modifier ou Supprimer">`+avg+`</a>`;
+                document.getElementById("plusieurA_listAVG").insertAdjacentHTML('beforeend',ch);
+                document.getElementById("NOM_AVG_OFF").value = "";
+                nbAVG +=1;
+            } 
+        }
+    }
+
+    var nbLANG =0;
+    function ajoutLang(){
+        var selectLang = document.getElementById("NOM_LANG");
+        var choiceLang = selectLang.selectedIndex;
+        console.log(choiceLang);
+        var valeurLang = selectLang.options[choiceLang].value;
+        var textLang = selectLang.options[choiceLang].innerHTML;
+        var chaine ="LANG";
+        var contLANG = chaine + nbLANG;
+        if(valeurLang =="1"){
+            if(document.getElementById("AUTRE_NOM_LANG").value !="" && document.getElementById("NIV_LANG_OFF").value !=""){
+                var listLang = document.getElementById("ListLang").getElementsByTagName("div");
+                if (listLang.length == 0){
+                    ch=`<div class="job-article-footer">
+                            <div id="plusieurA_listLang" class="article-tags">
+                                <span>Liste des langues:</span>
+                                <a id="`+contLANG+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+contLANG+`','autreLang','lang','langueOffres');" title="Modifier ou Supprimer">`+document.getElementById("AUTRE_NOM_LANG").value+`:`+document.getElementById("NIV_LANG_OFF").value+`</a>
+                            </div>
+                        </div>`;
+                    document.getElementById("ListLang").innerHTML= ch;
+                    /*document.getElementById("NOM_LANG").selectedIndex= document.getElementById("NOM_LANG").selectedIndex[0];
+                    document.getElementById("AUTRE_NOM_LANG").value = "";
+                    document.getElementById("NIV_LANG_OFF").value = "";*/
+                    document.getElementById("autreLang").innerHTML="";
+                    nbLANG +=1;
+                }else{
+                    var nomLang=document.getElementById("AUTRE_NOM_LANG").value;
+                    var nivLang=document.getElementById("NIV_LANG_OFF").value;
+                    ch=`<a id="`+contLANG+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+contLANG+`','autreLang','lang','langueOffres');" title="Modifier ou Supprimer">`+nomLang+`:`+nivLang+`</a>`;
+                    document.getElementById("plusieurA_listLang").insertAdjacentHTML('beforeend',ch);
+                    /*document.getElementById("NOM_LANG").selectedIndex= document.getElementById("NOM_LANG").selectedIndex[0];
+                    document.getElementById("AUTRE_NOM_LANG").value = "";
+                    document.getElementById("NIV_LANG_OFF").value = "";*/
+                    document.getElementById("autreLang").innerHTML="";
+                    nbLANG +=1;
+                }
+            }else{
+                Swal.fire({
+                    title:"Entrer une langue est leur niveau tout d'abbord",
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }
+        }else{
+            if(document.getElementById("NIV_LANG_OFF").value ==""){
+                Swal.fire({
+                    title:"Entrer un niveau de langue tout d'abbord",
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }else{
+                var listLang = document.getElementById("ListLang").getElementsByTagName("div");
+                if (listLang.length == 0){
+                    ch=`<div class="job-article-footer">
+                            <div id="plusieurA_listLang" class="article-tags">
+                                <span>Liste des langues:</span>
+                                <a id="`+contLANG+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+contLANG+`','autreLang','lang','langueOffres');" title="Modifier ou Supprimer">`+textLang+`:`+document.getElementById("NIV_LANG_OFF").value+`</a>
+                            </div>
+                        </div>`;
+                    document.getElementById("ListLang").innerHTML= ch;
+                    /*document.getElementById("NOM_LANG").selectedIndex= document.getElementById("NOM_LANG").selectedIndex[0];
+                    document.getElementById("NIV_LANG_OFF").value = "";*/
+                    document.getElementById("autreLang").innerHTML="";
+                    nbLANG +=1;
+                }else{
+                    var nivLang=document.getElementById("NIV_LANG_OFF").value;
+                    ch=`<a id="`+contLANG+`" onclick="SelectDelete_a('ListLang','plusieurA_listLang','NOM_LANG','`+contLANG+`','autreLang','lang','langueOffres');" title="Modifier ou Supprimer">`+textLang+`:`+nivLang+`</a>`;
+                    document.getElementById("plusieurA_listLang").insertAdjacentHTML('beforeend',ch);
+                    /*document.getElementById("NOM_LANG").selectedIndex= document.getElementById("NOM_LANG").selectedIndex[0];
+                    document.getElementById("NIV_LANG_OFF").value = "";*/
+                    document.getElementById("autreLang").innerHTML="";
+                    nbLANG +=1;
+                }
+            }
+        }
+    }
+
+    var nbCOMP =0;
+    function ajoutComp(){
+        var selectComp = document.getElementById("NOM_COMP");
+        var choiceComp = selectComp.selectedIndex;
+        var valeurComp = selectComp.options[choiceComp].value;
+        var textComp = selectComp.options[choiceComp].innerHTML;
+        var chaine ="COMP";
+        var contCOMP = chaine + nbCOMP;
+        if(valeurComp =="1"){
+            if(document.getElementById("AUTRE_NOM_COMP").value !="" && document.getElementById("NIV_COMP_OFF").value !=""){
+                var listComp = document.getElementById("ListComp").getElementsByTagName("div");
+                if (listComp.length == 0){
+                    ch=`<div class="job-article-footer">
+                            <div id="plusieurA_listComp" class="article-tags">
+                                <span>Liste des compétences:</span>
+                                <a id="`+contCOMP+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+contCOMP+`','autreComp','comp','competenceoffres');" title="Modifier ou Supprimer">`+document.getElementById("AUTRE_NOM_COMP").value+`:`+document.getElementById("NIV_COMP_OFF").value+`</a>
+                            </div>
+                        </div>`;
+                    document.getElementById("ListComp").innerHTML= ch;
+                    document.getElementById("autreComp").innerHTML="";
+                    nbCOMP +=1;
+                }else{
+                    var nomComp=document.getElementById("AUTRE_NOM_COMP").value;
+                    var nivComp=document.getElementById("NIV_COMP_OFF").value;
+                    ch=`<a id="`+contCOMP+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+contCOMP+`','autreComp','comp','competenceoffres');" title="Modifier ou Supprimer">`+nomComp+`:`+nivComp+`</a>`;
+                    document.getElementById("plusieurA_listComp").insertAdjacentHTML('beforeend',ch);
+                    document.getElementById("autreComp").innerHTML="";
+                    nbCOMP +=1
+                }
+            }else{
+                Swal.fire({
+                    title:"Entrer une compétence est leur niveau tout d'abbord",
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }
+        }else{
+            if(document.getElementById("NIV_COMP_OFF").value ==""){
+                Swal.fire({
+                    title:"Entrer un niveau de compétence tout d'abbord",
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }else{
+                var listComp = document.getElementById("ListComp").getElementsByTagName("div");
+                if (listComp.length == 0){
+                    ch=`<div class="job-article-footer">
+                            <div id="plusieurA_listComp" class="article-tags">
+                                <span>Liste des compétences:</span>
+                                <a id="`+contCOMP+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+contCOMP+`','autreComp','comp','competenceoffres');" title="Modifier ou Supprimer">`+textComp+`:`+document.getElementById("NIV_COMP_OFF").value+`</a>
+                            </div>
+                        </div>`;
+                    document.getElementById("ListComp").innerHTML= ch;
+                    document.getElementById("autreComp").innerHTML="";
+                    nbCOMP +=1;
+                }else{
+                    var nivComp=document.getElementById("NIV_COMP_OFF").value;
+                    ch=`<a id="`+contCOMP+`" onclick="SelectDelete_a('ListComp','plusieurA_listComp','NOM_COMP','`+contCOMP+`','autreComp','comp','competenceoffres');" title="Modifier ou Supprimer">`+textComp+`:`+nivComp+`</a>`;
+                    document.getElementById("plusieurA_listComp").insertAdjacentHTML('beforeend',ch);
+                    document.getElementById("autreComp").innerHTML="";
+                    nbCOMP +=1;
+                }
+            }
+        }
+    }
+
+    var nbDIP =0;
+    function ajoutDip(){
+        var selectDip = document.getElementById("TYPE_DIP");
+        var choiceDip = selectDip.selectedIndex;
+        var valeurDip = selectDip.options[choiceDip].value;
+        var textDip = selectDip.options[choiceDip].innerHTML;
+        var chaine ="DIP";
+        var contDIP = chaine + nbDIP;
+        if(valeurDip =="1"){
+            if(document.getElementById("AUTRE_TYPE_DIP").value !="" && document.getElementById("SPECIA_DEM_OFF").value !=""){
+                var listDip = document.getElementById("ListDip").getElementsByTagName("div");
+                if (listDip.length == 0){
+                    ch=`<div class="job-article-footer">
+                            <div id="plusieurA_listDip" class="article-tags">
+                                <span>Liste des diplômes:</span>
+                                <a id="`+contDIP+`" onclick="SelectDelete_a('ListDip','plusieurA_listDip','TYPE_DIP','`+contDIP+`','autreDip','dip','etudeexiges');" title="Modifier ou Supprimer">`+document.getElementById("AUTRE_TYPE_DIP").value+`:`+document.getElementById("SPECIA_DEM_OFF").value+`</a>
+                            </div>
+                        </div>`;
+                    document.getElementById("ListDip").innerHTML= ch;
+                    document.getElementById("autreDip").innerHTML="";
+                    nbDIP +=1;
+                }else{
+                    var nomDip=document.getElementById("AUTRE_TYPE_DIP").value;
+                    var nivDip=document.getElementById("SPECIA_DEM_OFF").value;
+                    ch=`<a id="`+contDIP+`" onclick="SelectDelete_a('ListDip','plusieurA_listDip','TYPE_DIP','`+contDIP+`','autreDip','dip','etudeexiges');" title="Modifier ou Supprimer">`+nomDip+`:`+nivDip+`</a>`;
+                    document.getElementById("plusieurA_listDip").insertAdjacentHTML('beforeend',ch);
+                    document.getElementById("autreDip").innerHTML="";
+                    nbDIP +=1;
+                }
+            }else{
+                Swal.fire({
+                    title:"Entrer un diplôme est leur spécialité tout d'abbord",
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }
+        }else{
+            if(document.getElementById("SPECIA_DEM_OFF").value ==""){
+                Swal.fire({
+                    title:"Entrer une spécialité de diplôme tout d'abbord",
+                    icon:'warning',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }else{
+                var listDip = document.getElementById("ListDip").getElementsByTagName("div");
+                if (listDip.length == 0){
+                    ch=`<div class="job-article-footer">
+                            <div id="plusieurA_listDip" class="article-tags">
+                                <span>Liste des diplômes:</span>
+                                <a id="`+contDIP+`" onclick="SelectDelete_a('ListDip','plusieurA_listDip','TYPE_DIP','`+contDIP+`','autreDip','dip','etudeexiges');" title="Modifier ou Supprimer">`+textDip+`:`+document.getElementById("SPECIA_DEM_OFF").value+`</a>
+                            </div>
+                        </div>`;
+                    document.getElementById("ListDip").innerHTML= ch;
+                    document.getElementById("autreDip").innerHTML="";
+                    nbDIP +=1;
+                }else{
+                    var nivDip=document.getElementById("SPECIA_DEM_OFF").value;
+                    ch=`<a id="`+contDIP+`" onclick="SelectDelete_a('ListDip','plusieurA_listDip','TYPE_DIP','`+contDIP+`','autreDip','dip','etudeexiges');" title="Modifier ou Supprimer">`+textDip+`:`+nivDip+`</a>`;
+                    document.getElementById("plusieurA_listDip").insertAdjacentHTML('beforeend',ch);
+                    document.getElementById("autreDip").innerHTML="";
+                    nbDIP +=1;
+                }
+            }
+        }
+    }
+
+    var nbEXP =0;
+    function ajoutExp(){
+        var selectExp = document.getElementById("NB_EXP_OFF");
+        var choiceExp = selectExp.selectedIndex;
+        var valeurExp = selectExp.options[choiceExp].value;
+        var textExp = selectExp.options[choiceExp].innerHTML;
+        var chaine ="EXP";
+        var contEXP = chaine + nbEXP;
+        if(valeurExp =="0"){
+        var listExp = document.getElementById("ListExp").getElementsByTagName("div");
+        if (listExp.length == 0){
+            ch=`<div class="job-article-footer">
+                    <div id="plusieurA_listExp" class="article-tags">
+                        <span>Liste des expériences:</span>
+                        <a id="`+contEXP+`" onclick="SelectTextDelete_a('ListExp','plusieurA_listExp','NB_EXP_OFF','NOM_EXP_OFF','`+contEXP+`','btnEXP','Exp');" title="Modifier ou Supprimer">`+textExp+`: -</a>
+                    </div>
+                </div>`;
+            document.getElementById("ListExp").innerHTML= ch;
+            nbEXP +=1;
+        }else{
+            //var nivExp=document.getElementById("NOM_EXP_OFF").value;
+            ch=`<a id="`+contEXP+`" onclick="SelectTextDelete_a('ListExp','plusieurA_listExp','NB_EXP_OFF','NOM_EXP_OFF','`+contEXP+`','btnEXP','Exp');" title="Modifier ou Supprimer">`+textExp+`: -</a>`;
+            document.getElementById("plusieurA_listExp").insertAdjacentHTML('beforeend',ch);
+            nbEXP +=1;
+        }
+    }else if((document.getElementById("NB_EXP_OFF").value !="")&&(document.getElementById("NOM_EXP_OFF").value !="")){
+            var listExp = document.getElementById("ListExp").getElementsByTagName("div");
+            if (listExp.length == 0){
+                ch=`<div class="job-article-footer">
+                        <div id="plusieurA_listExp" class="article-tags">
+                            <span>Liste des expériences:</span>
+                            <a id="`+contEXP+`" onclick="SelectTextDelete_a('ListExp','plusieurA_listExp','NB_EXP_OFF','NOM_EXP_OFF','`+contEXP+`','btnEXP','Exp');" title="Modifier ou Supprimer">`+textExp+`:`+document.getElementById("NOM_EXP_OFF").value+`</a>
+                        </div>
+                    </div>`;
+                document.getElementById("ListExp").innerHTML= ch;
+                nbEXP +=1;
+            }else{
+                var nivExp=document.getElementById("NOM_EXP_OFF").value;
+                ch=`<a id="`+contEXP+`" onclick="SelectTextDelete_a('ListExp','plusieurA_listExp','NB_EXP_OFF','NOM_EXP_OFF','`+contEXP+`','btnEXP','Exp');" title="Modifier ou Supprimer">`+textExp+`:`+nivExp+`</a>`;
+                document.getElementById("plusieurA_listExp").insertAdjacentHTML('beforeend',ch);
+                nbEXP +=1;
+            }
+        }else{
+            Swal.fire({
+                title:"Choisir un nombre d'expérience et entrer leur nom tout d'abbord",
+                icon:'warning',
+                showConfirmButton:false,
+                timer:1800
+            })
+        }
+    }
+
+    var nbTE=0;
+    function ajoutTE(){
+        if(document.getElementById("NOM_TE_OFF").value ==""){
+            Swal.fire({
+                title:"Entrer un type d'emploi tout d'abbord",
+                icon:'warning',
+                showConfirmButton:false,
+                timer:1800
+            })
+        }else{
+            var listTE = document.getElementById("ListTE").getElementsByTagName("div");
+            var chaine = "TE";
+            var contTE = chaine + nbTE;
+            if (listTE.length == 0){
+                ch=`<div class="job-article-footer">
+                        <div id="plusieurA_listTE" class="article-tags">
+                            <span>Liste des types d'emploi:</span>
+                            <a id="`+contTE+`" onclick="delete_a('ListTE','plusieurA_listTE','NOM_TE_OFF','`+contTE+`','btnTE','ajoutTE();');" title="Modifier ou Supprimer">`+document.getElementById("NOM_TE_OFF").value+`</a>
+                        </div>
+                    </div>`;
+                document.getElementById("ListTE").innerHTML= ch;
+                nbTE+=1;
+            }else{
+                var nivTE=document.getElementById("NOM_TE_OFF").value;
+                ch=`<a id="`+contTE+`" onclick="delete_a('ListTE','plusieurA_listTE','NOM_TE_OFF','`+contTE+`','btnTE','ajoutTE();');" title="Modifier ou Supprimer">`+nivTE+`</a>`;
+                document.getElementById("plusieurA_listTE").insertAdjacentHTML('beforeend',ch);
+                nbTE+=1;
+            }
+        }
+    }
+
+    var nbMC=0;
+    function ajoutMC(){
+        if(document.getElementById("NOM_MC_OFF").value ==""){
+            Swal.fire({
+                title:"Entrer un mot-clé tout d'abbord",
+                icon:'warning',
+                showConfirmButton:false,
+                timer:1800
+            })
+        }else{
+            var listMC = document.getElementById("ListMC").getElementsByTagName("div");
+            var chaine ="MC";
+            var contMC = chaine + nbMC;
+            if (listMC.length == 0){
+                ch=`<div class="job-article-footer">
+                        <div id="plusieurA_listMC" class="article-tags">
+                            <span>Liste des mots-clé:</span>
+                            <a id="`+contMC+`" onclick="delete_a('ListMC','plusieurA_listMC','NOM_MC_OFF','`+contMC+`','btnMC','ajoutMC();');" title="Modifier ou Supprimer">`+document.getElementById("NOM_MC_OFF").value+`</a>
+                        </div>
+                    </div>`;
+                document.getElementById("ListMC").innerHTML= ch;
+                nbMC+=1
+            }else{
+                var nivMC=document.getElementById("NOM_MC_OFF").value;
+                ch=`<a id="`+contMC+`" onclick="delete_a('ListMC','plusieurA_listMC','NOM_MC_OFF','`+contMC+`','btnMC','ajoutMC();');" title="Modifier ou Supprimer">`+nivMC+`</a>`;
+                document.getElementById("plusieurA_listMC").insertAdjacentHTML('beforeend',ch);
+                nbMC+=1;
+            }
+        }
+    }
+
+    function delete_a(ListDiv,ListA,textContenet,c,btn,Nomfn){
+        Swal.fire({
+        title: 'Voulez-vous modifier ou supprimer cet élément?',
+        icon:'question',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Modifier',
+        denyButtonText: `Supprimer`,
+        }).then((result) => {
+        if (result.isConfirmed) {
+            document.getElementById(textContenet).value = document.getElementById(c).innerHTML;
+            ch=`<button type="button" class="bouttonkbir" onclick="Modif_a('`+c+`','`+textContenet+`','`+btn+`','`+Nomfn+`');"><i class="ri-pencil-line"></i></button>`;
+            document.getElementById(btn).innerHTML = ch;
+        } else if (result.isDenied) {
+            var Del_a = document.getElementById(c);
+                Del_a.parentNode.removeChild(Del_a);
+                var listA = document.getElementById(ListA).getElementsByTagName("a");
+                if (listA.length == 0){
+                    document.getElementById(ListDiv).innerHTML = "";
+                    document.getElementById(textContenet).value = "";
+                }
+                Swal.fire({
+                    title:'cet élément est supprimé',
+                    icon:'success',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+        }
+        })
+    }
+    
+    function Modif_a(x,y,z,w){
+        document.getElementById(x).innerHTML = document.getElementById(y).value;
+        document.getElementById(y).value = "";
+        ch=`<button type="button" class="bouttonkbir" onclick="`+w+`"><i class="ri-add-line"></i></button>`;
+        document.getElementById(z).innerHTML = ch;
+        Swal.fire({
+            title:'cet élément est modifié',
+            icon:'success',
+            showConfirmButton:false,
+            timer:1800
+        })
+
+       
+    }
+
+    function SelectDelete_a(ListDiv,ListA,textContenet,c,btn,idNiv,NomNiv){
+        Swal.fire({
+        title: 'Voulez-vous modifier ou supprimer cet élément?',
+        icon:'question',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Modifier',
+        denyButtonText: `Supprimer`,
+        }).then((result) => {
+        if (result.isConfirmed) {
+            var spEv = document.getElementById(c).innerHTML.split(':');
+            if(btn == "autreDip"){
+                ch=`<div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                        <label>Nom séléctionné</label>
+                        <input id="AUTRE_NOM" name="autreNomLang" type="text" class="form-control" placeholder="Entrer un nom..." value="`+spEv[0]+`">
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-12">
+                    <div class="form-group">
+                        <label>Niveau séléctionné</label>
+                        <div class="row">
+                            <div class="col-lg-10 col-md-12">
+                                <input id="SPECIA_DEM_OFF" name="SpeciaDemOFF" class="form-control" type="text" placeholder="Spécialité de diplôme..." value="`+spEv[1]+`">
+                            </div>
+                            <div class="col-lg-2 col-md-12">
+                                <button id="NIV_LANG_OFF1" type="button" class="bouttonkbir" onclick="Selectmodif_a('`+c+`','AUTRE_NOM','NIV','`+btn+`');"><i class="ri-pencil-line"></i></button>
+                            </div>
+                        </div> 
+                    </div>
+                </div>`;
+            document.getElementById(btn).innerHTML = ch;
+            document.getElementById("NIV").value=spEv[1];
+            }else{
+                ch=`<div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Nom séléctionné</label>
+                            <input id="AUTRE_NOM" name="autreNomLang" type="text" class="form-control" placeholder="Entrer un nom..." value="`+spEv[0]+`">
+                        </div>
+                    </div>
+                    <div class="col-lg-6 col-md-12">
+                        <div class="form-group">
+                            <label>Niveau séléctionné</label>
+                            <div class="row">
+                                <div class="col-lg-10 col-md-12">
+                                    <select id="NIV" name="NivCompOFF" class="form-control">
+                                                <option value="1">1</option>
+                                                <option value="2">2</option>
+                                                <option value="3">3</option>
+                                                <option value="4">4</option>
+                                                <option value="5">5</option>
+                                            </select>
+                                </div>
+                                <div class="col-lg-2 col-md-12">
+                                    <button id="NIV_LANG_OFF1" type="button" class="bouttonkbir" onclick="Selectmodif_a('`+c+`','AUTRE_NOM','NIV','`+btn+`');"><i class="ri-pencil-line"></i></button>
+                                </div>
+                            </div> 
+                        </div>
+                    </div>`;
+                document.getElementById(btn).innerHTML = ch;
+                document.getElementById("NIV").value=spEv[1];
+            }
+        } else if (result.isDenied) {
+            var Del_a = document.getElementById(c);
+            Del_a.parentNode.removeChild(Del_a);
+            var listA = document.getElementById(ListA).getElementsByTagName("a");
+            if (listA.length == 0){
+                document.getElementById(ListDiv).innerHTML = "";
+                document.getElementById(textContenet).selectedIndex = document.getElementById(textContenet).selectedIndex[0];
+            }
+            Swal.fire({
+                title:'cet élément est supprimé',
+                icon:'success',
+                showConfirmButton:false,
+                timer:1800
+            })
+        }
+        })
+    }
+
+    function Selectmodif_a(x,y,z,w){
+        document.getElementById(x).innerHTML = document.getElementById(y).value+':'+document.getElementById(z).value;
+        document.getElementById(y).value = "";
+        ch=``;
+        document.getElementById(w).innerHTML = ch;
+        Swal.fire({
+            title:'cet élément est modifié',
+            icon:'success',
+            showConfirmButton:false,
+            timer:1800
+        })
+    }
+
+
+    function SelectTextDelete_a(ListDiv,ListA,listContenent,textContenet,c,btn,idNiv){
+        Swal.fire({
+        title: 'Voulez-vous modifier ou supprimer cet élément?',
+        icon:'question',
+        showDenyButton: true,
+        showCancelButton: true,
+        confirmButtonText: 'Modifier',
+        denyButtonText: `Supprimer`,
+        }).then((result) => {
+            if (result.isConfirmed) {
+                var spEv = document.getElementById(c).innerHTML.split(':');
+                //var choiceLang = document.getElementById("NB_EXP_OFF").selectedIndex;
+                //selectJour.selectedIndex = document.getElementById("NB_EXP_OFF").options[choiceLang].selectedIndex ;
+                //document.getElementById("NB_EXP_OFF").options[choiceLang].innerHTML = spEv[0];
+                //document.getElementById("NB_EXP_OFF").value = spEv[0];
+                console.log(spEv);
+                if(spEv[1] != "-"){
+                    console.log(spEv[1]);
+                    document.getElementById("NOM_EXP_OFF").value = spEv[1];
+                    chep=`<button type="button" class="bouttonkbir" onclick="SelectTextModif_a('`+c+`','`+listContenent+`','`+textContenet+`','btnEXP','`+spEv[0]+`');"><i class="ri-pencil-line"></i></button>`;
+                    document.getElementById("btnEXP").innerHTML = chep;
+                    console.log(ch);
+                }
+                 
+            } else if (result.isDenied) {
+                var Del_a = document.getElementById(c);
+                Del_a.parentNode.removeChild(Del_a);
+                var listA = document.getElementById(ListA).getElementsByTagName("a");
+                if (listA.length == 0){
+                    document.getElementById(ListDiv).innerHTML = "";
+                    //document.getElementById(listContenent).selectedIndex = document.getElementById(listContenent).selectedIndex[0];
+                    //document.getElementById(textContenet).value = "";
+                    ch=`<div class="row" >
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <label>Nombre d'expériences recherchées<span class="required">*</span></label>
+                                    <select id="NB_EXP_OFF" name="expSelect" class="form-control" onchange="change_valeurExp();">
+                                        <option selected disabled >Choisir un nombre d'expérience recherché...</option>
+                                        <option value="0"> Débutant</option>
+                                        <option value="1" > 0  à  1 ans</option>
+                                        <option value="2"> 1  à  3 ans</option>
+                                        <option value="3"> 3  à  5 ans</option>
+                                        <option value="4"> Plus de 5 ans</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <label>Expérience en<span class="required">*</span></label>
+                                    <div class="row">
+                                        <div class="col-lg-10 col-md-12">
+                                            <input id="NOM_EXP_OFF" name="NomExpOFF" class="form-control" type="text" placeholder="Entrer une expérience...">
+                                        </div>
+                                        <div class="col-lg-2 col-md-12">
+                                            <button id="NOM_EXP_OFF1" type="button" class="bouttonkbir" onclick="ajoutExp();"><i class="ri-add-line"></i></button>
+                                        </div>
+                                    </div> 
+                                </div>
+                            </div>
+                        </div>`;
+                    document.getElementById("expOFFAj").innerHTML=ch;
+                }
+                Swal.fire({
+                    title:'cet élément est supprimé',
+                    icon:'success',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }
+        })
+    }
+
+    function SelectTextModif_a(x,y,z,w,h){
+        var select = document.getElementById(y);
+        var choice = select.selectedIndex;
+        var valeur = select.options[choice].value;
+        var text = select.options[choice].innerHTML;
+        if(document.getElementById(y).value==""){
+            document.getElementById(x).innerHTML = h+':'+document.getElementById(z).value;
+        }else{
+            document.getElementById(x).innerHTML = text+':'+document.getElementById(z).value;
+        }
+        
+        document.getElementById(y).selectedIndex = document.getElementById(y).options[0];
+        document.getElementById(z).value = "";
+        ch=` <button id="NOM_EXP_OFF1" type="button" class="bouttonkbir" onclick="ajoutExp();"><i class="ri-add-line"></i></button>`;
+        document.getElementById(w).innerHTML = ch;
+        Swal.fire({
+            title:'cet élément est modifié',
+            icon:'success',
+            showConfirmButton:false,
+            timer:1800
+        })
+    }
+
+
+    function ajoutTest(y) {
+        var listText = document.getElementById(y).getElementsByTagName("textarea");
+        var requestTO = new XMLHttpRequest();
+            requestTO.open('GET', "http://192.168.43.96:3000/tests", true);
+            requestTO.onload = function()
+            {
+                var dataTest={};
+                var dataQuestion={};
+                var dataTO = JSON.parse(this.response);
+                var testTO = false;
+                var idxl ="";
+                dataTO.forEach(xl => {
+                    if (xl.ID_OFFRE == c){
+                        testTO = true;
+                        idxl = xl._id;
+                    }
+                })
+                if(testTO){
+                    dataQuestion.ENONCE_QUE = listText[0].value;
+                    dataQuestion.REP_T = listText[1].value;
+                    dataQuestion.REP_F1 = listText[2].value;
+                    dataQuestion.REP_F2 = listText[3].value;
+                    dataQuestion.ID_TEST = idxl;
+                    ajoutQues(dataQuestion);
+                }else{
+                    dataTest.ID_OFFRE = c;
+                    var jsonTest = JSON.stringify(dataTest);
+                    var urlTest = "http://192.168.43.96:3000/tests";
+                    var xhrTest = new XMLHttpRequest();
+                    xhrTest.open("POST", urlTest, true);
+                    xhrTest.setRequestHeader('Content-type','application/json; charset=utf-8');
+                    xhrTest.onload = function () {
+                    var Tests= JSON.parse(xhrTest.responseText);
+                    if (xhrTest.readyState == 4 && xhrTest.status == "200") {
+                            dataQuestion.ENONCE_QUE = listText[0].value;
+                            dataQuestion.REP_T = listText[1].value;
+                            dataQuestion.REP_F1 = listText[2].value;
+                            dataQuestion.REP_F2 = listText[3].value;
+                            dataQuestion.ID_TEST = Tests._id;
+                            ajoutQues(dataQuestion);
+                        }
+                    }
+                    xhrTest.send(jsonTest);
+                }
+            }
+            requestTO.send();
+    }
+
+    function ajoutQues(data){
+        var jsonQuestion = JSON.stringify(data);
+        var urlQuestion = "http://192.168.43.96:3000/questions";
+        var xhrQuestion = new XMLHttpRequest();
+        xhrQuestion.open("POST", urlQuestion, true);
+        xhrQuestion.setRequestHeader('Content-type','application/json; charset=utf-8');
+        xhrQuestion.onload = function () {
+            var Questions= JSON.parse(xhrQuestion.responseText);
+            if (xhrQuestion.readyState == 4 && xhrQuestion.status == "200") {
+                Swal.fire({
+                    title:'Question Ajouté avec succés.',
+                    icon:'success',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }
+        }
+        xhrQuestion.send(jsonQuestion);
+    }
+
+    function modifQues(x){
+        var dataQuestion={};
+        var listText = document.getElementById(x).getElementsByTagName("textarea");
+        dataQuestion.ENONCE_QUE = listText[0].value;
+        dataQuestion.REP_T = listText[1].value;
+        dataQuestion.REP_F1 = listText[2].value;
+        dataQuestion.REP_F2 = listText[3].value;
+        dataQuestion.ID_TEST = idtest;
+        var jsonQuestion = JSON.stringify(dataQuestion);
+        var urlQuestion = "http://192.168.43.96:3000/questions";
+        var xhrQuestion = new XMLHttpRequest();
+        xhrQuestion.open("POST", urlQuestion, true);
+        xhrQuestion.setRequestHeader('Content-type','application/json; charset=utf-8');
+        xhrQuestion.onload = function () {
+            var Questions= JSON.parse(xhrQuestion.responseText);
+            if (xhrQuestion.readyState == 4 && xhrQuestion.status == "200") {
+                Swal.fire({
+                    title:'Question Ajouté avec succés.',
+                    icon:'success',
+                    showConfirmButton:false,
+                    timer:1800
+                })
+            }
+        }
+        xhrQuestion.send(jsonQuestion);
+    }
+</script>
+        
+    </body>
+</html>

@@ -1,0 +1,685 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/notifcation.css">
+		
+		<title>Demandeur d’emploi | Recherche Selon Critères </title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(!localStorage.getItem("ID_DEM")){
+              location.replace("loginDemandeur.html");
+            }
+          </script>
+        
+       
+    </head>
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="sidemenu-header">
+                <a href="AccueilDemandeur.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/Recrute.fr.png" alt="image">
+                </a>
+
+                <div class="responsive-burger-menu d-block d-lg-none">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </div>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+                    <li class="nav-item ">
+                        <a href="dashboardDemandeur.html" class="nav-link">
+                            <span class="icon"><i class="ri-home-line"></i></span>
+                            <span class="menu-title">Tableau De Bord</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="modifierProfil.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-line"></i></span>
+                            <span class="menu-title">Mon Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="ModifierCV.html" class="nav-link">
+                            <span class="icon"><i class="ri-file-edit-line"></i></span>
+                            <span class="menu-title">Modifier CV</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="GenererCV.html" class="nav-link">
+                            <span class="icon"><i class="ri-newspaper-line"></i></span>
+                            <span class="menu-title">Générer CV</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="offresfavoris.html" class="nav-link">
+                            <span class="icon"><i class="ri-heart-3-line"></i></span>
+                            <span class="menu-title">Offres Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="offrespostulees.html" class="nav-link">
+                            <span class="icon"><i class="ri-send-plane-line"></i></span>
+                            <span class="menu-title">Offres Postulées</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="confirmerEntretiens.html" class="nav-link">
+                            <span class="icon"><i class="ri-checkbox-circle-line"></i></span>
+                            <span class="menu-title">Confirme Entretiens</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienENAttenteDEM.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-todo-line"></i></span>
+                            <span class="menu-title">Entretiens En Attente</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienDaujourdhuiDEM.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-check-line"></i></span>
+                            <span class="menu-title">Entretiens D'aujourd'hui</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PVconfirlers.html" class="nav-link">
+                            <span class="icon"><i class="ri-task-line"></i></span>
+                            <span class="menu-title">PV Confirmés</Sspan>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Messageries.html" class="nav-link">
+                            <span class="icon"><i class="ri-chat-download-line"></i></span>
+                            <span class="menu-title">Messageries</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" onClick="quiterStorge();" class="nav-link">
+                            <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                            <span class="menu-title">Deconexion</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  onClick="supprmierCempte()" class="nav-link">
+                            <span class="icon" style="color: red; "><i class="ri-delete-bin-line"></i></span>
+                            <span class="menu-title" style="color: red; ">Supprimer Profil</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="main-responsive-menu">
+                        <div class="responsive-burger-menu d-lg-none d-block">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item active">
+                                    <a href="AccueilDemandeur.html" class="nav-link">
+                                        Accueil 
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="contactDem.html" class="nav-link">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link">   <i class="ri-notification-2-line"> </i>
+                                        <span id="nbtotalhaut" class="badge badge-warning navbar-badge">0</span>   
+                                       &ensp; Notification                  
+                                    
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="Messageries.html" class="nav-link">
+                                            <b id="nbCandidatmes">0 </b> Messages Reçus</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="entretienDaujourdhuiDEM.html" class="nav-link">
+                                            <b id="nbentretienAujordhui">0 </b> Entretiens Aujourd'hui</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="confirmerEntretiens.html" class="nav-link">
+                                            <b id="nbentretienNONCON">0 </b> Entretiens qui n'est pas confirmé</a>
+                                        </li>
+
+                                    </ul>
+                                    
+                                </li>
+
+                            </ul>
+
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <div class="dropdown profile-nav-item">
+                                        <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="menu-profile">
+                                                <img src="" id="imgNav" class="rounded-circle" alt="image">
+                                                <span class="name">Mon Compte</span>
+                                            </div>
+                                        </a>
+            
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                                <div class="figure mb-3">
+                                                    <img src="" id="imgDEM" class="rounded-circle" alt="image">
+                                                </div>
+            
+                                                <div class="info text-center">
+                                                    <span class="name" id="nomDEM"></span>
+                                                    <p class="mb-3 email" id="emailDEM"></p>
+                                                </div>
+                                            </div>
+            
+                                            <div class="dropdown-body">
+                                                <ul class="profile-nav p-0 pt-3">
+                                                    <li class="nav-item ">
+                                                        <a href="dashboardDemandeur.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-home-line"></i></span>
+                                                            <span class="menu-title">Tableau De Bord</span>
+                                                        </a>
+                                                    </li>
+
+                                                    
+                                                    <li class="nav-item">
+                                                        <a href="modifierProfil.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-user-line"></i></span>
+                                                            <span class="menu-title">Mon Profil</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+            
+                                            <div class="dropdown-footer">
+                                                <ul class="profile-nav">
+                                                    <li class="nav-item">
+                                                        <a href="#" onClick="quiterStorge();" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Deconexion</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Salut</h1>
+                <ol class="breadcrumb">
+                    <li class="item" title="Retourner au Accueil"><a href="AccueilDemandeur.html">Accueil</a></li>
+                    <li class="item" >Recherche selon critères</li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+
+           
+            <!-- End Notification Alert Area -->
+
+            <div class="eeza-grid-sorting row align-items-center">
+                <div class="col-lg-9 col-md-6 result-count"></div>
+                <div class="col-lg-3 col-md-6 ordering">
+                    <p title="Cliquez ici ! Trouvez plus rapidement l'emploi qui vous convient "> <a href="AccueilDemandeur.html">Recherche multicritère</a></p>
+                </div>
+            </div>
+            <div class="dashboard-jobs-box">
+                <div class="invoice-header d-flex justify-content-between">
+                    <div class="invoice-left-text"> 
+                        <h3>Trouvez l'emploi Dès Maintenant.</h3>
+                    </div>
+                  
+                 </div>
+
+                <form >
+                    <div class="row justify-content-center">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="form-group">
+                                <input id="searchp" class="form-control" type="search" placeholder="Cherche Ici...">
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <div  id="listOFFERsSelonOFFRE">
+
+                </div>
+            </div>
+            
+            
+
+              <!-- Start Go Top Area -->
+            <div class="go-top">
+                <i class="ri-arrow-up-line"></i>
+            </div>
+            <!-- End Go Top Area -->
+
+
+        </div>
+        <!-- End Main Dashboard Content Wrapper Area -->
+
+        <!-- Start Copyright Area -->
+        <div class="footerCopy">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p><i class="ri-copyright-line"></i> 2021-2022 <a href="#"> Demandeur d’emploi </a>. </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/supprmierProfilDEM.js"></script>
+        <!--notifci-->
+        <script src="assets/js/notificationDEM.js"></script>
+        
+         <!--alert-->
+         <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+         <script>
+             
+            
+
+            /*runs each time a new character is entered*/
+            $("#searchp").keyup(function () {
+                    /*takes inpt from input box*/
+                    var seterm = $("#searchp").val();
+                    /*scans through each element*/
+                    for (var i = 0; i < $(".contact").length; i++) {
+                    /*Makes all elements visible*/
+
+                    $(".contact:eq(" + i + ")").css("display", "flex");
+                    $(".contact2:eq(" + i + ")").css("display", "flex");
+                    /*If it doesn't match the input it is hidden*/
+                    if (
+                        $(".contact:eq(" + i + ")")
+                        .text()
+                        .toLowerCase()
+                        .indexOf(seterm) < 0
+                    ) {
+                        $(".contact:eq(" + i + ")").css("display", "none");
+                    }
+                    }
+                });
+         </script>
+
+
+<script>
+var idDem=localStorage.getItem("ID_DEM");
+            var liste =["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+    function rec(){
+        var urlmatch = "http://192.168.43.96:5000/hostpredres";
+            var datamatch = {};
+            datamatch.word = localStorage.getItem("ID_DEM");
+            var jsonmatch = JSON.stringify(datamatch);
+            var xhrmatch = new XMLHttpRequest();
+            xhrmatch.open("POST", urlmatch, true);
+            xhrmatch.setRequestHeader('Content-type','application/json; charset=utf-8');
+            xhrmatch.onload = function () {
+            var admins= JSON.parse(xhrmatch.responseText);
+            if (xhrmatch.readyState == 4 && xhrmatch.status == "200") {
+                console.table(admins);
+                //document.getElementById("res").innerHTML = admins.res;
+                var t = admins.res.split(',');
+
+                var request = new XMLHttpRequest()
+                    // Open a new connection, using the GET request on the URL endpoint
+                    request.open('GET', 'http://192.168.43.96:3000/offres', true)
+                    request.onload = function()
+                    {
+                        // Begin accessing JSON data here
+                        var data = JSON.parse(this.response)
+                        var ee = document.getElementById("listOFFERsSelonOFFRE");
+                        data.forEach(j =>{
+                            if(j.ARCHV_OFF == "0"){
+                                var request3 = new XMLHttpRequest()
+                                // Open a new connection, using the GET request on the URL endpoint
+                                request3.open('GET', "http://192.168.43.96:3000/recruteurs/"+j.ID_RECRUTEUR, true)
+                                request3.onload = function()
+                                {
+                                    var data3 = JSON.parse(this.response)
+                                    for (i=0; i< t.length ; i++){
+                                        /*
+                                        if (i == 0){
+                                            var sp1 = t[i].split('[');
+                                            var sp2 = sp1[0].split("'");
+                                        } else if (i == t.length-1){
+                                            var sp1 = t[i].split(']');
+                                            var sp2 = sp1[0].split("'");
+                                        }else{
+                                            var sp2 = sp1[0].split("'");
+                                        }
+                                        */
+                                        string = t[i].replace(/[&\/\\#,+[]()$~%.'":*?<>{}]/g, '');
+                                        string = string.replace('[', '');
+                                        string = string.replace("'", '');
+                                        string = string.replace("'", '');
+                                        string = string.replace("]", '');
+
+                                        string = string.replace(/\s/g, '');
+
+                                        console.log(string);
+                                        //var sp1 = t[i].split('[');
+                                        //var sp11 = sp1[1].split(']');
+                                        //var sp2 = sp11[0].split("'");
+                
+                                        if (j._id == string){
+                                            var request1 = new XMLHttpRequest()
+                                            // Open a new connection, using the GET request on the URL endpoint
+                                            request1.open('GET', "http://192.168.43.96:3000/favoris", true)
+                                            request1.onload = function()
+                                            {    
+                                                // Begin accessing JSON data here
+                                                var data1 = JSON.parse(this.response)
+                                                var nb=0;
+                                                var idli=j._id +1;
+                                                var datenvsp1 = j.DAT_EXPIRA_OFF.split('-');
+                                                    if(datenvsp1[1]<10){
+                                                        datenvsp1[1]=datenvsp1[1][1];
+                                                    }
+                                                data1.forEach(k => {
+                                                    if((idDEM==k.ID_DEMANDEUR)&&(j._id==k.ID_OFFRE)) 
+                                                    {
+                                                        ch=` <div class="row contact">
+                                                                <div class="col-lg-12 col-md-12">
+                                                                    <div class="dashboard-job-card">
+                                                                        <div class="job-content">
+                                                                            <div class="row">
+                                                                                <div class="col-md-10 "></div>
+                                                                                <div class="col-md-2 " style="text-align: right;">
+                                                                                    <ul class="option-list">         
+                                                                                        <li><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Annuler Favori" type="button" onclick="favorioff('`+idDEM+`','`+j._id+`','`+idli+`')"><i id="`+idli+`" class="ri-heart-fill"></i></button></li>
+                                                                                                                    
+                                                                                    </ul>
+                                                                                </div>
+                                                                            </div> 
+                                                                            <div class="row">
+                                                                                <div class="col-md-2 "> 
+                                                                                    <div class="image" style="text-align:center;">
+                                                                                        <a href="profiloffreCritere.html?id=`+j._id+`"><img src="`+j.PHOTO_OFF+`" alt="image" class="imageCard" ></a>
+                                                                                    </div>  
+                                                                                </div>
+                                                                                <div class="col-md-6 ">
+                                                                                    <div class="postCard">  
+                                                                                        <ul class="location-information">
+                                                                                            <li><i class="ri-briefcase-line"></i> <h2><a href="profiloffreCritere.html?id=`+j._id+`">`+j.NOM_OFF+` </a></h2></li>  
+                                                                                        </ul>
+                                                                                        <ul class="location-information">
+                                                                                            <li><i class="ri-building-4-line"></i> `+data3.NOM_ENT+` </li>
+                                                                                        </ul>
+                                                                                        <ul class="location-information">
+                                                                                            <li><i class="ri-map-pin-line"></i> `+data3.VILLE_ENT+`</li>
+                                                                                        </ul>
+                                                                                        <ul class="location-information">
+                                                                                            <li><i class="flaticon-calendar"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                                                        </ul>
+                                                                                        <ul class="location-information">
+                                                                                            <li><i class="ri-money-dollar-circle-line"></i> `+j.SAL_MIN_OFF+` DT </li>
+                                                                                        </ul>
+                                                                                    </div>  
+                                                                                </div>
+                                                                                <div class="col-md-4 ">
+                                                                                    <br>
+                                                                                    <div class="featured-candidates-hire">
+                                                                                        
+                                                                                        
+                                                                                        <a href="profiloffreCritere.html?id=`+j._id+`" class="default-btn">Plus De Détails <i class="flaticon-list-1"></i></a>
+                                                                                        
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>`;        
+                                                        ee.insertAdjacentHTML('beforeend',ch);
+                                                        nb+=1;    
+                                                        
+                                                    }
+                                                })
+                                                if(nb==0)
+                                                {
+                                                    ch=` <div class="row contact">
+                                            
+                                                        <div class="col-lg-12 col-md-12">
+                                    
+                                                            <div class="dashboard-job-card">
+                                                                <div class="job-content">
+                                                                    <div class="row">
+                                                                        <div class="col-md-10 "></div>
+                                                                    <div class="col-md-2 " style="text-align: right;">
+                                                                    <ul class="option-list">         
+                                                                        <li><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Favori Offre Postulees" type="button" onclick="favorioff('`+idDEM+`','`+j._id+`','`+idli+`')"><i id="`+idli+`" class="ri-heart-3-line"></i></button></li>
+                                                                                
+                                                                    </ul>
+                                                                    </div>
+                                                                    </div> 
+                                                                    <div class="row">
+                                                                        <div class="col-md-2 "> 
+                                                                            <div class="image" style="text-align:center;">
+                                                                                <a href="profiloffreCritere.html?id=`+j._id+`"><img src="`+j.PHOTO_OFF+`" alt="image" class="imageCard" ></a>
+                                                                            </div>  
+                                    
+                                                                        </div>
+                                                                    <div class="col-md-6 ">
+                                                                        <div class="postCard">  
+                                                                            <ul class="location-information">
+                                                                                <li><i class="ri-briefcase-line"></i> <h2><a href="profiloffreCritere.html?id=`+j._id+`">`+j.NOM_OFF+` </a></h2></li>  
+                                                                            </ul>
+                                                                            <ul class="location-information">
+                                                                                <li><i class="ri-building-4-line"></i> `+data3.NOM_ENT+` </li>
+                                                                            </ul>
+                                                                            <ul class="location-information">
+                                                                                <li><i class="ri-map-pin-line"></i> `+data3.VILLE_ENT+`</li>
+                                                                            </ul>
+                                                                            <ul class="location-information">
+                                                                        <li><i class="flaticon-calendar"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                                    </ul>
+                                                                    <ul class="location-information">
+                                                                                        
+                                                                        <li><i class="ri-money-dollar-circle-line"></i> `+j.SAL_MIN_OFF+` DT </li>
+                                                                    </ul>
+                                                                        </div>  
+                                                                    </div>
+                                                                                    <div class="col-md-4 ">
+                                                                                        <br>
+                                                                                        <div class="featured-candidates-hire">
+                                                                                            
+                                                                                            
+                                                                                            <a href="profiloffreCritere.html?id=`+j._id+`" class="default-btn">Plus De Détails <i class="flaticon-list-1"></i></a>
+                                                                                            
+                                                                                        </div>
+                                                                                    </div>
+                                                                    </div>
+                                                                    
+                                                                    
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>`;
+                                                    ee.insertAdjacentHTML('beforeend',ch);
+                                                    
+                                                }
+                                            }
+                                            request1.send()  
+                                        }
+                                
+                                    }
+                                }
+                                request3.send();
+                            }
+                        })
+                    }
+                    request.send();
+  
+  
+  
+    } else { 
+      alert(admins.message);
+   console.table(admins);
+   }
+   }
+  xhrmatch.send(jsonmatch);
+   }
+  
+   rec();
+
+   function favorioff(a,b,cd){
+                 elm=document.getElementById(cd);
+                 if(elm.className === 'ri-heart-fill'){
+                     elm.className = 'ri-heart-3-line';
+                     var request55 = new XMLHttpRequest()
+
+                    // Open a new connection, using the GET request on the URL endpoint
+                    request55.open('GET', 'http://192.168.43.96:3000/favoris', true)
+                    request55.onload = function()
+                    {
+                        var data55 = JSON.parse(this.response);
+                        console.log(data55);
+                        data55.forEach(i55 => {
+                            console.log(a);
+                            console.log(b);
+                            if(i55.ID_DEMANDEUR == a && i55.ID_OFFRE == b  ){
+                                var url3 = "http://192.168.43.96:3000/favoris/" + i55._id ;
+                                var xhr3 = new XMLHttpRequest();
+                                xhr3.open("DELETE", url3, true);
+                                xhr3.onload = function () {
+                                    if (xhr3.readyState == 4 && xhr3.status == "200") {
+                                        
+                                        console.log("ok");
+                                       
+                                    } else {
+                                        console.log("error");
+                                    }
+                                }
+                                xhr3.send(null);
+                            }
+                        })
+                    }
+                    request55.send();
+                 }
+                 else
+                 {
+                    elm.className = 'ri-heart-fill';
+                    var url = "http://192.168.43.96:3000/favoris";
+                    var data66 = {};
+                    data66.FAVORI_OFF = "1";
+                    data66.ID_OFFRE = b;
+                    data66.ID_DEMANDEUR = a;
+                    var json = JSON.stringify(data66);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", url, true);
+                    xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                    xhr.onload = function () {
+                        var admins= JSON.parse(xhr.responseText);
+                        if (xhr.readyState == 4 && xhr.status == "200") {
+                            console.table(admins);
+                            
+                        } else {
+                            alert(admins.message);
+                            console.table(admins);
+                        }
+                    }
+                    xhr.send(json);
+                    
+                 }
+             }
+   </script>
+
+
+    </body>
+</html>

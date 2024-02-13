@@ -1,0 +1,1186 @@
+<!doctype html>
+<html lang="zxx">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Links of CSS files -->
+        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+        <link rel="stylesheet" href="assets/css/aos.css">
+        <link rel="stylesheet" href="assets/css/animate.min.css">
+        <link rel="stylesheet" href="assets/css/meanmenu.css">
+        <link rel="stylesheet" href="assets/css/flaticon.css">
+        <link rel="stylesheet" href="assets/css/remixicon.css">
+        <link rel="stylesheet" href="assets/css/odometer.min.css">
+        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
+        <link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="assets/css/magnific-popup.min.css">
+        <link rel="stylesheet" href="assets/css/fancybox.min.css">
+        <link rel="stylesheet" href="assets/css/selectize.min.css">
+        <link rel="stylesheet" href="assets/css/metismenu.min.css">
+        <link rel="stylesheet" href="assets/css/simplebar.min.css">
+        <link rel="stylesheet" href="assets/css/dropzone.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <link rel="stylesheet" href="assets/css/navbar.css">
+        <link rel="stylesheet" href="assets/css/footer.css">
+        <link rel="stylesheet" href="assets/css/dashboard.css">
+		<link rel="stylesheet" href="assets/css/responsive.css">
+        <link rel="stylesheet" href="assets/css/notifcation.css">
+		
+		<title>Demandeur d’emploi | Accueil  </title>
+
+        <link rel="icon" type="image/png" href="assets/Recrutelogo.png">
+        <script>
+            if(!localStorage.getItem("ID_DEM")){
+              location.replace("loginDemandeur.html");
+            }
+          </script>
+        
+       
+    </head>
+
+    <body>
+
+        <!-- Start Preloader Area -->
+        <div class="preloader-area">
+            <div class="spinner">
+                <div class="inner">
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                    <div class="disc"></div>
+                </div>
+            </div>
+        </div>
+        <!-- End Preloader Area -->
+
+        <!-- Start Sidemenu Area -->
+        <div class="sidemenu-area">
+            <div class="sidemenu-header">
+                <a href="AccueilDemandeur.html" class="navbar-brand d-flex align-items-center">
+                    <img src="assets/Recrute.fr.png" alt="image">
+                </a>
+
+                <div class="responsive-burger-menu d-block d-lg-none">
+                    <span class="top-bar"></span>
+                    <span class="middle-bar"></span>
+                    <span class="bottom-bar"></span>
+                </div>
+            </div>
+
+            <div class="sidemenu-body">
+                <ul class="sidemenu-nav metisMenu h-100" id="sidemenu-nav" data-simplebar>
+                    <li class="nav-item ">
+                        <a href="dashboardDemandeur.html" class="nav-link">
+                            <span class="icon"><i class="ri-home-line"></i></span>
+                            <span class="menu-title">Tableau De Bord</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="modifierProfil.html" class="nav-link">
+                            <span class="icon"><i class="ri-user-line"></i></span>
+                            <span class="menu-title">Mon Profil</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="ModifierCV.html" class="nav-link">
+                            <span class="icon"><i class="ri-file-edit-line"></i></span>
+                            <span class="menu-title">Modifier CV</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="GenererCV.html" class="nav-link">
+                            <span class="icon"><i class="ri-newspaper-line"></i></span>
+                            <span class="menu-title">Générer CV</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="offresfavoris.html" class="nav-link">
+                            <span class="icon"><i class="ri-heart-3-line"></i></span>
+                            <span class="menu-title">Offres Favoris</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="offrespostulees.html" class="nav-link">
+                            <span class="icon"><i class="ri-send-plane-line"></i></span>
+                            <span class="menu-title">Offres Postulées</span>
+                        </a>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a href="confirmerEntretiens.html" class="nav-link">
+                            <span class="icon"><i class="ri-checkbox-circle-line"></i></span>
+                            <span class="menu-title">Confirme Entretiens</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienENAttenteDEM.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-todo-line"></i></span>
+                            <span class="menu-title">Entretiens En Attente</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="entretienDaujourdhuiDEM.html" class="nav-link">
+                            <span class="icon"><i class="ri-calendar-check-line"></i></span>
+                            <span class="menu-title">Entretiens D'aujourd'hui</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="PVconfirlers.html" class="nav-link">
+                            <span class="icon"><i class="ri-task-line"></i></span>
+                            <span class="menu-title">PV Confirmés</Sspan>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="Messageries.html" class="nav-link">
+                            <span class="icon"><i class="ri-chat-download-line"></i></span>
+                            <span class="menu-title">Messageries</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a href="#" onClick="quiterStorge();" class="nav-link">
+                            <span class="icon"><i class="ri-logout-circle-r-line"></i></span>
+                            <span class="menu-title">Deconexion</span>
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a  onClick="supprmierCempte()" class="nav-link">
+                            <span class="icon" style="color: red; "><i class="ri-delete-bin-line"></i></span>
+                            <span class="menu-title" style="color: red; ">Supprimer Profil</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- End Sidemenu Area -->
+
+        <!-- Start Main Dashboard Content Wrapper Area -->
+        <div class="main-dashboard-content d-flex flex-column">
+
+            <!-- Start Navbar Area -->
+            <div class="navbar-area">
+                <div class="main-responsive-nav">
+                    <div class="main-responsive-menu">
+                        <div class="responsive-burger-menu d-lg-none d-block">
+                            <span class="top-bar"></span>
+                            <span class="middle-bar"></span>
+                            <span class="bottom-bar"></span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="main-navbar">
+                    <nav class="navbar navbar-expand-md navbar-light">
+                        <div class="collapse navbar-collapse mean-menu" id="navbarSupportedContent">
+                            <ul class="navbar-nav me-auto">
+                                <li class="nav-item active">
+                                    <a href="AccueilDemandeur.html" class="nav-link">
+                                        Accueil 
+                                    </a>
+                                </li>
+    
+                                <li class="nav-item">
+                                    <a href="contactDem.html" class="nav-link">Contact</a>
+                                </li>
+
+                                <li class="nav-item">
+                                    <a  class="nav-link">   <i class="ri-notification-2-line"> </i>
+                                        <span id="nbtotalhaut" class="badge badge-warning navbar-badge">0</span>   
+                                       &ensp; Notification                  
+                                    
+                                    </a>
+                                    <ul class="dropdown-menu">
+                                        <li class="nav-item">
+                                            <a href="Messageries.html" class="nav-link">
+                                            <b id="nbCandidatmes">0 </b> Messages Reçus</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="entretienDaujourdhuiDEM.html" class="nav-link">
+                                            <b id="nbentretienAujordhui">0 </b> Entretiens Aujourd'hui</a>
+                                        </li>
+
+                                        <li class="nav-item">
+                                            <a href="confirmerEntretiens.html" class="nav-link">
+                                            <b id="nbentretienNONCON">0 </b> Entretiens qui n'est pas confirmé</a>
+                                        </li>
+
+                                    </ul>
+                                    
+                                </li>
+
+                            </ul>
+                            
+
+                            <div class="others-options d-flex align-items-center">
+                                <div class="option-item">
+                                    <div class="dropdown profile-nav-item">
+                                        <a href="#" class="dropdown-bs-toggle" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                            <div class="menu-profile">
+                                                <img src="" id="imgNav" class="rounded-circle" alt="image">
+                                                <span class="name">Mon Compte</span>
+                                            </div>
+                                        </a>
+            
+                                        <div class="dropdown-menu">
+                                            <div class="dropdown-header d-flex flex-column align-items-center">
+                                                <div class="figure mb-3">
+                                                    <img src="" id="imgDEM" class="rounded-circle" alt="image">
+                                                </div>
+            
+                                                <div class="info text-center">
+                                                    <span class="name" id="nomDEM"></span>
+                                                    <p class="mb-3 email" id="emailDEM"></p>
+                                                </div>
+                                            </div>
+            
+                                            <div class="dropdown-body">
+                                                <ul class="profile-nav p-0 pt-3">
+                                                    <li class="nav-item ">
+                                                        <a href="dashboardDemandeur.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-home-line"></i></span>
+                                                            <span class="menu-title">Tableau De Bord</span>
+                                                        </a>
+                                                    </li>
+
+                                                    
+                                                    <li class="nav-item">
+                                                        <a href="modifierProfil.html" class="nav-link">
+                                                            <span class="icon"><i class="ri-user-line"></i></span>
+                                                            <span class="menu-title">Mon Profil</span>
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+            
+                                            <div class="dropdown-footer">
+                                                <ul class="profile-nav">
+                                                    <li class="nav-item">
+                                                        <a href="#" onClick="quiterStorge();" class="nav-link"><i class="ri-logout-box-r-line"></i> <span>Deconexion</span></a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- End Navbar Area -->
+
+            <!-- Breadcrumb Area -->
+            <div class="breadcrumb-area">
+                <h1>Salut</h1>
+                <ol class="breadcrumb">
+                    <li class="item" >Accueil</li>
+                </ol>
+            </div>
+            <!-- End Breadcrumb Area -->
+
+           
+            <!-- End Notification Alert Area -->
+
+            <div class="eeza-grid-sorting row align-items-center">
+                <div class="col-lg-9 col-md-6 result-count"></div>
+                <div class="col-lg-3 col-md-6 ordering">
+                    <p title="Cliquez ici ! Des offres selon vos critères "> <a href="RechercheSelonCeiteres.html">Recherche selon critères</a></p>
+                </div>
+            </div>
+            <div class="featured-candidates-search-box">
+                <div class="manage-jobs-box">
+                    <h3>Trouvez plus rapidement l'emploi qui vous convient.  </h3>
+                    <br>
+                    
+                    <form class="candidates-search-form">
+                        <div class="row justify-content-center">
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <label><i class="flaticon-edit"></i></label>
+                                    <input class="form-control" id="motcle" type="text" placeholder="Mots clés">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6 col-md-12">
+                                <div class="form-group">
+                                    <label><i class="flaticon-placeholder"></i></label>
+                                    <select class="form-control" id="TYPE_VIL">
+                                        <option value="" selected disabled>Choisir une Ville </option>
+                                        <option value="Ariana">Ariana</option>
+                                        <option value="Béja">Béja</option>
+                                        <option value="Ben Arous">Ben Arous</option>
+                                        <option value="Bizerte">Bizerte</option>
+                                        <option value="Gabès">Gabès</option>
+                                        <option value="Gafsa">Gafsa</option>
+                                        <option value="Jendouba">Jendouba</option>
+                                        <option value="Kairouan">Kairouan</option>
+                                        <option value="Kasserine">Kasserine</option>
+                                        <option value="Kebili">Kebili</option>
+                                        <option value="La Manouba">La Manouba</option>
+                                        <option value="Le Kef">Le Kef</option>
+                                        <option value="Mahdia">Mahdia</option>
+                                        <option value="Médenine">Médenine</option>
+                                        <option value="Monastir">Monastir</option>
+                                        <option value="Nabeul">Nabeul</option>
+                                        <option value="Sfax">Sfax</option>
+                                        <option value="Sidi Bouzid">Sidi Bouzid</option>
+                                        <option value="Siliana">Siliana</option>
+                                        <option value="Sousse">Sousse</option>
+                                        <option value="Tataouine">Tataouine</option>
+                                        <option value="Tozeur">Tozeur</option>
+                                        <option value="Tunis">Tunis</option>
+                                        <option value="Zaghouan">Zaghouan</option>
+            
+                                    
+                                    </select>
+                                   
+                                </div>
+                            </div>
+
+                            <div class="search-btn">
+                                <button type="button" onclick="recherchemmulti();"><i class="ri-search-line"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="dashboard-jobs-box" id="listeOffrerech">
+                
+                
+                    <div class="container">
+                        <div class="row align-items-center">
+                            
+        
+                            <div class="col-lg-12 col-md-12">
+                                <div class="about-content" data-aos="fade-left" data-aos-delay="70" data-aos-duration="700">
+                                   
+                                    <div class="row">
+                                        
+                                        <div class="col-lg-3 col-md-12 "></div>
+                                        <div class="col-lg-6  col-md-12 ">
+                                            <div class="about-fun-fact" id="datacountt">
+                                               
+                                            </div>
+                                        </div>
+                                    </div>
+        
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                
+                
+            
+            </div>
+
+            
+             <!-- Start About Area -->
+        
+          <!-- End About Area -->
+
+              <!-- Start Go Top Area -->
+            <div class="go-top">
+                <i class="ri-arrow-up-line"></i>
+            </div>
+            <!-- End Go Top Area -->
+
+
+        </div>
+        <!-- End Main Dashboard Content Wrapper Area -->
+        
+        <!-- Start Copyright Area -->
+        <div class="footerCopy">
+            <div class="row">
+                <div class="col-lg-12 col-md-12">
+                    <p><i class="ri-copyright-line"></i> 2021-2022 <a href="#"> Demandeur d’emploi </a>. </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Links of JS files -->
+        <script src="assets/js/jquery.min.js"></script>
+        <script src="assets/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/jquery.meanmenu.js"></script> 
+        <script src="assets/js/owl.carousel.min.js"></script>
+        <script src="assets/js/jquery.appear.js"></script>
+        <script src="assets/js/odometer.min.js"></script>
+        <script src="assets/js/jquery.magnific-popup.min.js"></script>
+        <script src="assets/js/fancybox.min.js"></script>
+        <script src="assets/js/selectize.min.js"></script>
+        <script src="assets/js/TweenMax.min.js"></script>
+        <script src="assets/js/aos.js"></script>
+        <script src="assets/js/metismenu.min.js"></script>
+        <script src="assets/js/simplebar.min.js"></script>
+        <script src="assets/js/dropzone.min.js"></script>
+        <script src="assets/js/sticky-sidebar.min.js"></script>
+		<script src="assets/js/jquery.ajaxchimp.min.js"></script>
+		<script src="assets/js/form-validator.min.js"></script>
+        <script src="assets/js/contact-form-script.js"></script>
+        <script src="assets/js/wow.min.js"></script>
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/supprmierProfilDEM.js"></script>
+        <!--notifci-->
+        <script src="assets/js/notificationDEM.js"></script>
+        
+         <!--alert-->
+         <script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+         <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+         <script>
+             var idDEM=localStorage.getItem("ID_DEM");
+
+             var liste =["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+             var requestoffre = new XMLHttpRequest()
+                    // Open a new connection, using the GET request on the URL endpoint
+                    requestoffre.open('GET', 'http://192.168.43.96:3000/offres', true)
+                    requestoffre.onload = function()
+                    {
+                        // Begin accessing JSON data here
+                        var dataoffre = JSON.parse(this.response)
+                        var j=0;
+                        dataoffre.forEach(ioo => {
+                            if(ioo.ARCHV_OFF =="0")
+                            {
+                                j+=1;
+                            }
+
+                        })
+                        choff=`
+                        <h3>
+                            <span class="odometer"  >`+j+`</span>
+                            <span class="sign-icon">+</span>
+                            <span>Offres D'emploi</span>
+                        </h3>
+                        
+                        `;
+                        document.getElementById("datacountt").innerHTML=choff;
+                    }
+                    requestoffre.send()
+             
+
+
+               function recherchemmulti()
+               {
+
+                    var request = new XMLHttpRequest()
+                    // Open a new connection, using the GET request on the URL endpoint
+                    request.open('GET', 'http://192.168.43.96:3000/offres', true)
+                    request.onload = function()
+                    {
+                        // Begin accessing JSON data here
+                        var data = JSON.parse(this.response)
+                        var ee = document.getElementById("listeOffrerech");
+                        ee.innerHTML = "";
+                        var villechoisie=document.getElementById("TYPE_VIL").value;
+                        var motcle=document.getElementById("motcle").value;
+                        var test1=true;
+                        var test=0;
+                        if(motcle==""){
+                                                        
+                            test1=false;
+                        }else{
+                            test=1;
+                        }
+                        var requestlg = new XMLHttpRequest()
+                        // Open a new connection, using the GET request on the URL endpoint
+                        requestlg.open('GET', 'http://192.168.43.96:3000/langueoffres', true)
+                        requestlg.onload = function()
+                        {
+                            // Begin accessing JSON data here
+                            var datalg = JSON.parse(this.response)
+                            var requestcomp = new XMLHttpRequest()
+                            // Open a new connection, using the GET request on the URL endpoint
+                            requestcomp.open('GET', 'http://192.168.43.96:3000/competenceoffres', true)
+                            requestcomp.onload = function()
+                            {
+                                // Begin accessing JSON data here
+                                var dataCP = JSON.parse(this.response)
+                                var requestdep = new XMLHttpRequest()
+                                // Open a new connection, using the GET request on the URL endpoint
+                                requestdep.open('GET', 'http://192.168.43.96:3000/etudeexiges', true)
+                                requestdep.onload = function()
+                                {
+                                    // Begin accessing JSON data here
+                                    var dataDEP = JSON.parse(this.response)
+                                    var avg;
+                                    var nblg;
+                                    var ncomd;
+                                    var testville;
+                                    
+                                    
+                                    var verif = false;
+                                    var request3 = new XMLHttpRequest()
+                                    // Open a new connection, using the GET request on the URL endpoint
+                                    request3.open('GET', "http://192.168.43.96:3000/recruteurs", true)
+                                    request3.onload = function()
+                                    {
+                                        var data3 = JSON.parse(this.response)
+                                        var requestl = new XMLHttpRequest();
+                                        requestl.open('GET', "http://192.168.43.96:3000/langues", true);
+                                        requestl.onload = function()
+                                        {
+                                            // Begin accessing JSON data here
+                                            var datal = JSON.parse(this.response);
+                                            var requestc = new XMLHttpRequest();
+                                            requestc.open('GET', "http://192.168.43.96:3000/competences", true);
+                                            requestc.onload = function()
+                                            {
+                                                // Begin accessing JSON data here
+                                                var datac = JSON.parse(this.response);
+                                                var requestD = new XMLHttpRequest();
+                                                requestD.open('GET', "http://192.168.43.96:3000/diplomes", true);
+                                                requestD.onload = function()
+                                                {
+                                                    // Begin accessing JSON data here
+                                                    var dataD = JSON.parse(this.response);
+                                                    data.forEach(i => {
+                                                        avg = 0;
+                                                        nblg=0;
+                                                        ncomd=0;
+                                                        
+                                                        data3.forEach(i3 => {
+                                                            testville=0;
+                                                            if ((Object.entries(data).length>1)){
+                                                                if((i.ARCHV_OFF =="0") &&(i3.ARCHIV_REC =="0")&&(i.ID_RECRUTEUR==i3._id))
+                                                                {
+                                                                    console.log(i3.VILLE_ENT);
+                                                                    if(villechoisie!=""){
+                                                                        if(i3.VILLE_ENT.match(villechoisie)){
+                                                                            testville=1;
+                                                                            console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+                                                                        }else{
+                                                                            testville=2;
+                                                                            console.log("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa");
+                                                                        }
+                                                                    }
+                                                                    
+                                                                    if(test==1)
+                                                                    {
+                                                                
+                                                                        if(i.NOM_AVG_OFF.match(motcle))
+                                                                        {
+                                                                            avg+=1;
+                                                                            
+                                                                        }
+                                                                        if(i.NOM_MC_OFF.match(motcle)) 
+                                                                        {
+                                                                            avg+=1;
+                                                                        }
+                                                                        if(i.NOM_TE_OFF.match(motcle)) 
+                                                                        {
+                                                                            avg+=1;
+                                                                        }
+                                                                        if(i.SAL_MIN_OFF.match(motcle)) 
+                                                                        {
+                                                                            avg+=1;
+                                                                        }
+                                                                        if(i.MISSION_OFF.match(motcle)) 
+                                                                        {
+                                                                            avg+=1;
+                                                                        }
+                                                                        if(i.NOM_OFF.match(motcle)) 
+                                                                        {
+                                                                            avg+=1;
+                                                                            
+                                                                        }
+                                                                        if(i.DESC_OFF.match(motcle)) 
+                                                                        {
+                                                                            avg+=1;
+                                                                        }
+                                                                        console.log(avg);
+                                                                        if(avg==0) {
+                                                                            
+                                                                            datalg.forEach(lg => {
+                                                                                datal.forEach(l => {
+                                                                                    if(l.NOM_LANG.match(motcle)&& (i._id==lg.ID_OFFRE) && (l._id == lg.ID_LANGUE)) 
+                                                                                    {
+                                                                                        nblg+=1;
+                                                                                        console.log("ali1");
+                                                                                        
+                                                                                    }
+                                                                                })
+                                                                            }) 
+                                                                            dataCP.forEach(comp => {
+                                                                                datac.forEach(co => {
+                                                                                    if ((co.NOM_COMP.match(motcle))&&(comp.ID_COMPETENCE==co._id) && (i._id==comp.ID_OFFRE)){
+                                                                                        nblg+=1;
+                                                                                        console.log("ali2");
+                                                                                    
+                                                                                    }
+                                                                                })
+                                                                            })   
+                                                                            dataDEP.forEach(comp1 => {
+                                                                                dataD.forEach(d1 => {
+                                                                                    if((i._id==comp1.ID_OFFRE) && (comp1.ID_DIPLOME == d1._id)){
+                                                                                        if ((d1.TYPE_DIP.match(motcle))|| (comp1.SPECIA_DEM_OFF.match(motcle))) {
+                                                                                            nblg+=1;
+                                                                                            console.log("ali3");
+                                                                                        }
+                                                                                    }
+                                                                                })
+                                                                            })     
+                                                                            if((nblg!=0 && testville==0) || (nblg!=0 && testville==1)){
+                                                                                console.log("azedfret");
+                                                                                var request1 = new XMLHttpRequest()
+                                                                                // Open a new connection, using the GET request on the URL endpoint
+                                                                                request1.open('GET', "http://192.168.43.96:3000/favoris", true)
+                                                                                request1.onload = function()
+                                                                                { 
+                                                                                    // Begin accessing JSON data here
+                                                                                    var data1 = JSON.parse(this.response)
+                                                                                    var nb=0;
+                                                                                    var idli=i._id +1;
+                                                                                    var datenvsp1 = i.DAT_EXPIRA_OFF.split('-');
+                                                                                        if(datenvsp1[1]<10){
+                                                                                            datenvsp1[1]=datenvsp1[1][1];
+                                                                                        }
+                                                                                    data1.forEach(k => {
+                                                                                        if((idDEM==k.ID_DEMANDEUR)&&(i._id==k.ID_OFFRE)) 
+                                                                                        {        
+                                                                                            ch=` <div class="row">
+                                                                                                    <div class="col-lg-12 col-md-12">
+                                                                                                        <div class="dashboard-job-card">
+                                                                                                            <div class="job-content">
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-10 "></div>
+                                                                                                                    <div class="col-md-2 " style="text-align: right;">
+                                                                                                                        <ul class="option-list">         
+                                                                                                                            <li><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Annuler Favori" type="button" onclick="favorioff('`+idDEM+`','`+i._id+`','`+idli+`')"><i id="`+idli+`" class="ri-heart-fill"></i></button></li>
+                                                                                                                                                        
+                                                                                                                        </ul>
+                                                                                                                    </div>
+                                                                                                                </div> 
+                                                                                                                <div class="row">
+                                                                                                                    <div class="col-md-2 "> 
+                                                                                                                        <div class="image" style="text-align:center;">
+                                                                                                                            <a href="profiloffreREcherch.html?id=`+i._id+`"><img src="`+i.PHOTO_OFF+`" alt="image" class="imageCard" ></a>
+                                                                                                                        </div>  
+                                                                                                                    </div>
+                                                                                                                    <div class="col-md-6 ">
+                                                                                                                        <div class="postCard">  
+                                                                                                                            <ul class="location-information">
+                                                                                                                                <li><i class="ri-briefcase-line"></i> <h2><a href="profiloffreREcherch.html?id=`+i._id+`">`+i.NOM_OFF+` </a></h2></li>  
+                                                                                                                            </ul>
+                                                                                                                            <ul class="location-information">
+                                                                                                                                <li><i class="ri-building-4-line"></i> `+i3.NOM_ENT+` </li>
+                                                                                                                            </ul>
+                                                                                                                            <ul class="location-information">
+                                                                                                                                <li><i class="ri-map-pin-line"></i> `+i3.VILLE_ENT+`</li>
+                                                                                                                            </ul>
+                                                                                                                            <ul class="location-information">
+                                                                                                                                <li><i class="flaticon-calendar"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                                                                                            </ul>
+                                                                                                                            <ul class="location-information">
+                                                                                                                                <li><i class="ri-money-dollar-circle-line"></i> `+i.SAL_MIN_OFF+` DT </li>
+                                                                                                                            </ul>
+                                                                                                                        </div>  
+                                                                                                                    </div>
+                                                                                                                    <div class="col-md-4 ">
+                                                                                                                        <br>
+                                                                                                                        <div class="featured-candidates-hire">
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            <a href="profiloffreREcherch.html?id=`+i._id+`" class="default-btn">Plus De Détails <i class="flaticon-list-1"></i></a>
+                                                                                                                            
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>`;        
+                                                                                            ee.insertAdjacentHTML('beforeend',ch);
+                                                                                            nb+=1;   
+                                                                                            
+                                                                                        }
+                                                                                    })
+                                                                                    if(nb==0)
+                                                                                    {
+                                                                                        console.log("aut");
+                                                                                        ch=` <div class="row">
+                                                                                                <div class="col-lg-12 col-md-12">
+                                                                                                    <div class="dashboard-job-card">
+                                                                                                        <div class="job-content">
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-md-10 "></div>
+                                                                                                                <div class="col-md-2 " style="text-align: right;">
+                                                                                                                    <ul class="option-list">         
+                                                                                                                        <li><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Favori Offre Postulees" type="button" onclick="favorioff('`+idDEM+`','`+i._id+`','`+idli+`')"><i id="`+idli+`" class="ri-heart-3-line"></i></button></li>
+                                                                                                                    </ul>
+                                                                                                                </div>
+                                                                                                            </div> 
+                                                                                                            <div class="row">
+                                                                                                                <div class="col-md-2 "> 
+                                                                                                                    <div class="image" style="text-align:center;">
+                                                                                                                        <a href="profiloffreREcherch.html?id=`+i._id+`"><img src="`+i.PHOTO_OFF+`" alt="image" class="imageCard" ></a>
+                                                                                                                    </div>  
+                                                                                                                </div>
+                                                                                                                <div class="col-md-6 ">
+                                                                                                                    <div class="postCard">  
+                                                                                                                        <ul class="location-information">
+                                                                                                                            <li><i class="ri-briefcase-line"></i> <h2><a href="profiloffreREcherch.html?id=`+i._id+`">`+i.NOM_OFF+` </a></h2></li>  
+                                                                                                                        </ul>
+                                                                                                                        <ul class="location-information">
+                                                                                                                            <li><i class="ri-building-4-line"></i> `+i3.NOM_ENT+` </li>
+                                                                                                                        </ul>
+                                                                                                                        <ul class="location-information">
+                                                                                                                            <li><i class="ri-map-pin-line"></i> `+i3.VILLE_ENT+`</li>
+                                                                                                                        </ul>
+                                                                                                                        <ul class="location-information">
+                                                                                                                            <li><i class="flaticon-calendar"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                                                                                        </ul>
+                                                                                                                        <ul class="location-information">
+                                                                                                                            <li><i class="ri-money-dollar-circle-line"></i> `+i.SAL_MIN_OFF+` DT </li>
+                                                                                                                        </ul>
+                                                                                                                    </div>  
+                                                                                                                </div>
+                                                                                                                <div class="col-md-4 ">
+                                                                                                                    <br>
+                                                                                                                    <div class="featured-candidates-hire">
+                                                                                                                        <a href="profiloffreREcherch.html?id=`+i._id+`" class="default-btn">Plus De Détails <i class="flaticon-list-1"></i></a>
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                            </div>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>`;
+                                                                                            ee.insertAdjacentHTML('beforeend',ch);
+                                                                                    }
+                                                                                }
+                                                                                request1.send()  
+                                                                                verif=true;
+                                                                            }
+                                                                        }
+
+                                                                        if ( (avg!=0 && testville==1) || (avg!=0 && testville==0))
+                                                                        {
+                                                                            console.log("testOffrecorrecte");
+                                                                            var request1 = new XMLHttpRequest()
+                                                                            console.log("aa00a");
+                                                                            // Open a new connection, using the GET request on the URL endpoint
+                                                                            request1.open('GET', "http://192.168.43.96:3000/favoris", true)
+                                                                            request1.onload = function()
+                                                                            {
+                                                                                // Begin accessing JSON data here
+                                                                                var data1 = JSON.parse(this.response)
+                                                                                var nb=0;
+                                                                                var idli=i._id +1;
+                                                                                var datenvsp1 = i.DAT_EXPIRA_OFF.split('-');
+                                                                                    if(datenvsp1[1]<10){
+                                                                                        datenvsp1[1]=datenvsp1[1][1];
+                                                                                    }
+                                                                                data1.forEach(k => {
+                                                                                    
+                                                                                    
+                                                                                    if((idDEM==k.ID_DEMANDEUR)&&(i._id==k.ID_OFFRE)) 
+                                                                                    {
+                                                                                        
+
+                                                                                        ch=` <div class="row">
+                                                                            
+                                                                                            <div class="col-lg-12 col-md-12">
+                                                                        
+                                                                                                <div class="dashboard-job-card">
+                                                                                                    <div class="job-content">
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-10 "></div>
+                                                                                                        <div class="col-md-2 " style="text-align: right;">
+                                                                                                        <ul class="option-list">         
+                                                                                                            <li><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Annuler Favori" type="button" onclick="favorioff('`+idDEM+`','`+i._id+`','`+idli+`')"><i id="`+idli+`" class="ri-heart-fill"></i></button></li>
+                                                                                                                                        
+                                                                                                        </ul>
+                                                                                                        </div>
+                                                                                                        </div> 
+                                                                                                        <div class="row">
+                                                                                                            <div class="col-md-2 "> 
+                                                                                                                <div class="image" style="text-align:center;">
+                                                                                                                    <a href="profiloffreREcherch.html?id=`+i._id+`"><img src="`+i.PHOTO_OFF+`" alt="image" class="imageCard" ></a>
+                                                                                                                </div>  
+                                                                        
+                                                                                                            </div>
+                                                                                                        <div class="col-md-6 ">
+                                                                                                            <div class="postCard">  
+                                                                                                                <ul class="location-information">
+                                                                                                                    <li><i class="ri-briefcase-line"></i> <h2><a href="profiloffreREcherch.html?id=`+i._id+`">`+i.NOM_OFF+` </a></h2></li>  
+                                                                                                                </ul>
+                                                                                                                <ul class="location-information">
+                                                                                                                    <li><i class="ri-building-4-line"></i> `+i3.NOM_ENT+` </li>
+                                                                                                                </ul>
+                                                                                                                <ul class="location-information">
+                                                                                                                    <li><i class="ri-map-pin-line"></i> `+i3.VILLE_ENT+`</li>
+                                                                                                                </ul>
+                                                                                                                <ul class="location-information">
+                                                                                                            <li><i class="flaticon-calendar"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                                                                        </ul>
+                                                                                                        <ul class="location-information">
+                                                                                                                            
+                                                                                                            <li><i class="ri-money-dollar-circle-line"></i> `+i.SAL_MIN_OFF+` DT </li>
+                                                                                                        </ul>
+                                                                                                            </div>  
+                                                                                                        </div>
+                                                                                                                        <div class="col-md-4 ">
+                                                                                                                            <br>
+                                                                                                                            <div class="featured-candidates-hire">
+                                                                                                                                
+                                                                                                                                
+                                                                                                                                <a href="profiloffreREcherch.html?id=`+i._id+`" class="default-btn">Plus De Détails <i class="flaticon-list-1"></i></a>
+                                                                                                                                
+                                                                                                                            </div>
+                                                                                                                        </div>
+                                                                                                        </div>
+                                                                                                        
+                                                                                                        
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>`;
+                                                                                        ee.insertAdjacentHTML('beforeend',ch);
+                                                                                        nb+=1;
+
+                                                                                    }
+                                                                                    
+                                                                                })
+                                                                                if(nb==0)
+                                                                                {
+                                                                                    ch=` <div class="row">
+                                                                            
+                                                                                        <div class="col-lg-12 col-md-12">
+                                                                    
+                                                                                            <div class="dashboard-job-card">
+                                                                                                <div class="job-content">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-10 "></div>
+                                                                                                    <div class="col-md-2 " style="text-align: right;">
+                                                                                                    <ul class="option-list">         
+                                                                                                        <li><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Favori Offre Postulees" type="button" onclick="favorioff('`+idDEM+`','`+i._id+`','`+idli+`')"><i id="`+idli+`" class="ri-heart-3-line"></i></button></li>
+                                                                                                                
+                                                                                                    </ul>
+                                                                                                    </div>
+                                                                                                    </div> 
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-2 "> 
+                                                                                                            <div class="image" style="text-align:center;">
+                                                                                                                <a href="profiloffreREcherch.html?id=`+i._id+`"><img src="`+i.PHOTO_OFF+`" alt="image" class="imageCard" ></a>
+                                                                                                            </div>  
+                                                                    
+                                                                                                        </div>
+                                                                                                    <div class="col-md-6 ">
+                                                                                                        <div class="postCard">  
+                                                                                                            <ul class="location-information">
+                                                                                                                <li><i class="ri-briefcase-line"></i> <h2><a href="profiloffreREcherch.html?id=`+i._id+`">`+i.NOM_OFF+` </a></h2></li>  
+                                                                                                            </ul>
+                                                                                                            <ul class="location-information">
+                                                                                                                <li><i class="ri-building-4-line"></i> `+i3.NOM_ENT+` </li>
+                                                                                                            </ul>
+                                                                                                            <ul class="location-information">
+                                                                                                                <li><i class="ri-map-pin-line"></i> `+i3.VILLE_ENT+`</li>
+                                                                                                            </ul>
+                                                                                                            <ul class="location-information">
+                                                                                                        <li><i class="flaticon-calendar"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                                                                    </ul>
+                                                                                                    <ul class="location-information">
+                                                                                                                        
+                                                                                                        <li><i class="ri-money-dollar-circle-line"></i> `+i.SAL_MIN_OFF+` DT </li>
+                                                                                                    </ul>
+                                                                                                        </div>  
+                                                                                                    </div>
+                                                                                                                    <div class="col-md-4 ">
+                                                                                                                        <br>
+                                                                                                                        <div class="featured-candidates-hire">
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            <a href="profiloffreREcherch.html?id=`+i._id+`" class="default-btn">Plus De Détails <i class="flaticon-list-1"></i></a>
+                                                                                                                            
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                    </div>
+                                                                                                    
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>`;
+                                                                                    ee.insertAdjacentHTML('beforeend',ch);
+                                                                                    
+                                                                                }
+
+                                                                            }
+                                                                            request1.send()
+                                                                            verif = true;
+                                                                        } 
+                                                                        
+                                                                    }    
+                                                                    
+                                                                    if( test1==false && testville==1)
+                                                                    {
+                                                                        console.log("testvillecorrecte");
+                                                                        var request1 = new XMLHttpRequest()
+                                            
+                                                                        // Open a new connection, using the GET request on the URL endpoint
+                                                                        request1.open('GET', "http://192.168.43.96:3000/favoris", true)
+                                                                        request1.onload = function()
+                                                                        {
+                                                                            // Begin accessing JSON data here
+                                                                            var data1 = JSON.parse(this.response)
+                                                                            var nb=0;
+                                                                            var datenvsp1 = i.DAT_EXPIRA_OFF.split('-');
+                                                                                if(datenvsp1[1]<10){
+                                                                                    datenvsp1[1]=datenvsp1[1][1];
+                                                                                }
+                                                                                var idli=i._id +1;
+                                                                            data1.forEach(k => {
+                                                                                
+                                                                                if((idDEM==k.ID_DEMANDEUR)&&(i._id==k.ID_OFFRE)) 
+                                                                                {
+                                                                                    
+
+                                                                                    ch=` <div class="row">
+                                                                        
+                                                                                        <div class="col-lg-12 col-md-12">
+                                                                    
+                                                                                            <div class="dashboard-job-card">
+                                                                                                <div class="job-content">
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-10 "></div>
+                                                                                                    <div class="col-md-2 " style="text-align: right;">
+                                                                                                    <ul class="option-list">         
+                                                                                                        <li><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Annuler Favori" type="button" onclick="favorioff('`+idDEM+`','`+i._id+`','`+idli+`')"><i id="`+idli+`" class="ri-heart-fill"></i></button></li>
+                                                                                                                                    
+                                                                                                    </ul>
+                                                                                                    </div>
+                                                                                                    </div> 
+                                                                                                    <div class="row">
+                                                                                                        <div class="col-md-2 "> 
+                                                                                                            <div class="image" style="text-align:center;">
+                                                                                                                <a href="profiloffreREcherch.html?id=`+i._id+`"><img src="`+i.PHOTO_OFF+`" alt="image" class="imageCard" ></a>
+                                                                                                            </div>  
+                                                                    
+                                                                                                        </div>
+                                                                                                    <div class="col-md-6 ">
+                                                                                                        <div class="postCard">  
+                                                                                                            <ul class="location-information">
+                                                                                                                <li><i class="ri-briefcase-line"></i> <h2><a href="profiloffreREcherch.html?id=`+i._id+`">`+i.NOM_OFF+` </a></h2></li>  
+                                                                                                            </ul>
+                                                                                                            <ul class="location-information">
+                                                                                                                <li><i class="ri-building-4-line"></i> `+i3.NOM_ENT+` </li>
+                                                                                                            </ul>
+                                                                                                            <ul class="location-information">
+                                                                                                                <li><i class="ri-map-pin-line"></i> `+i3.VILLE_ENT+`</li>
+                                                                                                            </ul>
+                                                                                                            <ul class="location-information">
+                                                                                                        <li><i class="flaticon-calendar"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                                                                    </ul>
+                                                                                                    <ul class="location-information">
+                                                                                                                        
+                                                                                                        <li><i class="ri-money-dollar-circle-line"></i> `+i.SAL_MIN_OFF+` DT </li>
+                                                                                                    </ul>
+                                                                                                        </div>  
+                                                                                                    </div>
+                                                                                                                    <div class="col-md-4 ">
+                                                                                                                        <br>
+                                                                                                                        <div class="featured-candidates-hire">
+                                                                                                                            
+                                                                                                                            
+                                                                                                                            <a href="profiloffreREcherch.html?id=`+i._id+`" class="default-btn">Plus De Détails <i class="flaticon-list-1"></i></a>
+                                                                                                                            
+                                                                                                                        </div>
+                                                                                                                    </div>
+                                                                                                    </div>
+                                                                                                    
+                                                                                                    
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>`;
+                                                                                    ee.insertAdjacentHTML('beforeend',ch);
+                                                                                    nb+=1;
+
+                                                                                }
+                                                                                
+                                                                            })
+                                                                            if(nb==0)
+                                                                            {
+                                                                                ch=` <div class="row">
+                                                                        
+                                                                                    <div class="col-lg-12 col-md-12">
+                                                                
+                                                                                        <div class="dashboard-job-card">
+                                                                                            <div class="job-content">
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-10 "></div>
+                                                                                                <div class="col-md-2 " style="text-align: right;">
+                                                                                                <ul class="option-list">         
+                                                                                                    <li><button class="option-btn d-inline-block" data-bs-toggle="tooltip" data-bs-placement="top" title="Favori Offre Postulees" type="button" onclick="favorioff('`+idDEM+`','`+i._id+`','`+idli+`')"><i id="`+idli+`" class="ri-heart-3-line"></i></button></li>
+                                                                                                            
+                                                                                                </ul>
+                                                                                                </div>
+                                                                                                </div> 
+                                                                                                <div class="row">
+                                                                                                    <div class="col-md-2 "> 
+                                                                                                        <div class="image" style="text-align:center;">
+                                                                                                            <a href="profiloffreREcherch.html?id=`+i._id+`"><img src="`+i.PHOTO_OFF+`" alt="image" class="imageCard" ></a>
+                                                                                                        </div>  
+                                                                
+                                                                                                    </div>
+                                                                                                <div class="col-md-6 ">
+                                                                                                    <div class="postCard">  
+                                                                                                        <ul class="location-information">
+                                                                                                            <li><i class="ri-briefcase-line"></i> <h2><a href="profiloffreREcherch.html?id=`+i._id+`">`+i.NOM_OFF+` </a></h2></li>  
+                                                                                                        </ul>
+                                                                                                        <ul class="location-information">
+                                                                                                            <li><i class="ri-building-4-line"></i> `+i3.NOM_ENT+` </li>
+                                                                                                        </ul>
+                                                                                                        <ul class="location-information">
+                                                                                                            <li><i class="ri-map-pin-line"></i> `+i3.VILLE_ENT+`</li>
+                                                                                                        </ul>
+                                                                                                        <ul class="location-information">
+                                                                                                    <li><i class="flaticon-calendar"></i> `+datenvsp1[2]+` `+liste[datenvsp1[1]-1]+` `+datenvsp1[0]+`</li>
+                                                                                                </ul>
+                                                                                                <ul class="location-information">
+                                                                                                                    
+                                                                                                    <li><i class="ri-money-dollar-circle-line"></i> `+i.SAL_MIN_OFF+` DT </li>
+                                                                                                </ul>
+                                                                                                    </div>  
+                                                                                                </div>
+                                                                                                                <div class="col-md-4 ">
+                                                                                                                    <br>
+                                                                                                                    <div class="featured-candidates-hire">
+                                                                                                                        
+                                                                                                                        
+                                                                                                                        <a href="profiloffreREcherch.html?id=`+i._id+`" class="default-btn">Plus De Détails <i class="flaticon-list-1"></i></a>
+                                                                                                                        
+                                                                                                                    </div>
+                                                                                                                </div>
+                                                                                                </div>
+                                                                                                
+                                                                                                
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>`;
+                                                                                ee.insertAdjacentHTML('beforeend',ch);
+                                                                                
+                                                                            }
+
+                                                                        }
+                                                                        request1.send()
+                                                                        verif = true;
+
+                                                                    }
+                                                                }
+                                                                
+                                                                
+                                                            }
+                                                            })    
+
+                                                    })
+                                                    if(test1 == false && testville == 0)
+                                                    {
+                                                        ch=`<p>Saisir les données cherchées si vous plaisez !</p>`;
+                                                        ee.innerHTML=ch;   
+                                                    }else if(verif == false)
+                                                        {
+                                                            ch=`<p>Désolé, nous n'avons actuellement aucun emploi pour cette recherche. Essayez une autre </p>`;
+                                                            ee.innerHTML=ch;   
+                                                        }
+                                                }
+                                                requestD.send();   
+                                            }
+                                            requestc.send(); 
+                                        }
+                                        requestl.send()
+                                        console.log(testville);
+                                    }
+                                    request3.send()
+                                }
+                                requestdep.send()
+                            }
+                            requestcomp.send();
+                        }
+                        requestlg.send();  
+                    }
+                    request.send()
+
+               }
+
+               
+               function favorioff(a,b,cd){
+                 elm=document.getElementById(cd);
+                 if(elm.className === 'ri-heart-fill'){
+                     elm.className = 'ri-heart-3-line';
+                     var request55 = new XMLHttpRequest()
+
+                    // Open a new connection, using the GET request on the URL endpoint
+                    request55.open('GET', 'http://192.168.43.96:3000/favoris', true)
+                    request55.onload = function()
+                    {
+                        var data55 = JSON.parse(this.response);
+                        console.log(data55);
+                        data55.forEach(i55 => {
+                            console.log(a);
+                            console.log(b);
+                            if(i55.ID_DEMANDEUR == a && i55.ID_OFFRE == b  ){
+                                var url3 = "http://192.168.43.96:3000/favoris/" + i55._id ;
+                                var xhr3 = new XMLHttpRequest();
+                                xhr3.open("DELETE", url3, true);
+                                xhr3.onload = function () {
+                                    if (xhr3.readyState == 4 && xhr3.status == "200") {
+                                        
+                                        console.log("ok");
+                                       
+                                    } else {
+                                        console.log("error");
+                                    }
+                                }
+                                xhr3.send(null);
+                            }
+                        })
+                    }
+                    request55.send();
+                 }
+                 else
+                 {
+                    elm.className = 'ri-heart-fill';
+                    var url = "http://192.168.43.96:3000/favoris";
+                    var data66 = {};
+                    data66.FAVORI_OFF = "1";
+                    data66.ID_OFFRE = b;
+                    data66.ID_DEMANDEUR = a;
+                    var json = JSON.stringify(data66);
+                    var xhr = new XMLHttpRequest();
+                    xhr.open("POST", url, true);
+                    xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+                    xhr.onload = function () {
+                        var admins= JSON.parse(xhr.responseText);
+                        if (xhr.readyState == 4 && xhr.status == "200") {
+                            console.table(admins);
+                            
+                        } else {
+                            alert(admins.message);
+                            console.table(admins);
+                        }
+                    }
+                    xhr.send(json);
+                    
+                 }
+             }
+            
+         </script>
+         
+    </body>
+</html>

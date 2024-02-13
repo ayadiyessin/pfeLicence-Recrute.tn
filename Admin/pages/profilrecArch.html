@@ -1,0 +1,823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Gestionnaire | Profile Recruteur Archivé</title>
+  <link rel="icon" type="image/png" href="../dist/img/Recrutelogo.png">
+  <link href="../dist/css/styessin.css" rel="stylesheet">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <!-- DataTables -->
+  <link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-responsive/css/responsive.bootstrap4.min.css">
+  <link rel="stylesheet" href="../plugins/datatables-buttons/css/buttons.bootstrap4.min.css">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false"></script>
+ 
+  <script>
+    if(!localStorage.getItem("ID_ADM")){
+      location.replace("login.html");
+    }
+  </script>
+  <script language="JavaScript">
+    function darkmode() {
+  document.body.classList.add("dark-mode");
+    }
+    function nodark() {
+  document.body.classList.remove("dark-mode");
+    }
+ function mode(){
+  if (document.getElementById("demo5").checked) {
+    darkmode(); //if the checkbox is checked, run this funtion
+  } else {
+    nodark(); //else run this funtion
+  }
+ }
+  </script>
+  </head>
+<body class="hold-transition sidebar-mini">
+<div class="wrapper">
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="../dist/img/Recrute.fr.png" alt="AdminLTELogo" >
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../index.html" class="nav-link">Accueil</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span id="nbtotalhaut" class="badge badge-warning navbar-badge"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header"><span id="nbtotalmenu"></span> &ensp; Notifications</span> 
+          <div class="dropdown-divider"></div>
+          <a href="reclamation.html" class="dropdown-item">
+            <i class="fas fa-copy mr-2"></i><span id="nbrecla"></span> &ensp;new réclamations
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="contacts.html" class="dropdown-item">
+            <i class="fas fa-comments mr-2"></i> <span id="nbrecontact"></span>&ensp;new contacts
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="recruteurEnAttente.html" class="dropdown-item">
+            <i class="fas fa-building mr-2"></i> <span id="nbrecrutEA"></span>&ensp;récruteur en attente
+          </a>
+          <div class="dropdown-divider"></div>
+          <!--<div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <!-- mta dark-->
+        <input  type="checkbox" class="demo5 " onclick="mode()" id="demo5">
+        <label for="demo5"></label>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+ <!-- Main Sidebar Container -->
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="../index.html" class="brand-link">
+    <img src="../dist/img/Recrutelogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">Recrute.tn</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="" id="nvphoto" style="width:32px; height: 32px;" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="profileAdmin.html" class="d-block"id="nvprof"></a>
+      </div>
+    
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item ">
+          <a href="../index.html" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+             Tableau De Bord
+            </p>
+          </a> 
+        </li>
+        <li class="nav-item">
+          <a href="demandeur.html" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Demandeur D'emploi
+            </p>
+          </a>
+        </li>
+        <li class="nav-item menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fas fa-building"></i>
+            <p>
+              Recruteur
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">2</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="recruteurEnAttente.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recruteur en attente</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="recruteurconfirmer.html" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recruteur confirmer</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="reclamation.html" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              Réclamation
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="offre.html" class="nav-link">
+            <i class="nav-icon fas fa-briefcase"></i>
+            <p>
+              Offre
+            </p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="contacts.html" class="nav-link">
+            <i class="nav-icon fas fa-comments"></i>
+            <p>
+              Contacts
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              Gestionnaire
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">2</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="formajoutadmin.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Ajouter</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="listadmin.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lister</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          </div>
+        <li class="nav-item">
+          <a href="#" onclick="quitter()" class="nav-link">
+            <i class="nav-icon fas fa-lock"></i>
+            <p>
+              Deconexion 
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Profile Recruteur Archivé</h1>
+          </div>
+          
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+              <li class="breadcrumb-item active"><a href="recruteurconfirmer.html">Recruteur Confirmer</a></li>
+              <li class="breadcrumb-item active"><a href="recruteurconfirmerArch.html">Recruteur Archivé</a></li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+ 
+    <div class="row">
+        <div class="col-sm-1"></div>
+      <div class="col-sm-10">
+        <!-- Widget: user widget style 1 -->
+        <div class="card card-widget widget-user">
+          <!-- Add the bg color to the header using any of the bg-info nbedel colour profile classes -->
+          <div class="widget-user-header badge-success ">
+            <h4 class="widget-user-desc" id="NOM_ENT" ></h4>
+            <h3 class="widget-user-username" id="SEC_DACT_ENT"></h3>
+           
+          </div>
+          <div class="widget-user-image">
+            <img class="img-circle elevation-2" src="" id="LOGO_ENT" style="width:100px; height: 100px;" alt="User Avatar">
+          </div>
+          <div class="card-footer">
+            <div class="row">
+              <div class="col-sm-4 border-right">
+                <div class="description-block">
+                  <span class="description-text">Identifiant Unique</span>
+                  <h5 class="description-header" id="IDENT_UNQ_ENT"></h5>
+                </div>
+                <!-- /.description-block -->
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-4 border-right">
+                <div class="description-block">
+                  <span class="description-text">Email</span>
+                  <b><a href="" class="btn-link text-secondary" id="EMAIL_ENTh"><h5 class="description-header" id="EMAIL_ENT"></h5></a></b>
+                </div>
+                <!-- /.description-block -->
+              </div>
+              <!-- /.col -->
+              <div class="col-sm-4">
+                <div class="description-block">
+                  <span class="description-text">Numéro téléphone</span>
+                  <h5 class="description-header" id="NUM_TEL_ENT"></h5>
+                </div>
+                <!-- /.description-block -->
+              </div>
+
+              
+              <!-- /.col -->
+            </div>
+            <br>
+                
+            <div class="post"> </div>
+                <div class="card-body">
+                    <div class="row">
+                      <div class="col-12 col-md-12 col-lg-8 order-2 order-md-1">
+                        <div class="row">
+                          <div class="col-12 col-sm-4">
+                            <div class="info-box bg-light">
+                              <div class="info-box-content">
+                                <span class="info-box-text text-center mb-1 "><h5>Pays d'origine</h5></span>
+                                <span class="info-box-number text-center text-muted mb-0" id="PAYS_ORG_ENT"></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="info-box bg-light">
+                              <div class="info-box-content">
+                                <span class="info-box-text text-center mb-1"><h5>Total des salariés</h5></span>
+                                <span class="info-box-number text-center text-muted mb-0"id="NB_SAL_ENT" ></span>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <div class="info-box bg-light">
+                              <div class="info-box-content">
+                                <span class="info-box-text text-center mb-1"><h5>Date de création</h5></span>
+                                <span class="info-box-number text-center text-muted mb-0"id="DAT_CREA_ENT"></span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <i class="fas fa-user"></i>&ensp;&ensp; <b>Profile</b>
+                            <div class="post"></div>  
+                            <div class="post">
+                                <!-- /.user-block -->
+                                <p id="DESC_ENT"></p>
+                              </div>
+          
+                              
+                              
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-12">
+                            <i class="fas fa-map-marked-alt"></i>&ensp;&ensp; <b>Localisation</b>
+                            <div class="post"></div>  
+                                <!-- /.user-block -->
+                                <div id="map" class="sty"></div>   
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 col-md-12 col-lg-4 order-1 order-md-2">
+                        <div class="info-box bg-light">
+                          <div class="info-box-content">
+                            <h5 class="mt-1 ">Site Web</h5>
+                            <ul class="list-unstyled">
+                              <li>
+                                <a href=""id="URL_WEB_ENT" class="btn-link text-secondary"><i class="fas fa-globe"></i>&ensp;&ensp; Site Web</a>
+                              </li>
+                            </ul>
+                            <h5 class="mt-1 ">Linkedin</h5>
+                            <ul class="list-unstyled">
+                              <li>
+                                <a href=""id="URL_LINK_ENT" class="btn-link text-secondary"><i class="fas fa-globe"></i>&ensp;&ensp; Linkedin</a>
+                              </li>
+                            </ul>
+                            <h5 class="mt-1 ">Facebook</h5>
+                            <ul class="list-unstyled">
+                              <li>
+                                <a href=""id="URL_FB_ENT" class="btn-link text-secondary"><i class="fas fa-globe"></i>&ensp;&ensp; Facebook</a>
+                              </li>
+                            </ul>
+                           
+                            <h5 class="mt-1 ">Responsable sur l'entreprise</h5>
+                            <ul class="list-unstyled">
+                              <li>
+                                <a href=""  class="btn-link text-secondary" id="EMAIL_RECh"><i class="fas fa-envelope"></i>&ensp;&ensp; <span id="EMAIL_REC"></span> </a>
+                              </li>
+                            </ul>
+                            <h5 class="mt-1 ">Adresse</h5>
+                            <ul class="list-unstyled">
+                              <li>
+                                  <a href="" class="btn-link text-secondary"><i class="fas fa-map-marker-alt"></i>&ensp;&ensp; <span id="ADRESSE_ENT"></span></a>
+                              </li>
+                                </ul>
+                            <h5 class="mt-1 ">Horaires </h5>
+                            <ul class="list-unstyled" id="horaireconf">
+                              
+                              
+                            </ul>
+                          </div>
+                        </div>
+                       
+                      </div>
+                    </div>
+                  </div>
+            <!-- /.row -->
+          </div>
+        
+        <!-- /.widget-user -->
+      
+      <!-- /.content -->
+      <section class="content  ">
+        
+            
+            <form>
+        <!-- /.card-body -->
+        <div class="card-footer ">
+            <!--<a class="btn btn-danger  float-right" href="#" onClick="dalaterecconf()" title="Supprimer Recruteur">
+                <i class="fas fa-trash "></i>    
+            </a>-->
+            <a class="btn btn-secondary  float-right" href="#" onClick="updateREC()"  style="margin-right: 5px;" title="Désarchivé Recruteur">
+                <i class="fas fa-undo-alt"></i>    
+            </a>
+            <a class="btn btn-info" href="recruteurconfirmerArch.html" style="margin-right: 5px;" title="Retour">
+                <i class="fas fa-less-than"></i>
+            </a> 
+        </div>
+      </form>
+          
+       
+    </section>
+  </div>
+    </div>
+  </div>
+
+    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </div>
+  <!-- /.content-wrapper -->
+
+  <footer class="main-footer">
+
+    <strong>&copy; 2021-2022 <a href="../index.html">Recrute</a>.</strong>
+  </footer>
+
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!--alert-->
+<script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<!--mail-->
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+<script src="../plugins/datatables/jquery.dataTables.min.js"></script>
+<script src="../plugins/datatables-bs4/js/dataTables.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-responsive/js/dataTables.responsive.min.js"></script>
+<script src="../plugins/datatables-responsive/js/responsive.bootstrap4.min.js"></script>
+<script src="../plugins/datatables-buttons/js/dataTables.buttons.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.bootstrap4.min.js"></script>
+<script src="../plugins/jszip/jszip.min.js"></script>
+<script src="../plugins/pdfmake/pdfmake.min.js"></script>
+<script src="../plugins/pdfmake/vfs_fonts.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.html5.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.print.min.js"></script>
+<script src="../plugins/datatables-buttons/js/buttons.colVis.min.js"></script>
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<script src="../dist/js/notific.js"></script>
+<!-- DataTables  & Plugins -->
+<script>
+  var liste =["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre"];
+   // Create a request variable and assign a new XMLHttpRequest object to it.
+   var request = new XMLHttpRequest()
+   var url_string = window.location.href
+   var url = new URL(url_string);
+   var c = url.searchParams.get("id");
+     console.log(c);
+  // Open a new connection, using the GET request on the URL endpoint
+  request.open('GET', 'http://192.168.43.96:3000/recruteurs/' + c, true)
+  request.onload = function()
+  {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response)
+      console.log(data);
+      document.getElementById("NOM_ENT").innerHTML=data.NOM_ENT;
+      document.getElementById("SEC_DACT_ENT").innerHTML=data.SEC_DACT_ENT;
+      document.getElementById("IDENT_UNQ_ENT").innerHTML=data.IDENT_UNQ_ENT;
+      document.getElementById("EMAIL_ENT").innerHTML=data.EMAIL_ENT;
+      document.getElementById("EMAIL_ENTh").href="mailto:"+data.EMAIL_ENT;
+      document.getElementById("NUM_TEL_ENT").innerHTML=data.NUM_TEL_ENT;
+      document.getElementById("PAYS_ORG_ENT").innerHTML=data.PAYS_ORG_ENT;
+      document.getElementById("NB_SAL_ENT").innerHTML=data.NB_SAL_ENT; 
+      var spdatcre = data.DAT_CREA_ENT.split('-');
+      if(spdatcre[1]<10){
+        spdatcre[1]=spdatcre[1][1];
+      }
+      document.getElementById("DAT_CREA_ENT").innerHTML = spdatcre[2]+' '+liste[spdatcre[1]-1]+' '+spdatcre[0];
+      document.getElementById("DESC_ENT").innerHTML=data.DESC_ENT;
+      document.getElementById("URL_WEB_ENT").href=data.URL_WEB_ENT;
+      document.getElementById("EMAIL_REC").innerHTML=data.EMAIL_REC;
+      document.getElementById("EMAIL_RECh").href="mailto:"+data.EMAIL_REC;
+      document.getElementById("ADRESSE_ENT").innerHTML=data.ADRESSE_ENT+","+data.VILLE_ENT+","+data.COD_POST_ENT;
+      document.getElementById("LOGO_ENT").src=data.LOGO_ENT;
+      document.getElementById("URL_LINK_ENT").href=data.URL_LINK_ENT;
+      document.getElementById("URL_FB_ENT").href=data.URL_FB_ENT;
+  }   
+  // Send request
+  request.send();
+
+  //date
+  var request1 = new XMLHttpRequest()
+  request1.open('GET','http://192.168.43.96:3000/horaires', true)
+  request1.onload = function()
+  {
+      // Begin accessing JSON data here
+      var data = JSON.parse(this.response)
+      console.log(data);
+      
+        var ee = document.getElementById("horaireconf");
+      data.forEach(i => {
+        if (i.ID_RECRUTEUR===c){
+          if (i.TIME_DEB_MATIN ==="" && i.TIME_DEB_MIDI===""){
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-5">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-7">
+                    <a  class="btn-link text-secondary"> Fermé </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+           }else if (i.TIME_DEB_MATIN ==="" && i.TIME_FIN_MATIN===""){
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-5">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-7">
+                    <a  class="btn-link text-secondary"> ` + i.TIME_DEB_MIDI+ `-` + i.TIME_FIN_MIDI+`  </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+           }else if (i.TIME_DEB_MIDI ==="" && i.TIME_FIN_MIDI===""){
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-5">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-7">
+                    <a  class="btn-link text-secondary"> ` + i.TIME_DEB_MATIN+ `-` + i.TIME_FIN_MATIN+`  </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+            }else if (i.TIME_FIN_MATIN ==="" && i.TIME_DEB_MIDI===""){
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-5">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-7">
+                    <a  class="btn-link text-secondary"> ` + i.TIME_DEB_MATIN+ `-` + i.TIME_FIN_MIDI+`  </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+            }else{
+              ch = `
+              <li>
+                <div class="row">
+                  <div class="col-md-5">
+                    <a  class="btn-link text-secondary"><i class="fas fa-calendar-alt"></i>&ensp;&ensp;` + i.JOUR_TRAV+ ` : </a> 
+                  </div>
+                  <div class="col-md-7">
+                    <a  class="btn-link text-secondary">` + i.TIME_DEB_MATIN+ `-` + i.TIME_FIN_MATIN+` & ` + i.TIME_DEB_MIDI+ `-` + i.TIME_FIN_MIDI+` </a>
+                  </div>
+                </div>
+                </li>
+              `;
+              ee.insertAdjacentHTML('beforeend',ch);
+              
+            }
+        } 
+      })      
+  }   
+  // Send request
+  request1.send()
+
+
+//fin date
+/*
+  function dalaterecconf(){ 
+    
+    Swal.fire({
+          title: 'Etes vous Sure?',
+          text: "Vous souhaitez le supprimer !",
+          icon: 'warning',
+          showCancelButton: true,
+          confirmButtonColor: '#228B22',
+          cancelButtonColor: '#d33',
+          confirmButtonText: 'Oui, Supprimer!'
+        }).then((result) => {
+          if (result.isConfirmed) {
+      var url_string = window.location.href
+      var url = new URL(url_string);
+      var c = url.searchParams.get("id");
+     
+      // Post a user
+      var url3 = "http://192.168.43.96:3000/recruteurs/" + c ;
+      var xhr3 = new XMLHttpRequest();
+      xhr3.open("DELETE", url3, true);
+      xhr3.onload = function () {
+        if (xhr3.readyState == 4 && xhr3.status == "200") {
+                  Swal.fire({
+                      title:'Supprimer!',
+                      text:'Ce fichier est supprimer avec succés.',
+                      icon:'success',
+                    
+                  }).then((result) => {
+                      if (result.isConfirmed){
+                        location.replace("recruteurconfirmer.html");
+                        event.preventDefault();
+                      }
+
+                  })
+                
+                } 
+              }  
+              xhr3.send(null);
+        
+          }
+        })            
+    }
+*/
+    function updateREC(){
+          Swal.fire({
+          title: "Voulez-vous désarchiver cette Recruteur ?",
+          icon: 'question',
+          showDenyButton: true,
+          confirmButtonColor: '#17a2b8',
+          confirmButtonText: 'Désarchiver',
+          denyButtonText: `Non`,
+        }).then((result) => {
+          if (result.isConfirmed) {
+            var url_string = window.location.href
+            var url = new URL(url_string);
+            var c = url.searchParams.get("id");
+            var request = new XMLHttpRequest()
+            
+            // Open a new connection, using the GET request on the URL endpoint
+            request.open('GET', 'http://192.168.43.96:3000/recruteurs/'+ c, true)
+            
+            request.onload = function() {
+                // Begin accessing JSON data here
+                var data = JSON.parse(this.response)
+                console.log(data);
+                var url3 = "http://192.168.43.96:3000/recruteurs/" + c ;
+                var data2 = {};
+                data2.NOM_ENT=data.NOM_ENT;
+                data2.SEC_DACT_ENT=data.SEC_DACT_ENT;
+                data2.IDENT_UNQ_ENT=data.IDENT_UNQ_ENT;
+                data2.EMAIL_ENT=data.EMAIL_ENT;
+                data2.NUM_TEL_ENT=data.NUM_TEL_ENT;
+                data2.PAYS_ORG_ENT=data.PAYS_ORG_ENT;
+                data2.NB_SAL_ENT=data.NB_SAL_ENT; 
+                data2.DAT_CREA_ENT=data.DAT_CREA_ENT;
+                data2.DESC_ENT=data.DESC_ENT;
+                data2.URL_WEB_ENT=data.URL_WEB_ENT;
+                data2.EMAIL_REC=data.EMAIL_REC;
+                data2.PSW_REC=data.PSW_REC;
+                data2.ADRESSE_ENT=data.ADRESSE_ENT;
+                data2.VILLE_ENT=data.VILLE_ENT;
+                data2.COD_POST_ENT=data.COD_POST_ENT;
+                data2.VALID_ENT=data.VALID_ENT;
+                data2.ARCHIV_REC ="0";
+                data2.X=data.X;
+                data2.Y=data.Y;
+                data2.LOGO_ENT=data.LOGO_ENT;
+                data2.URL_LINK_ENT=data.URL_LINK_ENT;
+                data2.URL_FB_ENT=data.URL_FB_ENT;
+                console.log(data2);
+                Email.send({
+                      Host: "smtp.gmail.com",
+                      Username : "tunisierecrute0@gmail.com",
+                      Password : "Recrute123",
+                      To : `${data.EMAIL_REC}`,
+                      From : "tunisierecrute0@gmail.com",
+                      Subject : "désarchivation de compte",
+                      Body : "Votre compte est désarchivé. ",
+                    })   
+                var json = JSON.stringify(data2);
+                var xhr3 = new XMLHttpRequest();
+                xhr3.open("PUT", url3, true);
+                xhr3.setRequestHeader('Content-type','application/json; charset=utf-8');
+                xhr3.onload = function () {
+                    if (xhr3.readyState == 4 && xhr3.status == "200") {
+                        //location.replace("archiveAdmin.html");
+                        //event.preventDefault();
+                        Swal.fire({
+                            title:'Compte Recruteur Est Désarchivé !',
+                            icon:'success',
+                        
+                        }).then((result) => {
+                            if (result.isConfirmed){
+                            location.replace("recruteurconfirmerArch.html");
+                            event.preventDefault();
+                            }
+
+                        })
+                    } else {
+                        console.log("error");
+                        Swal.fire({
+                                    icon:'error',  
+                                    title:'Il y a un erreur !',
+                                    showConfirmButton:true,
+                                    timer:1500
+                                        
+                                    
+                                    })
+                    }
+                }
+                xhr3.send(json);
+            }
+            request.send();
+        }
+        else if (result.isDenied){
+           Swal.fire("Désarchive Non Enregistrer", '', 'info');
+        }
+      })
+    }
+         
+</script>
+<script>
+  var url_string = window.location.href
+            var url = new URL(url_string);
+            var c = url.searchParams.get("id");
+            var request55 = new XMLHttpRequest()
+            
+            // Open a new connection, using the GET request on the URL endpoint
+            request55.open('GET', 'http://192.168.43.96:3000/recruteurs/'+ c, true)
+            
+            request55.onload = function() {
+                // Begin accessing JSON data here
+                var data55 = JSON.parse(this.response)
+  var locations = [
+    [
+      '<b>Name 1</b><br>Address Line 1<br>Bismarck, ND 58501<br>Phone: 701-555-1234<br><a href="#" >Link<a> of some sort.',
+      data55.X,
+      data55.Y,
+      4,
+    ],
+    
+    /*
+     * Next point on map
+     *   -Notice how the last number within the brackets incrementally increases from the prior marker
+     *   -Use http://itouchmap.com/latlong.html to get Latitude and Longitude of a specific address
+     *   -Follow the model below:
+     *      ['<b>Name 3</b><br>Address Line 1<br>City, ST Zipcode<br>Phone: ###-###-####<br><a href="#" target="_blank">Link<a> of some sort.', ##.####, -##.####, #]
+     */
+  ];
+  console.log(data55.X);
+  console.log(data55.Y);
+  var map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 7,
+    /* Zoom level of your map */
+    center: new google.maps.LatLng(35.47021625, 10.47173475),
+    /* coordinates for the center of your map */
+    mapTypeId: google.maps.MapTypeId.ROADMAP,
+  });
+
+  var infowindow = new google.maps.InfoWindow();
+
+  var marker, i;
+
+  for (i = 0; i < locations.length; i++) {
+    marker = new google.maps.Marker({
+      position: new google.maps.LatLng(locations[i][1], locations[i][2]),
+      map: map,
+    });
+
+    google.maps.event.addListener(
+      marker,
+      "click",
+      (function (marker, i) {
+        return function () {
+          infowindow.setContent(locations[i][0]);
+          infowindow.open(map, marker);
+        };
+      })(marker, i)
+    );
+  }
+            }
+            request55.send()
+</script>
+</body>
+</html>

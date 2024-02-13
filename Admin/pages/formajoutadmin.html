@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!--image-->
+   <script src="https://static.filestackapi.com/filestack-js/3.x.x/filestack.min.js"></script>
+       
+  <title>Super-Gestionnaire | Ajouter un Gestionnaire</title>
+  <link rel="icon" type="image/png" href="../dist/img/Recrutelogo.png">
+  <link href="../dist/css/styessin.css" rel="stylesheet">
+  <!-- Google Font: Source Sans Pro -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  <script>
+    if(localStorage.getItem('ETAT_ADM') == 0){
+      alert("Cette page n'est pas à votre disposition.");
+      location.replace("../index.html");
+    }
+  </script>
+  <script>
+    if(!localStorage.getItem("ID_ADM")){
+      location.replace("login.html");
+    }
+  </script>
+  
+  <script language="JavaScript">
+    function darkmode() {
+  document.body.classList.add("dark-mode");
+    }
+    function nodark() {
+  document.body.classList.remove("dark-mode");
+    }
+ function mode(){
+  if (document.getElementById("demo5").checked) {
+    darkmode(); //if the checkbox is checked, run this funtion
+  } else {
+    nodark(); //else run this funtion
+  }
+ }
+  </script>
+  <!--<script>
+    function validateEmail(elementValue){      
+    var emailPattern = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+    return emailPattern.test(elementValue); 
+    }
+    function validateNumero(elementValue){      
+    var numeroPattern = /^[2-9]+\d[0-9]{6}$/;
+    return numeroPattern.test(elementValue); 
+    }  
+    function champVide(){
+      var test=true;
+        var NOM_ADM = document.getElementById("NOM_ADM").value;
+        var PRE_ADM = document.getElementById("PRE_ADM").value;
+        var EMAIL_ADM = document.getElementById("EMAIL_ADM").value;
+        var NUM_TEL_ADM = document.getElementById("NUM_TEL_ADM").value;
+        var PSW_ADM = document.getElementById("PSW_ADM").value;
+        var CPSW_ADM = document.getElementById("CPSW_ADM").value;
+        var VILLE_ADM = document.getElementById("VILLE_ADM").value;
+        var PHOTO_ADM = document.getElementById("PHOTO_ADM").value;
+        if(NOM_ADM=="" ) {
+            document.getElementById("NOM_ADM").className="form-control is-warning";
+            test=false;
+        }else{
+          document.getElementById("NOM_ADM").className="form-control is-valid";
+        }
+        if(PRE_ADM=="" ) {
+            document.getElementById("PRE_ADM").className="form-control is-warning";
+            test=false;
+        }else{
+          document.getElementById("PRE_ADM").className="form-control is-valid";
+        }
+        if(VILLE_ADM=="Choose Ville" ) {
+            document.getElementById("VILLE_ADM").className="form-control is-warning";
+            test=false;
+        }else{
+          document.getElementById("VILLE_ADM").className="form-control is-valid";
+        }
+        if(EMAIL_ADM=="" ) {
+            document.getElementById("EMAIL_ADM").className="form-control is-warning";
+            test=false;
+        }else if(validateEmail(EMAIL_ADM)){
+          document.getElementById("EMAIL_ADM").className="form-control is-valid";
+        }else{
+          document.getElementById("EMAIL_ADM").className="form-control is-invalid";
+          test=false;
+        }
+        if(NUM_TEL_ADM=="" ) {
+            document.getElementById("NUM_TEL_ADM").className="form-control is-warning";
+            test=false;
+        }else if(validateNumero(NUM_TEL_ADM)){
+          document.getElementById("NUM_TEL_ADM").className="form-control is-valid";
+        }else{
+          document.getElementById("NUM_TEL_ADM").className="form-control is-invalid";
+          test=false;
+        }
+        if(PSW_ADM=="" ) {
+            document.getElementById("PSW_ADM").className="form-control is-warning";
+            test=false;
+        }else if(PSW_ADM == CPSW_ADM){
+          document.getElementById("PSW_ADM").className="form-control is-valid";
+          document.getElementById("CPSW_ADM").className="form-control is-valid";
+        }else{
+          document.getElementById("PSW_ADM").className="form-control is-valid";
+          document.getElementById("CPSW_ADM").className="form-control is-invalid";
+          test=false;
+        }
+        if(PHOTO_ADM=="importer photo" ) {
+            document.getElementById("PHOTO_ADM").className="form-control is-warning";
+            test=false;
+        }else{
+          document.getElementById("PHOTO_ADM").className="form-control is-valid";
+        }
+        if(test==true){
+          return true;
+        }else{
+          return false;
+        }
+        
+    }
+ </script>-->
+</head>
+<body class="hold-transition sidebar-mini">
+  
+<div class="wrapper">
+  <!-- Preloader -->
+  <div class="preloader flex-column justify-content-center align-items-center">
+    <img class="animation__shake" src="../dist/img/Recrute.fr.png" alt="AdminLTELogo" >
+  </div>
+
+  <!-- Navbar -->
+  <nav class="main-header navbar navbar-expand navbar-white navbar-light">
+    <!-- Left navbar links -->
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" data-widget="pushmenu" href="#" role="button"><i class="fas fa-bars"></i></a>
+      </li>
+      <li class="nav-item d-none d-sm-inline-block">
+        <a href="../index.html" class="nav-link">Accueil</a>
+      </li>
+    </ul>
+
+    <!-- Right navbar links -->
+    <ul class="navbar-nav ml-auto">
+      
+      <!-- Notifications Dropdown Menu -->
+      <li class="nav-item dropdown">
+        <a class="nav-link" data-toggle="dropdown" href="#">
+          <i class="far fa-bell"></i>
+          <span id="nbtotalhaut" class="badge badge-warning navbar-badge"></span>
+        </a>
+        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+          <span class="dropdown-item dropdown-header"><span id="nbtotalmenu"></span> &ensp; Notifications</span> 
+          <div class="dropdown-divider"></div>
+          <a href="reclamation.html" class="dropdown-item">
+            <i class="fas fa-copy mr-2"></i><span id="nbrecla"></span> &ensp;new réclamations
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="contacts.html" class="dropdown-item">
+            <i class="fas fa-comments mr-2"></i> <span id="nbrecontact"></span>&ensp;new contacts
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="recruteurEnAttente.html" class="dropdown-item">
+            <i class="fas fa-building mr-2"></i> <span id="nbrecrutEA"></span>&ensp;récruteur en attente
+          </a>
+          <div class="dropdown-divider"></div>
+          <!--<div class="dropdown-divider"></div>
+          <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+        </div>-->
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-widget="fullscreen" href="#" role="button">
+          <i class="fas fa-expand-arrows-alt"></i>
+        </a>
+      </li>
+      <li class="nav-item">
+        <!-- mta dark-->
+        <input  type="checkbox" class="demo5 " onclick="mode()" id="demo5">
+        <label for="demo5"></label>
+      </li>
+    </ul>
+  </nav>
+  <!-- /.navbar -->
+ <!-- Main Sidebar Container -->
+ <aside class="main-sidebar sidebar-dark-primary elevation-4">
+  <!-- Brand Logo -->
+  <a href="../index.html" class="brand-link">
+    <img src="../dist/img/Recrutelogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+    <span class="brand-text font-weight-light">Recrute.tn</span>
+  </a>
+
+  <!-- Sidebar -->
+  <div class="sidebar">
+    <!-- Sidebar user panel (optional) -->
+    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+      <div class="image">
+        <img src="" id="nvphoto" style="width:32px; height: 32px;" class="img-circle elevation-2" alt="User Image">
+      </div>
+      <div class="info">
+        <a href="profileAdmin.html" class="d-block"id="nvprof"></a>
+      </div>
+    
+    </div>
+
+    <!-- SidebarSearch Form -->
+    <div class="form-inline">
+      <div class="input-group" data-widget="sidebar-search">
+        <input class="form-control form-control-sidebar" type="search" placeholder="Search" aria-label="Search">
+        <div class="input-group-append">
+          <button class="btn btn-sidebar">
+            <i class="fas fa-search fa-fw"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sidebar Menu -->
+    <nav class="mt-2">
+      <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+        <!-- Add icons to the links using the .nav-icon class
+             with font-awesome or any other icon font library -->
+        <li class="nav-item ">
+          <a href="../index.html" class="nav-link">
+            <i class="nav-icon fas fa-tachometer-alt"></i>
+            <p>
+             Tableau De Bord
+            </p>
+          </a> 
+        </li>
+        <li class="nav-item">
+          <a href="demandeur.html" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Demandeur D'emploi
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#" class="nav-link">
+            <i class="nav-icon fas fa-building"></i>
+            <p>
+              Recruteur
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">2</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="recruteurEnAttente.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recruteur en attente</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="recruteurconfirmer.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Recruteur confirmer</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a href="reclamation.html" class="nav-link">
+            <i class="nav-icon fas fa-copy"></i>
+            <p>
+              Réclamation
+            </p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="offre.html" class="nav-link">
+            <i class="nav-icon fas fa-briefcase"></i>
+            <p>
+              Offre
+            </p>
+          </a>
+        </li>
+        <li class="nav-item ">
+          <a href="contacts.html" class="nav-link">
+            <i class="nav-icon fas fa-comments"></i>
+            <p>
+              Contacts
+            </p>
+          </a>
+        </li>
+        <li class="nav-item menu-open">
+          <a href="#" class="nav-link active">
+            <i class="nav-icon fas fa-user"></i>
+            <p>
+              Gestionnaire
+              <i class="fas fa-angle-left right"></i>
+              <span class="badge badge-info right">2</span>
+            </p>
+          </a>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="formajoutadmin.html" class="nav-link active">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Ajouter</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="listadmin.html" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lister</p>
+              </a>
+            </li>
+          </ul>
+        </li>
+          <div class="user-panel mt-3 pb-3 mb-3 d-flex">
+          </div>
+        <li class="nav-item">
+          <a href="#" onclick="quitter()" class="nav-link">
+            <i class="nav-icon fas fa-lock"></i>
+            <p>
+              Deconexion 
+            </p>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /.sidebar-menu -->
+  </div>
+  <!-- /.sidebar -->
+</aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1>Formulaire d'ajout un Gestionnaire</h1>
+          </div>
+          <div class="col-sm-6">
+            <ol class="breadcrumb float-sm-right">
+              <li class="breadcrumb-item"><a href="../index.html">Accueil</a></li>
+              <li class="breadcrumb-item active">Gestionnaire</li>
+              <li class="breadcrumb-item active">Ajouter</li>
+            </ol>
+          </div>
+        </div>
+      </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content-wrapper -->
+    <section class="content  ">
+      <div class="row">
+        <div class="col-md-2"></div>
+      <div class="col-md-8 ">
+        
+    <!-- general form elements -->
+      <div class="card card-primary">
+        <div class="card-header">
+          <h3 class="card-title">Ajouter un Gestionnaire</h3>
+        </div>
+        <!-- /.card-header -->
+        <!-- form start -->
+        <form onsubmit="return false" id="form">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="exampleInputnom">Nom</label>
+                    <input type="text" name="NOM" class="form-control" id="NOM_ADM"  placeholder="Donnée Nom">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="exampleInputpre">Prénom</label>
+                    <input type="text" name="PRE" class="form-control" id="PRE_ADM"  placeholder="Donnée Prénom">
+                </div>
+              </div> 
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <!-- select -->
+                <div class="form-group"> 
+                  <label>Ville</label>
+                    <select name="VILLE" class="form-control" id="VILLE_ADM" >
+                      <option selected disabled>Choose Ville</option>
+                      <option value="Ariana">Ariana</option>
+                      <option value="Béja">Béja</option>
+                      <option value="Ben Arous">Ben Arous</option>
+                      <option value="Bizerte">Bizerte</option>
+                      <option value="Gabès">Gabès</option>
+                      <option value="Gafsa">Gafsa</option>
+                      <option value="Jendouba">Jendouba</option>
+                      <option value="Kairouan">Kairouan</option>
+                      <option value="Kasserine">Kasserine</option>
+                      <option value="Kebili">Kebili</option>
+                      <option value="La Manouba">La Manouba</option>
+                      <option value="Le Kef">Le Kef</option>
+                      <option value="Mahdia">Mahdia</option>
+                      <option value="Médenine">Médenine</option>
+                      <option value="Monastir">Monastir</option>
+                      <option value="Nabeul">Nabeul</option>
+                      <option value="Sfax">Sfax</option>
+                      <option value="Sidi Bouzid">Sidi Bouzid</option>
+                      <option value="Siliana">Siliana</option>
+                      <option value="Sousse">Sousse</option>
+                      <option value="Tataouine">Tataouine</option>
+                      <option value="Tozeur">Tozeur</option>
+                      <option value="Tunis">Tunis</option>
+                      <option value="Zaghouan">Zaghouan</option>
+                    </select>
+                </div>    
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="exampleInputsexe">Sexe</label> <br>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radio" id="SEXE_H" >
+                    <label class="form-check-label" name="homme">Homme</label> &ensp;&ensp;&ensp;&ensp;
+
+                    <input class="form-check-input" type="radio" name="radio" id="SEXE_f" >
+                    <label class="form-check-label" name="femme">Femme</label>
+                  </div>
+               <!--   <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                  
+                    <label class="btn btn-secondary active ">
+                      <input type="radio" name="options" id="option_a1" autocomplete="off" checked> Homme
+                    </label>
+                    <label class="btn btn-default">
+                      <input type="radio" name="options" id="option_a2" autocomplete="off"> Femme
+                    </label>
+                  </div>-->
+                </div>
+               
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Adresse Email</label>
+                    <input type="email" name="EMAIL" class="form-control" id="EMAIL_ADM"  placeholder="Donnée email">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="exampleInputnumero">Numéro Téléphone</label>
+                    <input type="text" name="NUM_TEL" class="form-control" id="NUM_TEL_ADM"  placeholder="Donnée numéro">
+                </div>
+              </div>     
+            </div>
+            <div class="row">
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="exampleInputPassword1">Mot de Passe</label>
+                    <input type="password" name="PSW" class="form-control" id="PSW_ADM"  placeholder="Donnée mot de passe">
+                </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="form-group">
+                  <label for="confirmePSW">Confirmer Mot de Passe</label>
+                    <input type="password" name="CPSW" class="form-control" id="CPSW_ADM"  placeholder="Confirmer mot de passe">
+                </div>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputFile">Importer Photo</label>
+                  <div class="custom-file">
+                    <input type="text" name="PHOTO" class="form-control" id="PHOTO_ADM" onclick="send()" placeholder="importer photo">
+                   
+                   <!-- <input type="text" name="PHOTO" class="custom-file-input" id="PHOTO_ADM" onclick="send()" placeholder="importer photo"  >
+                    <label id="labphoto" class="custom-file-label" for="exampleInputFile">importer photo</label>-->
+                  </div>
+
+            </div>
+            <input id="ETAT_ADM" name="prodId" type="hidden" value="0">
+          </div>
+          <!-- /.card-body -->
+          <div class="card-footer">
+            <button type="reset" class="btn btn-default" id="resetbt" onClick="res()">Annuler</button>
+            <button type="submit" class="btn btn-primary float-right" ><i class="fas fa-plus-circle"></i>&ensp;Ajouter</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+    </section>
+
+    <!-- /.content -->
+    <a id="back-to-top" href="#" class="btn btn-primary back-to-top" role="button" aria-label="Scroll to top">
+      <i class="fas fa-chevron-up"></i>
+    </a>
+  </div>
+  <footer class="main-footer">
+
+    <strong>&copy; 2021-2022 <a href="../index.html">Recrute</a>.</strong>
+  </footer>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark">
+    <!-- Control sidebar content goes here -->
+  </aside>
+  <!-- /.control-sidebar -->
+</div>
+<!-- ./wrapper -->
+<!--alert-->
+<script src="https://unpKg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<!-- jQuery -->
+<script src="../plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="../plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- bs-custom-file-input -->
+<script src="../plugins/bs-custom-file-input/bs-custom-file-input.min.js"></script>
+<!-- jquery-validation -->
+<script src="../plugins/jquery-validation/jquery.validate.min.js"></script>
+<script src="../plugins/jquery-validation/additional-methods.min.js"></script>
+<!-- AdminLTE App -->
+<script src="../dist/js/adminlte.min.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="../dist/js/demo.js"></script>
+<script src="../dist/js/notific.js"></script>
+<script>
+  function send() {
+    var i = document.getElementById("PHOTO_ADM");
+    const apikey = "AnPRsl9JkTZKL3Hp9hwzxz";
+    const client = filestack.init(apikey);
+    const options = {
+      maxFiles: 20,
+      uploadInBackground: false,
+      onOpen: () => console.log("opened!"),
+      onUploadDone: (res) => (i.value = res.filesUploaded[0].url),
+    };
+    client.picker(options).open();
+  }
+</script>
+<script>
+$(function () {
+  
+  $.validator.setDefaults({
+    submitHandler: function () {
+      var sexe = "";
+      if (document.getElementById("SEXE_H").checked){
+      sexe = "Homme";
+    }else{
+      sexe = "Femme";
+    }
+    var url = "http://192.168.43.96:3000/admins";
+    var data = {};
+    data.PHOTO_ADM = document.getElementById("PHOTO_ADM").value;
+    data.EMAIL_ADM = document.getElementById("EMAIL_ADM").value;
+    data.PSW_ADM = document.getElementById("PSW_ADM").value;
+    data.NOM_ADM = document.getElementById("NOM_ADM").value;
+    data.PRE_ADM = document.getElementById("PRE_ADM").value; 
+    data.SEXE_ADM = sexe;
+    data.ARCHIV_ADM= "0";
+    data.VILLE_ADM = document.getElementById("VILLE_ADM").value;
+    data.NUM_TEL_ADM = document.getElementById("NUM_TEL_ADM").value;
+    data.ETAT_ADM = document.getElementById("ETAT_ADM").value;
+    var request = new XMLHttpRequest()
+      
+      // Open a new connection, using the GET request on the URL endpoint
+      request.open('GET', 'http://192.168.43.96:3000/admins', true)
+      
+      request.onload = function() {
+          // Begin accessing JSON data here
+          var dataprinc = JSON.parse(this.response)
+          var testemail = true;
+          var testARCH="";
+          dataprinc.forEach(i => {
+            if(i.EMAIL_ADM==data.EMAIL_ADM){
+              testemail=false;
+              testARCH = i.ARCHIV_ADM;
+            }
+          })
+          if(testemail == true){
+            var json = JSON.stringify(data);
+            var xhr = new XMLHttpRequest();
+            xhr.open("POST", url, true);
+            xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+            xhr.onload = function () {
+                var admins= JSON.parse(xhr.responseText);
+                if (xhr.readyState == 4 && xhr.status == "200") {
+                    console.table(admins);
+                  //  alert("Gestionnaire ajouter");
+                    Swal.fire({
+                      title:'Gestionnaire ajouter avec succés.',
+                      icon:'success',
+                      showConfirmButton:false,
+                      timer:1800
+                    
+                  })
+                    //location.replace("../index.html");
+                } else {
+                   // alert(admins.message);
+                    Swal.fire('Gestionnaire Non Enregistrer')
+                    console.table(admins);
+                }
+            }
+            xhr.send(json);
+            document.getElementById("form").reset();
+            document.getElementById("NOM_ADM").classList.remove('is-valid');
+            document.getElementById("PRE_ADM").classList.remove('is-valid');
+            document.getElementById("VILLE_ADM").classList.remove('is-valid');
+            document.getElementById("EMAIL_ADM").classList.remove('is-valid');
+            document.getElementById("NUM_TEL_ADM").classList.remove('is-valid');
+            document.getElementById("PSW_ADM").classList.remove('is-valid');
+            document.getElementById("CPSW_ADM").classList.remove('is-valid');
+            document.getElementById("PHOTO_ADM").classList.remove('is-valid');
+          }else if(testARCH == "0"){
+           // alert("ce compte est existe déjà");
+            Swal.fire({
+                      title:'Ce compte est existe déjà !',
+                      icon:'warning',
+                      showConfirmButton:false,
+                      timer:1800
+                    
+                  })
+            document.getElementById("EMAIL_ADM").classList.add('is-invalid');
+          }else {
+          //  alert("ce compte est archivé");
+            Swal.fire({
+                      title:'Ce compte est archivé !',
+                      icon:'warning',
+                      showConfirmButton:false,
+                      timer:1800
+                    
+                  })
+            
+            document.getElementById("EMAIL_ADM").classList.add('is-invalid');
+          }
+      }
+      request.send();
+    }
+  });
+  
+  $('#form').validate({
+  
+    rules: {
+      EMAIL: {
+        required: true,
+        email: true,
+      },
+      PSW: {
+        required: true,
+        minlength: 5,
+      },
+      CPSW: {
+        required: true,
+        equalTo: "#form input[name='PSW']",
+      },
+      NOM: {
+        required: true,
+        fullname: true,
+        minlength: 2,
+      },
+      PRE: {
+        required: true,
+        fullname: true,
+        minlength: 2,
+      },
+      VILLE: {
+        required: true,
+      },
+      NUM_TEL: {
+        required: true,
+        num: true,
+        number: true,
+      },
+      PHOTO: {
+        required: true,
+        accept: "image/*",
+      },
+      radio: {
+        required: true,
+      },
+    },
+    messages: {
+      EMAIL: {
+        required: "Veuillez saisir une adresse e-mail",
+        email: "S'il vous plaît, mettez une adresse email valide"
+      },
+      PSW: {
+        required: "Veuillez fournir un mot de passe",
+        minlength: "Votre mot de passe doit comporter au moins 5 caractères",
+        password: "Au moins une lettre minuscule + Au moins une lettre majuscule + Au moins un chiffre"
+      },
+      CPSW: {
+        
+        required: "Veuillez fournir un mot de passe de confirmation",
+        equalTo:"Entrez à nouveau la même valeur s'il vous plait.",
+        password:"Entrez à nouveau la même valeur s'il vous plait.",
+      },
+      NOM: {
+        required: "Veuillez fournir votre nom",
+        fullname: "Le nom ne contient que des lettres alphabétiques",
+        minlength: "Votre nom doit comporter au moins 2 caractères"
+      },
+      PRE: {
+        required: "Veuillez fournir votre prénom",
+        fullname: "Le prénom ne contient que des lettres alphabétiques",
+        minlength: "Votre prenom doit comporter au moins 2 caractères"
+      },
+      radio: {
+        required: "Veuillez fournir votre sexe"
+      },
+      PHOTO: {
+        required: "Veuillez fournir votre photo",
+        accept:"image"
+      },
+     
+      NUM_TEL: {
+        required: "Veuillez fournir un numéro de téléphone",
+     //   maxlength: "Votre téléphone doit comporter 8 numéro",
+       // minlength: "Votre téléphone doit comporter au moins 8 numéro",
+        num: "Votre téléphone doit comporter 8 chiffres et ne débute pas par 0 ou 1 ",
+        number:"Contient que chiffres "
+      }
+    },
+    errorElement: 'span',
+    errorPlacement: function (error, element) {
+      error.addClass('invalid-feedback');
+      element.closest('.form-group').append(error);
+    },
+    highlight: function (element, errorClass, validClass) {
+      
+      if (element.type === "radio") {
+            
+          } else {
+            $(element).addClass('is-invalid');
+          }
+      
+    },
+    unhighlight: function (element, errorClass, validClass) {
+      $(element).removeClass('is-invalid');
+      
+      if (element.type === "radio") {
+            
+        } else {
+          $(element).addClass('is-valid');
+        }
+  
+    }
+  
+  });
+  jQuery.validator.addMethod(
+  "password",
+  function(value, element) {
+    return /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)[a-zA-Z\d]{1,}$/.test(value);
+  },),
+  jQuery.validator.addMethod(
+  "fullname",
+  function(value, element) {
+    return /^[a-zA-Z]+$/.test(value);
+  },),
+  jQuery.validator.addMethod(
+  "num",
+  function(value, element) {
+    return /^[2-9][0-9].{6}$/.test(value);
+   // return /^([0-9]{8})|(\([2-9]{1}\)\s+[0-9]{7})$/.test(value);
+  },)
+  jQuery.validator.addMethod(
+  "email",
+  function(value, element) {
+    return /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/.test(value);
+    //([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+
+   // return /^([0-9]{8})|(\([2-9]{1}\)\s+[0-9]{7})$/.test(value);
+  },)
+});
+
+
+</script>
+<script>
+  function res(){
+    var form = $("form"),
+    validator = form.validate();
+
+ validator.resetForm();
+ form.find(".error").removeClass("error");
+ document.getElementById('form').reset();
+    document.getElementById("NOM_ADM").classList.remove('is-valid');
+    document.getElementById("PRE_ADM").classList.remove('is-valid');
+    document.getElementById("VILLE_ADM").classList.remove('is-valid');
+    document.getElementById("EMAIL_ADM").classList.remove('is-valid');
+    document.getElementById("NUM_TEL_ADM").classList.remove('is-valid');
+    document.getElementById("PSW_ADM").classList.remove('is-valid');
+    document.getElementById("CPSW_ADM").classList.remove('is-valid');
+    document.getElementById("PHOTO_ADM").classList.remove('is-valid');
+ 
+  }
+ /* function ajouter(){
+    if(champVide()){
+      var sexe = "";
+      if (document.getElementById("SEXE_H").checked){
+      sexe = "Homme";
+    }else{
+      sexe = "Femme";
+    }
+    var url = "http://192.168.43.96:3000/admins";
+    var data = {};
+    data.PHOTO_ADM = document.getElementById("PHOTO_ADM").value;
+    data.EMAIL_ADM = document.getElementById("EMAIL_ADM").value;
+    data.PSW_ADM = document.getElementById("PSW_ADM").value;
+    data.NOM_ADM = document.getElementById("NOM_ADM").value;
+    data.PRE_ADM = document.getElementById("PRE_ADM").value;
+    
+    data.SEXE_ADM = sexe;
+    data.VILLE_ADM = document.getElementById("VILLE_ADM").value;
+    data.NUM_TEL_ADM = document.getElementById("NUM_TEL_ADM").value;
+    var json = JSON.stringify(data);
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", url, true);
+    xhr.setRequestHeader('Content-type','application/json; charset=utf-8');
+    xhr.onload = function () {
+        var admins= JSON.parse(xhr.responseText);
+        if (xhr.readyState == 4 && xhr.status == "200") {
+            console.table(admins);
+            alert("Admin ajouter");
+            //location.replace("../index.html");
+        } else {
+            alert(admins.message);
+            console.table(admins);
+        }
+    }
+    document.getElementById("form").reset();
+    xhr.send(json);
+  }
+  }*/
+
+</script>
+
+<script>
+  $(function () {
+    bsCustomFileInput.init();
+  });
+  </script>
+</body>
+</html>
